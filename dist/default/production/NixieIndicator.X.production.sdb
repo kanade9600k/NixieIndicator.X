@@ -1,0 +1,173 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1938 ]
+[d frameptr 6 ]
+"5 D:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"5 D:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"10 D:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 D:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 D:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"69 D:\Programing\PIC\NixieIndicator.X\main.c
+[v _main main `(v  1 e 1 0 ]
+"184
+[v _send_to_decoder send_to_decoder `(v  1 e 1 0 ]
+"50 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"58
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"68
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"55 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"1228 D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1938.h
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1290
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+"1352
+[v _TRISC TRISC `VEuc  1 e 1 @142 ]
+"1414
+[v _TRISE TRISE `VEuc  1 e 1 @144 ]
+[s S34 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1623
+[s S43 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S48 . 1 `S34 1 . 1 0 `S43 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES48  1 e 1 @149 ]
+"1734
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1793
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1851
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2193
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+"2255
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+"2317
+[v _LATC LATC `VEuc  1 e 1 @270 ]
+"2379
+[v _LATE LATE `VEuc  1 e 1 @272 ]
+"2672
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"3021
+[v _APFCON APFCON `VEuc  1 e 1 @285 ]
+"3077
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"3135
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3702
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"3772
+[v _WPUE WPUE `VEuc  1 e 1 @528 ]
+"8137
+[v _RA1 RA1 `VEb  1 e 0 @97 ]
+"8140
+[v _RA2 RA2 `VEb  1 e 0 @98 ]
+"8143
+[v _RA3 RA3 `VEb  1 e 0 @99 ]
+"8146
+[v _RA4 RA4 `VEb  1 e 0 @100 ]
+"8149
+[v _RA5 RA5 `VEb  1 e 0 @101 ]
+"8152
+[v _RA6 RA6 `VEb  1 e 0 @102 ]
+"8155
+[v _RA7 RA7 `VEb  1 e 0 @103 ]
+"8158
+[v _RB0 RB0 `VEb  1 e 0 @104 ]
+"8161
+[v _RB1 RB1 `VEb  1 e 0 @105 ]
+"8164
+[v _RB2 RB2 `VEb  1 e 0 @106 ]
+"8170
+[v _RB4 RB4 `VEb  1 e 0 @108 ]
+"8173
+[v _RB5 RB5 `VEb  1 e 0 @109 ]
+"8176
+[v _RB6 RB6 `VEb  1 e 0 @110 ]
+"8179
+[v _RB7 RB7 `VEb  1 e 0 @111 ]
+"69 D:\Programing\PIC\NixieIndicator.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"110
+[v main@j j `uc  1 a 1 12 ]
+"96
+[v main@i i `uc  1 a 1 7 ]
+"94
+[v main@count count `ul  1 a 4 8 ]
+"88
+[v main@tmp_count tmp_count `ul  1 a 4 3 ]
+"89
+[v main@digit digit `uc  1 a 1 2 ]
+"182
+} 0
+"184
+[v _send_to_decoder send_to_decoder `(v  1 e 1 0 ]
+{
+[v send_to_decoder@digit digit `uc  1 a 1 wreg ]
+[v send_to_decoder@digit digit `uc  1 a 1 wreg ]
+[v send_to_decoder@digit digit `uc  1 a 1 2 ]
+"265
+} 0
+"5 D:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"10
+[v ___llmod@counter counter `uc  1 a 1 9 ]
+"5
+[v ___llmod@divisor divisor `ul  1 p 4 0 ]
+[v ___llmod@dividend dividend `ul  1 p 4 4 ]
+"25
+} 0
+"5 D:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"30
+} 0
+"50 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"56
+} 0
+"68
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"72
+} 0
+"55 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"97
+} 0
+"58 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"66
+} 0

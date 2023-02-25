@@ -14,7 +14,7 @@
     This header file provides implementations for pin APIs for all pins selected in the GUI.
     Generation Information :
         Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.81.8
-        Device            :  PIC16F1938
+        Device            :  PIC16F1939
         Driver Version    :  2.11
     The generated drivers are tested against the following:
         Compiler          :  XC8 2.36 and above
@@ -58,6 +58,7 @@ void PIN_MANAGER_Initialize(void)
     LATx registers
     */
     LATE = 0x00;
+    LATD = 0x00;
     LATA = 0x00;
     LATB = 0x00;
     LATC = 0x00;
@@ -69,11 +70,14 @@ void PIN_MANAGER_Initialize(void)
     TRISA = 0x00;
     TRISB = 0x00;
     TRISC = 0x00;
+    TRISD = 0x00;
 
     /**
     ANSELx registers
     */
+    ANSELD = 0x00;
     ANSELB = 0x00;
+    ANSELE = 0x00;
     ANSELA = 0x00;
 
     /**

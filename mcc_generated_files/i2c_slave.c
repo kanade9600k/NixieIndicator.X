@@ -22,33 +22,33 @@
 */
 
 /*
-    (c) 2018 Microchip Technology Inc. and its subsidiaries. 
-    
-    Subject to your compliance with these terms, you may use Microchip software and any 
-    derivatives exclusively with Microchip products. It is your responsibility to comply with third party 
-    license terms applicable to your use of third party software (including open source software) that 
+    (c) 2018 Microchip Technology Inc. and its subsidiaries.
+
+    Subject to your compliance with these terms, you may use Microchip software and any
+    derivatives exclusively with Microchip products. It is your responsibility to comply with third party
+    license terms applicable to your use of third party software (including open source software) that
     may accompany Microchip software.
-    
-    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
-    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY 
-    IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS 
+
+    THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER
+    EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY
+    IMPLIED WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS
     FOR A PARTICULAR PURPOSE.
-    
-    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
-    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
-    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP 
-    HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO 
-    THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL 
-    CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT 
-    OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS 
+
+    IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE,
+    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND
+    WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP
+    HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO
+    THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL
+    CLAIMS IN ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT
+    OF FEES, IF ANY, THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS
     SOFTWARE.
 */
 
 #include "i2c_slave.h"
 #include <xc.h>
 
-#define I2C_SLAVE_ADDRESS      24
-#define I2C_SLAVE_MASK         127
+#define I2C_SLAVE_ADDRESS 24
+#define I2C_SLAVE_MASK 127
 
 typedef enum
 {
@@ -107,13 +107,13 @@ static inline bool I2C_SlaveIsOverFlow(void);
 
 void I2C_Initialize()
 {
-    SSPSTAT  = 0x00;
+    SSPSTAT = 0x00;
     SSPCON1 |= 0x06;
-    SSPCON2  = 0x00;
+    SSPCON2 = 0x00;
     SSPCON1bits.SSPEN = 0;
 }
 
-void I2C_Open() 
+void I2C_Open()
 {
     I2C_SlaveOpen();
     I2C_SlaveSetSlaveAddr(I2C_SLAVE_ADDRESS);
@@ -124,17 +124,17 @@ void I2C_Open()
     I2C_SlaveSetReadIntHandler(I2C_SlaveDefRdInterruptHandler);
     I2C_SlaveSetAddrIntHandler(I2C_SlaveDefAddrInterruptHandler);
     I2C_SlaveSetWrColIntHandler(I2C_SlaveDefWrColInterruptHandler);
-    I2C_SlaveEnableIrq();    
+    I2C_SlaveEnableIrq();
 }
 
-void I2C_Close() 
+void I2C_Close()
 {
     I2C_SlaveClose();
 }
 
 uint8_t I2C_Read()
 {
-   return I2C_SlaveGetRxData();
+    return I2C_SlaveGetRxData();
 }
 
 void I2C_Write(uint8_t data)
@@ -162,13 +162,13 @@ void I2C_SendNack()
     I2C_SlaveSendNack();
 }
 
-static void I2C_Isr() 
-{ 
+static void I2C_Isr()
+{
     I2C_SlaveClearIrq();
 
-    if(I2C_SlaveIsAddr())
+    if (I2C_SlaveIsAddr())
     {
-        if(I2C_SlaveIsRead())
+        if (I2C_SlaveIsRead())
         {
             i2cSlaveState = I2C_ADDR_TX;
         }
@@ -179,7 +179,7 @@ static void I2C_Isr()
     }
     else
     {
-        if(I2C_SlaveIsRead())
+        if (I2C_SlaveIsRead())
         {
             i2cSlaveState = I2C_DATA_TX;
         }
@@ -189,32 +189,32 @@ static void I2C_Isr()
         }
     }
 
-    switch(i2cSlaveState)
+    switch (i2cSlaveState)
     {
-        case I2C_ADDR_TX:
-            I2C_SlaveAddrCallBack();
-            if(I2C_SlaveIsTxBufEmpty())
-            {
-                I2C_SlaveWrCallBack();
-            }
-            break;
-        case I2C_ADDR_RX:
-            I2C_SlaveAddrCallBack();
-            break;
-        case I2C_DATA_TX:
-            if(I2C_SlaveIsTxBufEmpty())
-            {
-                I2C_SlaveWrCallBack();
-            }
-            break;
-        case I2C_DATA_RX:
-            if(I2C_SlaveIsRxBufFull())
-            {
-                I2C_SlaveRdCallBack();
-            }
-            break;
-        default:
-            break;
+    case I2C_ADDR_TX:
+        I2C_SlaveAddrCallBack();
+        if (I2C_SlaveIsTxBufEmpty())
+        {
+            I2C_SlaveWrCallBack();
+        }
+        break;
+    case I2C_ADDR_RX:
+        I2C_SlaveAddrCallBack();
+        break;
+    case I2C_DATA_TX:
+        if (I2C_SlaveIsTxBufEmpty())
+        {
+            I2C_SlaveWrCallBack();
+        }
+        break;
+    case I2C_DATA_RX:
+        if (I2C_SlaveIsRxBufFull())
+        {
+            I2C_SlaveRdCallBack();
+        }
+        break;
+    default:
+        break;
     }
     I2C_SlaveReleaseClock();
 }
@@ -226,94 +226,110 @@ void I2C_SlaveSetIsrHandler(i2cInterruptHandler handler)
 }
 
 // Read Event Interrupt Handlers
-void I2C_SlaveSetReadIntHandler(i2cInterruptHandler handler) {
+void I2C_SlaveSetReadIntHandler(i2cInterruptHandler handler)
+{
     I2C_SlaveRdInterruptHandler = handler;
 }
 
-static void I2C_SlaveRdCallBack() {
+static void I2C_SlaveRdCallBack()
+{
     // Add your custom callback code here
-    if (I2C_SlaveRdInterruptHandler) 
+    if (I2C_SlaveRdInterruptHandler)
     {
         I2C_SlaveRdInterruptHandler();
     }
 }
 
-static void I2C_SlaveDefRdInterruptHandler() {
+static void I2C_SlaveDefRdInterruptHandler()
+{
     i2cRdData = I2C_SlaveGetRxData();
 }
 
 // Write Event Interrupt Handlers
-void I2C_SlaveSetWriteIntHandler(i2cInterruptHandler handler) {
+void I2C_SlaveSetWriteIntHandler(i2cInterruptHandler handler)
+{
     I2C_SlaveWrInterruptHandler = handler;
 }
 
-static void I2C_SlaveWrCallBack() {
+static void I2C_SlaveWrCallBack()
+{
     // Add your custom callback code here
-    if (I2C_SlaveWrInterruptHandler) 
+    if (I2C_SlaveWrInterruptHandler)
     {
         I2C_SlaveWrInterruptHandler();
     }
 }
 
-static void I2C_SlaveDefWrInterruptHandler() {
+static void I2C_SlaveDefWrInterruptHandler()
+{
     I2C_SlaveSendTxData(i2cWrData);
 }
 
 // ADDRESS Event Interrupt Handlers
-void I2C_SlaveSetAddrIntHandler(i2cInterruptHandler handler){
+void I2C_SlaveSetAddrIntHandler(i2cInterruptHandler handler)
+{
     I2C_SlaveAddrInterruptHandler = handler;
 }
 
-static void I2C_SlaveAddrCallBack() {
+static void I2C_SlaveAddrCallBack()
+{
     // Add your custom callback code here
-    if (I2C_SlaveAddrInterruptHandler) {
+    if (I2C_SlaveAddrInterruptHandler)
+    {
         I2C_SlaveAddrInterruptHandler();
     }
 }
 
-static void I2C_SlaveDefAddrInterruptHandler() {
+static void I2C_SlaveDefAddrInterruptHandler()
+{
     i2cSlaveAddr = I2C_SlaveGetRxData();
 }
 
 // Write Collision Event Interrupt Handlers
-void I2C_SlaveSetWrColIntHandler(i2cInterruptHandler handler){
+void I2C_SlaveSetWrColIntHandler(i2cInterruptHandler handler)
+{
     I2C_SlaveWrColInterruptHandler = handler;
 }
 
-static void  I2C_SlaveWrColCallBack() {
+static void I2C_SlaveWrColCallBack()
+{
     // Add your custom callback code here
-    if ( I2C_SlaveWrColInterruptHandler) 
+    if (I2C_SlaveWrColInterruptHandler)
     {
-         I2C_SlaveWrColInterruptHandler();
+        I2C_SlaveWrColInterruptHandler();
     }
 }
 
-static void I2C_SlaveDefWrColInterruptHandler() {
+static void I2C_SlaveDefWrColInterruptHandler()
+{
 }
 
 // Bus Collision Event Interrupt Handlers
-void I2C_SlaveSetBusColIntHandler(i2cInterruptHandler handler){
+void I2C_SlaveSetBusColIntHandler(i2cInterruptHandler handler)
+{
     I2C_SlaveBusColInterruptHandler = handler;
 }
 
-static void  I2C_SlaveBusColCallBack() {
+static void I2C_SlaveBusColCallBack()
+{
     // Add your custom callback code here
-    if ( I2C_SlaveBusColInterruptHandler) 
+    if (I2C_SlaveBusColInterruptHandler)
     {
-         I2C_SlaveBusColInterruptHandler();
+        I2C_SlaveBusColInterruptHandler();
     }
 }
 
-static void I2C_SlaveDefBusColInterruptHandler() {
+static void I2C_SlaveDefBusColInterruptHandler()
+{
 }
 
 static inline bool I2C_SlaveOpen()
 {
-    if(!SSPCON1bits.SSPEN)
-    {      
-        SSPSTAT  = 0x00;
+    if (!SSPCON1bits.SSPEN)
+    {
+        SSPSTAT = 0x00;
         SSPCON1 |= 0x06;
-        SSPCON2  = 0x00;
+        SSPCON2 = 0x00;
         SSPCON1bits.SSPEN = 1;
         return true;
     }
@@ -322,20 +338,20 @@ static inline bool I2C_SlaveOpen()
 
 static inline void I2C_SlaveClose()
 {
-    SSPSTAT  = 0x00;
+    SSPSTAT = 0x00;
     SSPCON1 |= 0x06;
-    SSPCON2  = 0x00;
+    SSPCON2 = 0x00;
     SSPCON1bits.SSPEN = 0;
 }
 
 static inline void I2C_SlaveSetSlaveAddr(uint8_t slaveAddr)
 {
-    SSPADD = (uint8_t) (slaveAddr << 1);
+    SSPADD = (uint8_t)(slaveAddr << 1);
 }
 
 static inline void I2C_SlaveSetSlaveMask(uint8_t maskAddr)
 {
-    SSPMSK = (uint8_t) (maskAddr << 1);
+    SSPMSK = (uint8_t)(maskAddr << 1);
 }
 
 static inline void I2C_SlaveEnableIrq()

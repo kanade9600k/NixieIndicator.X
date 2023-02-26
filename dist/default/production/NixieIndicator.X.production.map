@@ -5,10 +5,10 @@ Linker command line:
 -W-3 --edf=D:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\NixieIndicator.X.production.sym \
   --cmf=dist/default/production\NixieIndicator.X.production.cmf -z \
-  -Q16F1939 -oC:\Users\tomo9\AppData\Local\Temp\s4k.2 \
+  -Q16F1939 -oC:\Users\tomo9\AppData\Local\Temp\sm1k.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/NixieIndicator.X.production.map -E1 \
-  -ver=XC8 Compiler --acfsm=1493 -ASTACK=02065h-023EFh -pstack=STACK \
+  -ver=XC8 Compiler --acfsm=1493 -ASTACK=0207Dh-023EFh -pstack=STACK \
   -ACODE=00h-07FFhx8 -ASTRCODE=00h-03FFFh -ASTRING=00h-0FFhx64 \
   -ACONST=00h-0FFhx64 -AENTRY=00h-0FFhx64 -ACOMMON=070h-07Fh \
   -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh \
@@ -32,7 +32,7 @@ Linker command line:
   -AIDLOC=08000h-08003h -DIDLOC=2 -AEEDATA=00h-0FFh/0F000h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
-  -pcinit=CODE -pfunctab=ENTRY -k C:\Users\tomo9\AppData\Local\Temp\s4k.o \
+  -pcinit=CODE -pfunctab=ENTRY -k C:\Users\tomo9\AppData\Local\Temp\sm1k.o \
   dist/default/production\NixieIndicator.X.production.o 
 
 Object code version is 3.11
@@ -42,79 +42,143 @@ Machine type is 16F1939
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\tomo9\AppData\Local\Temp\s4k.o
-                end_init                             2C       2C        2        8       0
+C:\Users\tomo9\AppData\Local\Temp\sm1k.o
+                end_init                             4A       4A        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
 dist/default/production\NixieIndicator.X.production.o
-                cinit                                2E       2E       16        8       0
-                intentry                              4        4       28        8       0
+                cinit                                4C       4C       18        8       0
+                intentry                              4        4       46        8       0
                 config                             8007     8007        2        0       4
-                text24                              57B      57B       1A        8       0
-                text23                              5F4      5F4        4        8       0
-                text22                              5F8      5F8        1        8       0
-                text21                              5F0      5F0        4        8       0
-                text20                              4A4      4A4       39        8       0
-                text19                              53E      53E       22        8       0
-                text17                              5B8      5B8        9        8       0
-                text16                              5E6      5E6        6        8       0
-                text15                              5E0      5E0        6        8       0
-                text14                              5DA      5DA        6        8       0
-                text13                              5D4      5D4        6        8       0
-                text12                              5CE      5CE        6        8       0
-                text11                              465      465       3F        8       0
-                text10                              5C1      5C1        7        8       0
-                text9                               560      560       1B        8       0
-                text8                               5EC      5EC        4        8       0
-                text7                               5AB      5AB        D        8       0
-                text6                               514      514       2A        8       0
-                text5                               4DD      4DD       37        8       0
-                text4                               41A      41A       4B        8       0
-                text3                               3CF      3CF       4B        8       0
-                text2                                44       44      25D        8       0
-                text1                               2A1      2A1      12E        8       0
-                maintext                            595      595       16        8       0
-                cstackBANK0                          3D       3D       18       20       1
-                cstackCOMMON                         70       70        A       70       1
-                clrtext                             5C8      5C8        6        8       0
-                bssBANK1                             A0       A0       15       A0       1
-                bssBANK0                             20       20       1D       20       1
-                bssCOMMON                            7A       7A        2       70       1
-                nvBANK0                              55       55        B       20       1
+                text55                              66B      66B       1A        8       0
+                text54                              780      780        4        8       0
+                text53                              793      793        1        8       0
+                text52                              77C      77C        4        8       0
+                text51                              576      576       39        8       0
+                text50                              62E      62E       22        8       0
+                text49                              790      790        3        8       0
+                text48                              6E3      6E3        8        8       0
+                text47                              6BC      6BC        D        8       0
+                text46                              78D      78D        3        8       0
+                text45                              707      707        7        8       0
+                text44                              76B      76B        5        8       0
+                text43                              778      778        4        8       0
+                text42                              700      700        7        8       0
+                text41                              6DB      6DB        8        8       0
+                text40                              6AF      6AF        D        8       0
+                text39                              78A      78A        3        8       0
+                text38                              766      766        5        8       0
+                text37                              756      756        6        8       0
+                text36                              6A2      6A2        D        8       0
+                text35                              3F3      3F3       75        8       0
+                text33                              6D2      6D2        9        8       0
+                text32                              787      787        3        8       0
+                text31                              695      695        D        8       0
+                text30                              750      750        6        8       0
+                text29                              74A      74A        6        8       0
+                text28                              744      744        6        8       0
+                text27                              73E      73E        6        8       0
+                text26                              761      761        5        8       0
+                text25                              75C      75C        5        8       0
+                text24                              738      738        6        8       0
+                text23                              732      732        6        8       0
+                text22                              53D      53D       39        8       0
+                text21                              72C      72C        6        8       0
+                text20                              726      726        6        8       0
+                text19                              720      720        6        8       0
+                text18                              71A      71A        6        8       0
+                text17                              714      714        6        8       0
+                text16                              4FE      4FE       3F        8       0
+                text15                              6C9      6C9        9        8       0
+                text14                              6F9      6F9        7        8       0
+                text13                              650      650       1B        8       0
+                text12                              774      774        4        8       0
+                text11                              685      685       10        8       0
+                text10                              5E1      5E1       2A        8       0
+                text9                               5AF      5AF       32        8       0
+                text8                               6F2      6F2        7        8       0
+                text7                               784      784        3        8       0
+                text6                               770      770        4        8       0
+                text5                               6EB      6EB        7        8       0
+                text4                               4B3      4B3       4B        8       0
+                text3                               468      468       4B        8       0
+                text2                                64       64      237        8       0
+                text1                               29B      29B      158        8       0
+                maintext                            60B      60B       23        8       0
+                cstackBANK0                          55       55        8       20       1
+                cstackCOMMON                         70       70        6       70       1
+                cstackBANK1                          A0       A0       16       A0       1
+                clrtext                             70E      70E        6        8       0
+                bssBANK1                             B6       B6       15       A0       1
+                bssBANK0                             20       20       2C       20       1
+                bssCOMMON                            76       76        4       70       1
+                nvBANK1                              CB       CB        2       A0       1
+                nvBANK0                              4C       4C        9       20       1
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
-                end_init                             2C       2C        2         0
-                cinit                                2E       2E       16         0
-                intentry                              4        4       28         0
+                end_init                             4A       4A        2         0
+                cinit                                4C       4C       18         0
+                intentry                              4        4       46         0
                 reset_vec                             0        0        2         0
-                text24                              57B      57B       1A         0
-                text23                              5F4      5F4        4         0
-                text22                              5F8      5F8        1         0
-                text21                              5F0      5F0        4         0
-                text20                              4A4      4A4       39         0
-                text19                              53E      53E       22         0
-                text17                              5B8      5B8        9         0
-                text16                              5E6      5E6        6         0
-                text15                              5E0      5E0        6         0
-                text14                              5DA      5DA        6         0
-                text13                              5D4      5D4        6         0
-                text12                              5CE      5CE        6         0
-                text11                              465      465       3F         0
-                text10                              5C1      5C1        7         0
-                text9                               560      560       1B         0
-                text8                               5EC      5EC        4         0
-                text7                               5AB      5AB        D         0
-                text6                               514      514       2A         0
-                text5                               4DD      4DD       37         0
-                text4                               41A      41A       4B         0
-                text3                               3CF      3CF       4B         0
-                text2                                44       44      25D         0
-                text1                               2A1      2A1      12E         0
-                maintext                            595      595       16         0
-                clrtext                             5C8      5C8        6         0
+                text55                              66B      66B       1A         0
+                text54                              780      780        4         0
+                text53                              793      793        1         0
+                text52                              77C      77C        4         0
+                text51                              576      576       39         0
+                text50                              62E      62E       22         0
+                text49                              790      790        3         0
+                text48                              6E3      6E3        8         0
+                text47                              6BC      6BC        D         0
+                text46                              78D      78D        3         0
+                text45                              707      707        7         0
+                text44                              76B      76B        5         0
+                text43                              778      778        4         0
+                text42                              700      700        7         0
+                text41                              6DB      6DB        8         0
+                text40                              6AF      6AF        D         0
+                text39                              78A      78A        3         0
+                text38                              766      766        5         0
+                text37                              756      756        6         0
+                text36                              6A2      6A2        D         0
+                text35                              3F3      3F3       75         0
+                text33                              6D2      6D2        9         0
+                text32                              787      787        3         0
+                text31                              695      695        D         0
+                text30                              750      750        6         0
+                text29                              74A      74A        6         0
+                text28                              744      744        6         0
+                text27                              73E      73E        6         0
+                text26                              761      761        5         0
+                text25                              75C      75C        5         0
+                text24                              738      738        6         0
+                text23                              732      732        6         0
+                text22                              53D      53D       39         0
+                text21                              72C      72C        6         0
+                text20                              726      726        6         0
+                text19                              720      720        6         0
+                text18                              71A      71A        6         0
+                text17                              714      714        6         0
+                text16                              4FE      4FE       3F         0
+                text15                              6C9      6C9        9         0
+                text14                              6F9      6F9        7         0
+                text13                              650      650       1B         0
+                text12                              774      774        4         0
+                text11                              685      685       10         0
+                text10                              5E1      5E1       2A         0
+                text9                               5AF      5AF       32         0
+                text8                               6F2      6F2        7         0
+                text7                               784      784        3         0
+                text6                               770      770        4         0
+                text5                               6EB      6EB        7         0
+                text4                               4B3      4B3       4B         0
+                text3                               468      468       4B         0
+                text2                                64       64      237         0
+                text1                               29B      29B      158         0
+                maintext                            60B      60B       23         0
+                clrtext                             70E      70E        6         0
 
         CLASS   STRCODE        
 
@@ -125,16 +189,18 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   ENTRY          
 
         CLASS   COMMON         
-                cstackCOMMON                         70       70        A         1
-                bssCOMMON                            7A       7A        2         1
+                cstackCOMMON                         70       70        6         1
+                bssCOMMON                            76       76        4         1
 
         CLASS   BANK0          
-                cstackBANK0                          3D       3D       18         1
-                bssBANK0                             20       20       1D         1
-                nvBANK0                              55       55        B         1
+                cstackBANK0                          55       55        8         1
+                bssBANK0                             20       20       2C         1
+                nvBANK0                              4C       4C        9         1
 
         CLASS   BANK1          
-                bssBANK1                             A0       A0       15         1
+                cstackBANK1                          A0       A0       16         1
+                bssBANK1                             B6       B6       15         1
+                nvBANK1                              CB       CB        2         1
 
         CLASS   BANK2          
 
@@ -279,17 +345,17 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
-                intentry                       000004  0005F5  0005F9         8       0  CODE        2
-                bssBANK0                       000020  000040  000060        20       1  BANK0       1
-                cstackCOMMON                   000070  00000C  00007C        70       1  COMMON      1
-                bssBANK1                       0000A0  000015  0000B5        A0       1  BANK1       1
+                intentry                       000004  000790  000794         8       0  CODE        2
+                bssBANK0                       000020  00003D  00005D        20       1  BANK0       1
+                cstackCOMMON                   000070  00000A  00007A        70       1  COMMON      1
+                cstackBANK1                    0000A0  00002D  0000CD        A0       1  BANK1       1
 
 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            00060-0006F              10           1
-        BANK1            000B5-000EF              3B           1
+        BANK0            0005D-0006F              13           1
+        BANK1            000CD-000EF              23           1
         BANK10           00520-0056F              50           1
         BANK11           005A0-005EF              50           1
         BANK12           00620-0064F              30           1
@@ -303,16 +369,16 @@ UNUSED ADDRESS RANGES
         BANK9            004A0-004EF              50           1
         BIGRAM           02000-023EF             3F0           1
         CODE             00002-00003               2           2
-                         005F9-03FFF             800
-        COMMON           0007C-0007D               2           1
+                         00794-03FFF             800
+        COMMON           0007A-0007D               4           1
         CONST            00002-00003               2           2
-                         005F9-03FFF             100
+                         00794-03FFF             100
         EEDATA           0F000-0F0FF             100           2
         ENTRY            00002-00003               2           2
-                         005F9-03FFF             100
+                         00794-03FFF             100
         IDLOC            08000-08003               4           2
-        RAM              00060-0006F              10           1
-                         000B5-000EF              3B
+        RAM              0005D-0006F              13           1
+                         000CD-000EF              23
                          00120-0016F              50
                          001A0-001EF              50
                          00220-0026F              50
@@ -356,20 +422,29 @@ UNUSED ADDRESS RANGES
         SFR7             00380-0039F              20           1
         SFR8             00400-0041F              20           1
         SFR9             00480-0049F              20           1
-        STACK            02065-023EF             38B           1
+        STACK            0207D-023EF             373           1
         STRCODE          00002-00003               2           2
-                         005F9-03FFF            3A07
+                         00794-03FFF            386C
         STRING           00002-00003               2           2
-                         005F9-03FFF             100
+                         00794-03FFF             100
 
                                   Symbol Table
 
-EUSART_Read@readValue                          cstackCOMMON 00072
-EUSART_SetErrorHandler@interruptHandler        cstackCOMMON 00071
-EUSART_SetFramingErrorHandler@interruptHandler cstackCOMMON 00071
-EUSART_SetOverrunErrorHandler@interruptHandler cstackCOMMON 00071
-EUSART_SetRxInterruptHandler@interruptHandler  cstackCOMMON 00071
-EUSART_SetTxInterruptHandler@interruptHandler  cstackCOMMON 00071
+EUSART_Read@readValue                          cstackCOMMON 00074
+EUSART_SetErrorHandler@interruptHandler        cstackCOMMON 00073
+EUSART_SetFramingErrorHandler@interruptHandler cstackCOMMON 00073
+EUSART_SetOverrunErrorHandler@interruptHandler cstackCOMMON 00073
+EUSART_SetRxInterruptHandler@interruptHandler  cstackCOMMON 00073
+EUSART_SetTxInterruptHandler@interruptHandler  cstackCOMMON 00073
+I2C_SlaveSendTxData@data                       cstackCOMMON 00070
+I2C_SlaveSetAddrIntHandler@handler             cstackCOMMON 00073
+I2C_SlaveSetBusColIntHandler@handler           cstackCOMMON 00073
+I2C_SlaveSetIsrHandler@handler                 cstackCOMMON 00073
+I2C_SlaveSetReadIntHandler@handler             cstackCOMMON 00073
+I2C_SlaveSetSlaveAddr@slaveAddr                cstackCOMMON 00073
+I2C_SlaveSetSlaveMask@maskAddr                 cstackCOMMON 00073
+I2C_SlaveSetWrColIntHandler@handler            cstackCOMMON 00073
+I2C_SlaveSetWriteIntHandler@handler            cstackCOMMON 00073
 _ANSELA                                        (abs)        0018C
 _ANSELB                                        (abs)        0018D
 _ANSELD                                        (abs)        0018F
@@ -377,25 +452,60 @@ _ANSELE                                        (abs)        00190
 _APFCON                                        (abs)        0011D
 _BAUDCON                                       (abs)        0019F
 _BORCON                                        (abs)        00116
-_EUSART_DefaultErrorHandler                    text23       005F4
-_EUSART_DefaultFramingErrorHandler             text22       005F8
-_EUSART_DefaultOverrunErrorHandler             text21       005F0
-_EUSART_ErrorHandler                           nvBANK0      00055
-_EUSART_FramingErrorHandler                    nvBANK0      00059
-_EUSART_Initialize                             text11       00465
-_EUSART_OverrunErrorHandler                    nvBANK0      00057
-_EUSART_Read                                   text6        00514
-_EUSART_Receive_ISR                            text20       004A4
-_EUSART_RxDataHandler                          text24       0057B
-_EUSART_RxDefaultInterruptHandler              nvBANK0      0005B
-_EUSART_SetErrorHandler                        text16       005E6
-_EUSART_SetFramingErrorHandler                 text15       005E0
-_EUSART_SetOverrunErrorHandler                 text14       005DA
-_EUSART_SetRxInterruptHandler                  text13       005D4
-_EUSART_SetTxInterruptHandler                  text12       005CE
-_EUSART_Transmit_ISR                           text19       0053E
-_EUSART_TxDefaultInterruptHandler              nvBANK0      0005D
-_EUSART_is_rx_ready                            text17       005B8
+_EUSART_DefaultErrorHandler                    text54       00780
+_EUSART_DefaultFramingErrorHandler             text53       00793
+_EUSART_DefaultOverrunErrorHandler             text52       0077C
+_EUSART_ErrorHandler                           nvBANK1      000CB
+_EUSART_FramingErrorHandler                    nvBANK0      0004E
+_EUSART_Initialize                             text16       004FE
+_EUSART_OverrunErrorHandler                    nvBANK0      0004C
+_EUSART_Read                                   text10       005E1
+_EUSART_Receive_ISR                            text51       00576
+_EUSART_RxDataHandler                          text55       0066B
+_EUSART_RxDefaultInterruptHandler              nvBANK0      00050
+_EUSART_SetErrorHandler                        text21       0072C
+_EUSART_SetFramingErrorHandler                 text20       00726
+_EUSART_SetOverrunErrorHandler                 text19       00720
+_EUSART_SetRxInterruptHandler                  text18       0071A
+_EUSART_SetTxInterruptHandler                  text17       00714
+_EUSART_Transmit_ISR                           text50       0062E
+_EUSART_TxDefaultInterruptHandler              nvBANK0      00052
+_EUSART_is_rx_ready                            text33       006D2
+_I2C_Initialize                                text15       006C9
+_I2C_Isr                                       text35       003F3
+_I2C_Open                                      text22       0053D
+_I2C_Read                                      text6        00770
+_I2C_SlaveAddrCallBack                         text47       006BC
+_I2C_SlaveAddrInterruptHandler                 bssBANK0     0003C
+_I2C_SlaveBusColInterruptHandler               bssBANK0     0003A
+_I2C_SlaveClearIrq                             text46       0078D
+_I2C_SlaveDefAddrInterruptHandler              text48       006E3
+_I2C_SlaveDefBusColInterruptHandler            (abs)        00000
+_I2C_SlaveDefRdInterruptHandler                text41       006DB
+_I2C_SlaveDefWrColInterruptHandler             (abs)        00000
+_I2C_SlaveDefWrInterruptHandler                text37       00756
+_I2C_SlaveEnableIrq                            text32       00787
+_I2C_SlaveGetRxData                            text7        00784
+_I2C_SlaveIsAddr                               text45       00707
+_I2C_SlaveIsRead                               text44       0076B
+_I2C_SlaveIsRxBufFull                          text43       00778
+_I2C_SlaveIsTxBufEmpty                         text42       00700
+_I2C_SlaveOpen                                 text31       00695
+_I2C_SlaveRdCallBack                           text40       006AF
+_I2C_SlaveRdInterruptHandler                   bssBANK0     00040
+_I2C_SlaveReleaseClock                         text39       0078A
+_I2C_SlaveSendTxData                           text38       00766
+_I2C_SlaveSetAddrIntHandler                    text30       00750
+_I2C_SlaveSetBusColIntHandler                  text29       0074A
+_I2C_SlaveSetIsrHandler                        text28       00744
+_I2C_SlaveSetReadIntHandler                    text27       0073E
+_I2C_SlaveSetSlaveAddr                         text26       00761
+_I2C_SlaveSetSlaveMask                         text25       0075C
+_I2C_SlaveSetWrColIntHandler                   text24       00738
+_I2C_SlaveSetWriteIntHandler                   text23       00732
+_I2C_SlaveWrCallBack                           text36       006A2
+_I2C_SlaveWrColInterruptHandler                bssBANK0     00038
+_I2C_SlaveWrInterruptHandler                   bssBANK0     0003E
 _INTCONbits                                    (abs)        0000B
 _INTERRUPT_InterruptManager                    intentry     00004
 _LATA                                          (abs)        0010C
@@ -403,13 +513,16 @@ _LATB                                          (abs)        0010D
 _LATC                                          (abs)        0010E
 _LATD                                          (abs)        0010F
 _LATE                                          (abs)        00110
+_MSSP_InterruptHandler                         bssBANK0     00042
 _OPTION_REGbits                                (abs)        00095
 _OSCCON                                        (abs)        00099
-_OSCILLATOR_Initialize                         text10       005C1
+_OSCILLATOR_Initialize                         text14       006F9
 _OSCTUNE                                       (abs)        00098
 _PIE1bits                                      (abs)        00091
-_PIN_MANAGER_Initialize                        text9        00560
+_PIE2bits                                      (abs)        00092
+_PIN_MANAGER_Initialize                        text13       00650
 _PIR1bits                                      (abs)        00011
+_PIR2bits                                      (abs)        00012
 _RA0                                           (abs)        00060
 _RA1                                           (abs)        00061
 _RA2                                           (abs)        00062
@@ -440,7 +553,16 @@ _RE1                                           (abs)        00081
 _RE2                                           (abs)        00082
 _SPBRGH                                        (abs)        0019C
 _SPBRGL                                        (abs)        0019B
-_SYSTEM_Initialize                             text7        005AB
+_SSPADD                                        (abs)        00212
+_SSPBUF                                        (abs)        00211
+_SSPCON1                                       (abs)        00215
+_SSPCON1bits                                   (abs)        00215
+_SSPCON2                                       (abs)        00216
+_SSPCON2bits                                   (abs)        00216
+_SSPMSK                                        (abs)        00213
+_SSPSTAT                                       (abs)        00214
+_SSPSTATbits                                   (abs)        00214
+_SYSTEM_Initialize                             text11       00685
 _TRISA                                         (abs)        0008C
 _TRISB                                         (abs)        0008D
 _TRISC                                         (abs)        0008E
@@ -450,7 +572,7 @@ _TXREG                                         (abs)        0019A
 _TXSTA                                         (abs)        0019E
 _TXSTAbits                                     (abs)        0019E
 _WDTCON                                        (abs)        00097
-_WDT_Initialize                                text8        005EC
+_WDT_Initialize                                text12       00774
 _WPUB                                          (abs)        0020D
 _WPUE                                          (abs)        00210
 __Habs1                                        abs1         00000
@@ -490,20 +612,22 @@ __Hbigram                                      bigram       00000
 __HbssBANK0                                    bssBANK0     00000
 __HbssBANK1                                    bssBANK1     00000
 __HbssCOMMON                                   bssCOMMON    00000
-__Hcinit                                       cinit        00044
+__Hcinit                                       cinit        00064
 __Hclrtext                                     clrtext      00000
 __Hcode                                        code         00000
 __Hcommon                                      common       00000
 __Hconfig                                      config       08009
 __HcstackBANK0                                 cstackBANK0  00000
+__HcstackBANK1                                 cstackBANK1  00000
 __HcstackCOMMON                                cstackCOMMON 00000
 __Heeprom_data                                 eeprom_data  00000
-__Hend_init                                    end_init     0002E
+__Hend_init                                    end_init     0004C
 __Hfunctab                                     functab      00000
-__Hinit                                        init         0002C
-__Hintentry                                    intentry     0002C
+__Hinit                                        init         0004A
+__Hintentry                                    intentry     0004A
 __Hmaintext                                    maintext     00000
 __HnvBANK0                                     nvBANK0      00000
+__HnvBANK1                                     nvBANK1      00000
 __Hpowerup                                     powerup      00000
 __Hram                                         ram          00000
 __Hreset_vec                                   reset_vec    00002
@@ -539,8 +663,8 @@ __Hsfr6                                        sfr6         00000
 __Hsfr7                                        sfr7         00000
 __Hsfr8                                        sfr8         00000
 __Hsfr9                                        sfr9         00000
-__Hspace_0                                     (abs)        005F9
-__Hspace_1                                     (abs)        000B5
+__Hspace_0                                     (abs)        00794
+__Hspace_1                                     (abs)        000CD
 __Hspace_2                                     (abs)        00000
 __Hspace_3                                     (abs)        00000
 __Hspace_4                                     (abs)        10010
@@ -584,20 +708,22 @@ __Lbigram                                      bigram       00000
 __LbssBANK0                                    bssBANK0     00000
 __LbssBANK1                                    bssBANK1     00000
 __LbssCOMMON                                   bssCOMMON    00000
-__Lcinit                                       cinit        0002E
+__Lcinit                                       cinit        0004C
 __Lclrtext                                     clrtext      00000
 __Lcode                                        code         00000
 __Lcommon                                      common       00000
 __Lconfig                                      config       00000
 __LcstackBANK0                                 cstackBANK0  00000
+__LcstackBANK1                                 cstackBANK1  00000
 __LcstackCOMMON                                cstackCOMMON 00000
 __Leeprom_data                                 eeprom_data  00000
-__Lend_init                                    end_init     0002C
+__Lend_init                                    end_init     0004A
 __Lfunctab                                     functab      00000
-__Linit                                        init         0002C
+__Linit                                        init         0004A
 __Lintentry                                    intentry     00004
 __Lmaintext                                    maintext     00000
 __LnvBANK0                                     nvBANK0      00000
+__LnvBANK1                                     nvBANK1      00000
 __Lpowerup                                     powerup      00000
 __Lram                                         ram          00000
 __Lreset_vec                                   reset_vec    00000
@@ -641,73 +767,137 @@ __Lspace_4                                     (abs)        00000
 __Lstack                                       stack        00000
 __Lstrings                                     strings      00000
 __Ltext                                        text         00000
-__S0                                           (abs)        005F9
-__S1                                           (abs)        000B5
+__S0                                           (abs)        00794
+__S1                                           (abs)        000CD
 __S2                                           (abs)        00000
 __S3                                           (abs)        00000
 ___int_sp                                      stack        00000
 ___latbits                                     (abs)        00003
 ___sp                                          stack        00000
 ___stackhi                                     (abs)        023EF
-___stacklo                                     (abs)        02065
-__end_of_EUSART_DefaultErrorHandler            text23       005F8
-__end_of_EUSART_DefaultFramingErrorHandler     text22       005F9
-__end_of_EUSART_DefaultOverrunErrorHandler     text21       005F4
-__end_of_EUSART_Initialize                     text11       004A4
-__end_of_EUSART_Read                           text6        0053E
-__end_of_EUSART_Receive_ISR                    text20       004DD
-__end_of_EUSART_RxDataHandler                  text24       00595
-__end_of_EUSART_SetErrorHandler                text16       005EC
-__end_of_EUSART_SetFramingErrorHandler         text15       005E6
-__end_of_EUSART_SetOverrunErrorHandler         text14       005E0
-__end_of_EUSART_SetRxInterruptHandler          text13       005DA
-__end_of_EUSART_SetTxInterruptHandler          text12       005D4
-__end_of_EUSART_Transmit_ISR                   text19       00560
-__end_of_EUSART_is_rx_ready                    text17       005C1
-__end_of_INTERRUPT_InterruptManager            intentry     0002C
-__end_of_OSCILLATOR_Initialize                 text10       005C8
-__end_of_PIN_MANAGER_Initialize                text9        0057B
-__end_of_SYSTEM_Initialize                     text7        005B8
-__end_of_WDT_Initialize                        text8        005F0
-__end_of__initialization                       cinit        00040
-__end_of_main                                  maintext     005AB
-__end_of_off_digit                             text4        00465
-__end_of_on_digit                              text3        0041A
-__end_of_receive_char_from_EUSART              text5        00514
-__end_of_show                                  text1        003CF
-__end_of_show_character                        text2        002A1
-__initialization                               cinit        0002E
+___stacklo                                     (abs)        0207D
+__end_of_EUSART_DefaultErrorHandler            text54       00784
+__end_of_EUSART_DefaultFramingErrorHandler     text53       00794
+__end_of_EUSART_DefaultOverrunErrorHandler     text52       00780
+__end_of_EUSART_Initialize                     text16       0053D
+__end_of_EUSART_Read                           text10       0060B
+__end_of_EUSART_Receive_ISR                    text51       005AF
+__end_of_EUSART_RxDataHandler                  text55       00685
+__end_of_EUSART_SetErrorHandler                text21       00732
+__end_of_EUSART_SetFramingErrorHandler         text20       0072C
+__end_of_EUSART_SetOverrunErrorHandler         text19       00726
+__end_of_EUSART_SetRxInterruptHandler          text18       00720
+__end_of_EUSART_SetTxInterruptHandler          text17       0071A
+__end_of_EUSART_Transmit_ISR                   text50       00650
+__end_of_EUSART_is_rx_ready                    text33       006DB
+__end_of_I2C_Initialize                        text15       006D2
+__end_of_I2C_Isr                               text35       00468
+__end_of_I2C_Open                              text22       00576
+__end_of_I2C_Read                              text6        00774
+__end_of_I2C_SlaveAddrCallBack                 text47       006C9
+__end_of_I2C_SlaveClearIrq                     text46       00790
+__end_of_I2C_SlaveDefAddrInterruptHandler      text48       006EB
+__end_of_I2C_SlaveDefRdInterruptHandler        text41       006E3
+__end_of_I2C_SlaveDefWrInterruptHandler        text37       0075C
+__end_of_I2C_SlaveEnableIrq                    text32       0078A
+__end_of_I2C_SlaveGetRxData                    text7        00787
+__end_of_I2C_SlaveIsAddr                       text45       0070E
+__end_of_I2C_SlaveIsRead                       text44       00770
+__end_of_I2C_SlaveIsRxBufFull                  text43       0077C
+__end_of_I2C_SlaveIsTxBufEmpty                 text42       00707
+__end_of_I2C_SlaveOpen                         text31       006A2
+__end_of_I2C_SlaveRdCallBack                   text40       006BC
+__end_of_I2C_SlaveReleaseClock                 text39       0078D
+__end_of_I2C_SlaveSendTxData                   text38       0076B
+__end_of_I2C_SlaveSetAddrIntHandler            text30       00756
+__end_of_I2C_SlaveSetBusColIntHandler          text29       00750
+__end_of_I2C_SlaveSetIsrHandler                text28       0074A
+__end_of_I2C_SlaveSetReadIntHandler            text27       00744
+__end_of_I2C_SlaveSetSlaveAddr                 text26       00766
+__end_of_I2C_SlaveSetSlaveMask                 text25       00761
+__end_of_I2C_SlaveSetWrColIntHandler           text24       0073E
+__end_of_I2C_SlaveSetWriteIntHandler           text23       00738
+__end_of_I2C_SlaveWrCallBack                   text36       006AF
+__end_of_INTERRUPT_InterruptManager            intentry     0004A
+__end_of_OSCILLATOR_Initialize                 text14       00700
+__end_of_PIN_MANAGER_Initialize                text13       0066B
+__end_of_SYSTEM_Initialize                     text11       00695
+__end_of_WDT_Initialize                        text12       00778
+__end_of__initialization                       cinit        00060
+__end_of_decode_received_char                  text9        005E1
+__end_of_main                                  maintext     0062E
+__end_of_off_digit                             text4        004FE
+__end_of_on_digit                              text3        004B3
+__end_of_receive_char_from_EUSART              text8        006F9
+__end_of_receive_char_from_I2C                 text5        006F2
+__end_of_show                                  text1        003F3
+__end_of_show_character                        text2        0029B
+__end_ofi1_I2C_SlaveGetRxData                  text49       00793
+__initialization                               cinit        0004C
 __pbssBANK0                                    bssBANK0     00020
-__pbssBANK1                                    bssBANK1     000A0
-__pbssCOMMON                                   bssCOMMON    0007A
-__pcstackBANK0                                 cstackBANK0  0003D
+__pbssBANK1                                    bssBANK1     000B6
+__pbssCOMMON                                   bssCOMMON    00076
+__pcstackBANK0                                 cstackBANK0  00055
+__pcstackBANK1                                 cstackBANK1  000A0
 __pcstackCOMMON                                cstackCOMMON 00070
 __pintentry                                    intentry     00004
-__pmaintext                                    maintext     00595
-__pnvBANK0                                     nvBANK0      00055
-__ptext1                                       text1        002A1
-__ptext10                                      text10       005C1
-__ptext11                                      text11       00465
-__ptext12                                      text12       005CE
-__ptext13                                      text13       005D4
-__ptext14                                      text14       005DA
-__ptext15                                      text15       005E0
-__ptext16                                      text16       005E6
-__ptext17                                      text17       005B8
-__ptext19                                      text19       0053E
-__ptext2                                       text2        00044
-__ptext20                                      text20       004A4
-__ptext21                                      text21       005F0
-__ptext22                                      text22       005F8
-__ptext23                                      text23       005F4
-__ptext24                                      text24       0057B
-__ptext3                                       text3        003CF
-__ptext4                                       text4        0041A
-__ptext5                                       text5        004DD
-__ptext6                                       text6        00514
-__ptext7                                       text7        005AB
-__ptext8                                       text8        005EC
-__ptext9                                       text9        00560
+__pmaintext                                    maintext     0060B
+__pnvBANK0                                     nvBANK0      0004C
+__pnvBANK1                                     nvBANK1      000CB
+__ptext1                                       text1        0029B
+__ptext10                                      text10       005E1
+__ptext11                                      text11       00685
+__ptext12                                      text12       00774
+__ptext13                                      text13       00650
+__ptext14                                      text14       006F9
+__ptext15                                      text15       006C9
+__ptext16                                      text16       004FE
+__ptext17                                      text17       00714
+__ptext18                                      text18       0071A
+__ptext19                                      text19       00720
+__ptext2                                       text2        00064
+__ptext20                                      text20       00726
+__ptext21                                      text21       0072C
+__ptext22                                      text22       0053D
+__ptext23                                      text23       00732
+__ptext24                                      text24       00738
+__ptext25                                      text25       0075C
+__ptext26                                      text26       00761
+__ptext27                                      text27       0073E
+__ptext28                                      text28       00744
+__ptext29                                      text29       0074A
+__ptext3                                       text3        00468
+__ptext30                                      text30       00750
+__ptext31                                      text31       00695
+__ptext32                                      text32       00787
+__ptext33                                      text33       006D2
+__ptext35                                      text35       003F3
+__ptext36                                      text36       006A2
+__ptext37                                      text37       00756
+__ptext38                                      text38       00766
+__ptext39                                      text39       0078A
+__ptext4                                       text4        004B3
+__ptext40                                      text40       006AF
+__ptext41                                      text41       006DB
+__ptext42                                      text42       00700
+__ptext43                                      text43       00778
+__ptext44                                      text44       0076B
+__ptext45                                      text45       00707
+__ptext46                                      text46       0078D
+__ptext47                                      text47       006BC
+__ptext48                                      text48       006E3
+__ptext49                                      text49       00790
+__ptext5                                       text5        006EB
+__ptext50                                      text50       0062E
+__ptext51                                      text51       00576
+__ptext52                                      text52       0077C
+__ptext53                                      text53       00793
+__ptext54                                      text54       00780
+__ptext55                                      text55       0066B
+__ptext6                                       text6        00770
+__ptext7                                       text7        00784
+__ptext8                                       text8        006F2
+__ptext9                                       text9        005AF
 __size_of_EUSART_DefaultErrorHandler           (abs)        00000
 __size_of_EUSART_DefaultFramingErrorHandler    (abs)        00000
 __size_of_EUSART_DefaultOverrunErrorHandler    (abs)        00000
@@ -722,38 +912,79 @@ __size_of_EUSART_SetRxInterruptHandler         (abs)        00000
 __size_of_EUSART_SetTxInterruptHandler         (abs)        00000
 __size_of_EUSART_Transmit_ISR                  (abs)        00000
 __size_of_EUSART_is_rx_ready                   (abs)        00000
+__size_of_I2C_Initialize                       (abs)        00000
+__size_of_I2C_Isr                              (abs)        00000
+__size_of_I2C_Open                             (abs)        00000
+__size_of_I2C_Read                             (abs)        00000
+__size_of_I2C_SlaveAddrCallBack                (abs)        00000
+__size_of_I2C_SlaveClearIrq                    (abs)        00000
+__size_of_I2C_SlaveDefAddrInterruptHandler     (abs)        00000
+__size_of_I2C_SlaveDefRdInterruptHandler       (abs)        00000
+__size_of_I2C_SlaveDefWrInterruptHandler       (abs)        00000
+__size_of_I2C_SlaveEnableIrq                   (abs)        00000
+__size_of_I2C_SlaveGetRxData                   (abs)        00000
+__size_of_I2C_SlaveIsAddr                      (abs)        00000
+__size_of_I2C_SlaveIsRead                      (abs)        00000
+__size_of_I2C_SlaveIsRxBufFull                 (abs)        00000
+__size_of_I2C_SlaveIsTxBufEmpty                (abs)        00000
+__size_of_I2C_SlaveOpen                        (abs)        00000
+__size_of_I2C_SlaveRdCallBack                  (abs)        00000
+__size_of_I2C_SlaveReleaseClock                (abs)        00000
+__size_of_I2C_SlaveSendTxData                  (abs)        00000
+__size_of_I2C_SlaveSetAddrIntHandler           (abs)        00000
+__size_of_I2C_SlaveSetBusColIntHandler         (abs)        00000
+__size_of_I2C_SlaveSetIsrHandler               (abs)        00000
+__size_of_I2C_SlaveSetReadIntHandler           (abs)        00000
+__size_of_I2C_SlaveSetSlaveAddr                (abs)        00000
+__size_of_I2C_SlaveSetSlaveMask                (abs)        00000
+__size_of_I2C_SlaveSetWrColIntHandler          (abs)        00000
+__size_of_I2C_SlaveSetWriteIntHandler          (abs)        00000
+__size_of_I2C_SlaveWrCallBack                  (abs)        00000
 __size_of_INTERRUPT_InterruptManager           (abs)        00000
 __size_of_OSCILLATOR_Initialize                (abs)        00000
 __size_of_PIN_MANAGER_Initialize               (abs)        00000
 __size_of_SYSTEM_Initialize                    (abs)        00000
 __size_of_WDT_Initialize                       (abs)        00000
+__size_of_decode_received_char                 (abs)        00000
 __size_of_main                                 (abs)        00000
 __size_of_off_digit                            (abs)        00000
 __size_of_on_digit                             (abs)        00000
 __size_of_receive_char_from_EUSART             (abs)        00000
+__size_of_receive_char_from_I2C                (abs)        00000
 __size_of_show                                 (abs)        00000
 __size_of_show_character                       (abs)        00000
+__size_ofi1_I2C_SlaveGetRxData                 (abs)        00000
+_decode_received_char                          text9        005AF
 _eusartRxBuffer                                bssBANK0     00028
-_eusartRxCount                                 bssBANK0     00039
-_eusartRxHead                                  bssCOMMON    0007B
-_eusartRxLastError                             bssBANK0     00038
+_eusartRxCount                                 bssBANK0     00049
+_eusartRxHead                                  bssCOMMON    00077
+_eusartRxLastError                             bssBANK0     00048
 _eusartRxStatusBuffer                          bssBANK0     00020
-_eusartRxTail                                  bssCOMMON    0007A
+_eusartRxTail                                  bssCOMMON    00076
 _eusartTxBuffer                                bssBANK0     00030
-_eusartTxBufferRemaining                       nvBANK0      0005F
-_eusartTxHead                                  bssBANK0     0003B
-_eusartTxTail                                  bssBANK0     0003A
-_main                                          maintext     00595
-_off_digit                                     text4        0041A
-_on_digit                                      text3        003CF
-_receive_char_from_EUSART                      text5        004DD
-_receive_index                                 bssBANK0     0003C
-_show                                          text1        002A1
-_show_character                                text2        00044
-_value                                         bssBANK1     000A0
+_eusartTxBufferRemaining                       nvBANK0      00054
+_eusartTxHead                                  bssCOMMON    00079
+_eusartTxTail                                  bssCOMMON    00078
+_i2cRdData                                     bssBANK0     00046
+_i2cSlaveAddr                                  bssBANK0     00045
+_i2cSlaveState                                 bssBANK0     00044
+_i2cWrData                                     bssBANK0     00047
+_is_I2C_interrupt                              bssBANK0     0004A
+_main                                          maintext     0060B
+_off_digit                                     text4        004B3
+_on_digit                                      text3        00468
+_receive_char_from_EUSART                      text8        006F2
+_receive_char_from_I2C                         text5        006EB
+_receive_index                                 bssBANK0     0004B
+_show                                          text1        0029B
+_show_character                                text2        00064
+_value                                         bssBANK1     000B6
 btemp                                          (abs)        0007E
-clear_ram0                                     clrtext      005C8
-end_of_initialization                          cinit        00040
+clear_ram0                                     clrtext      0070E
+decode_received_char@i                         cstackCOMMON 00075
+decode_received_char@received_char             cstackCOMMON 00074
+end_of_initialization                          cinit        00060
+i1_I2C_SlaveGetRxData                          text49       00790
 int$flags                                      (abs)        0007E
 intlevel0                                      functab      00000
 intlevel1                                      functab      00000
@@ -761,20 +992,18 @@ intlevel2                                      functab      00000
 intlevel3                                      functab      00000
 intlevel4                                      functab      00000
 intlevel5                                      functab      00000
-off_digit@digit                                cstackCOMMON 00073
-on_digit@digit                                 cstackCOMMON 00073
-receive_char_from_EUSART@i                     cstackCOMMON 00075
-receive_char_from_EUSART@receive_char          cstackCOMMON 00074
+off_digit@digit                                cstackCOMMON 00075
+on_digit@digit                                 cstackCOMMON 00075
 reset_vec                                      reset_vec    00000
-show@chars                                     cstackBANK0  0003F
-show@chars_index                               cstackBANK0  00054
-show@value_index                               cstackBANK0  00053
-show_character@character                       cstackCOMMON 00074
-show_character@digit                           cstackCOMMON 00075
-show_character@dot                             cstackCOMMON 00078
-show_character@group                           cstackCOMMON 00079
-start                                          init         0002C
-start_initialization                           cinit        0002E
+show@chars                                     cstackBANK1  000A0
+show@chars_index                               cstackBANK1  000B5
+show@value_index                               cstackBANK1  000B4
+show_character@character                       cstackBANK0  00055
+show_character@digit                           cstackBANK0  00056
+show_character@dot                             cstackBANK0  00059
+show_character@group                           cstackBANK0  0005A
+start                                          init         0004A
+start_initialization                           cinit        0004C
 wtemp0                                         (abs)        0007E
 
 
@@ -782,7 +1011,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 98 in file "main.c"
+		line 102 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -801,11 +1030,13 @@ FUNCTION INFORMATION:
       Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
- Hardware stack levels required when called:    7
+ Hardware stack levels required when called:    8
  This function calls:
 		_EUSART_is_rx_ready
+		_I2C_Open
 		_SYSTEM_Initialize
 		_receive_char_from_EUSART
+		_receive_char_from_I2C
 		_show
  This function is called by:
 		Startup code after reset
@@ -814,13 +1045,13 @@ Total ram usage:        0 bytes
 
  *************** function _show *****************
  Defined at:
-		line 131 in file "main.c"
+		line 142 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  chars          20    2[BANK0 ] unsigned char [20]
-  chars_index     1   23[BANK0 ] unsigned char 
-  value_index     1   22[BANK0 ] unsigned char 
+  chars          20    0[BANK1 ] unsigned char [20]
+  chars_index     1   21[BANK1 ] unsigned char 
+  value_index     1   20[BANK1 ] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -831,12 +1062,12 @@ Total ram usage:        0 bytes
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
       Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0      22       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0      22       0       0       0       0       0       0       0       0       0       0       0
       Temps:          0       2       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0      24       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       2      22       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:       24 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    6
+ Hardware stack levels required when called:    7
  This function calls:
 		_off_digit
 		_show_character
@@ -847,14 +1078,14 @@ Total ram usage:       24 bytes
 
  *************** function _show_character *****************
  Defined at:
-		line 192 in file "main.c"
+		line 203 in file "main.c"
  Parameters:    Size  Location     Type
   dot             1    wreg     unsigned char 
-  character       1    4[COMMON] unsigned char 
-  digit           1    5[COMMON] char 
+  character       1    0[BANK0 ] unsigned char 
+  digit           1    1[BANK0 ] char 
  Auto vars:     Size  Location     Type
-  dot             1    8[COMMON] unsigned char 
-  group           1    9[COMMON] enum E3000
+  dot             1    4[BANK0 ] unsigned char 
+  group           1    5[BANK0 ] enum E3048
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -864,13 +1095,13 @@ Total ram usage:       24 bytes
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
-      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         6       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Params:         0       2       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       2       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       2       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       6       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        6 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    5
+ Hardware stack levels required when called:    6
  This function calls:
 		_on_digit
  This function is called by:
@@ -880,11 +1111,11 @@ Total ram usage:        6 bytes
 
  *************** function _on_digit *****************
  Defined at:
-		line 594 in file "main.c"
+		line 605 in file "main.c"
  Parameters:    Size  Location     Type
   digit           1    wreg     char 
  Auto vars:     Size  Location     Type
-  digit           1    3[COMMON] char 
+  digit           1    5[COMMON] char 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -900,7 +1131,7 @@ Total ram usage:        6 bytes
       Totals:         3       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        3 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -910,11 +1141,11 @@ Total ram usage:        3 bytes
 
  *************** function _off_digit *****************
  Defined at:
-		line 637 in file "main.c"
+		line 648 in file "main.c"
  Parameters:    Size  Location     Type
   digit           1    wreg     char 
  Auto vars:     Size  Location     Type
-  digit           1    3[COMMON] char 
+  digit           1    5[COMMON] char 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -930,7 +1161,7 @@ Total ram usage:        3 bytes
       Totals:         3       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        3 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -938,18 +1169,140 @@ Total ram usage:        3 bytes
  This function uses a non-reentrant model
 
 
- *************** function _receive_char_from_EUSART *****************
+ *************** function _receive_char_from_I2C *****************
  Defined at:
-		line 677 in file "main.c"
+		line 694 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  i               1    5[COMMON] unsigned char 
-  receive_char    1    4[COMMON] unsigned char 
+		None
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
 		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    7
+ This function calls:
+		_I2C_Read
+		_decode_received_char
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_Read *****************
+ Defined at:
+		line 135 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_I2C_SlaveGetRxData
+ This function is called by:
+		_receive_char_from_I2C
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveGetRxData *****************
+ Defined at:
+		line 412 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Read
+ This function uses a non-reentrant model
+
+
+ *************** function _receive_char_from_EUSART *****************
+ Defined at:
+		line 688 in file "main.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_EUSART_Read
+		_decode_received_char
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _decode_received_char *****************
+ Defined at:
+		line 700 in file "main.c"
+ Parameters:    Size  Location     Type
+  received_cha    1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  received_cha    1    4[COMMON] unsigned char 
+  i               1    5[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr1l, fsr1h, status,2, status,0
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -963,9 +1316,10 @@ Total ram usage:        3 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    5
  This function calls:
-		_EUSART_Read
+		Nothing
  This function is called by:
-		_main
+		_receive_char_from_EUSART
+		_receive_char_from_I2C
  This function uses a non-reentrant model
 
 
@@ -975,7 +1329,7 @@ Total ram usage:        3 bytes
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  readValue       1    2[COMMON] unsigned char 
+  readValue       1    4[COMMON] unsigned char 
  Return value:  Size  Location     Type
                   1    wreg      unsigned char 
  Registers used:
@@ -991,7 +1345,7 @@ Total ram usage:        3 bytes
       Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        2 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1021,9 +1375,10 @@ Total ram usage:        2 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    6
+ Hardware stack levels required when called:    7
  This function calls:
 		_EUSART_Initialize
+		_I2C_Initialize
 		_OSCILLATOR_Initialize
 		_PIN_MANAGER_Initialize
 		_WDT_Initialize
@@ -1034,7 +1389,7 @@ Total ram usage:        0 bytes
 
  *************** function _WDT_Initialize *****************
  Defined at:
-		line 69 in file "mcc_generated_files/mcc.c"
+		line 70 in file "mcc_generated_files/mcc.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1054,7 +1409,7 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1084,7 +1439,7 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1094,7 +1449,7 @@ Total ram usage:        0 bytes
 
  *************** function _OSCILLATOR_Initialize *****************
  Defined at:
-		line 59 in file "mcc_generated_files/mcc.c"
+		line 60 in file "mcc_generated_files/mcc.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1114,11 +1469,42 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
 		_SYSTEM_Initialize
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_Initialize *****************
+ Defined at:
+		line 108 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_SYSTEM_Initialize
+		_I2C_Enable
  This function uses a non-reentrant model
 
 
@@ -1144,7 +1530,7 @@ Total ram usage:        0 bytes
       Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        1 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    5
+ Hardware stack levels required when called:    6
  This function calls:
 		_EUSART_SetErrorHandler
 		_EUSART_SetFramingErrorHandler
@@ -1160,7 +1546,7 @@ Total ram usage:        1 bytes
  Defined at:
 		line 276 in file "mcc_generated_files/eusart.c"
  Parameters:    Size  Location     Type
-  interruptHan    2    1[COMMON] PTR FTN()void 
+  interruptHan    2    3[COMMON] PTR FTN()void 
 		 -> EUSART_Transmit_ISR(1), 
  Auto vars:     Size  Location     Type
 		None
@@ -1179,7 +1565,7 @@ Total ram usage:        1 bytes
       Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        2 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1191,7 +1577,7 @@ Total ram usage:        2 bytes
  Defined at:
 		line 280 in file "mcc_generated_files/eusart.c"
  Parameters:    Size  Location     Type
-  interruptHan    2    1[COMMON] PTR FTN()void 
+  interruptHan    2    3[COMMON] PTR FTN()void 
 		 -> EUSART_Receive_ISR(1), 
  Auto vars:     Size  Location     Type
 		None
@@ -1210,7 +1596,7 @@ Total ram usage:        2 bytes
       Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        2 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1222,7 +1608,7 @@ Total ram usage:        2 bytes
  Defined at:
 		line 268 in file "mcc_generated_files/eusart.c"
  Parameters:    Size  Location     Type
-  interruptHan    2    1[COMMON] PTR FTN()void 
+  interruptHan    2    3[COMMON] PTR FTN()void 
 		 -> EUSART_DefaultOverrunErrorHandler(1), 
  Auto vars:     Size  Location     Type
 		None
@@ -1241,7 +1627,7 @@ Total ram usage:        2 bytes
       Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        2 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1253,7 +1639,7 @@ Total ram usage:        2 bytes
  Defined at:
 		line 264 in file "mcc_generated_files/eusart.c"
  Parameters:    Size  Location     Type
-  interruptHan    2    1[COMMON] PTR FTN()void 
+  interruptHan    2    3[COMMON] PTR FTN()void 
 		 -> EUSART_DefaultFramingErrorHandler(1), 
  Auto vars:     Size  Location     Type
 		None
@@ -1272,7 +1658,7 @@ Total ram usage:        2 bytes
       Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        2 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1284,7 +1670,7 @@ Total ram usage:        2 bytes
  Defined at:
 		line 272 in file "mcc_generated_files/eusart.c"
  Parameters:    Size  Location     Type
-  interruptHan    2    1[COMMON] PTR FTN()void 
+  interruptHan    2    3[COMMON] PTR FTN()void 
 		 -> EUSART_DefaultErrorHandler(1), 
  Auto vars:     Size  Location     Type
 		None
@@ -1303,11 +1689,356 @@ Total ram usage:        2 bytes
       Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        2 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
 		_EUSART_Initialize
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_Open *****************
+ Defined at:
+		line 116 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    6
+ This function calls:
+		_I2C_SlaveEnableIrq
+		_I2C_SlaveOpen
+		_I2C_SlaveSetAddrIntHandler
+		_I2C_SlaveSetBusColIntHandler
+		_I2C_SlaveSetIsrHandler
+		_I2C_SlaveSetReadIntHandler
+		_I2C_SlaveSetSlaveAddr
+		_I2C_SlaveSetSlaveMask
+		_I2C_SlaveSetWrColIntHandler
+		_I2C_SlaveSetWriteIntHandler
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveSetWriteIntHandler *****************
+ Defined at:
+		line 249 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+  handler         2    3[COMMON] PTR FTN()void 
+		 -> I2C_SlaveDefWrInterruptHandler(1), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Open
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveSetWrColIntHandler *****************
+ Defined at:
+		line 289 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+  handler         2    3[COMMON] PTR FTN()void 
+		 -> I2C_SlaveDefWrColInterruptHandler(1), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Open
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveSetSlaveMask *****************
+ Defined at:
+		line 352 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+  maskAddr        1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  maskAddr        1    3[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Open
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveSetSlaveAddr *****************
+ Defined at:
+		line 347 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+  slaveAddr       1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  slaveAddr       1    3[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Open
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveSetReadIntHandler *****************
+ Defined at:
+		line 229 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+  handler         2    3[COMMON] PTR FTN()void 
+		 -> I2C_SlaveDefRdInterruptHandler(1), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Open
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveSetIsrHandler *****************
+ Defined at:
+		line 223 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+  handler         2    3[COMMON] PTR FTN()void 
+		 -> I2C_Isr(1), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Open
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveSetBusColIntHandler *****************
+ Defined at:
+		line 308 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+  handler         2    3[COMMON] PTR FTN()void 
+		 -> I2C_SlaveDefBusColInterruptHandler(1), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Open
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveSetAddrIntHandler *****************
+ Defined at:
+		line 269 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+  handler         2    3[COMMON] PTR FTN()void 
+		 -> I2C_SlaveDefAddrInterruptHandler(1), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Open
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveOpen *****************
+ Defined at:
+		line 326 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Open
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveEnableIrq *****************
+ Defined at:
+		line 357 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    5
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Open
  This function uses a non-reentrant model
 
 
@@ -1333,7 +2064,7 @@ Total ram usage:        2 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		Nothing
  This function is called by:
@@ -1343,7 +2074,7 @@ Total ram usage:        0 bytes
 
  *************** function _INTERRUPT_InterruptManager *****************
  Defined at:
-		line 52 in file "mcc_generated_files/interrupt_manager.c"
+		line 54 in file "mcc_generated_files/interrupt_manager.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1351,7 +2082,7 @@ Total ram usage:        0 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, fsr1l, fsr1h, status,2, status,0, pclath, cstack
+		wreg, fsr0l, fsr0h, fsr1l, fsr1h, status,2, status,0, pclath, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -1363,13 +2094,474 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    3
+ Hardware stack levels required when called:    4
  This function calls:
 		Absolute function
 		_EUSART_Receive_ISR
 		_EUSART_Transmit_ISR
+		_I2C_Isr
  This function is called by:
 		Interrupt level 1
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_Isr *****************
+ Defined at:
+		line 165 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr0l, fsr0h, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_I2C_SlaveAddrCallBack
+		_I2C_SlaveClearIrq
+		_I2C_SlaveIsAddr
+		_I2C_SlaveIsRead
+		_I2C_SlaveIsRxBufFull
+		_I2C_SlaveIsTxBufEmpty
+		_I2C_SlaveRdCallBack
+		_I2C_SlaveReleaseClock
+		_I2C_SlaveWrCallBack
+ This function is called by:
+		_I2C_Open
+		_INTERRUPT_InterruptManager
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveWrCallBack *****************
+ Defined at:
+		line 254 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Absolute function
+		_I2C_SlaveDefWrInterruptHandler
+ This function is called by:
+		_I2C_Isr
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveDefWrInterruptHandler *****************
+ Defined at:
+		line 263 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_I2C_SlaveSendTxData
+ This function is called by:
+		_I2C_Open
+		_I2C_SlaveWrCallBack
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveSendTxData *****************
+ Defined at:
+		line 407 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+  data            1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  data            1    0[COMMON] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_SlaveDefWrInterruptHandler
+		_I2C_Write
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveReleaseClock *****************
+ Defined at:
+		line 377 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Isr
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveRdCallBack *****************
+ Defined at:
+		line 234 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Absolute function
+		_I2C_SlaveDefRdInterruptHandler
+ This function is called by:
+		_I2C_Isr
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveDefRdInterruptHandler *****************
+ Defined at:
+		line 243 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		i1_I2C_SlaveGetRxData
+ This function is called by:
+		_I2C_Open
+		_I2C_SlaveRdCallBack
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveIsTxBufEmpty *****************
+ Defined at:
+		line 397 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Isr
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveIsRxBufFull *****************
+ Defined at:
+		line 402 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Isr
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveIsRead *****************
+ Defined at:
+		line 367 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Isr
+		_I2C_IsRead
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveIsAddr *****************
+ Defined at:
+		line 362 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      _Bool 
+ Registers used:
+		wreg, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Isr
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveClearIrq *****************
+ Defined at:
+		line 372 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		None
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_Isr
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveAddrCallBack *****************
+ Defined at:
+		line 274 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		Absolute function
+		_I2C_SlaveDefAddrInterruptHandler
+ This function is called by:
+		_I2C_Isr
+ This function uses a non-reentrant model
+
+
+ *************** function _I2C_SlaveDefAddrInterruptHandler *****************
+ Defined at:
+		line 283 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, pclath, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        1 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		i1_I2C_SlaveGetRxData
+ This function is called by:
+		_I2C_Open
+		_I2C_SlaveAddrCallBack
+ This function uses a non-reentrant model
+
+
+ *************** function i1_I2C_SlaveGetRxData *****************
+ Defined at:
+		line 412 in file "mcc_generated_files/i2c_slave.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMMON   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        0 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_I2C_SlaveDefRdInterruptHandler
+		_I2C_SlaveDefAddrInterruptHandler
  This function uses a non-reentrant model
 
 
@@ -1563,53 +2755,88 @@ Total ram usage:        1 bytes
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
-mcc_generated_files/interrupt_manager.c
-		_INTERRUPT_InterruptManager		CODE           	0004	0000	40
+mcc_generated_files/i2c_slave.c
+		_I2C_SlaveDefRdInterruptHandler		CODE           	06DB	0000	8
+		_I2C_SlaveDefWrInterruptHandler		CODE           	0756	0000	6
+		_I2C_SlaveSetWrColIntHandler		CODE           	0738	0000	6
+		_I2C_SlaveSetWriteIntHandler		CODE           	0732	0000	6
+		_I2C_SlaveOpen 		CODE           	0695	0000	13
+		_I2C_SlaveSetSlaveAddr		CODE           	0761	0000	5
+		_I2C_SlaveIsRxBufFull		CODE           	0778	0000	4
+		_I2C_SlaveClearIrq		CODE           	078D	0000	3
+		_I2C_SlaveGetRxData		CODE           	0784	0000	3
+		_I2C_SlaveSetSlaveMask		CODE           	075C	0000	5
+		_I2C_Isr       		CODE           	03F3	0000	117
+		_I2C_Read      		CODE           	0770	0000	4
+		_I2C_SlaveDefAddrInterruptHandler		CODE           	06E3	0000	8
+		_I2C_Open      		CODE           	053D	0000	57
+		_I2C_SlaveIsRead		CODE           	076B	0000	5
+		_I2C_SlaveSetIsrHandler		CODE           	0744	0000	6
+		_I2C_SlaveIsAddr		CODE           	0707	0000	7
+		_I2C_SlaveSetBusColIntHandler		CODE           	074A	0000	6
+		_I2C_SlaveEnableIrq		CODE           	0787	0000	3
+		_I2C_SlaveSendTxData		CODE           	0766	0000	5
+		_I2C_SlaveRdCallBack		CODE           	06AF	0000	13
+		_I2C_SlaveWrCallBack		CODE           	06A2	0000	13
+		_I2C_SlaveSetReadIntHandler		CODE           	073E	0000	6
+		_I2C_SlaveAddrCallBack		CODE           	06BC	0000	13
+		_I2C_Initialize		CODE           	06C9	0000	9
+		_I2C_SlaveIsTxBufEmpty		CODE           	0700	0000	7
+		_I2C_SlaveSetAddrIntHandler		CODE           	0750	0000	6
+		_I2C_SlaveReleaseClock		CODE           	078A	0000	3
 
-mcc_generated_files/interrupt_manager.c estimated size: 40
+mcc_generated_files/i2c_slave.c estimated size: 347
+
+mcc_generated_files/interrupt_manager.c
+		_INTERRUPT_InterruptManager		CODE           	0004	0000	70
+
+mcc_generated_files/interrupt_manager.c estimated size: 70
 
 mcc_generated_files/pin_manager.c
-		_PIN_MANAGER_Initialize		CODE           	0560	0000	27
+		_PIN_MANAGER_Initialize		CODE           	0650	0000	27
 
 mcc_generated_files/pin_manager.c estimated size: 27
 
 shared
-		__initialization		CODE           	002E	0000	18
+		__initialization		CODE           	004C	0000	20
+		i1_I2C_SlaveGetRxData		CODE           	0790	0000	3
 
-shared estimated size: 18
+shared estimated size: 23
 
 mcc_generated_files/mcc.c
-		_WDT_Initialize		CODE           	05EC	0000	4
-		_OSCILLATOR_Initialize		CODE           	05C1	0000	7
-		_SYSTEM_Initialize		CODE           	05AB	0000	13
+		_WDT_Initialize		CODE           	0774	0000	4
+		_OSCILLATOR_Initialize		CODE           	06F9	0000	7
+		_SYSTEM_Initialize		CODE           	0685	0000	16
 
-mcc_generated_files/mcc.c estimated size: 24
+mcc_generated_files/mcc.c estimated size: 27
 
 mcc_generated_files/eusart.c
-		_EUSART_SetRxInterruptHandler		CODE           	05D4	0000	6
-		_EUSART_SetTxInterruptHandler		CODE           	05CE	0000	6
-		_EUSART_Read   		CODE           	0514	0000	42
-		_EUSART_DefaultOverrunErrorHandler		CODE           	05F0	0000	4
-		_EUSART_DefaultErrorHandler		CODE           	05F4	0000	4
-		_EUSART_Transmit_ISR		CODE           	053E	0000	34
-		_EUSART_Initialize		CODE           	0465	0000	63
-		_EUSART_SetFramingErrorHandler		CODE           	05E0	0000	6
-		_EUSART_SetErrorHandler		CODE           	05E6	0000	6
-		_EUSART_SetOverrunErrorHandler		CODE           	05DA	0000	6
-		_EUSART_Receive_ISR		CODE           	04A4	0000	57
-		_EUSART_RxDataHandler		CODE           	057B	0000	26
-		_EUSART_DefaultFramingErrorHandler		CODE           	05F8	0000	1
-		_EUSART_is_rx_ready		CODE           	05B8	0000	9
+		_EUSART_SetRxInterruptHandler		CODE           	071A	0000	6
+		_EUSART_SetTxInterruptHandler		CODE           	0714	0000	6
+		_EUSART_Read   		CODE           	05E1	0000	42
+		_EUSART_DefaultOverrunErrorHandler		CODE           	077C	0000	4
+		_EUSART_DefaultErrorHandler		CODE           	0780	0000	4
+		_EUSART_Transmit_ISR		CODE           	062E	0000	34
+		_EUSART_Initialize		CODE           	04FE	0000	63
+		_EUSART_SetFramingErrorHandler		CODE           	0726	0000	6
+		_EUSART_SetErrorHandler		CODE           	072C	0000	6
+		_EUSART_SetOverrunErrorHandler		CODE           	0720	0000	6
+		_EUSART_Receive_ISR		CODE           	0576	0000	57
+		_EUSART_RxDataHandler		CODE           	066B	0000	26
+		_EUSART_DefaultFramingErrorHandler		CODE           	0793	0000	1
+		_EUSART_is_rx_ready		CODE           	06D2	0000	9
 
 mcc_generated_files/eusart.c estimated size: 270
 
 main.c
-		_on_digit      		CODE           	03CF	0000	75
-		_off_digit     		CODE           	041A	0000	75
-		_receive_char_from_EUSART		CODE           	04DD	0000	55
-		_main          		CODE           	0595	0000	22
-		_show          		CODE           	02A1	0000	302
-		_show_character		CODE           	0044	0000	605
+		_on_digit      		CODE           	0468	0000	75
+		_off_digit     		CODE           	04B3	0000	75
+		_receive_char_from_EUSART		CODE           	06F2	0000	7
+		_main          		CODE           	060B	0000	35
+		_show          		CODE           	029B	0000	344
+		_decode_received_char		CODE           	05AF	0000	50
+		_show_character		CODE           	0064	0000	567
+		_receive_char_from_I2C		CODE           	06EB	0000	7
 
-main.c estimated size: 1134
+main.c estimated size: 1160
 

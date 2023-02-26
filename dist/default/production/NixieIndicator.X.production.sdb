@@ -3,11 +3,19 @@
 [d edition pro ]
 [d chip 16F1939 ]
 [d frameptr 6 ]
-"195 D:\Programing\PIC\NixieIndicator.X\main.c
-[e E3000 . `uc
+"206 D:\Programing\PIC\NixieIndicator.X\main.c
+[e E3048 . `uc
 UPPER 0
 MIDDLE 1
 LOWER 2
+]
+"68 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/i2c_slave.c
+[e E2984 . `uc
+I2C_IDLE 0
+I2C_ADDR_TX 1
+I2C_ADDR_RX 2
+I2C_DATA_TX 3
+I2C_DATA_RX 4
 ]
 "10 D:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
@@ -17,18 +25,22 @@ LOWER 2
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"98 D:\Programing\PIC\NixieIndicator.X\main.c
+"102 D:\Programing\PIC\NixieIndicator.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"131
+"142
 [v _show show `(v  1 e 1 0 ]
-"192
+"203
 [v _show_character show_character `(v  1 e 1 0 ]
-"594
+"605
 [v _on_digit on_digit `(v  1 e 1 0 ]
-"637
+"648
 [v _off_digit off_digit `(v  1 e 1 0 ]
-"677
+"688
 [v _receive_char_from_EUSART receive_char_from_EUSART `(v  1 e 1 0 ]
+"694
+[v _receive_char_from_I2C receive_char_from_I2C `(v  1 e 1 0 ]
+"700
+[v _decode_received_char decode_received_char `(v  1 e 1 0 ]
 "88 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
 "137
@@ -57,17 +69,84 @@ LOWER 2
 [v _EUSART_SetTxInterruptHandler EUSART_SetTxInterruptHandler `(v  1 e 1 0 ]
 "280
 [v _EUSART_SetRxInterruptHandler EUSART_SetRxInterruptHandler `(v  1 e 1 0 ]
-"52 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
+"108 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/i2c_slave.c
+[v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
+"116
+[v _I2C_Open I2C_Open `(v  1 e 1 0 ]
+"135
+[v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
+"165
+[v _I2C_Isr I2C_Isr `(v  1 s 1 I2C_Isr ]
+"223
+[v _I2C_SlaveSetIsrHandler I2C_SlaveSetIsrHandler `(v  1 e 1 0 ]
+"229
+[v _I2C_SlaveSetReadIntHandler I2C_SlaveSetReadIntHandler `(v  1 e 1 0 ]
+"234
+[v _I2C_SlaveRdCallBack I2C_SlaveRdCallBack `(v  1 s 1 I2C_SlaveRdCallBack ]
+"243
+[v _I2C_SlaveDefRdInterruptHandler I2C_SlaveDefRdInterruptHandler `(v  1 s 1 I2C_SlaveDefRdInterruptHandler ]
+"249
+[v _I2C_SlaveSetWriteIntHandler I2C_SlaveSetWriteIntHandler `(v  1 e 1 0 ]
+"254
+[v _I2C_SlaveWrCallBack I2C_SlaveWrCallBack `(v  1 s 1 I2C_SlaveWrCallBack ]
+"263
+[v _I2C_SlaveDefWrInterruptHandler I2C_SlaveDefWrInterruptHandler `(v  1 s 1 I2C_SlaveDefWrInterruptHandler ]
+"269
+[v _I2C_SlaveSetAddrIntHandler I2C_SlaveSetAddrIntHandler `(v  1 e 1 0 ]
+"274
+[v _I2C_SlaveAddrCallBack I2C_SlaveAddrCallBack `(v  1 s 1 I2C_SlaveAddrCallBack ]
+"283
+[v _I2C_SlaveDefAddrInterruptHandler I2C_SlaveDefAddrInterruptHandler `(v  1 s 1 I2C_SlaveDefAddrInterruptHandler ]
+"289
+[v _I2C_SlaveSetWrColIntHandler I2C_SlaveSetWrColIntHandler `(v  1 e 1 0 ]
+"303
+[v _I2C_SlaveDefWrColInterruptHandler I2C_SlaveDefWrColInterruptHandler `(v  1 s 1 I2C_SlaveDefWrColInterruptHandler ]
+"308
+[v _I2C_SlaveSetBusColIntHandler I2C_SlaveSetBusColIntHandler `(v  1 e 1 0 ]
+"322
+[v _I2C_SlaveDefBusColInterruptHandler I2C_SlaveDefBusColInterruptHandler `(v  1 s 1 I2C_SlaveDefBusColInterruptHandler ]
+"326
+[v _I2C_SlaveOpen I2C_SlaveOpen `T(a  1 s 1 I2C_SlaveOpen ]
+"339
+[v _I2C_SlaveClose I2C_SlaveClose `T(v  1 s 1 I2C_SlaveClose ]
+"347
+[v _I2C_SlaveSetSlaveAddr I2C_SlaveSetSlaveAddr `T(v  1 s 1 I2C_SlaveSetSlaveAddr ]
+"352
+[v _I2C_SlaveSetSlaveMask I2C_SlaveSetSlaveMask `T(v  1 s 1 I2C_SlaveSetSlaveMask ]
+"357
+[v _I2C_SlaveEnableIrq I2C_SlaveEnableIrq `T(v  1 s 1 I2C_SlaveEnableIrq ]
+"362
+[v _I2C_SlaveIsAddr I2C_SlaveIsAddr `T(a  1 s 1 I2C_SlaveIsAddr ]
+"367
+[v _I2C_SlaveIsRead I2C_SlaveIsRead `T(a  1 s 1 I2C_SlaveIsRead ]
+"372
+[v _I2C_SlaveClearIrq I2C_SlaveClearIrq `T(v  1 s 1 I2C_SlaveClearIrq ]
+"377
+[v _I2C_SlaveReleaseClock I2C_SlaveReleaseClock `T(v  1 s 1 I2C_SlaveReleaseClock ]
+"397
+[v _I2C_SlaveIsTxBufEmpty I2C_SlaveIsTxBufEmpty `T(a  1 s 1 I2C_SlaveIsTxBufEmpty ]
+"402
+[v _I2C_SlaveIsRxBufFull I2C_SlaveIsRxBufFull `T(a  1 s 1 I2C_SlaveIsRxBufFull ]
+"407
+[v _I2C_SlaveSendTxData I2C_SlaveSendTxData `T(v  1 s 1 I2C_SlaveSendTxData ]
+"412
+[v _I2C_SlaveGetRxData I2C_SlaveGetRxData `T(uc  1 s 1 I2C_SlaveGetRxData ]
+[v i1_I2C_SlaveGetRxData I2C_SlaveGetRxData `T(uc  1 s 1 i1_I2C_SlaveGetRxData ]
+"422
+[v _I2C_SlaveSendAck I2C_SlaveSendAck `T(v  1 s 1 I2C_SlaveSendAck ]
+"428
+[v _I2C_SlaveSendNack I2C_SlaveSendNack `T(v  1 s 1 I2C_SlaveSendNack ]
+"54 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 "50 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"59
+"60
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"69
+"70
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 "55 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-[s S103 . 1 `uc 1 IOCIF 1 0 :1:0 
+[s S125 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -77,14 +156,14 @@ LOWER 2
 `uc 1 GIE 1 0 :1:7 
 ]
 "374 D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h
-[s S112 . 1 `uc 1 . 1 0 :2:0 
+[s S134 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S117 . 1 `S103 1 . 1 0 `S112 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES117  1 e 1 @11 ]
-[s S489 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S139 . 1 `S125 1 . 1 0 `S134 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES139  1 e 1 @11 ]
+[s S543 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -94,8 +173,20 @@ LOWER 2
 `uc 1 TMR1GIF 1 0 :1:7 
 ]
 "732
-[u S498 . 1 `S489 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES498  1 e 1 @17 ]
+[u S552 . 1 `S543 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES552  1 e 1 @17 ]
+[s S589 . 1 `uc 1 CCP2IF 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 LCDIF 1 0 :1:2 
+`uc 1 BCLIF 1 0 :1:3 
+`uc 1 EEIF 1 0 :1:4 
+`uc 1 C1IF 1 0 :1:5 
+`uc 1 C2IF 1 0 :1:6 
+`uc 1 OSFIF 1 0 :1:7 
+]
+"794
+[u S598 . 1 `S589 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES598  1 e 1 @18 ]
 "1313
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1375
@@ -106,7 +197,7 @@ LOWER 2
 [v _TRISD TRISD `VEuc  1 e 1 @143 ]
 "1561
 [v _TRISE TRISE `VEuc  1 e 1 @144 ]
-[s S248 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S296 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -116,8 +207,20 @@ LOWER 2
 `uc 1 TMR1GIE 1 0 :1:7 
 ]
 "1616
-[u S257 . 1 `S248 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES257  1 e 1 @145 ]
+[u S305 . 1 `S296 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES305  1 e 1 @145 ]
+[s S568 . 1 `uc 1 CCP2IE 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 LCDIE 1 0 :1:2 
+`uc 1 BCLIE 1 0 :1:3 
+`uc 1 EEIE 1 0 :1:4 
+`uc 1 C1IE 1 0 :1:5 
+`uc 1 C2IE 1 0 :1:6 
+`uc 1 OSFIE 1 0 :1:7 
+]
+"1678
+[u S577 . 1 `S568 1 . 1 0 ]
+[v _PIE2bits PIE2bits `VES577  1 e 1 @146 ]
 [s S38 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
@@ -173,7 +276,7 @@ LOWER 2
 [v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
 "3887
 [v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
-[s S346 . 1 `uc 1 RX9D 1 0 :1:0 
+[s S394 . 1 `uc 1 RX9D 1 0 :1:0 
 `uc 1 OERR 1 0 :1:1 
 `uc 1 FERR 1 0 :1:2 
 `uc 1 ADDEN 1 0 :1:3 
@@ -183,11 +286,11 @@ LOWER 2
 `uc 1 SPEN 1 0 :1:7 
 ]
 "3904
-[u S355 . 1 `S346 1 . 1 0 ]
-[v _RCSTAbits RCSTAbits `VES355  1 e 1 @413 ]
+[u S403 . 1 `S394 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES403  1 e 1 @413 ]
 "3949
 [v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
-[s S324 . 1 `uc 1 TX9D 1 0 :1:0 
+[s S372 . 1 `uc 1 TX9D 1 0 :1:0 
 `uc 1 TRMT 1 0 :1:1 
 `uc 1 BRGH 1 0 :1:2 
 `uc 1 SENDB 1 0 :1:3 
@@ -197,14 +300,62 @@ LOWER 2
 `uc 1 CSRC 1 0 :1:7 
 ]
 "3966
-[u S333 . 1 `S324 1 . 1 0 ]
-[v _TXSTAbits TXSTAbits `VES333  1 e 1 @414 ]
+[u S381 . 1 `S372 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES381  1 e 1 @414 ]
 "4011
 [v _BAUDCON BAUDCON `VEuc  1 e 1 @415 ]
 "4063
 [v _WPUB WPUB `VEuc  1 e 1 @525 ]
 "4133
 [v _WPUE WPUE `VEuc  1 e 1 @528 ]
+"4154
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @529 ]
+"4174
+[v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
+"4194
+[v _SSPMSK SSPMSK `VEuc  1 e 1 @531 ]
+"4214
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
+[s S866 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"4231
+[u S875 . 1 `S866 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES875  1 e 1 @532 ]
+"4276
+[v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
+[s S664 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"4298
+[u S673 . 1 `S664 1 . 1 0 ]
+[v _SSPCON1bits SSPCON1bits `VES673  1 e 1 @533 ]
+"4398
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @534 ]
+[s S899 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"4415
+[u S908 . 1 `S899 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES908  1 e 1 @534 ]
 "8874
 [v _RA0 RA0 `VEb  1 e 0 @96 ]
 "8877
@@ -255,10 +406,12 @@ LOWER 2
 [v _RE1 RE1 `VEb  1 e 0 @129 ]
 "8991
 [v _RE2 RE2 `VEb  1 e 0 @130 ]
-"94 D:\Programing\PIC\NixieIndicator.X\main.c
+"87 D:\Programing\PIC\NixieIndicator.X\main.c
 [v _value value `[21]uc  1 e 21 0 ]
-"95
+"88
 [v _receive_index receive_index `c  1 e 1 0 ]
+"89
+[v _is_I2C_interrupt is_I2C_interrupt `uc  1 e 1 0 ]
 "62 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
 [v _eusartTxHead eusartTxHead `VEuc  1 e 1 0 ]
 "63
@@ -273,18 +426,18 @@ LOWER 2
 [v _eusartRxTail eusartRxTail `VEuc  1 e 1 0 ]
 "69
 [v _eusartRxBuffer eusartRxBuffer `VE[8]uc  1 e 8 0 ]
-[s S235 . 1 `uc 1 perr 1 0 :1:0 
+[s S283 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
 `uc 1 oerr 1 0 :1:2 
 `uc 1 reserved 1 0 :5:3 
 ]
 "70
-[u S240 . 1 `S235 1 . 1 0 `uc 1 status 1 0 ]
-[v _eusartRxStatusBuffer eusartRxStatusBuffer `VE[8]S240  1 e 8 0 ]
+[u S288 . 1 `S283 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusartRxStatusBuffer eusartRxStatusBuffer `VE[8]S288  1 e 8 0 ]
 "71
 [v _eusartRxCount eusartRxCount `VEuc  1 e 1 0 ]
 "72
-[v _eusartRxLastError eusartRxLastError `VES240  1 e 1 0 ]
+[v _eusartRxLastError eusartRxLastError `VES288  1 e 1 0 ]
 "77
 [v _EUSART_TxDefaultInterruptHandler EUSART_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
 "78
@@ -295,87 +448,135 @@ LOWER 2
 [v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 e 2 0 ]
 "82
 [v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
-"98 D:\Programing\PIC\NixieIndicator.X\main.c
+"65 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/i2c_slave.c
+[v _i2cWrData i2cWrData `VEuc  1 e 1 0 ]
+"66
+[v _i2cRdData i2cRdData `VEuc  1 e 1 0 ]
+"67
+[v _i2cSlaveAddr i2cSlaveAddr `VEuc  1 e 1 0 ]
+"68
+[v _i2cSlaveState i2cSlaveState `VEE2984  1 s 1 i2cSlaveState ]
+"135 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/i2c_slave.h
+[v _MSSP_InterruptHandler MSSP_InterruptHandler `*.37(v  1 e 2 0 ]
+"136
+[v _I2C_SlaveRdInterruptHandler I2C_SlaveRdInterruptHandler `*.37(v  1 e 2 0 ]
+"137
+[v _I2C_SlaveWrInterruptHandler I2C_SlaveWrInterruptHandler `*.37(v  1 e 2 0 ]
+"138
+[v _I2C_SlaveAddrInterruptHandler I2C_SlaveAddrInterruptHandler `*.37(v  1 e 2 0 ]
+"139
+[v _I2C_SlaveBusColInterruptHandler I2C_SlaveBusColInterruptHandler `*.37(v  1 e 2 0 ]
+"140
+[v _I2C_SlaveWrColInterruptHandler I2C_SlaveWrColInterruptHandler `*.37(v  1 e 2 0 ]
+"102 D:\Programing\PIC\NixieIndicator.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"128
+"139
 } 0
-"131
+"142
 [v _show show `(v  1 e 1 0 ]
 {
-"133
-[v show@chars chars `[20]uc  1 a 20 2 ]
-"137
-[v show@chars_index chars_index `uc  1 a 1 23 ]
-"136
-[v show@value_index value_index `uc  1 a 1 22 ]
-"184
+"144
+[v show@chars chars `[20]uc  1 a 20 0 ]
+"148
+[v show@chars_index chars_index `uc  1 a 1 21 ]
+"147
+[v show@value_index value_index `uc  1 a 1 20 ]
+"195
 } 0
-"192
+"203
 [v _show_character show_character `(v  1 e 1 0 ]
 {
 [v show_character@dot dot `uc  1 a 1 wreg ]
-"195
-[v show_character@group group `E3000  1 a 1 9 ]
-"192
+"206
+[v show_character@group group `E3048  1 a 1 5 ]
+"203
 [v show_character@dot dot `uc  1 a 1 wreg ]
-[v show_character@character character `uc  1 p 1 4 ]
-[v show_character@digit digit `c  1 p 1 5 ]
-"196
-[v show_character@dot dot `uc  1 a 1 8 ]
-"588
+[v show_character@character character `uc  1 p 1 0 ]
+[v show_character@digit digit `c  1 p 1 1 ]
+"207
+[v show_character@dot dot `uc  1 a 1 4 ]
+"599
 } 0
-"594
+"605
 [v _on_digit on_digit `(v  1 e 1 0 ]
 {
 [v on_digit@digit digit `c  1 a 1 wreg ]
 [v on_digit@digit digit `c  1 a 1 wreg ]
-[v on_digit@digit digit `c  1 a 1 3 ]
-"631
+[v on_digit@digit digit `c  1 a 1 5 ]
+"642
 } 0
-"637
+"648
 [v _off_digit off_digit `(v  1 e 1 0 ]
 {
 [v off_digit@digit digit `c  1 a 1 wreg ]
 [v off_digit@digit digit `c  1 a 1 wreg ]
-[v off_digit@digit digit `c  1 a 1 3 ]
-"674
+[v off_digit@digit digit `c  1 a 1 5 ]
+"685
 } 0
-"677
+"694
+[v _receive_char_from_I2C receive_char_from_I2C `(v  1 e 1 0 ]
+{
+"697
+} 0
+"135 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/i2c_slave.c
+[v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
+{
+"138
+} 0
+"412
+[v _I2C_SlaveGetRxData I2C_SlaveGetRxData `T(uc  1 s 1 I2C_SlaveGetRxData ]
+{
+"415
+} 0
+"688 D:\Programing\PIC\NixieIndicator.X\main.c
 [v _receive_char_from_EUSART receive_char_from_EUSART `(v  1 e 1 0 ]
 {
-"684
-[v receive_char_from_EUSART@i i `uc  1 a 1 5 ]
-"679
-[v receive_char_from_EUSART@receive_char receive_char `uc  1 a 1 4 ]
-"694
+"691
+} 0
+"700
+[v _decode_received_char decode_received_char `(v  1 e 1 0 ]
+{
+[v decode_received_char@received_char received_char `uc  1 a 1 wreg ]
+"706
+[v decode_received_char@i i `uc  1 a 1 5 ]
+"700
+[v decode_received_char@received_char received_char `uc  1 a 1 wreg ]
+"702
+[v decode_received_char@received_char received_char `uc  1 a 1 4 ]
+"716
 } 0
 "151 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
 [v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
 {
 "153
-[v EUSART_Read@readValue readValue `uc  1 a 1 2 ]
+[v EUSART_Read@readValue readValue `uc  1 a 1 4 ]
 "171
 } 0
 "50 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"57
+"58
 } 0
-"69
+"70
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 {
-"73
+"74
 } 0
 "55 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "101
 } 0
-"59 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+"60 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"67
+"68
+} 0
+"108 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/i2c_slave.c
+[v _I2C_Initialize I2C_Initialize `(v  1 e 1 0 ]
+{
+"114
 } 0
 "88 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
@@ -385,42 +586,190 @@ LOWER 2
 "276
 [v _EUSART_SetTxInterruptHandler EUSART_SetTxInterruptHandler `(v  1 e 1 0 ]
 {
-[v EUSART_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+[v EUSART_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 3 ]
 "278
 } 0
 "280
 [v _EUSART_SetRxInterruptHandler EUSART_SetRxInterruptHandler `(v  1 e 1 0 ]
 {
-[v EUSART_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+[v EUSART_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 3 ]
 "282
 } 0
 "268
 [v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+[v EUSART_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 3 ]
 "270
 } 0
 "264
 [v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+[v EUSART_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 3 ]
 "266
 } 0
 "272
 [v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
 {
-[v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+[v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 3 ]
 "274
 } 0
-"137
+"116 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/i2c_slave.c
+[v _I2C_Open I2C_Open `(v  1 e 1 0 ]
+{
+"128
+} 0
+"249
+[v _I2C_SlaveSetWriteIntHandler I2C_SlaveSetWriteIntHandler `(v  1 e 1 0 ]
+{
+[v I2C_SlaveSetWriteIntHandler@handler handler `*.37(v  1 p 2 3 ]
+"252
+} 0
+"289
+[v _I2C_SlaveSetWrColIntHandler I2C_SlaveSetWrColIntHandler `(v  1 e 1 0 ]
+{
+[v I2C_SlaveSetWrColIntHandler@handler handler `*.37(v  1 p 2 3 ]
+"292
+} 0
+"352
+[v _I2C_SlaveSetSlaveMask I2C_SlaveSetSlaveMask `T(v  1 s 1 I2C_SlaveSetSlaveMask ]
+{
+[v I2C_SlaveSetSlaveMask@maskAddr maskAddr `uc  1 a 1 wreg ]
+[v I2C_SlaveSetSlaveMask@maskAddr maskAddr `uc  1 a 1 wreg ]
+"354
+[v I2C_SlaveSetSlaveMask@maskAddr maskAddr `uc  1 a 1 3 ]
+"355
+} 0
+"347
+[v _I2C_SlaveSetSlaveAddr I2C_SlaveSetSlaveAddr `T(v  1 s 1 I2C_SlaveSetSlaveAddr ]
+{
+[v I2C_SlaveSetSlaveAddr@slaveAddr slaveAddr `uc  1 a 1 wreg ]
+[v I2C_SlaveSetSlaveAddr@slaveAddr slaveAddr `uc  1 a 1 wreg ]
+"349
+[v I2C_SlaveSetSlaveAddr@slaveAddr slaveAddr `uc  1 a 1 3 ]
+"350
+} 0
+"229
+[v _I2C_SlaveSetReadIntHandler I2C_SlaveSetReadIntHandler `(v  1 e 1 0 ]
+{
+[v I2C_SlaveSetReadIntHandler@handler handler `*.37(v  1 p 2 3 ]
+"232
+} 0
+"223
+[v _I2C_SlaveSetIsrHandler I2C_SlaveSetIsrHandler `(v  1 e 1 0 ]
+{
+[v I2C_SlaveSetIsrHandler@handler handler `*.37(v  1 p 2 3 ]
+"226
+} 0
+"308
+[v _I2C_SlaveSetBusColIntHandler I2C_SlaveSetBusColIntHandler `(v  1 e 1 0 ]
+{
+[v I2C_SlaveSetBusColIntHandler@handler handler `*.37(v  1 p 2 3 ]
+"311
+} 0
+"269
+[v _I2C_SlaveSetAddrIntHandler I2C_SlaveSetAddrIntHandler `(v  1 e 1 0 ]
+{
+[v I2C_SlaveSetAddrIntHandler@handler handler `*.37(v  1 p 2 3 ]
+"272
+} 0
+"326
+[v _I2C_SlaveOpen I2C_SlaveOpen `T(a  1 s 1 I2C_SlaveOpen ]
+{
+"337
+} 0
+"357
+[v _I2C_SlaveEnableIrq I2C_SlaveEnableIrq `T(v  1 s 1 I2C_SlaveEnableIrq ]
+{
+"360
+} 0
+"137 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
 [v _EUSART_is_rx_ready EUSART_is_rx_ready `(a  1 e 1 0 ]
 {
 "140
 } 0
-"52 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
+"54 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
-"74
+"86
+} 0
+"165 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/i2c_slave.c
+[v _I2C_Isr I2C_Isr `(v  1 s 1 I2C_Isr ]
+{
+"220
+} 0
+"254
+[v _I2C_SlaveWrCallBack I2C_SlaveWrCallBack `(v  1 s 1 I2C_SlaveWrCallBack ]
+{
+"261
+} 0
+"263
+[v _I2C_SlaveDefWrInterruptHandler I2C_SlaveDefWrInterruptHandler `(v  1 s 1 I2C_SlaveDefWrInterruptHandler ]
+{
+"266
+} 0
+"407
+[v _I2C_SlaveSendTxData I2C_SlaveSendTxData `T(v  1 s 1 I2C_SlaveSendTxData ]
+{
+[v I2C_SlaveSendTxData@data data `uc  1 a 1 wreg ]
+[v I2C_SlaveSendTxData@data data `uc  1 a 1 wreg ]
+"409
+[v I2C_SlaveSendTxData@data data `uc  1 a 1 0 ]
+"410
+} 0
+"377
+[v _I2C_SlaveReleaseClock I2C_SlaveReleaseClock `T(v  1 s 1 I2C_SlaveReleaseClock ]
+{
+"380
+} 0
+"234
+[v _I2C_SlaveRdCallBack I2C_SlaveRdCallBack `(v  1 s 1 I2C_SlaveRdCallBack ]
+{
+"241
+} 0
+"243
+[v _I2C_SlaveDefRdInterruptHandler I2C_SlaveDefRdInterruptHandler `(v  1 s 1 I2C_SlaveDefRdInterruptHandler ]
+{
+"246
+} 0
+"397
+[v _I2C_SlaveIsTxBufEmpty I2C_SlaveIsTxBufEmpty `T(a  1 s 1 I2C_SlaveIsTxBufEmpty ]
+{
+"400
+} 0
+"402
+[v _I2C_SlaveIsRxBufFull I2C_SlaveIsRxBufFull `T(a  1 s 1 I2C_SlaveIsRxBufFull ]
+{
+"405
+} 0
+"367
+[v _I2C_SlaveIsRead I2C_SlaveIsRead `T(a  1 s 1 I2C_SlaveIsRead ]
+{
+"370
+} 0
+"362
+[v _I2C_SlaveIsAddr I2C_SlaveIsAddr `T(a  1 s 1 I2C_SlaveIsAddr ]
+{
+"365
+} 0
+"372
+[v _I2C_SlaveClearIrq I2C_SlaveClearIrq `T(v  1 s 1 I2C_SlaveClearIrq ]
+{
+"375
+} 0
+"274
+[v _I2C_SlaveAddrCallBack I2C_SlaveAddrCallBack `(v  1 s 1 I2C_SlaveAddrCallBack ]
+{
+"281
+} 0
+"283
+[v _I2C_SlaveDefAddrInterruptHandler I2C_SlaveDefAddrInterruptHandler `(v  1 s 1 I2C_SlaveDefAddrInterruptHandler ]
+{
+"286
+} 0
+"412
+[v i1_I2C_SlaveGetRxData I2C_SlaveGetRxData `T(uc  1 s 1 i1_I2C_SlaveGetRxData ]
+{
+"415
 } 0
 "197 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
 [v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]

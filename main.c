@@ -74,12 +74,19 @@
 #define LIGHTING_TIME 800   // 点灯時間(us)
 #define EXTINCTION_TIME 200 // 消灯時間(us)
 
+// ダイナミック制御のグループ型
 typedef enum
 {
   UPPER,
   MIDDLE,
   LOWER,
 } NIXIE_GLOUP;
+
+// グローバル変数
+// 0から最上位けた
+char value[DIGITS * 2 + 1] = "";
+signed char receive_index = 0;      // 現在の受信文字のインデックス
+unsigned char is_I2C_interrupt = 0; // I2Cの割り込みフラグ
 
 // 関数プロトタイプ
 
@@ -88,11 +95,8 @@ void show_character(char, char, signed char);
 void on_digit(signed char);
 void off_digit(signed char);
 void receive_char_from_EUSART(void);
-
-// グローバル変数
-// 0から最上位けた
-char value[DIGITS * 2 + 1] = "";
-signed char receive_index = 0; // 現在の受信文字のインデックス
+void receive_char_from_I2C(void);
+void decode_received_char(char);
 
 /* Main application */
 void main(void)
@@ -115,6 +119,8 @@ void main(void)
   // Disable the Peripheral Interrupts
   // INTERRUPT_PeripheralInterruptDisable();
 
+  I2C_Open(); // I2C通信を有効化
+
   while (1)
   {
     if (EUSART_is_rx_ready())
@@ -122,6 +128,11 @@ void main(void)
       receive_char_from_EUSART(); // EUSARTからデータが送られてきていたら受け取る
     }
 
+    if (is_I2C_interrupt)
+    {
+      is_I2C_interrupt = 0;
+      receive_char_from_I2C(); // I2Cからデータが送られてきていたら受け取る
+    }
     // 表示
     show();
   }
@@ -676,8 +687,19 @@ void off_digit(signed char digit)
 /* EUSARTから表示値を受け取る関数*/
 void receive_char_from_EUSART(void)
 {
-  char receive_char = EUSART_Read();
-  if ((receive_char == '$') || (receive_index > DIGITS * 2))
+  decode_received_char(EUSART_Read());
+}
+
+/* I2Cから表示値を受け取る関数 */
+void receive_char_from_I2C(void)
+{
+  decode_received_char(I2C_Read());
+}
+
+/* 受け取った文字を解釈し，表示値に登録する関数 */
+void decode_received_char(char received_char)
+{
+  if ((received_char == '$') || (receive_index > DIGITS * 2))
   {
     // $を受け取った・文字幅を超えたら文字数インデックスと表示値をリセット
     receive_index = 0;
@@ -688,7 +710,7 @@ void receive_char_from_EUSART(void)
   }
   else
   {
-    value[receive_index] = receive_char;
+    value[receive_index] = received_char;
     receive_index++;
   }
 }

@@ -5281,9 +5281,9 @@ extern __bank0 __bit __timeout;
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 550 "mcc_generated_files/pin_manager.h"
+# 544 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 562 "mcc_generated_files/pin_manager.h"
+# 556 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
@@ -5413,6 +5413,91 @@ extern void cputs(const char *);
 # 1 "mcc_generated_files/interrupt_manager.h" 1
 # 55 "mcc_generated_files/mcc.h" 2
 
+# 1 "mcc_generated_files/i2c_slave.h" 1
+# 53 "mcc_generated_files/i2c_slave.h"
+typedef void (*i2cInterruptHandler)(void);
+
+
+
+
+
+
+
+void I2C_Initialize(void);
+
+
+
+
+
+
+void I2C_Open(void);
+
+
+
+
+
+
+
+void I2C_Close(void);
+
+
+
+
+
+
+uint8_t I2C_Read(void);
+
+
+
+
+
+
+void I2C_Write(uint8_t data);
+# 99 "mcc_generated_files/i2c_slave.h"
+_Bool I2C_IsRead(void);
+
+
+
+
+
+
+void I2C_Enable(void);
+
+
+
+
+
+
+void I2C_SendAck(void);
+
+
+
+
+
+
+void I2C_SendNack(void);
+
+
+
+
+
+
+
+void I2C_SlaveSetIsrHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetAddrIntHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetReadIntHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetWriteIntHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetBusColIntHandler(i2cInterruptHandler handler);
+void I2C_SlaveSetWrColIntHandler(i2cInterruptHandler handler);
+
+void (*MSSP_InterruptHandler)(void);
+void (*I2C_SlaveRdInterruptHandler)(void);
+void (*I2C_SlaveWrInterruptHandler)(void);
+void (*I2C_SlaveAddrInterruptHandler)(void);
+void (*I2C_SlaveBusColInterruptHandler)(void);
+void (*I2C_SlaveWrColInterruptHandler)(void);
+# 56 "mcc_generated_files/mcc.h" 2
+
 # 1 "mcc_generated_files/eusart.h" 1
 # 75 "mcc_generated_files/eusart.h"
 typedef union {
@@ -5466,12 +5551,12 @@ void EUSART_SetErrorHandler(void (* interruptHandler)(void));
 void EUSART_SetTxInterruptHandler(void (* interruptHandler)(void));
 # 505 "mcc_generated_files/eusart.h"
 void EUSART_SetRxInterruptHandler(void (* interruptHandler)(void));
-# 56 "mcc_generated_files/mcc.h" 2
-# 71 "mcc_generated_files/mcc.h"
+# 57 "mcc_generated_files/mcc.h" 2
+# 72 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 84 "mcc_generated_files/mcc.h"
+# 85 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 96 "mcc_generated_files/mcc.h"
+# 97 "mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 47 "mcc_generated_files/mcc.c" 2
 
@@ -5480,6 +5565,7 @@ void WDT_Initialize(void);
 void SYSTEM_Initialize(void)
 {
 
+    I2C_Initialize();
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     WDT_Initialize();

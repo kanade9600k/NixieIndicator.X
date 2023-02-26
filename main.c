@@ -83,13 +83,16 @@ typedef enum
 
 // 関数プロトタイプ
 
+void show(void);
 void show_character(char, char, signed char);
 void on_digit(signed char);
 void off_digit(signed char);
+void receive_char_from_EUSART(void);
 
 // グローバル変数
-// 0,1: 最上位桁のドット, 数字・文字 ... 18, 19: 最下位桁のドット, 数字・文字 (現状10桁)
-char chars[DIGITS * 2] = {'.', '0', '.', '1', ' ', '2', ' ', '3', ' ', '4', ' ', '5', '.', '6', ' ', '7', ' ', 'k', ' ', 'h'};
+// 0から最上位けた
+char value[DIGITS * 2 + 1] = "";
+signed char receive_index = 0; // 現在の受信文字のインデックス
 
 /* Main application */
 void main(void)
@@ -114,38 +117,70 @@ void main(void)
 
   while (1)
   {
-    show_character(chars[0], chars[1], 0);
-    show_character(chars[8], chars[9], 4);
-    show_character(chars[16], chars[17], 8);
-    __delay_us(LIGHTING_TIME);
-    off_digit(0);
-    off_digit(4);
-    off_digit(8);
-    __delay_us(EXTINCTION_TIME);
+    if (EUSART_is_rx_ready())
+    {
+      receive_char_from_EUSART(); // EUSARTからデータが送られてきていたら受け取る
+    }
 
-    show_character(chars[2], chars[3], 1);
-    show_character(chars[10], chars[11], 5);
-    show_character(chars[18], chars[19], 9);
-    __delay_us(LIGHTING_TIME);
-    off_digit(1);
-    off_digit(5);
-    off_digit(9);
-    __delay_us(EXTINCTION_TIME);
-
-    show_character(chars[4], chars[5], 2);
-    show_character(chars[12], chars[13], 6);
-    __delay_us(LIGHTING_TIME);
-    off_digit(2);
-    off_digit(6);
-    __delay_us(EXTINCTION_TIME);
-
-    show_character(chars[6], chars[7], 3);
-    show_character(chars[14], chars[15], 7);
-    __delay_us(LIGHTING_TIME);
-    off_digit(3);
-    off_digit(7);
-    __delay_us(EXTINCTION_TIME);
+    // 表示
+    show();
   }
+}
+
+/* 現在保持している値を表示する関数 */
+void show(void)
+{
+  char chars[DIGITS * 2]; // 表示用に変換した文字配列
+  // 変換
+  // for (unsigned char i = 0; i < DIGITS * 2; i++)
+  unsigned char value_index = 0;
+  unsigned char chars_index = 0;
+  while (chars_index < DIGITS * 2)
+  {
+    if (value[value_index] == '.')
+    {
+      chars[chars_index++] = value[value_index++];
+      chars[chars_index++] = value[value_index++];
+    }
+    else
+    {
+      chars[chars_index++] = ' '; // 空白を代入後，インクリメント
+      chars[chars_index++] = value[value_index++];
+    }
+  }
+
+  // 表示
+  show_character(chars[0], chars[1], 0);
+  show_character(chars[8], chars[9], 4);
+  show_character(chars[16], chars[17], 8);
+  __delay_us(LIGHTING_TIME);
+  off_digit(0);
+  off_digit(4);
+  off_digit(8);
+  __delay_us(EXTINCTION_TIME);
+
+  show_character(chars[2], chars[3], 1);
+  show_character(chars[10], chars[11], 5);
+  show_character(chars[18], chars[19], 9);
+  __delay_us(LIGHTING_TIME);
+  off_digit(1);
+  off_digit(5);
+  off_digit(9);
+  __delay_us(EXTINCTION_TIME);
+
+  show_character(chars[4], chars[5], 2);
+  show_character(chars[12], chars[13], 6);
+  __delay_us(LIGHTING_TIME);
+  off_digit(2);
+  off_digit(6);
+  __delay_us(EXTINCTION_TIME);
+
+  show_character(chars[6], chars[7], 3);
+  show_character(chars[14], chars[15], 7);
+  __delay_us(LIGHTING_TIME);
+  off_digit(3);
+  off_digit(7);
+  __delay_us(EXTINCTION_TIME);
 }
 
 /* ニキシー管に数字・文字を表示する関数
@@ -552,6 +587,10 @@ void show_character(char dot, char character, signed char digit)
   on_digit(digit);
 }
 
+/* 選択した桁のニキシー管を点灯する関数
+  引数:
+    digit (signed char): 点灯桁
+*/
 void on_digit(signed char digit)
 {
   switch (digit)
@@ -591,6 +630,10 @@ void on_digit(signed char digit)
   }
 }
 
+/* 選択した桁のニキシー管を消灯する関数
+  引数:
+    digit (signed char): 消灯桁
+*/
 void off_digit(signed char digit)
 {
   switch (digit)
@@ -629,6 +672,27 @@ void off_digit(signed char digit)
     break;
   }
 }
+
+/* EUSARTから表示値を受け取る関数*/
+void receive_char_from_EUSART(void)
+{
+  char receive_char = EUSART_Read();
+  if ((receive_char == '$') || (receive_index > DIGITS * 2))
+  {
+    // $を受け取った・文字幅を超えたら文字数インデックスと表示値をリセット
+    receive_index = 0;
+    for (unsigned char i = 0; i < DIGITS * 2; i++)
+    {
+      value[i] = ' ';
+    }
+  }
+  else
+  {
+    value[receive_index] = receive_char;
+    receive_index++;
+  }
+}
+
 // /**
 //  End of File
 // */

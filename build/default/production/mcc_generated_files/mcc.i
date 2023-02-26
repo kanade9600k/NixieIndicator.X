@@ -5281,9 +5281,9 @@ extern __bank0 __bit __timeout;
 # 50 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/pin_manager.h" 1
-# 556 "mcc_generated_files/pin_manager.h"
+# 550 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 568 "mcc_generated_files/pin_manager.h"
+# 562 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "mcc_generated_files/mcc.h" 2
 
@@ -5409,11 +5409,69 @@ extern __bit kbhit(void);
 extern char * cgets(char *);
 extern void cputs(const char *);
 # 54 "mcc_generated_files/mcc.h" 2
-# 69 "mcc_generated_files/mcc.h"
+
+# 1 "mcc_generated_files/interrupt_manager.h" 1
+# 55 "mcc_generated_files/mcc.h" 2
+
+# 1 "mcc_generated_files/eusart.h" 1
+# 75 "mcc_generated_files/eusart.h"
+typedef union {
+    struct {
+        unsigned perr : 1;
+        unsigned ferr : 1;
+        unsigned oerr : 1;
+        unsigned reserved : 5;
+    };
+    uint8_t status;
+}eusart_status_t;
+
+
+
+
+extern volatile uint8_t eusartTxBufferRemaining;
+extern volatile uint8_t eusartRxCount;
+
+
+
+
+extern void (*EUSART_TxDefaultInterruptHandler)(void);
+extern void (*EUSART_RxDefaultInterruptHandler)(void);
+# 117 "mcc_generated_files/eusart.h"
+void EUSART_Initialize(void);
+# 165 "mcc_generated_files/eusart.h"
+_Bool EUSART_is_tx_ready(void);
+# 213 "mcc_generated_files/eusart.h"
+_Bool EUSART_is_rx_ready(void);
+# 260 "mcc_generated_files/eusart.h"
+_Bool EUSART_is_tx_done(void);
+# 308 "mcc_generated_files/eusart.h"
+eusart_status_t EUSART_get_last_status(void);
+# 328 "mcc_generated_files/eusart.h"
+uint8_t EUSART_Read(void);
+# 348 "mcc_generated_files/eusart.h"
+void EUSART_Write(uint8_t txData);
+# 369 "mcc_generated_files/eusart.h"
+void EUSART_Transmit_ISR(void);
+# 390 "mcc_generated_files/eusart.h"
+void EUSART_Receive_ISR(void);
+# 411 "mcc_generated_files/eusart.h"
+void EUSART_RxDataHandler(void);
+# 429 "mcc_generated_files/eusart.h"
+void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
+# 447 "mcc_generated_files/eusart.h"
+void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
+# 465 "mcc_generated_files/eusart.h"
+void EUSART_SetErrorHandler(void (* interruptHandler)(void));
+# 485 "mcc_generated_files/eusart.h"
+void EUSART_SetTxInterruptHandler(void (* interruptHandler)(void));
+# 505 "mcc_generated_files/eusart.h"
+void EUSART_SetRxInterruptHandler(void (* interruptHandler)(void));
+# 56 "mcc_generated_files/mcc.h" 2
+# 71 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 82 "mcc_generated_files/mcc.h"
+# 84 "mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 94 "mcc_generated_files/mcc.h"
+# 96 "mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 47 "mcc_generated_files/mcc.c" 2
 
@@ -5425,6 +5483,7 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     WDT_Initialize();
+    EUSART_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)

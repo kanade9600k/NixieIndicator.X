@@ -5281,9 +5281,9 @@ extern __bank0 __bit __timeout;
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 556 "./mcc_generated_files/pin_manager.h"
+# 550 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 568 "./mcc_generated_files/pin_manager.h"
+# 562 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -5409,11 +5409,69 @@ extern __bit kbhit(void);
 extern char * cgets(char *);
 extern void cputs(const char *);
 # 54 "./mcc_generated_files/mcc.h" 2
-# 69 "./mcc_generated_files/mcc.h"
+
+# 1 "./mcc_generated_files/interrupt_manager.h" 1
+# 55 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/eusart.h" 1
+# 75 "./mcc_generated_files/eusart.h"
+typedef union {
+    struct {
+        unsigned perr : 1;
+        unsigned ferr : 1;
+        unsigned oerr : 1;
+        unsigned reserved : 5;
+    };
+    uint8_t status;
+}eusart_status_t;
+
+
+
+
+extern volatile uint8_t eusartTxBufferRemaining;
+extern volatile uint8_t eusartRxCount;
+
+
+
+
+extern void (*EUSART_TxDefaultInterruptHandler)(void);
+extern void (*EUSART_RxDefaultInterruptHandler)(void);
+# 117 "./mcc_generated_files/eusart.h"
+void EUSART_Initialize(void);
+# 165 "./mcc_generated_files/eusart.h"
+_Bool EUSART_is_tx_ready(void);
+# 213 "./mcc_generated_files/eusart.h"
+_Bool EUSART_is_rx_ready(void);
+# 260 "./mcc_generated_files/eusart.h"
+_Bool EUSART_is_tx_done(void);
+# 308 "./mcc_generated_files/eusart.h"
+eusart_status_t EUSART_get_last_status(void);
+# 328 "./mcc_generated_files/eusart.h"
+uint8_t EUSART_Read(void);
+# 348 "./mcc_generated_files/eusart.h"
+void EUSART_Write(uint8_t txData);
+# 369 "./mcc_generated_files/eusart.h"
+void EUSART_Transmit_ISR(void);
+# 390 "./mcc_generated_files/eusart.h"
+void EUSART_Receive_ISR(void);
+# 411 "./mcc_generated_files/eusart.h"
+void EUSART_RxDataHandler(void);
+# 429 "./mcc_generated_files/eusart.h"
+void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
+# 447 "./mcc_generated_files/eusart.h"
+void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
+# 465 "./mcc_generated_files/eusart.h"
+void EUSART_SetErrorHandler(void (* interruptHandler)(void));
+# 485 "./mcc_generated_files/eusart.h"
+void EUSART_SetTxInterruptHandler(void (* interruptHandler)(void));
+# 505 "./mcc_generated_files/eusart.h"
+void EUSART_SetRxInterruptHandler(void (* interruptHandler)(void));
+# 56 "./mcc_generated_files/mcc.h" 2
+# 71 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 82 "./mcc_generated_files/mcc.h"
+# 84 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 94 "./mcc_generated_files/mcc.h"
+# 96 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 43 "main.c" 2
 # 77 "main.c"
@@ -5426,54 +5484,104 @@ typedef enum
 
 
 
+void show(void);
 void show_character(char, char, signed char);
 void on_digit(signed char);
 void off_digit(signed char);
+void receive_char_from_EUSART(void);
 
 
 
-char chars[10 * 2] = {'.', '0', '.', '1', ' ', '2', ' ', '3', ' ', '4', ' ', '5', '.', '6', ' ', '7', ' ', 'k', ' ', 'h'};
+char value[10 * 2 + 1] = "";
+signed char receive_index = 0;
 
 
 void main(void)
 {
 
   SYSTEM_Initialize();
-# 115 "main.c"
+
+
+
+
+
+  (INTCONbits.GIE = 1);
+
+
+  (INTCONbits.PEIE = 1);
+
+
+
+
+
+
+
   while (1)
   {
-    show_character(chars[0], chars[1], 0);
-    show_character(chars[8], chars[9], 4);
-    show_character(chars[16], chars[17], 8);
-    _delay((unsigned long)((800)*(8000000/4000000.0)));
-    off_digit(0);
-    off_digit(4);
-    off_digit(8);
-    _delay((unsigned long)((200)*(8000000/4000000.0)));
+    if (EUSART_is_rx_ready())
+    {
+      receive_char_from_EUSART();
+    }
 
-    show_character(chars[2], chars[3], 1);
-    show_character(chars[10], chars[11], 5);
-    show_character(chars[18], chars[19], 9);
-    _delay((unsigned long)((800)*(8000000/4000000.0)));
-    off_digit(1);
-    off_digit(5);
-    off_digit(9);
-    _delay((unsigned long)((200)*(8000000/4000000.0)));
 
-    show_character(chars[4], chars[5], 2);
-    show_character(chars[12], chars[13], 6);
-    _delay((unsigned long)((800)*(8000000/4000000.0)));
-    off_digit(2);
-    off_digit(6);
-    _delay((unsigned long)((200)*(8000000/4000000.0)));
-
-    show_character(chars[6], chars[7], 3);
-    show_character(chars[14], chars[15], 7);
-    _delay((unsigned long)((800)*(8000000/4000000.0)));
-    off_digit(3);
-    off_digit(7);
-    _delay((unsigned long)((200)*(8000000/4000000.0)));
+    show();
   }
+}
+
+
+void show(void)
+{
+  char chars[10 * 2];
+
+
+  unsigned char value_index = 0;
+  unsigned char chars_index = 0;
+  while (chars_index < 10 * 2)
+  {
+    if (value[value_index] == '.')
+    {
+      chars[chars_index++] = value[value_index++];
+      chars[chars_index++] = value[value_index++];
+    }
+    else
+    {
+      chars[chars_index++] = ' ';
+      chars[chars_index++] = value[value_index++];
+    }
+  }
+
+
+  show_character(chars[0], chars[1], 0);
+  show_character(chars[8], chars[9], 4);
+  show_character(chars[16], chars[17], 8);
+  _delay((unsigned long)((800)*(8000000/4000000.0)));
+  off_digit(0);
+  off_digit(4);
+  off_digit(8);
+  _delay((unsigned long)((200)*(8000000/4000000.0)));
+
+  show_character(chars[2], chars[3], 1);
+  show_character(chars[10], chars[11], 5);
+  show_character(chars[18], chars[19], 9);
+  _delay((unsigned long)((800)*(8000000/4000000.0)));
+  off_digit(1);
+  off_digit(5);
+  off_digit(9);
+  _delay((unsigned long)((200)*(8000000/4000000.0)));
+
+  show_character(chars[4], chars[5], 2);
+  show_character(chars[12], chars[13], 6);
+  _delay((unsigned long)((800)*(8000000/4000000.0)));
+  off_digit(2);
+  off_digit(6);
+  _delay((unsigned long)((200)*(8000000/4000000.0)));
+
+  show_character(chars[6], chars[7], 3);
+  show_character(chars[14], chars[15], 7);
+  _delay((unsigned long)((800)*(8000000/4000000.0)));
+  off_digit(3);
+  off_digit(7);
+  _delay((unsigned long)((200)*(8000000/4000000.0)));
 }
 
 
@@ -5880,6 +5988,10 @@ void show_character(char dot, char character, signed char digit)
   on_digit(digit);
 }
 
+
+
+
+
 void on_digit(signed char digit)
 {
   switch (digit)
@@ -5919,6 +6031,10 @@ void on_digit(signed char digit)
   }
 }
 
+
+
+
+
 void off_digit(signed char digit)
 {
   switch (digit)
@@ -5955,5 +6071,25 @@ void off_digit(signed char digit)
     break;
   default:
     break;
+  }
+}
+
+
+void receive_char_from_EUSART(void)
+{
+  char receive_char = EUSART_Read();
+  if ((receive_char == '$') || (receive_index > 10 * 2))
+  {
+
+    receive_index = 0;
+    for (unsigned char i = 0; i < 10 * 2; i++)
+    {
+      value[i] = ' ';
+    }
+  }
+  else
+  {
+    value[receive_index] = receive_char;
+    receive_index++;
   }
 }

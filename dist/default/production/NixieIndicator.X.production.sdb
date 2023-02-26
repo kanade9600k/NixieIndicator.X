@@ -3,8 +3,8 @@
 [d edition pro ]
 [d chip 16F1939 ]
 [d frameptr 6 ]
-"160 D:\Programing\PIC\NixieIndicator.X\main.c
-[e E2954 . `uc
+"195 D:\Programing\PIC\NixieIndicator.X\main.c
+[e E3000 . `uc
 UPPER 0
 MIDDLE 1
 LOWER 2
@@ -17,23 +17,86 @@ LOWER 2
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"95 D:\Programing\PIC\NixieIndicator.X\main.c
+"98 D:\Programing\PIC\NixieIndicator.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"157
+"131
+[v _show show `(v  1 e 1 0 ]
+"192
 [v _show_character show_character `(v  1 e 1 0 ]
-"555
-[v _on_digit on_digit `(v  1 e 1 0 ]
 "594
+[v _on_digit on_digit `(v  1 e 1 0 ]
+"637
 [v _off_digit off_digit `(v  1 e 1 0 ]
+"677
+[v _receive_char_from_EUSART receive_char_from_EUSART `(v  1 e 1 0 ]
+"88 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+"137
+[v _EUSART_is_rx_ready EUSART_is_rx_ready `(a  1 e 1 0 ]
+"151
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+"197
+[v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
+"216
+[v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
+"240
+[v _EUSART_RxDataHandler EUSART_RxDataHandler `(v  1 e 1 0 ]
+"250
+[v _EUSART_DefaultFramingErrorHandler EUSART_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+"252
+[v _EUSART_DefaultOverrunErrorHandler EUSART_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+"260
+[v _EUSART_DefaultErrorHandler EUSART_DefaultErrorHandler `(v  1 e 1 0 ]
+"264
+[v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
+"268
+[v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
+"272
+[v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
+"276
+[v _EUSART_SetTxInterruptHandler EUSART_SetTxInterruptHandler `(v  1 e 1 0 ]
+"280
+[v _EUSART_SetRxInterruptHandler EUSART_SetRxInterruptHandler `(v  1 e 1 0 ]
+"52 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 "50 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"58
+"59
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
-"68
+"69
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 "55 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"1313 D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h
+[s S103 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h
+[s S112 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S117 . 1 `S103 1 . 1 0 `S112 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES117  1 e 1 @11 ]
+[s S489 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"732
+[u S498 . 1 `S489 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES498  1 e 1 @17 ]
+"1313
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1375
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
@@ -43,6 +106,18 @@ LOWER 2
 [v _TRISD TRISD `VEuc  1 e 1 @143 ]
 "1561
 [v _TRISE TRISE `VEuc  1 e 1 @144 ]
+[s S248 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1616
+[u S257 . 1 `S248 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES257  1 e 1 @145 ]
 [s S38 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
@@ -88,6 +163,44 @@ LOWER 2
 [v _ANSELD ANSELD `VEuc  1 e 1 @399 ]
 "3514
 [v _ANSELE ANSELE `VEuc  1 e 1 @400 ]
+"3748
+[v _RCREG RCREG `VEuc  1 e 1 @409 ]
+"3768
+[v _TXREG TXREG `VEuc  1 e 1 @410 ]
+"3804
+[v _SPBRGL SPBRGL `VEuc  1 e 1 @411 ]
+"3854
+[v _SPBRGH SPBRGH `VEuc  1 e 1 @412 ]
+"3887
+[v _RCSTA RCSTA `VEuc  1 e 1 @413 ]
+[s S346 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"3904
+[u S355 . 1 `S346 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES355  1 e 1 @413 ]
+"3949
+[v _TXSTA TXSTA `VEuc  1 e 1 @414 ]
+[s S324 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"3966
+[u S333 . 1 `S324 1 . 1 0 ]
+[v _TXSTAbits TXSTAbits `VES333  1 e 1 @414 ]
+"4011
+[v _BAUDCON BAUDCON `VEuc  1 e 1 @415 ]
 "4063
 [v _WPUB WPUB `VEuc  1 e 1 @525 ]
 "4133
@@ -142,60 +255,199 @@ LOWER 2
 [v _RE1 RE1 `VEb  1 e 0 @129 ]
 "8991
 [v _RE2 RE2 `VEb  1 e 0 @130 ]
-"92 D:\Programing\PIC\NixieIndicator.X\main.c
-[v _chars chars `[20]uc  1 e 20 0 ]
+"94 D:\Programing\PIC\NixieIndicator.X\main.c
+[v _value value `[21]uc  1 e 21 0 ]
 "95
+[v _receive_index receive_index `c  1 e 1 0 ]
+"62 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+[v _eusartTxHead eusartTxHead `VEuc  1 e 1 0 ]
+"63
+[v _eusartTxTail eusartTxTail `VEuc  1 e 1 0 ]
+"64
+[v _eusartTxBuffer eusartTxBuffer `VE[8]uc  1 e 8 0 ]
+"65
+[v _eusartTxBufferRemaining eusartTxBufferRemaining `VEuc  1 e 1 0 ]
+"67
+[v _eusartRxHead eusartRxHead `VEuc  1 e 1 0 ]
+"68
+[v _eusartRxTail eusartRxTail `VEuc  1 e 1 0 ]
+"69
+[v _eusartRxBuffer eusartRxBuffer `VE[8]uc  1 e 8 0 ]
+[s S235 . 1 `uc 1 perr 1 0 :1:0 
+`uc 1 ferr 1 0 :1:1 
+`uc 1 oerr 1 0 :1:2 
+`uc 1 reserved 1 0 :5:3 
+]
+"70
+[u S240 . 1 `S235 1 . 1 0 `uc 1 status 1 0 ]
+[v _eusartRxStatusBuffer eusartRxStatusBuffer `VE[8]S240  1 e 8 0 ]
+"71
+[v _eusartRxCount eusartRxCount `VEuc  1 e 1 0 ]
+"72
+[v _eusartRxLastError eusartRxLastError `VES240  1 e 1 0 ]
+"77
+[v _EUSART_TxDefaultInterruptHandler EUSART_TxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
+"78
+[v _EUSART_RxDefaultInterruptHandler EUSART_RxDefaultInterruptHandler `*.37(v  1 e 2 0 ]
+"80
+[v _EUSART_FramingErrorHandler EUSART_FramingErrorHandler `*.37(v  1 e 2 0 ]
+"81
+[v _EUSART_OverrunErrorHandler EUSART_OverrunErrorHandler `*.37(v  1 e 2 0 ]
+"82
+[v _EUSART_ErrorHandler EUSART_ErrorHandler `*.37(v  1 e 2 0 ]
+"98 D:\Programing\PIC\NixieIndicator.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"149
+"128
 } 0
-"157
+"131
+[v _show show `(v  1 e 1 0 ]
+{
+"133
+[v show@chars chars `[20]uc  1 a 20 2 ]
+"137
+[v show@chars_index chars_index `uc  1 a 1 23 ]
+"136
+[v show@value_index value_index `uc  1 a 1 22 ]
+"184
+} 0
+"192
 [v _show_character show_character `(v  1 e 1 0 ]
 {
 [v show_character@dot dot `uc  1 a 1 wreg ]
-"160
-[v show_character@group group `E2954  1 a 1 8 ]
-"157
+"195
+[v show_character@group group `E3000  1 a 1 9 ]
+"192
 [v show_character@dot dot `uc  1 a 1 wreg ]
-[v show_character@character character `uc  1 p 1 3 ]
-[v show_character@digit digit `c  1 p 1 4 ]
-"161
-[v show_character@dot dot `uc  1 a 1 7 ]
-"553
+[v show_character@character character `uc  1 p 1 4 ]
+[v show_character@digit digit `c  1 p 1 5 ]
+"196
+[v show_character@dot dot `uc  1 a 1 8 ]
+"588
 } 0
-"555
+"594
 [v _on_digit on_digit `(v  1 e 1 0 ]
 {
 [v on_digit@digit digit `c  1 a 1 wreg ]
 [v on_digit@digit digit `c  1 a 1 wreg ]
-[v on_digit@digit digit `c  1 a 1 2 ]
-"592
+[v on_digit@digit digit `c  1 a 1 3 ]
+"631
 } 0
-"594
+"637
 [v _off_digit off_digit `(v  1 e 1 0 ]
 {
 [v off_digit@digit digit `c  1 a 1 wreg ]
 [v off_digit@digit digit `c  1 a 1 wreg ]
-[v off_digit@digit digit `c  1 a 1 2 ]
-"631
+[v off_digit@digit digit `c  1 a 1 3 ]
+"674
+} 0
+"677
+[v _receive_char_from_EUSART receive_char_from_EUSART `(v  1 e 1 0 ]
+{
+"684
+[v receive_char_from_EUSART@i i `uc  1 a 1 5 ]
+"679
+[v receive_char_from_EUSART@receive_char receive_char `uc  1 a 1 4 ]
+"694
+} 0
+"151 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+[v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]
+{
+"153
+[v EUSART_Read@readValue readValue `uc  1 a 1 2 ]
+"171
 } 0
 "50 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
-"56
+"57
 } 0
-"68
+"69
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 {
-"72
+"73
 } 0
 "55 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "101
 } 0
-"58 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+"59 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
-"66
+"67
+} 0
+"88 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+[v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
+{
+"130
+} 0
+"276
+[v _EUSART_SetTxInterruptHandler EUSART_SetTxInterruptHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetTxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"278
+} 0
+"280
+[v _EUSART_SetRxInterruptHandler EUSART_SetRxInterruptHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetRxInterruptHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"282
+} 0
+"268
+[v _EUSART_SetOverrunErrorHandler EUSART_SetOverrunErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetOverrunErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"270
+} 0
+"264
+[v _EUSART_SetFramingErrorHandler EUSART_SetFramingErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetFramingErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"266
+} 0
+"272
+[v _EUSART_SetErrorHandler EUSART_SetErrorHandler `(v  1 e 1 0 ]
+{
+[v EUSART_SetErrorHandler@interruptHandler interruptHandler `*.37(v  1 p 2 1 ]
+"274
+} 0
+"137
+[v _EUSART_is_rx_ready EUSART_is_rx_ready `(a  1 e 1 0 ]
+{
+"140
+} 0
+"52 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"74
+} 0
+"197 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+[v _EUSART_Transmit_ISR EUSART_Transmit_ISR `(v  1 e 1 0 ]
+{
+"214
+} 0
+"216
+[v _EUSART_Receive_ISR EUSART_Receive_ISR `(v  1 e 1 0 ]
+{
+"238
+} 0
+"252
+[v _EUSART_DefaultOverrunErrorHandler EUSART_DefaultOverrunErrorHandler `(v  1 e 1 0 ]
+{
+"258
+} 0
+"250
+[v _EUSART_DefaultFramingErrorHandler EUSART_DefaultFramingErrorHandler `(v  1 e 1 0 ]
+{
+} 0
+"260
+[v _EUSART_DefaultErrorHandler EUSART_DefaultErrorHandler `(v  1 e 1 0 ]
+{
+"262
+} 0
+"240
+[v _EUSART_RxDataHandler EUSART_RxDataHandler `(v  1 e 1 0 ]
+{
+"248
 } 0

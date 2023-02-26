@@ -62,6 +62,14 @@ void __interrupt() INTERRUPT_InterruptManager (void)
         {
             EUSART_RxDefaultInterruptHandler();
         } 
+        else if(PIE2bits.BCLIE == 1 && PIR2bits.BCLIF == 1)
+        {
+            MSSP_InterruptHandler();
+        } 
+        else if(PIE1bits.SSPIE == 1 && PIR1bits.SSPIF == 1)
+        {
+            MSSP_InterruptHandler();
+        } 
         else
         {
             //Unhandled Interrupt

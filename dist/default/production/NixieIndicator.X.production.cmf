@@ -12,23 +12,43 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\NixieIndicator.X.production.o
-cinit CODE 0 7F1 7F1 F 2
-text1 CODE 0 594 594 25D 2
-text2 CODE 0 472 472 4B 2
-text3 CODE 0 427 427 4B 2
-text4 CODE 0 3EF 3EF A 2
-text5 CODE 0 3DE 3DE 4 2
-text6 CODE 0 40D 40D 1A 2
-text7 CODE 0 3E8 3E8 7 2
-maintext CODE 0 4BD 4BD D7 2
-cstackCOMMON COMMON 1 70 70 B 1
-inittext CODE 0 3E2 3E2 6 2
-idataBANK0 CODE 0 3F9 3F9 14 2
-dataBANK0 BANK0 1 20 20 14 1
+cinit CODE 0 2E 2E 16 2
+text1 CODE 0 2A1 2A1 12E 2
+text2 CODE 0 44 44 25D 2
+text3 CODE 0 3CF 3CF 4B 2
+text4 CODE 0 41A 41A 4B 2
+text5 CODE 0 4DD 4DD 37 2
+text6 CODE 0 514 514 2A 2
+text7 CODE 0 5AB 5AB D 2
+text8 CODE 0 5EC 5EC 4 2
+text9 CODE 0 560 560 1B 2
+text10 CODE 0 5C1 5C1 7 2
+text11 CODE 0 465 465 3F 2
+text12 CODE 0 5CE 5CE 6 2
+text13 CODE 0 5D4 5D4 6 2
+text14 CODE 0 5DA 5DA 6 2
+text15 CODE 0 5E0 5E0 6 2
+text16 CODE 0 5E6 5E6 6 2
+text17 CODE 0 5B8 5B8 9 2
+text19 CODE 0 53E 53E 22 2
+text20 CODE 0 4A4 4A4 39 2
+text21 CODE 0 5F0 5F0 4 2
+text22 CODE 0 5F8 5F8 1 2
+text23 CODE 0 5F4 5F4 4 2
+text24 CODE 0 57B 57B 1A 2
+nvBANK0 BANK0 1 55 55 B 1
+maintext CODE 0 595 595 16 2
+cstackCOMMON COMMON 1 70 70 A 1
+cstackBANK0 BANK0 1 3D 3D 18 1
+intentry CODE 0 4 4 28 2
+bssBANK0 BANK0 1 20 20 1D 1
+bssBANK1 BANK1 1 A0 A0 15 1
+clrtext CODE 0 5C8 5C8 6 2
+bssCOMMON COMMON 1 7A 7A 2 1
 config CONFIG 4 8007 8007 2 2
-$C:\Users\tomo9\AppData\Local\Temp\scmo.o
+$C:\Users\tomo9\AppData\Local\Temp\s4k.o
 reset_vec CODE 0 0 0 2 2
-end_init CODE 0 2 2 2 2
+end_init CODE 0 2C 2C 2 2
 config CONFIG 4 8007 8007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -36,8 +56,8 @@ config CONFIG 4 8007 8007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 34-6F 1
-RAM A0-EF 1
+RAM 60-6F 1
+RAM B5-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
 RAM 220-26F 1
@@ -49,8 +69,8 @@ RAM 4A0-4EF 1
 RAM 520-56F 1
 RAM 5A0-5EF 1
 RAM 620-64F 1
-BANK0 34-6F 1
-BANK1 A0-EF 1
+BANK0 60-6F 1
+BANK1 B5-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
 BANK4 220-26F 1
@@ -59,10 +79,10 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 4-3DD 2
-CONST 800-3FFF 2
-ENTRY 4-3DD 2
-ENTRY 800-3FFF 2
+CONST 2-3 2
+CONST 5F9-3FFF 2
+ENTRY 2-3 2
+ENTRY 5F9-3FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -86,9 +106,9 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-STACK 2014-23EF 1
-CODE 4-3DD 2
-CODE 800-3FFF 2
+STACK 2065-23EF 1
+CODE 2-3 2
+CODE 5F9-3FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -103,12 +123,12 @@ BANK10 520-56F 1
 BANK11 5A0-5EF 1
 BANK12 620-64F 1
 BIGRAM 2000-23EF 1
-COMMON 7B-7D 1
+COMMON 7C-7D 1
 EEDATA F000-F0FF 2
-STRCODE 4-3DD 2
-STRCODE 800-3FFF 2
-STRING 4-3DD 2
-STRING 800-3FFF 2
+STRCODE 2-3 2
+STRCODE 5F9-3FFF 2
+STRING 2-3 2
+STRING 5F9-3FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -123,417 +143,550 @@ STRING 800-3FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\NixieIndicator.X.production.o
-7F1 cinit CODE >1650:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-7F1 cinit CODE >1653:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-7F1 cinit CODE >1677:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-7F2 cinit CODE >1678:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-7F3 cinit CODE >1679:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-7F4 cinit CODE >1680:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-7F5 cinit CODE >1681:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-7F6 cinit CODE >1682:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-7F7 cinit CODE >1683:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-7F8 cinit CODE >1684:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-7F9 cinit CODE >1685:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-7FA cinit CODE >1686:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-7FD cinit CODE >1692:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-7FD cinit CODE >1694:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-7FE cinit CODE >1695:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-3E8 text7 CODE >58:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
-3E8 text7 CODE >61:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
-3EB text7 CODE >63:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
-3EC text7 CODE >65:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
-3EE text7 CODE >66:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
-40D text6 CODE >55:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-40D text6 CODE >60:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-40F text6 CODE >61:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-410 text6 CODE >62:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-411 text6 CODE >63:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-412 text6 CODE >64:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-413 text6 CODE >69:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-416 text6 CODE >70:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-417 text6 CODE >71:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-418 text6 CODE >72:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-419 text6 CODE >73:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-41A text6 CODE >78:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-41C text6 CODE >79:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-41D text6 CODE >80:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-41E text6 CODE >81:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-41F text6 CODE >86:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-421 text6 CODE >87:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-422 text6 CODE >88:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-424 text6 CODE >94:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-426 text6 CODE >101:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
-3DE text5 CODE >68:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
-3DE text5 CODE >71:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
-3E1 text5 CODE >72:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
-3EF text4 CODE >50:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
-3EF text4 CODE >53:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
-3F2 text4 CODE >54:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
-3F5 text4 CODE >55:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
-3F8 text4 CODE >56:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
-427 text3 CODE >594:D:\Programing\PIC\NixieIndicator.X\main.c
-428 text3 CODE >596:D:\Programing\PIC\NixieIndicator.X\main.c
-429 text3 CODE >598:D:\Programing\PIC\NixieIndicator.X\main.c
-429 text3 CODE >599:D:\Programing\PIC\NixieIndicator.X\main.c
-42B text3 CODE >600:D:\Programing\PIC\NixieIndicator.X\main.c
-42C text3 CODE >601:D:\Programing\PIC\NixieIndicator.X\main.c
-42C text3 CODE >602:D:\Programing\PIC\NixieIndicator.X\main.c
-42E text3 CODE >603:D:\Programing\PIC\NixieIndicator.X\main.c
-42F text3 CODE >604:D:\Programing\PIC\NixieIndicator.X\main.c
-42F text3 CODE >605:D:\Programing\PIC\NixieIndicator.X\main.c
-431 text3 CODE >606:D:\Programing\PIC\NixieIndicator.X\main.c
-432 text3 CODE >607:D:\Programing\PIC\NixieIndicator.X\main.c
-432 text3 CODE >608:D:\Programing\PIC\NixieIndicator.X\main.c
-434 text3 CODE >609:D:\Programing\PIC\NixieIndicator.X\main.c
-435 text3 CODE >610:D:\Programing\PIC\NixieIndicator.X\main.c
-435 text3 CODE >611:D:\Programing\PIC\NixieIndicator.X\main.c
-437 text3 CODE >612:D:\Programing\PIC\NixieIndicator.X\main.c
-438 text3 CODE >613:D:\Programing\PIC\NixieIndicator.X\main.c
-438 text3 CODE >614:D:\Programing\PIC\NixieIndicator.X\main.c
-43A text3 CODE >615:D:\Programing\PIC\NixieIndicator.X\main.c
-43B text3 CODE >616:D:\Programing\PIC\NixieIndicator.X\main.c
-43B text3 CODE >617:D:\Programing\PIC\NixieIndicator.X\main.c
-43D text3 CODE >618:D:\Programing\PIC\NixieIndicator.X\main.c
-43E text3 CODE >619:D:\Programing\PIC\NixieIndicator.X\main.c
-43E text3 CODE >620:D:\Programing\PIC\NixieIndicator.X\main.c
-440 text3 CODE >621:D:\Programing\PIC\NixieIndicator.X\main.c
-441 text3 CODE >622:D:\Programing\PIC\NixieIndicator.X\main.c
-441 text3 CODE >623:D:\Programing\PIC\NixieIndicator.X\main.c
-443 text3 CODE >624:D:\Programing\PIC\NixieIndicator.X\main.c
-444 text3 CODE >625:D:\Programing\PIC\NixieIndicator.X\main.c
-444 text3 CODE >626:D:\Programing\PIC\NixieIndicator.X\main.c
-446 text3 CODE >627:D:\Programing\PIC\NixieIndicator.X\main.c
-447 text3 CODE >630:D:\Programing\PIC\NixieIndicator.X\main.c
-471 text3 CODE >631:D:\Programing\PIC\NixieIndicator.X\main.c
-472 text2 CODE >555:D:\Programing\PIC\NixieIndicator.X\main.c
-473 text2 CODE >557:D:\Programing\PIC\NixieIndicator.X\main.c
-474 text2 CODE >559:D:\Programing\PIC\NixieIndicator.X\main.c
-474 text2 CODE >560:D:\Programing\PIC\NixieIndicator.X\main.c
-476 text2 CODE >561:D:\Programing\PIC\NixieIndicator.X\main.c
-477 text2 CODE >562:D:\Programing\PIC\NixieIndicator.X\main.c
-477 text2 CODE >563:D:\Programing\PIC\NixieIndicator.X\main.c
-479 text2 CODE >564:D:\Programing\PIC\NixieIndicator.X\main.c
-47A text2 CODE >565:D:\Programing\PIC\NixieIndicator.X\main.c
-47A text2 CODE >566:D:\Programing\PIC\NixieIndicator.X\main.c
-47C text2 CODE >567:D:\Programing\PIC\NixieIndicator.X\main.c
-47D text2 CODE >568:D:\Programing\PIC\NixieIndicator.X\main.c
-47D text2 CODE >569:D:\Programing\PIC\NixieIndicator.X\main.c
-47F text2 CODE >570:D:\Programing\PIC\NixieIndicator.X\main.c
-480 text2 CODE >571:D:\Programing\PIC\NixieIndicator.X\main.c
-480 text2 CODE >572:D:\Programing\PIC\NixieIndicator.X\main.c
-482 text2 CODE >573:D:\Programing\PIC\NixieIndicator.X\main.c
-483 text2 CODE >574:D:\Programing\PIC\NixieIndicator.X\main.c
-483 text2 CODE >575:D:\Programing\PIC\NixieIndicator.X\main.c
-485 text2 CODE >576:D:\Programing\PIC\NixieIndicator.X\main.c
-486 text2 CODE >577:D:\Programing\PIC\NixieIndicator.X\main.c
-486 text2 CODE >578:D:\Programing\PIC\NixieIndicator.X\main.c
-488 text2 CODE >579:D:\Programing\PIC\NixieIndicator.X\main.c
-489 text2 CODE >580:D:\Programing\PIC\NixieIndicator.X\main.c
-489 text2 CODE >581:D:\Programing\PIC\NixieIndicator.X\main.c
-48B text2 CODE >582:D:\Programing\PIC\NixieIndicator.X\main.c
-48C text2 CODE >583:D:\Programing\PIC\NixieIndicator.X\main.c
-48C text2 CODE >584:D:\Programing\PIC\NixieIndicator.X\main.c
-48E text2 CODE >585:D:\Programing\PIC\NixieIndicator.X\main.c
-48F text2 CODE >586:D:\Programing\PIC\NixieIndicator.X\main.c
-48F text2 CODE >587:D:\Programing\PIC\NixieIndicator.X\main.c
-491 text2 CODE >588:D:\Programing\PIC\NixieIndicator.X\main.c
-492 text2 CODE >591:D:\Programing\PIC\NixieIndicator.X\main.c
-4BC text2 CODE >592:D:\Programing\PIC\NixieIndicator.X\main.c
-594 text1 CODE >157:D:\Programing\PIC\NixieIndicator.X\main.c
-595 text1 CODE >161:D:\Programing\PIC\NixieIndicator.X\main.c
-59C text1 CODE >163:D:\Programing\PIC\NixieIndicator.X\main.c
-59D text1 CODE >164:D:\Programing\PIC\NixieIndicator.X\main.c
-59E text1 CODE >165:D:\Programing\PIC\NixieIndicator.X\main.c
-5A5 text1 CODE >167:D:\Programing\PIC\NixieIndicator.X\main.c
-5A7 text1 CODE >168:D:\Programing\PIC\NixieIndicator.X\main.c
-5A8 text1 CODE >171:D:\Programing\PIC\NixieIndicator.X\main.c
-5AC text1 CODE >175:D:\Programing\PIC\NixieIndicator.X\main.c
-5B3 text1 CODE >179:D:\Programing\PIC\NixieIndicator.X\main.c
-5B3 text1 CODE >180:D:\Programing\PIC\NixieIndicator.X\main.c
-5B5 text1 CODE >181:D:\Programing\PIC\NixieIndicator.X\main.c
-5B6 text1 CODE >182:D:\Programing\PIC\NixieIndicator.X\main.c
-5B6 text1 CODE >183:D:\Programing\PIC\NixieIndicator.X\main.c
-5B8 text1 CODE >184:D:\Programing\PIC\NixieIndicator.X\main.c
-5B9 text1 CODE >185:D:\Programing\PIC\NixieIndicator.X\main.c
-5B9 text1 CODE >186:D:\Programing\PIC\NixieIndicator.X\main.c
-5BC text1 CODE >189:D:\Programing\PIC\NixieIndicator.X\main.c
-5CF text1 CODE >195:D:\Programing\PIC\NixieIndicator.X\main.c
-5CF text1 CODE >196:D:\Programing\PIC\NixieIndicator.X\main.c
-5D1 text1 CODE >197:D:\Programing\PIC\NixieIndicator.X\main.c
-5D2 text1 CODE >198:D:\Programing\PIC\NixieIndicator.X\main.c
-5D2 text1 CODE >199:D:\Programing\PIC\NixieIndicator.X\main.c
-5D4 text1 CODE >200:D:\Programing\PIC\NixieIndicator.X\main.c
-5D5 text1 CODE >201:D:\Programing\PIC\NixieIndicator.X\main.c
-5D5 text1 CODE >202:D:\Programing\PIC\NixieIndicator.X\main.c
-5D8 text1 CODE >205:D:\Programing\PIC\NixieIndicator.X\main.c
-5EB text1 CODE >206:D:\Programing\PIC\NixieIndicator.X\main.c
-5EB text1 CODE >209:D:\Programing\PIC\NixieIndicator.X\main.c
-5EC text1 CODE >213:D:\Programing\PIC\NixieIndicator.X\main.c
-5EC text1 CODE >215:D:\Programing\PIC\NixieIndicator.X\main.c
-5ED text1 CODE >217:D:\Programing\PIC\NixieIndicator.X\main.c
-5ED text1 CODE >218:D:\Programing\PIC\NixieIndicator.X\main.c
-5EF text1 CODE >219:D:\Programing\PIC\NixieIndicator.X\main.c
-5F0 text1 CODE >220:D:\Programing\PIC\NixieIndicator.X\main.c
-5F1 text1 CODE >221:D:\Programing\PIC\NixieIndicator.X\main.c
-5F2 text1 CODE >222:D:\Programing\PIC\NixieIndicator.X\main.c
-5F3 text1 CODE >224:D:\Programing\PIC\NixieIndicator.X\main.c
-5F3 text1 CODE >225:D:\Programing\PIC\NixieIndicator.X\main.c
-5F5 text1 CODE >226:D:\Programing\PIC\NixieIndicator.X\main.c
-5F6 text1 CODE >227:D:\Programing\PIC\NixieIndicator.X\main.c
-5F7 text1 CODE >228:D:\Programing\PIC\NixieIndicator.X\main.c
-5F8 text1 CODE >229:D:\Programing\PIC\NixieIndicator.X\main.c
-5F9 text1 CODE >231:D:\Programing\PIC\NixieIndicator.X\main.c
-5F9 text1 CODE >232:D:\Programing\PIC\NixieIndicator.X\main.c
-5FB text1 CODE >233:D:\Programing\PIC\NixieIndicator.X\main.c
-5FC text1 CODE >234:D:\Programing\PIC\NixieIndicator.X\main.c
-5FD text1 CODE >235:D:\Programing\PIC\NixieIndicator.X\main.c
-5FE text1 CODE >236:D:\Programing\PIC\NixieIndicator.X\main.c
-5FF text1 CODE >240:D:\Programing\PIC\NixieIndicator.X\main.c
-612 text1 CODE >245:D:\Programing\PIC\NixieIndicator.X\main.c
-612 text1 CODE >246:D:\Programing\PIC\NixieIndicator.X\main.c
-613 text1 CODE >248:D:\Programing\PIC\NixieIndicator.X\main.c
-613 text1 CODE >249:D:\Programing\PIC\NixieIndicator.X\main.c
-615 text1 CODE >250:D:\Programing\PIC\NixieIndicator.X\main.c
-616 text1 CODE >251:D:\Programing\PIC\NixieIndicator.X\main.c
-617 text1 CODE >252:D:\Programing\PIC\NixieIndicator.X\main.c
-618 text1 CODE >253:D:\Programing\PIC\NixieIndicator.X\main.c
-619 text1 CODE >255:D:\Programing\PIC\NixieIndicator.X\main.c
-619 text1 CODE >256:D:\Programing\PIC\NixieIndicator.X\main.c
-61B text1 CODE >257:D:\Programing\PIC\NixieIndicator.X\main.c
-61C text1 CODE >258:D:\Programing\PIC\NixieIndicator.X\main.c
-61D text1 CODE >259:D:\Programing\PIC\NixieIndicator.X\main.c
-61E text1 CODE >260:D:\Programing\PIC\NixieIndicator.X\main.c
-61F text1 CODE >262:D:\Programing\PIC\NixieIndicator.X\main.c
-61F text1 CODE >263:D:\Programing\PIC\NixieIndicator.X\main.c
-621 text1 CODE >264:D:\Programing\PIC\NixieIndicator.X\main.c
-622 text1 CODE >265:D:\Programing\PIC\NixieIndicator.X\main.c
-623 text1 CODE >266:D:\Programing\PIC\NixieIndicator.X\main.c
-624 text1 CODE >267:D:\Programing\PIC\NixieIndicator.X\main.c
-625 text1 CODE >271:D:\Programing\PIC\NixieIndicator.X\main.c
-638 text1 CODE >276:D:\Programing\PIC\NixieIndicator.X\main.c
-638 text1 CODE >277:D:\Programing\PIC\NixieIndicator.X\main.c
-639 text1 CODE >279:D:\Programing\PIC\NixieIndicator.X\main.c
-639 text1 CODE >280:D:\Programing\PIC\NixieIndicator.X\main.c
-63B text1 CODE >281:D:\Programing\PIC\NixieIndicator.X\main.c
-63C text1 CODE >282:D:\Programing\PIC\NixieIndicator.X\main.c
-63D text1 CODE >283:D:\Programing\PIC\NixieIndicator.X\main.c
-63E text1 CODE >284:D:\Programing\PIC\NixieIndicator.X\main.c
-63F text1 CODE >286:D:\Programing\PIC\NixieIndicator.X\main.c
-63F text1 CODE >287:D:\Programing\PIC\NixieIndicator.X\main.c
-641 text1 CODE >288:D:\Programing\PIC\NixieIndicator.X\main.c
-642 text1 CODE >289:D:\Programing\PIC\NixieIndicator.X\main.c
-643 text1 CODE >290:D:\Programing\PIC\NixieIndicator.X\main.c
-644 text1 CODE >291:D:\Programing\PIC\NixieIndicator.X\main.c
-645 text1 CODE >293:D:\Programing\PIC\NixieIndicator.X\main.c
-645 text1 CODE >294:D:\Programing\PIC\NixieIndicator.X\main.c
-647 text1 CODE >295:D:\Programing\PIC\NixieIndicator.X\main.c
-648 text1 CODE >296:D:\Programing\PIC\NixieIndicator.X\main.c
-649 text1 CODE >297:D:\Programing\PIC\NixieIndicator.X\main.c
-64A text1 CODE >298:D:\Programing\PIC\NixieIndicator.X\main.c
-64B text1 CODE >302:D:\Programing\PIC\NixieIndicator.X\main.c
-65E text1 CODE >309:D:\Programing\PIC\NixieIndicator.X\main.c
-65E text1 CODE >310:D:\Programing\PIC\NixieIndicator.X\main.c
-660 text1 CODE >311:D:\Programing\PIC\NixieIndicator.X\main.c
-661 text1 CODE >312:D:\Programing\PIC\NixieIndicator.X\main.c
-662 text1 CODE >313:D:\Programing\PIC\NixieIndicator.X\main.c
-663 text1 CODE >314:D:\Programing\PIC\NixieIndicator.X\main.c
-664 text1 CODE >316:D:\Programing\PIC\NixieIndicator.X\main.c
-664 text1 CODE >317:D:\Programing\PIC\NixieIndicator.X\main.c
-666 text1 CODE >318:D:\Programing\PIC\NixieIndicator.X\main.c
-667 text1 CODE >319:D:\Programing\PIC\NixieIndicator.X\main.c
-668 text1 CODE >320:D:\Programing\PIC\NixieIndicator.X\main.c
-669 text1 CODE >321:D:\Programing\PIC\NixieIndicator.X\main.c
-66A text1 CODE >323:D:\Programing\PIC\NixieIndicator.X\main.c
-66A text1 CODE >324:D:\Programing\PIC\NixieIndicator.X\main.c
-66C text1 CODE >325:D:\Programing\PIC\NixieIndicator.X\main.c
-66D text1 CODE >326:D:\Programing\PIC\NixieIndicator.X\main.c
-66E text1 CODE >327:D:\Programing\PIC\NixieIndicator.X\main.c
-66F text1 CODE >328:D:\Programing\PIC\NixieIndicator.X\main.c
-670 text1 CODE >332:D:\Programing\PIC\NixieIndicator.X\main.c
-683 text1 CODE >337:D:\Programing\PIC\NixieIndicator.X\main.c
-683 text1 CODE >338:D:\Programing\PIC\NixieIndicator.X\main.c
-684 text1 CODE >340:D:\Programing\PIC\NixieIndicator.X\main.c
-684 text1 CODE >341:D:\Programing\PIC\NixieIndicator.X\main.c
-686 text1 CODE >342:D:\Programing\PIC\NixieIndicator.X\main.c
-687 text1 CODE >343:D:\Programing\PIC\NixieIndicator.X\main.c
-688 text1 CODE >344:D:\Programing\PIC\NixieIndicator.X\main.c
-689 text1 CODE >345:D:\Programing\PIC\NixieIndicator.X\main.c
-68A text1 CODE >347:D:\Programing\PIC\NixieIndicator.X\main.c
-68A text1 CODE >348:D:\Programing\PIC\NixieIndicator.X\main.c
-68C text1 CODE >349:D:\Programing\PIC\NixieIndicator.X\main.c
-68D text1 CODE >350:D:\Programing\PIC\NixieIndicator.X\main.c
-68E text1 CODE >351:D:\Programing\PIC\NixieIndicator.X\main.c
-68F text1 CODE >352:D:\Programing\PIC\NixieIndicator.X\main.c
-690 text1 CODE >354:D:\Programing\PIC\NixieIndicator.X\main.c
-690 text1 CODE >355:D:\Programing\PIC\NixieIndicator.X\main.c
-692 text1 CODE >356:D:\Programing\PIC\NixieIndicator.X\main.c
-693 text1 CODE >357:D:\Programing\PIC\NixieIndicator.X\main.c
-694 text1 CODE >358:D:\Programing\PIC\NixieIndicator.X\main.c
-695 text1 CODE >359:D:\Programing\PIC\NixieIndicator.X\main.c
-696 text1 CODE >363:D:\Programing\PIC\NixieIndicator.X\main.c
-6A9 text1 CODE >368:D:\Programing\PIC\NixieIndicator.X\main.c
-6A9 text1 CODE >369:D:\Programing\PIC\NixieIndicator.X\main.c
-6AA text1 CODE >371:D:\Programing\PIC\NixieIndicator.X\main.c
-6AA text1 CODE >372:D:\Programing\PIC\NixieIndicator.X\main.c
-6AC text1 CODE >373:D:\Programing\PIC\NixieIndicator.X\main.c
-6AD text1 CODE >374:D:\Programing\PIC\NixieIndicator.X\main.c
-6AE text1 CODE >375:D:\Programing\PIC\NixieIndicator.X\main.c
-6AF text1 CODE >376:D:\Programing\PIC\NixieIndicator.X\main.c
-6B0 text1 CODE >378:D:\Programing\PIC\NixieIndicator.X\main.c
-6B0 text1 CODE >379:D:\Programing\PIC\NixieIndicator.X\main.c
-6B2 text1 CODE >380:D:\Programing\PIC\NixieIndicator.X\main.c
-6B3 text1 CODE >381:D:\Programing\PIC\NixieIndicator.X\main.c
-6B4 text1 CODE >382:D:\Programing\PIC\NixieIndicator.X\main.c
-6B5 text1 CODE >383:D:\Programing\PIC\NixieIndicator.X\main.c
-6B6 text1 CODE >385:D:\Programing\PIC\NixieIndicator.X\main.c
-6B6 text1 CODE >386:D:\Programing\PIC\NixieIndicator.X\main.c
-6B8 text1 CODE >387:D:\Programing\PIC\NixieIndicator.X\main.c
-6B9 text1 CODE >388:D:\Programing\PIC\NixieIndicator.X\main.c
-6BA text1 CODE >389:D:\Programing\PIC\NixieIndicator.X\main.c
-6BB text1 CODE >390:D:\Programing\PIC\NixieIndicator.X\main.c
-6BC text1 CODE >394:D:\Programing\PIC\NixieIndicator.X\main.c
-6CF text1 CODE >399:D:\Programing\PIC\NixieIndicator.X\main.c
-6CF text1 CODE >400:D:\Programing\PIC\NixieIndicator.X\main.c
-6D0 text1 CODE >402:D:\Programing\PIC\NixieIndicator.X\main.c
-6D0 text1 CODE >403:D:\Programing\PIC\NixieIndicator.X\main.c
-6D2 text1 CODE >404:D:\Programing\PIC\NixieIndicator.X\main.c
-6D3 text1 CODE >405:D:\Programing\PIC\NixieIndicator.X\main.c
-6D4 text1 CODE >406:D:\Programing\PIC\NixieIndicator.X\main.c
-6D5 text1 CODE >407:D:\Programing\PIC\NixieIndicator.X\main.c
-6D6 text1 CODE >409:D:\Programing\PIC\NixieIndicator.X\main.c
-6D6 text1 CODE >410:D:\Programing\PIC\NixieIndicator.X\main.c
-6D8 text1 CODE >411:D:\Programing\PIC\NixieIndicator.X\main.c
-6D9 text1 CODE >412:D:\Programing\PIC\NixieIndicator.X\main.c
-6DA text1 CODE >413:D:\Programing\PIC\NixieIndicator.X\main.c
-6DB text1 CODE >414:D:\Programing\PIC\NixieIndicator.X\main.c
-6DC text1 CODE >416:D:\Programing\PIC\NixieIndicator.X\main.c
-6DC text1 CODE >417:D:\Programing\PIC\NixieIndicator.X\main.c
-6DE text1 CODE >418:D:\Programing\PIC\NixieIndicator.X\main.c
-6DF text1 CODE >419:D:\Programing\PIC\NixieIndicator.X\main.c
-6E0 text1 CODE >420:D:\Programing\PIC\NixieIndicator.X\main.c
-6E1 text1 CODE >421:D:\Programing\PIC\NixieIndicator.X\main.c
-6E2 text1 CODE >425:D:\Programing\PIC\NixieIndicator.X\main.c
-6F5 text1 CODE >430:D:\Programing\PIC\NixieIndicator.X\main.c
-6F5 text1 CODE >431:D:\Programing\PIC\NixieIndicator.X\main.c
-6F6 text1 CODE >433:D:\Programing\PIC\NixieIndicator.X\main.c
-6F6 text1 CODE >434:D:\Programing\PIC\NixieIndicator.X\main.c
-6F8 text1 CODE >435:D:\Programing\PIC\NixieIndicator.X\main.c
-6F9 text1 CODE >436:D:\Programing\PIC\NixieIndicator.X\main.c
-6FA text1 CODE >437:D:\Programing\PIC\NixieIndicator.X\main.c
-6FB text1 CODE >438:D:\Programing\PIC\NixieIndicator.X\main.c
-6FC text1 CODE >440:D:\Programing\PIC\NixieIndicator.X\main.c
-6FC text1 CODE >441:D:\Programing\PIC\NixieIndicator.X\main.c
-6FE text1 CODE >442:D:\Programing\PIC\NixieIndicator.X\main.c
-6FF text1 CODE >443:D:\Programing\PIC\NixieIndicator.X\main.c
-700 text1 CODE >444:D:\Programing\PIC\NixieIndicator.X\main.c
-701 text1 CODE >445:D:\Programing\PIC\NixieIndicator.X\main.c
-702 text1 CODE >447:D:\Programing\PIC\NixieIndicator.X\main.c
-702 text1 CODE >448:D:\Programing\PIC\NixieIndicator.X\main.c
-704 text1 CODE >449:D:\Programing\PIC\NixieIndicator.X\main.c
-705 text1 CODE >450:D:\Programing\PIC\NixieIndicator.X\main.c
-706 text1 CODE >451:D:\Programing\PIC\NixieIndicator.X\main.c
-707 text1 CODE >452:D:\Programing\PIC\NixieIndicator.X\main.c
-708 text1 CODE >456:D:\Programing\PIC\NixieIndicator.X\main.c
-71B text1 CODE >463:D:\Programing\PIC\NixieIndicator.X\main.c
-71B text1 CODE >464:D:\Programing\PIC\NixieIndicator.X\main.c
-71D text1 CODE >465:D:\Programing\PIC\NixieIndicator.X\main.c
-71E text1 CODE >466:D:\Programing\PIC\NixieIndicator.X\main.c
-71F text1 CODE >467:D:\Programing\PIC\NixieIndicator.X\main.c
-720 text1 CODE >468:D:\Programing\PIC\NixieIndicator.X\main.c
-721 text1 CODE >470:D:\Programing\PIC\NixieIndicator.X\main.c
-721 text1 CODE >471:D:\Programing\PIC\NixieIndicator.X\main.c
-723 text1 CODE >472:D:\Programing\PIC\NixieIndicator.X\main.c
-724 text1 CODE >473:D:\Programing\PIC\NixieIndicator.X\main.c
-725 text1 CODE >474:D:\Programing\PIC\NixieIndicator.X\main.c
-726 text1 CODE >475:D:\Programing\PIC\NixieIndicator.X\main.c
-727 text1 CODE >477:D:\Programing\PIC\NixieIndicator.X\main.c
-727 text1 CODE >478:D:\Programing\PIC\NixieIndicator.X\main.c
-729 text1 CODE >479:D:\Programing\PIC\NixieIndicator.X\main.c
-72A text1 CODE >480:D:\Programing\PIC\NixieIndicator.X\main.c
-72B text1 CODE >481:D:\Programing\PIC\NixieIndicator.X\main.c
-72C text1 CODE >482:D:\Programing\PIC\NixieIndicator.X\main.c
-72D text1 CODE >486:D:\Programing\PIC\NixieIndicator.X\main.c
-740 text1 CODE >491:D:\Programing\PIC\NixieIndicator.X\main.c
-740 text1 CODE >492:D:\Programing\PIC\NixieIndicator.X\main.c
-741 text1 CODE >494:D:\Programing\PIC\NixieIndicator.X\main.c
-741 text1 CODE >495:D:\Programing\PIC\NixieIndicator.X\main.c
-743 text1 CODE >496:D:\Programing\PIC\NixieIndicator.X\main.c
-744 text1 CODE >497:D:\Programing\PIC\NixieIndicator.X\main.c
-745 text1 CODE >498:D:\Programing\PIC\NixieIndicator.X\main.c
-746 text1 CODE >499:D:\Programing\PIC\NixieIndicator.X\main.c
-747 text1 CODE >501:D:\Programing\PIC\NixieIndicator.X\main.c
-747 text1 CODE >502:D:\Programing\PIC\NixieIndicator.X\main.c
-749 text1 CODE >503:D:\Programing\PIC\NixieIndicator.X\main.c
-74A text1 CODE >504:D:\Programing\PIC\NixieIndicator.X\main.c
-74B text1 CODE >505:D:\Programing\PIC\NixieIndicator.X\main.c
-74C text1 CODE >506:D:\Programing\PIC\NixieIndicator.X\main.c
-74D text1 CODE >508:D:\Programing\PIC\NixieIndicator.X\main.c
-74D text1 CODE >509:D:\Programing\PIC\NixieIndicator.X\main.c
-74F text1 CODE >510:D:\Programing\PIC\NixieIndicator.X\main.c
-750 text1 CODE >511:D:\Programing\PIC\NixieIndicator.X\main.c
-751 text1 CODE >512:D:\Programing\PIC\NixieIndicator.X\main.c
-752 text1 CODE >513:D:\Programing\PIC\NixieIndicator.X\main.c
-753 text1 CODE >517:D:\Programing\PIC\NixieIndicator.X\main.c
-766 text1 CODE >524:D:\Programing\PIC\NixieIndicator.X\main.c
-766 text1 CODE >525:D:\Programing\PIC\NixieIndicator.X\main.c
-768 text1 CODE >526:D:\Programing\PIC\NixieIndicator.X\main.c
-769 text1 CODE >527:D:\Programing\PIC\NixieIndicator.X\main.c
-76A text1 CODE >528:D:\Programing\PIC\NixieIndicator.X\main.c
-76B text1 CODE >529:D:\Programing\PIC\NixieIndicator.X\main.c
-76C text1 CODE >531:D:\Programing\PIC\NixieIndicator.X\main.c
-76C text1 CODE >532:D:\Programing\PIC\NixieIndicator.X\main.c
-76E text1 CODE >533:D:\Programing\PIC\NixieIndicator.X\main.c
-76F text1 CODE >534:D:\Programing\PIC\NixieIndicator.X\main.c
-770 text1 CODE >535:D:\Programing\PIC\NixieIndicator.X\main.c
-771 text1 CODE >536:D:\Programing\PIC\NixieIndicator.X\main.c
-772 text1 CODE >538:D:\Programing\PIC\NixieIndicator.X\main.c
-772 text1 CODE >539:D:\Programing\PIC\NixieIndicator.X\main.c
-774 text1 CODE >540:D:\Programing\PIC\NixieIndicator.X\main.c
-775 text1 CODE >541:D:\Programing\PIC\NixieIndicator.X\main.c
-776 text1 CODE >542:D:\Programing\PIC\NixieIndicator.X\main.c
-777 text1 CODE >543:D:\Programing\PIC\NixieIndicator.X\main.c
-778 text1 CODE >547:D:\Programing\PIC\NixieIndicator.X\main.c
-78B text1 CODE >549:D:\Programing\PIC\NixieIndicator.X\main.c
-7EC text1 CODE >552:D:\Programing\PIC\NixieIndicator.X\main.c
-7F0 text1 CODE >553:D:\Programing\PIC\NixieIndicator.X\main.c
-4BD maintext CODE >95:D:\Programing\PIC\NixieIndicator.X\main.c
-4BD maintext CODE >98:D:\Programing\PIC\NixieIndicator.X\main.c
-4C0 maintext CODE >117:D:\Programing\PIC\NixieIndicator.X\main.c
-4CA maintext CODE >118:D:\Programing\PIC\NixieIndicator.X\main.c
-4D7 maintext CODE >119:D:\Programing\PIC\NixieIndicator.X\main.c
-4E4 maintext CODE >120:D:\Programing\PIC\NixieIndicator.X\main.c
-4EB maintext CODE >121:D:\Programing\PIC\NixieIndicator.X\main.c
-4EF maintext CODE >122:D:\Programing\PIC\NixieIndicator.X\main.c
-4F3 maintext CODE >123:D:\Programing\PIC\NixieIndicator.X\main.c
-4F7 maintext CODE >124:D:\Programing\PIC\NixieIndicator.X\main.c
-4FB maintext CODE >126:D:\Programing\PIC\NixieIndicator.X\main.c
-506 maintext CODE >127:D:\Programing\PIC\NixieIndicator.X\main.c
-513 maintext CODE >128:D:\Programing\PIC\NixieIndicator.X\main.c
-520 maintext CODE >129:D:\Programing\PIC\NixieIndicator.X\main.c
-527 maintext CODE >130:D:\Programing\PIC\NixieIndicator.X\main.c
-52B maintext CODE >131:D:\Programing\PIC\NixieIndicator.X\main.c
-52F maintext CODE >132:D:\Programing\PIC\NixieIndicator.X\main.c
-533 maintext CODE >133:D:\Programing\PIC\NixieIndicator.X\main.c
-537 maintext CODE >135:D:\Programing\PIC\NixieIndicator.X\main.c
-544 maintext CODE >136:D:\Programing\PIC\NixieIndicator.X\main.c
-551 maintext CODE >137:D:\Programing\PIC\NixieIndicator.X\main.c
-558 maintext CODE >138:D:\Programing\PIC\NixieIndicator.X\main.c
-55C maintext CODE >139:D:\Programing\PIC\NixieIndicator.X\main.c
-560 maintext CODE >140:D:\Programing\PIC\NixieIndicator.X\main.c
-564 maintext CODE >142:D:\Programing\PIC\NixieIndicator.X\main.c
-571 maintext CODE >143:D:\Programing\PIC\NixieIndicator.X\main.c
-57E maintext CODE >144:D:\Programing\PIC\NixieIndicator.X\main.c
-585 maintext CODE >145:D:\Programing\PIC\NixieIndicator.X\main.c
-589 maintext CODE >146:D:\Programing\PIC\NixieIndicator.X\main.c
-58D maintext CODE >147:D:\Programing\PIC\NixieIndicator.X\main.c
-3E2 inittext CODE >1666:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-3E2 inittext CODE >1667:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-3E3 inittext CODE >1668:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-3E3 inittext CODE >1669:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-3E4 inittext CODE >1670:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-3E5 inittext CODE >1671:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-3E6 inittext CODE >1672:C:\Users\tomo9\AppData\Local\Temp\scmo.s
-3E7 inittext CODE >1673:C:\Users\tomo9\AppData\Local\Temp\scmo.s
+2E cinit CODE >2404:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+2E cinit CODE >2407:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+2E cinit CODE >2467:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+2F cinit CODE >2468:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+30 cinit CODE >2472:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+31 cinit CODE >2473:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+32 cinit CODE >2474:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+33 cinit CODE >2475:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+34 cinit CODE >2476:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+35 cinit CODE >2477:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+38 cinit CODE >2481:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+39 cinit CODE >2482:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+3A cinit CODE >2483:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+3B cinit CODE >2484:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+3C cinit CODE >2485:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+3D cinit CODE >2486:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+40 cinit CODE >2492:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+40 cinit CODE >2494:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+41 cinit CODE >2495:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+42 cinit CODE >2496:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+4 intentry CODE >52:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
+6 intentry CODE >55:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
+A intentry CODE >57:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
+14 intentry CODE >59:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
+19 intentry CODE >60:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
+1A intentry CODE >61:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
+24 intentry CODE >63:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
+29 intentry CODE >64:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
+2A intentry CODE >68:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
+2A intentry CODE >74:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/interrupt_manager.c
+57B text24 CODE >240:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+57B text24 CODE >242:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+588 text24 CODE >243:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+58E text24 CODE >245:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+58F text24 CODE >247:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+594 text24 CODE >248:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5F4 text23 CODE >260:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5F4 text23 CODE >261:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5F7 text23 CODE >262:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5F8 text22 CODE >250:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5F0 text21 CODE >252:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5F0 text21 CODE >255:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5F2 text21 CODE >256:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5F3 text21 CODE >258:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4A4 text20 CODE >216:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4A4 text20 CODE >219:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4A9 text20 CODE >221:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4AE text20 CODE >222:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4B3 text20 CODE >223:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4B9 text20 CODE >226:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4BE text20 CODE >227:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4C3 text20 CODE >228:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4C9 text20 CODE >231:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4D2 text20 CODE >232:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4D8 text20 CODE >233:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4D9 text20 CODE >234:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4DC text20 CODE >238:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+53E text19 CODE >197:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+53E text19 CODE >201:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+545 text19 CODE >203:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+551 text19 CODE >204:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+557 text19 CODE >206:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+558 text19 CODE >208:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+55C text19 CODE >209:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+55D text19 CODE >210:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+55D text19 CODE >212:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+55F text19 CODE >214:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5B8 text17 CODE >137:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5B8 text17 CODE >139:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5C0 text17 CODE >140:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5E6 text16 CODE >272:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5E6 text16 CODE >273:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5EB text16 CODE >274:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5E0 text15 CODE >264:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5E0 text15 CODE >265:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5E5 text15 CODE >266:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5DA text14 CODE >268:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5DA text14 CODE >269:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5DF text14 CODE >270:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5D4 text13 CODE >280:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5D4 text13 CODE >281:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5D9 text13 CODE >282:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5CE text12 CODE >276:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5CE text12 CODE >277:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5D3 text12 CODE >278:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+465 text11 CODE >88:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+465 text11 CODE >91:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+467 text11 CODE >92:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+46E text11 CODE >93:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+470 text11 CODE >94:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+477 text11 CODE >98:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+47A text11 CODE >101:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+47C text11 CODE >104:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+47E text11 CODE >107:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+480 text11 CODE >110:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+481 text11 CODE >113:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+488 text11 CODE >114:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+48F text11 CODE >115:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+496 text11 CODE >117:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+498 text11 CODE >120:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+499 text11 CODE >121:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+49A text11 CODE >122:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+49E text11 CODE >124:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+49F text11 CODE >125:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4A0 text11 CODE >126:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4A1 text11 CODE >129:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4A3 text11 CODE >130:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+5C1 text10 CODE >59:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+5C1 text10 CODE >62:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+5C4 text10 CODE >64:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+5C5 text10 CODE >66:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+5C7 text10 CODE >67:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+560 text9 CODE >55:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+560 text9 CODE >60:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+562 text9 CODE >61:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+563 text9 CODE >62:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+564 text9 CODE >63:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+565 text9 CODE >64:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+566 text9 CODE >69:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+569 text9 CODE >70:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+56A text9 CODE >71:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+56B text9 CODE >72:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+56D text9 CODE >73:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+56E text9 CODE >78:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+570 text9 CODE >79:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+571 text9 CODE >80:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+572 text9 CODE >81:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+573 text9 CODE >86:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+575 text9 CODE >87:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+576 text9 CODE >88:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+578 text9 CODE >94:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+57A text9 CODE >101:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/pin_manager.c
+5EC text8 CODE >69:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+5EC text8 CODE >72:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+5EF text8 CODE >73:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+5AB text7 CODE >50:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+5AB text7 CODE >53:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+5AE text7 CODE >54:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+5B1 text7 CODE >55:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+5B4 text7 CODE >56:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+5B7 text7 CODE >57:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/mcc.c
+514 text6 CODE >151:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+514 text6 CODE >153:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+514 text6 CODE >155:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+51A text6 CODE >159:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+522 text6 CODE >161:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+52E text6 CODE >162:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+534 text6 CODE >164:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+535 text6 CODE >166:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+537 text6 CODE >167:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+53A text6 CODE >168:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+53C text6 CODE >170:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+53D text6 CODE >171:D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
+4DD text5 CODE >677:D:\Programing\PIC\NixieIndicator.X\main.c
+4DD text5 CODE >679:D:\Programing\PIC\NixieIndicator.X\main.c
+4E3 text5 CODE >680:D:\Programing\PIC\NixieIndicator.X\main.c
+4F1 text5 CODE >683:D:\Programing\PIC\NixieIndicator.X\main.c
+4F3 text5 CODE >684:D:\Programing\PIC\NixieIndicator.X\main.c
+4F4 text5 CODE >686:D:\Programing\PIC\NixieIndicator.X\main.c
+4FC text5 CODE >687:D:\Programing\PIC\NixieIndicator.X\main.c
+507 text5 CODE >691:D:\Programing\PIC\NixieIndicator.X\main.c
+50F text5 CODE >692:D:\Programing\PIC\NixieIndicator.X\main.c
+513 text5 CODE >694:D:\Programing\PIC\NixieIndicator.X\main.c
+41A text4 CODE >637:D:\Programing\PIC\NixieIndicator.X\main.c
+41B text4 CODE >639:D:\Programing\PIC\NixieIndicator.X\main.c
+41C text4 CODE >641:D:\Programing\PIC\NixieIndicator.X\main.c
+41C text4 CODE >642:D:\Programing\PIC\NixieIndicator.X\main.c
+41E text4 CODE >643:D:\Programing\PIC\NixieIndicator.X\main.c
+41F text4 CODE >644:D:\Programing\PIC\NixieIndicator.X\main.c
+41F text4 CODE >645:D:\Programing\PIC\NixieIndicator.X\main.c
+421 text4 CODE >646:D:\Programing\PIC\NixieIndicator.X\main.c
+422 text4 CODE >647:D:\Programing\PIC\NixieIndicator.X\main.c
+422 text4 CODE >648:D:\Programing\PIC\NixieIndicator.X\main.c
+424 text4 CODE >649:D:\Programing\PIC\NixieIndicator.X\main.c
+425 text4 CODE >650:D:\Programing\PIC\NixieIndicator.X\main.c
+425 text4 CODE >651:D:\Programing\PIC\NixieIndicator.X\main.c
+427 text4 CODE >652:D:\Programing\PIC\NixieIndicator.X\main.c
+428 text4 CODE >653:D:\Programing\PIC\NixieIndicator.X\main.c
+428 text4 CODE >654:D:\Programing\PIC\NixieIndicator.X\main.c
+42A text4 CODE >655:D:\Programing\PIC\NixieIndicator.X\main.c
+42B text4 CODE >656:D:\Programing\PIC\NixieIndicator.X\main.c
+42B text4 CODE >657:D:\Programing\PIC\NixieIndicator.X\main.c
+42D text4 CODE >658:D:\Programing\PIC\NixieIndicator.X\main.c
+42E text4 CODE >659:D:\Programing\PIC\NixieIndicator.X\main.c
+42E text4 CODE >660:D:\Programing\PIC\NixieIndicator.X\main.c
+430 text4 CODE >661:D:\Programing\PIC\NixieIndicator.X\main.c
+431 text4 CODE >662:D:\Programing\PIC\NixieIndicator.X\main.c
+431 text4 CODE >663:D:\Programing\PIC\NixieIndicator.X\main.c
+433 text4 CODE >664:D:\Programing\PIC\NixieIndicator.X\main.c
+434 text4 CODE >665:D:\Programing\PIC\NixieIndicator.X\main.c
+434 text4 CODE >666:D:\Programing\PIC\NixieIndicator.X\main.c
+436 text4 CODE >667:D:\Programing\PIC\NixieIndicator.X\main.c
+437 text4 CODE >668:D:\Programing\PIC\NixieIndicator.X\main.c
+437 text4 CODE >669:D:\Programing\PIC\NixieIndicator.X\main.c
+439 text4 CODE >670:D:\Programing\PIC\NixieIndicator.X\main.c
+43A text4 CODE >673:D:\Programing\PIC\NixieIndicator.X\main.c
+464 text4 CODE >674:D:\Programing\PIC\NixieIndicator.X\main.c
+3CF text3 CODE >594:D:\Programing\PIC\NixieIndicator.X\main.c
+3D0 text3 CODE >596:D:\Programing\PIC\NixieIndicator.X\main.c
+3D1 text3 CODE >598:D:\Programing\PIC\NixieIndicator.X\main.c
+3D1 text3 CODE >599:D:\Programing\PIC\NixieIndicator.X\main.c
+3D3 text3 CODE >600:D:\Programing\PIC\NixieIndicator.X\main.c
+3D4 text3 CODE >601:D:\Programing\PIC\NixieIndicator.X\main.c
+3D4 text3 CODE >602:D:\Programing\PIC\NixieIndicator.X\main.c
+3D6 text3 CODE >603:D:\Programing\PIC\NixieIndicator.X\main.c
+3D7 text3 CODE >604:D:\Programing\PIC\NixieIndicator.X\main.c
+3D7 text3 CODE >605:D:\Programing\PIC\NixieIndicator.X\main.c
+3D9 text3 CODE >606:D:\Programing\PIC\NixieIndicator.X\main.c
+3DA text3 CODE >607:D:\Programing\PIC\NixieIndicator.X\main.c
+3DA text3 CODE >608:D:\Programing\PIC\NixieIndicator.X\main.c
+3DC text3 CODE >609:D:\Programing\PIC\NixieIndicator.X\main.c
+3DD text3 CODE >610:D:\Programing\PIC\NixieIndicator.X\main.c
+3DD text3 CODE >611:D:\Programing\PIC\NixieIndicator.X\main.c
+3DF text3 CODE >612:D:\Programing\PIC\NixieIndicator.X\main.c
+3E0 text3 CODE >613:D:\Programing\PIC\NixieIndicator.X\main.c
+3E0 text3 CODE >614:D:\Programing\PIC\NixieIndicator.X\main.c
+3E2 text3 CODE >615:D:\Programing\PIC\NixieIndicator.X\main.c
+3E3 text3 CODE >616:D:\Programing\PIC\NixieIndicator.X\main.c
+3E3 text3 CODE >617:D:\Programing\PIC\NixieIndicator.X\main.c
+3E5 text3 CODE >618:D:\Programing\PIC\NixieIndicator.X\main.c
+3E6 text3 CODE >619:D:\Programing\PIC\NixieIndicator.X\main.c
+3E6 text3 CODE >620:D:\Programing\PIC\NixieIndicator.X\main.c
+3E8 text3 CODE >621:D:\Programing\PIC\NixieIndicator.X\main.c
+3E9 text3 CODE >622:D:\Programing\PIC\NixieIndicator.X\main.c
+3E9 text3 CODE >623:D:\Programing\PIC\NixieIndicator.X\main.c
+3EB text3 CODE >624:D:\Programing\PIC\NixieIndicator.X\main.c
+3EC text3 CODE >625:D:\Programing\PIC\NixieIndicator.X\main.c
+3EC text3 CODE >626:D:\Programing\PIC\NixieIndicator.X\main.c
+3EE text3 CODE >627:D:\Programing\PIC\NixieIndicator.X\main.c
+3EF text3 CODE >630:D:\Programing\PIC\NixieIndicator.X\main.c
+419 text3 CODE >631:D:\Programing\PIC\NixieIndicator.X\main.c
+44 text2 CODE >192:D:\Programing\PIC\NixieIndicator.X\main.c
+45 text2 CODE >196:D:\Programing\PIC\NixieIndicator.X\main.c
+4C text2 CODE >198:D:\Programing\PIC\NixieIndicator.X\main.c
+4D text2 CODE >199:D:\Programing\PIC\NixieIndicator.X\main.c
+4E text2 CODE >200:D:\Programing\PIC\NixieIndicator.X\main.c
+55 text2 CODE >202:D:\Programing\PIC\NixieIndicator.X\main.c
+57 text2 CODE >203:D:\Programing\PIC\NixieIndicator.X\main.c
+58 text2 CODE >206:D:\Programing\PIC\NixieIndicator.X\main.c
+5C text2 CODE >210:D:\Programing\PIC\NixieIndicator.X\main.c
+63 text2 CODE >214:D:\Programing\PIC\NixieIndicator.X\main.c
+63 text2 CODE >215:D:\Programing\PIC\NixieIndicator.X\main.c
+65 text2 CODE >216:D:\Programing\PIC\NixieIndicator.X\main.c
+66 text2 CODE >217:D:\Programing\PIC\NixieIndicator.X\main.c
+66 text2 CODE >218:D:\Programing\PIC\NixieIndicator.X\main.c
+68 text2 CODE >219:D:\Programing\PIC\NixieIndicator.X\main.c
+69 text2 CODE >220:D:\Programing\PIC\NixieIndicator.X\main.c
+69 text2 CODE >221:D:\Programing\PIC\NixieIndicator.X\main.c
+6C text2 CODE >224:D:\Programing\PIC\NixieIndicator.X\main.c
+7F text2 CODE >230:D:\Programing\PIC\NixieIndicator.X\main.c
+7F text2 CODE >231:D:\Programing\PIC\NixieIndicator.X\main.c
+81 text2 CODE >232:D:\Programing\PIC\NixieIndicator.X\main.c
+82 text2 CODE >233:D:\Programing\PIC\NixieIndicator.X\main.c
+82 text2 CODE >234:D:\Programing\PIC\NixieIndicator.X\main.c
+84 text2 CODE >235:D:\Programing\PIC\NixieIndicator.X\main.c
+85 text2 CODE >236:D:\Programing\PIC\NixieIndicator.X\main.c
+85 text2 CODE >237:D:\Programing\PIC\NixieIndicator.X\main.c
+88 text2 CODE >240:D:\Programing\PIC\NixieIndicator.X\main.c
+9B text2 CODE >241:D:\Programing\PIC\NixieIndicator.X\main.c
+9B text2 CODE >244:D:\Programing\PIC\NixieIndicator.X\main.c
+9C text2 CODE >248:D:\Programing\PIC\NixieIndicator.X\main.c
+9C text2 CODE >250:D:\Programing\PIC\NixieIndicator.X\main.c
+9D text2 CODE >252:D:\Programing\PIC\NixieIndicator.X\main.c
+9D text2 CODE >253:D:\Programing\PIC\NixieIndicator.X\main.c
+9F text2 CODE >254:D:\Programing\PIC\NixieIndicator.X\main.c
+A0 text2 CODE >255:D:\Programing\PIC\NixieIndicator.X\main.c
+A1 text2 CODE >256:D:\Programing\PIC\NixieIndicator.X\main.c
+A2 text2 CODE >257:D:\Programing\PIC\NixieIndicator.X\main.c
+A3 text2 CODE >259:D:\Programing\PIC\NixieIndicator.X\main.c
+A3 text2 CODE >260:D:\Programing\PIC\NixieIndicator.X\main.c
+A5 text2 CODE >261:D:\Programing\PIC\NixieIndicator.X\main.c
+A6 text2 CODE >262:D:\Programing\PIC\NixieIndicator.X\main.c
+A7 text2 CODE >263:D:\Programing\PIC\NixieIndicator.X\main.c
+A8 text2 CODE >264:D:\Programing\PIC\NixieIndicator.X\main.c
+A9 text2 CODE >266:D:\Programing\PIC\NixieIndicator.X\main.c
+A9 text2 CODE >267:D:\Programing\PIC\NixieIndicator.X\main.c
+AB text2 CODE >268:D:\Programing\PIC\NixieIndicator.X\main.c
+AC text2 CODE >269:D:\Programing\PIC\NixieIndicator.X\main.c
+AD text2 CODE >270:D:\Programing\PIC\NixieIndicator.X\main.c
+AE text2 CODE >271:D:\Programing\PIC\NixieIndicator.X\main.c
+AF text2 CODE >275:D:\Programing\PIC\NixieIndicator.X\main.c
+C2 text2 CODE >280:D:\Programing\PIC\NixieIndicator.X\main.c
+C2 text2 CODE >281:D:\Programing\PIC\NixieIndicator.X\main.c
+C3 text2 CODE >283:D:\Programing\PIC\NixieIndicator.X\main.c
+C3 text2 CODE >284:D:\Programing\PIC\NixieIndicator.X\main.c
+C5 text2 CODE >285:D:\Programing\PIC\NixieIndicator.X\main.c
+C6 text2 CODE >286:D:\Programing\PIC\NixieIndicator.X\main.c
+C7 text2 CODE >287:D:\Programing\PIC\NixieIndicator.X\main.c
+C8 text2 CODE >288:D:\Programing\PIC\NixieIndicator.X\main.c
+C9 text2 CODE >290:D:\Programing\PIC\NixieIndicator.X\main.c
+C9 text2 CODE >291:D:\Programing\PIC\NixieIndicator.X\main.c
+CB text2 CODE >292:D:\Programing\PIC\NixieIndicator.X\main.c
+CC text2 CODE >293:D:\Programing\PIC\NixieIndicator.X\main.c
+CD text2 CODE >294:D:\Programing\PIC\NixieIndicator.X\main.c
+CE text2 CODE >295:D:\Programing\PIC\NixieIndicator.X\main.c
+CF text2 CODE >297:D:\Programing\PIC\NixieIndicator.X\main.c
+CF text2 CODE >298:D:\Programing\PIC\NixieIndicator.X\main.c
+D1 text2 CODE >299:D:\Programing\PIC\NixieIndicator.X\main.c
+D2 text2 CODE >300:D:\Programing\PIC\NixieIndicator.X\main.c
+D3 text2 CODE >301:D:\Programing\PIC\NixieIndicator.X\main.c
+D4 text2 CODE >302:D:\Programing\PIC\NixieIndicator.X\main.c
+D5 text2 CODE >306:D:\Programing\PIC\NixieIndicator.X\main.c
+E8 text2 CODE >311:D:\Programing\PIC\NixieIndicator.X\main.c
+E8 text2 CODE >312:D:\Programing\PIC\NixieIndicator.X\main.c
+E9 text2 CODE >314:D:\Programing\PIC\NixieIndicator.X\main.c
+E9 text2 CODE >315:D:\Programing\PIC\NixieIndicator.X\main.c
+EB text2 CODE >316:D:\Programing\PIC\NixieIndicator.X\main.c
+EC text2 CODE >317:D:\Programing\PIC\NixieIndicator.X\main.c
+ED text2 CODE >318:D:\Programing\PIC\NixieIndicator.X\main.c
+EE text2 CODE >319:D:\Programing\PIC\NixieIndicator.X\main.c
+EF text2 CODE >321:D:\Programing\PIC\NixieIndicator.X\main.c
+EF text2 CODE >322:D:\Programing\PIC\NixieIndicator.X\main.c
+F1 text2 CODE >323:D:\Programing\PIC\NixieIndicator.X\main.c
+F2 text2 CODE >324:D:\Programing\PIC\NixieIndicator.X\main.c
+F3 text2 CODE >325:D:\Programing\PIC\NixieIndicator.X\main.c
+F4 text2 CODE >326:D:\Programing\PIC\NixieIndicator.X\main.c
+F5 text2 CODE >328:D:\Programing\PIC\NixieIndicator.X\main.c
+F5 text2 CODE >329:D:\Programing\PIC\NixieIndicator.X\main.c
+F7 text2 CODE >330:D:\Programing\PIC\NixieIndicator.X\main.c
+F8 text2 CODE >331:D:\Programing\PIC\NixieIndicator.X\main.c
+F9 text2 CODE >332:D:\Programing\PIC\NixieIndicator.X\main.c
+FA text2 CODE >333:D:\Programing\PIC\NixieIndicator.X\main.c
+FB text2 CODE >337:D:\Programing\PIC\NixieIndicator.X\main.c
+10E text2 CODE >344:D:\Programing\PIC\NixieIndicator.X\main.c
+10E text2 CODE >345:D:\Programing\PIC\NixieIndicator.X\main.c
+110 text2 CODE >346:D:\Programing\PIC\NixieIndicator.X\main.c
+111 text2 CODE >347:D:\Programing\PIC\NixieIndicator.X\main.c
+112 text2 CODE >348:D:\Programing\PIC\NixieIndicator.X\main.c
+113 text2 CODE >349:D:\Programing\PIC\NixieIndicator.X\main.c
+114 text2 CODE >351:D:\Programing\PIC\NixieIndicator.X\main.c
+114 text2 CODE >352:D:\Programing\PIC\NixieIndicator.X\main.c
+116 text2 CODE >353:D:\Programing\PIC\NixieIndicator.X\main.c
+117 text2 CODE >354:D:\Programing\PIC\NixieIndicator.X\main.c
+118 text2 CODE >355:D:\Programing\PIC\NixieIndicator.X\main.c
+119 text2 CODE >356:D:\Programing\PIC\NixieIndicator.X\main.c
+11A text2 CODE >358:D:\Programing\PIC\NixieIndicator.X\main.c
+11A text2 CODE >359:D:\Programing\PIC\NixieIndicator.X\main.c
+11C text2 CODE >360:D:\Programing\PIC\NixieIndicator.X\main.c
+11D text2 CODE >361:D:\Programing\PIC\NixieIndicator.X\main.c
+11E text2 CODE >362:D:\Programing\PIC\NixieIndicator.X\main.c
+11F text2 CODE >363:D:\Programing\PIC\NixieIndicator.X\main.c
+120 text2 CODE >367:D:\Programing\PIC\NixieIndicator.X\main.c
+133 text2 CODE >372:D:\Programing\PIC\NixieIndicator.X\main.c
+133 text2 CODE >373:D:\Programing\PIC\NixieIndicator.X\main.c
+134 text2 CODE >375:D:\Programing\PIC\NixieIndicator.X\main.c
+134 text2 CODE >376:D:\Programing\PIC\NixieIndicator.X\main.c
+136 text2 CODE >377:D:\Programing\PIC\NixieIndicator.X\main.c
+137 text2 CODE >378:D:\Programing\PIC\NixieIndicator.X\main.c
+138 text2 CODE >379:D:\Programing\PIC\NixieIndicator.X\main.c
+139 text2 CODE >380:D:\Programing\PIC\NixieIndicator.X\main.c
+13A text2 CODE >382:D:\Programing\PIC\NixieIndicator.X\main.c
+13A text2 CODE >383:D:\Programing\PIC\NixieIndicator.X\main.c
+13C text2 CODE >384:D:\Programing\PIC\NixieIndicator.X\main.c
+13D text2 CODE >385:D:\Programing\PIC\NixieIndicator.X\main.c
+13E text2 CODE >386:D:\Programing\PIC\NixieIndicator.X\main.c
+13F text2 CODE >387:D:\Programing\PIC\NixieIndicator.X\main.c
+140 text2 CODE >389:D:\Programing\PIC\NixieIndicator.X\main.c
+140 text2 CODE >390:D:\Programing\PIC\NixieIndicator.X\main.c
+142 text2 CODE >391:D:\Programing\PIC\NixieIndicator.X\main.c
+143 text2 CODE >392:D:\Programing\PIC\NixieIndicator.X\main.c
+144 text2 CODE >393:D:\Programing\PIC\NixieIndicator.X\main.c
+145 text2 CODE >394:D:\Programing\PIC\NixieIndicator.X\main.c
+146 text2 CODE >398:D:\Programing\PIC\NixieIndicator.X\main.c
+159 text2 CODE >403:D:\Programing\PIC\NixieIndicator.X\main.c
+159 text2 CODE >404:D:\Programing\PIC\NixieIndicator.X\main.c
+15A text2 CODE >406:D:\Programing\PIC\NixieIndicator.X\main.c
+15A text2 CODE >407:D:\Programing\PIC\NixieIndicator.X\main.c
+15C text2 CODE >408:D:\Programing\PIC\NixieIndicator.X\main.c
+15D text2 CODE >409:D:\Programing\PIC\NixieIndicator.X\main.c
+15E text2 CODE >410:D:\Programing\PIC\NixieIndicator.X\main.c
+15F text2 CODE >411:D:\Programing\PIC\NixieIndicator.X\main.c
+160 text2 CODE >413:D:\Programing\PIC\NixieIndicator.X\main.c
+160 text2 CODE >414:D:\Programing\PIC\NixieIndicator.X\main.c
+162 text2 CODE >415:D:\Programing\PIC\NixieIndicator.X\main.c
+163 text2 CODE >416:D:\Programing\PIC\NixieIndicator.X\main.c
+164 text2 CODE >417:D:\Programing\PIC\NixieIndicator.X\main.c
+165 text2 CODE >418:D:\Programing\PIC\NixieIndicator.X\main.c
+166 text2 CODE >420:D:\Programing\PIC\NixieIndicator.X\main.c
+166 text2 CODE >421:D:\Programing\PIC\NixieIndicator.X\main.c
+168 text2 CODE >422:D:\Programing\PIC\NixieIndicator.X\main.c
+169 text2 CODE >423:D:\Programing\PIC\NixieIndicator.X\main.c
+16A text2 CODE >424:D:\Programing\PIC\NixieIndicator.X\main.c
+16B text2 CODE >425:D:\Programing\PIC\NixieIndicator.X\main.c
+16C text2 CODE >429:D:\Programing\PIC\NixieIndicator.X\main.c
+17F text2 CODE >434:D:\Programing\PIC\NixieIndicator.X\main.c
+17F text2 CODE >435:D:\Programing\PIC\NixieIndicator.X\main.c
+180 text2 CODE >437:D:\Programing\PIC\NixieIndicator.X\main.c
+180 text2 CODE >438:D:\Programing\PIC\NixieIndicator.X\main.c
+182 text2 CODE >439:D:\Programing\PIC\NixieIndicator.X\main.c
+183 text2 CODE >440:D:\Programing\PIC\NixieIndicator.X\main.c
+184 text2 CODE >441:D:\Programing\PIC\NixieIndicator.X\main.c
+185 text2 CODE >442:D:\Programing\PIC\NixieIndicator.X\main.c
+186 text2 CODE >444:D:\Programing\PIC\NixieIndicator.X\main.c
+186 text2 CODE >445:D:\Programing\PIC\NixieIndicator.X\main.c
+188 text2 CODE >446:D:\Programing\PIC\NixieIndicator.X\main.c
+189 text2 CODE >447:D:\Programing\PIC\NixieIndicator.X\main.c
+18A text2 CODE >448:D:\Programing\PIC\NixieIndicator.X\main.c
+18B text2 CODE >449:D:\Programing\PIC\NixieIndicator.X\main.c
+18C text2 CODE >451:D:\Programing\PIC\NixieIndicator.X\main.c
+18C text2 CODE >452:D:\Programing\PIC\NixieIndicator.X\main.c
+18E text2 CODE >453:D:\Programing\PIC\NixieIndicator.X\main.c
+18F text2 CODE >454:D:\Programing\PIC\NixieIndicator.X\main.c
+190 text2 CODE >455:D:\Programing\PIC\NixieIndicator.X\main.c
+191 text2 CODE >456:D:\Programing\PIC\NixieIndicator.X\main.c
+192 text2 CODE >460:D:\Programing\PIC\NixieIndicator.X\main.c
+1A5 text2 CODE >465:D:\Programing\PIC\NixieIndicator.X\main.c
+1A5 text2 CODE >466:D:\Programing\PIC\NixieIndicator.X\main.c
+1A6 text2 CODE >468:D:\Programing\PIC\NixieIndicator.X\main.c
+1A6 text2 CODE >469:D:\Programing\PIC\NixieIndicator.X\main.c
+1A8 text2 CODE >470:D:\Programing\PIC\NixieIndicator.X\main.c
+1A9 text2 CODE >471:D:\Programing\PIC\NixieIndicator.X\main.c
+1AA text2 CODE >472:D:\Programing\PIC\NixieIndicator.X\main.c
+1AB text2 CODE >473:D:\Programing\PIC\NixieIndicator.X\main.c
+1AC text2 CODE >475:D:\Programing\PIC\NixieIndicator.X\main.c
+1AC text2 CODE >476:D:\Programing\PIC\NixieIndicator.X\main.c
+1AE text2 CODE >477:D:\Programing\PIC\NixieIndicator.X\main.c
+1AF text2 CODE >478:D:\Programing\PIC\NixieIndicator.X\main.c
+1B0 text2 CODE >479:D:\Programing\PIC\NixieIndicator.X\main.c
+1B1 text2 CODE >480:D:\Programing\PIC\NixieIndicator.X\main.c
+1B2 text2 CODE >482:D:\Programing\PIC\NixieIndicator.X\main.c
+1B2 text2 CODE >483:D:\Programing\PIC\NixieIndicator.X\main.c
+1B4 text2 CODE >484:D:\Programing\PIC\NixieIndicator.X\main.c
+1B5 text2 CODE >485:D:\Programing\PIC\NixieIndicator.X\main.c
+1B6 text2 CODE >486:D:\Programing\PIC\NixieIndicator.X\main.c
+1B7 text2 CODE >487:D:\Programing\PIC\NixieIndicator.X\main.c
+1B8 text2 CODE >491:D:\Programing\PIC\NixieIndicator.X\main.c
+1CB text2 CODE >498:D:\Programing\PIC\NixieIndicator.X\main.c
+1CB text2 CODE >499:D:\Programing\PIC\NixieIndicator.X\main.c
+1CD text2 CODE >500:D:\Programing\PIC\NixieIndicator.X\main.c
+1CE text2 CODE >501:D:\Programing\PIC\NixieIndicator.X\main.c
+1CF text2 CODE >502:D:\Programing\PIC\NixieIndicator.X\main.c
+1D0 text2 CODE >503:D:\Programing\PIC\NixieIndicator.X\main.c
+1D1 text2 CODE >505:D:\Programing\PIC\NixieIndicator.X\main.c
+1D1 text2 CODE >506:D:\Programing\PIC\NixieIndicator.X\main.c
+1D3 text2 CODE >507:D:\Programing\PIC\NixieIndicator.X\main.c
+1D4 text2 CODE >508:D:\Programing\PIC\NixieIndicator.X\main.c
+1D5 text2 CODE >509:D:\Programing\PIC\NixieIndicator.X\main.c
+1D6 text2 CODE >510:D:\Programing\PIC\NixieIndicator.X\main.c
+1D7 text2 CODE >512:D:\Programing\PIC\NixieIndicator.X\main.c
+1D7 text2 CODE >513:D:\Programing\PIC\NixieIndicator.X\main.c
+1D9 text2 CODE >514:D:\Programing\PIC\NixieIndicator.X\main.c
+1DA text2 CODE >515:D:\Programing\PIC\NixieIndicator.X\main.c
+1DB text2 CODE >516:D:\Programing\PIC\NixieIndicator.X\main.c
+1DC text2 CODE >517:D:\Programing\PIC\NixieIndicator.X\main.c
+1DD text2 CODE >521:D:\Programing\PIC\NixieIndicator.X\main.c
+1F0 text2 CODE >526:D:\Programing\PIC\NixieIndicator.X\main.c
+1F0 text2 CODE >527:D:\Programing\PIC\NixieIndicator.X\main.c
+1F1 text2 CODE >529:D:\Programing\PIC\NixieIndicator.X\main.c
+1F1 text2 CODE >530:D:\Programing\PIC\NixieIndicator.X\main.c
+1F3 text2 CODE >531:D:\Programing\PIC\NixieIndicator.X\main.c
+1F4 text2 CODE >532:D:\Programing\PIC\NixieIndicator.X\main.c
+1F5 text2 CODE >533:D:\Programing\PIC\NixieIndicator.X\main.c
+1F6 text2 CODE >534:D:\Programing\PIC\NixieIndicator.X\main.c
+1F7 text2 CODE >536:D:\Programing\PIC\NixieIndicator.X\main.c
+1F7 text2 CODE >537:D:\Programing\PIC\NixieIndicator.X\main.c
+1F9 text2 CODE >538:D:\Programing\PIC\NixieIndicator.X\main.c
+1FA text2 CODE >539:D:\Programing\PIC\NixieIndicator.X\main.c
+1FB text2 CODE >540:D:\Programing\PIC\NixieIndicator.X\main.c
+1FC text2 CODE >541:D:\Programing\PIC\NixieIndicator.X\main.c
+1FD text2 CODE >543:D:\Programing\PIC\NixieIndicator.X\main.c
+1FD text2 CODE >544:D:\Programing\PIC\NixieIndicator.X\main.c
+1FF text2 CODE >545:D:\Programing\PIC\NixieIndicator.X\main.c
+200 text2 CODE >546:D:\Programing\PIC\NixieIndicator.X\main.c
+201 text2 CODE >547:D:\Programing\PIC\NixieIndicator.X\main.c
+202 text2 CODE >548:D:\Programing\PIC\NixieIndicator.X\main.c
+203 text2 CODE >552:D:\Programing\PIC\NixieIndicator.X\main.c
+216 text2 CODE >559:D:\Programing\PIC\NixieIndicator.X\main.c
+216 text2 CODE >560:D:\Programing\PIC\NixieIndicator.X\main.c
+218 text2 CODE >561:D:\Programing\PIC\NixieIndicator.X\main.c
+219 text2 CODE >562:D:\Programing\PIC\NixieIndicator.X\main.c
+21A text2 CODE >563:D:\Programing\PIC\NixieIndicator.X\main.c
+21B text2 CODE >564:D:\Programing\PIC\NixieIndicator.X\main.c
+21C text2 CODE >566:D:\Programing\PIC\NixieIndicator.X\main.c
+21C text2 CODE >567:D:\Programing\PIC\NixieIndicator.X\main.c
+21E text2 CODE >568:D:\Programing\PIC\NixieIndicator.X\main.c
+21F text2 CODE >569:D:\Programing\PIC\NixieIndicator.X\main.c
+220 text2 CODE >570:D:\Programing\PIC\NixieIndicator.X\main.c
+221 text2 CODE >571:D:\Programing\PIC\NixieIndicator.X\main.c
+222 text2 CODE >573:D:\Programing\PIC\NixieIndicator.X\main.c
+222 text2 CODE >574:D:\Programing\PIC\NixieIndicator.X\main.c
+224 text2 CODE >575:D:\Programing\PIC\NixieIndicator.X\main.c
+225 text2 CODE >576:D:\Programing\PIC\NixieIndicator.X\main.c
+226 text2 CODE >577:D:\Programing\PIC\NixieIndicator.X\main.c
+227 text2 CODE >578:D:\Programing\PIC\NixieIndicator.X\main.c
+228 text2 CODE >582:D:\Programing\PIC\NixieIndicator.X\main.c
+23B text2 CODE >584:D:\Programing\PIC\NixieIndicator.X\main.c
+29C text2 CODE >587:D:\Programing\PIC\NixieIndicator.X\main.c
+2A0 text2 CODE >588:D:\Programing\PIC\NixieIndicator.X\main.c
+2A1 text1 CODE >131:D:\Programing\PIC\NixieIndicator.X\main.c
+2A1 text1 CODE >136:D:\Programing\PIC\NixieIndicator.X\main.c
+2A3 text1 CODE >137:D:\Programing\PIC\NixieIndicator.X\main.c
+2A4 text1 CODE >138:D:\Programing\PIC\NixieIndicator.X\main.c
+2A5 text1 CODE >140:D:\Programing\PIC\NixieIndicator.X\main.c
+2AF text1 CODE >142:D:\Programing\PIC\NixieIndicator.X\main.c
+2C3 text1 CODE >143:D:\Programing\PIC\NixieIndicator.X\main.c
+2D7 text1 CODE >144:D:\Programing\PIC\NixieIndicator.X\main.c
+2D8 text1 CODE >147:D:\Programing\PIC\NixieIndicator.X\main.c
+2E4 text1 CODE >148:D:\Programing\PIC\NixieIndicator.X\main.c
+2F8 text1 CODE >138:D:\Programing\PIC\NixieIndicator.X\main.c
+2FE text1 CODE >153:D:\Programing\PIC\NixieIndicator.X\main.c
+307 text1 CODE >154:D:\Programing\PIC\NixieIndicator.X\main.c
+314 text1 CODE >155:D:\Programing\PIC\NixieIndicator.X\main.c
+321 text1 CODE >156:D:\Programing\PIC\NixieIndicator.X\main.c
+328 text1 CODE >157:D:\Programing\PIC\NixieIndicator.X\main.c
+32C text1 CODE >158:D:\Programing\PIC\NixieIndicator.X\main.c
+330 text1 CODE >159:D:\Programing\PIC\NixieIndicator.X\main.c
+334 text1 CODE >160:D:\Programing\PIC\NixieIndicator.X\main.c
+338 text1 CODE >162:D:\Programing\PIC\NixieIndicator.X\main.c
+343 text1 CODE >163:D:\Programing\PIC\NixieIndicator.X\main.c
+350 text1 CODE >164:D:\Programing\PIC\NixieIndicator.X\main.c
+35D text1 CODE >165:D:\Programing\PIC\NixieIndicator.X\main.c
+364 text1 CODE >166:D:\Programing\PIC\NixieIndicator.X\main.c
+368 text1 CODE >167:D:\Programing\PIC\NixieIndicator.X\main.c
+36C text1 CODE >168:D:\Programing\PIC\NixieIndicator.X\main.c
+370 text1 CODE >169:D:\Programing\PIC\NixieIndicator.X\main.c
+374 text1 CODE >171:D:\Programing\PIC\NixieIndicator.X\main.c
+381 text1 CODE >172:D:\Programing\PIC\NixieIndicator.X\main.c
+38E text1 CODE >173:D:\Programing\PIC\NixieIndicator.X\main.c
+395 text1 CODE >174:D:\Programing\PIC\NixieIndicator.X\main.c
+399 text1 CODE >175:D:\Programing\PIC\NixieIndicator.X\main.c
+39D text1 CODE >176:D:\Programing\PIC\NixieIndicator.X\main.c
+3A1 text1 CODE >178:D:\Programing\PIC\NixieIndicator.X\main.c
+3AE text1 CODE >179:D:\Programing\PIC\NixieIndicator.X\main.c
+3BB text1 CODE >180:D:\Programing\PIC\NixieIndicator.X\main.c
+3C2 text1 CODE >181:D:\Programing\PIC\NixieIndicator.X\main.c
+3C6 text1 CODE >182:D:\Programing\PIC\NixieIndicator.X\main.c
+3CA text1 CODE >183:D:\Programing\PIC\NixieIndicator.X\main.c
+3CE text1 CODE >184:D:\Programing\PIC\NixieIndicator.X\main.c
+595 maintext CODE >98:D:\Programing\PIC\NixieIndicator.X\main.c
+595 maintext CODE >101:D:\Programing\PIC\NixieIndicator.X\main.c
+598 maintext CODE >107:D:\Programing\PIC\NixieIndicator.X\main.c
+599 maintext CODE >110:D:\Programing\PIC\NixieIndicator.X\main.c
+59A maintext CODE >118:D:\Programing\PIC\NixieIndicator.X\main.c
+59A maintext CODE >120:D:\Programing\PIC\NixieIndicator.X\main.c
+5A2 maintext CODE >122:D:\Programing\PIC\NixieIndicator.X\main.c
+5A5 maintext CODE >126:D:\Programing\PIC\NixieIndicator.X\main.c
+5C8 clrtext CODE >2456:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+5C8 clrtext CODE >2457:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+5C9 clrtext CODE >2458:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+5C9 clrtext CODE >2459:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+5CA clrtext CODE >2460:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+5CB clrtext CODE >2461:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+5CC clrtext CODE >2462:C:\Users\tomo9\AppData\Local\Temp\s4k.s
+5CD clrtext CODE >2463:C:\Users\tomo9\AppData\Local\Temp\s4k.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -547,18 +700,20 @@ $dist/default/production\NixieIndicator.X.production.o
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 3 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
-__LdataBANK0 0 0 ABS 0 dataBANK0 -
-__Hspace_0 800 0 ABS 0 - -
-__Hspace_1 7B 0 ABS 0 - -
+_EUSART_Read A28 0 CODE 0 text6 dist/default/production\NixieIndicator.X.production.o
+__Hspace_0 5F9 0 ABS 0 - -
+__Hspace_1 B5 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 10010 0 ABS 0 - -
-__HidataBANK0 0 0 ABS 0 idataBANK0 -
-on_digit@digit 72 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
-_show_character B28 0 CODE 0 text1 dist/default/production\NixieIndicator.X.production.o
+on_digit@digit 73 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
+_show_character 88 0 CODE 0 text2 dist/default/production\NixieIndicator.X.production.o
+_receive_char_from_EUSART 9BA 0 CODE 0 text5 dist/default/production\NixieIndicator.X.production.o
+receive_char_from_EUSART@i 75 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__end_of_WDT_Initialize 7C4 0 CODE 0 text5 dist/default/production\NixieIndicator.X.production.o
+__end_of_WDT_Initialize BE0 0 CODE 0 text8 dist/default/production\NixieIndicator.X.production.o
 __Hstrings 0 0 ABS 0 strings -
+_EUSART_RxDefaultInterruptHandler 5B 0 BANK0 1 nvBANK0 dist/default/production\NixieIndicator.X.production.o
 _LATA 10C 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _LATB 10D 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _LATC 10E 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
@@ -566,42 +721,75 @@ _LATD 10F 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _LATE 110 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _WPUB 20D 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _WPUE 210 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\tomo9\AppData\Local\Temp\scmo.o
-_main 97A 0 CODE 0 maintext dist/default/production\NixieIndicator.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\tomo9\AppData\Local\Temp\s4k.o
+_main B2A 0 CODE 0 maintext dist/default/production\NixieIndicator.X.production.o
+_show 542 0 CODE 0 text1 dist/default/production\NixieIndicator.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
-start 4 0 CODE 0 init C:\Users\tomo9\AppData\Local\Temp\scmo.o
+start 58 0 CODE 0 init C:\Users\tomo9\AppData\Local\Temp\s4k.o
 __size_of_main 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__size_of_show 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__end_of_EUSART_SetFramingErrorHandler BCC 0 CODE 0 text15 dist/default/production\NixieIndicator.X.production.o
+__end_of_EUSART_SetOverrunErrorHandler BC0 0 CODE 0 text14 dist/default/production\NixieIndicator.X.production.o
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
-__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__end_of_EUSART_Initialize 948 0 CODE 0 text11 dist/default/production\NixieIndicator.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\tomo9\AppData\Local\Temp\scmo.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\tomo9\AppData\Local\Temp\scmo.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\tomo9\AppData\Local\Temp\scmo.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\tomo9\AppData\Local\Temp\scmo.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\tomo9\AppData\Local\Temp\scmo.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\tomo9\AppData\Local\Temp\scmo.o
-__end_of_show_character FE2 0 CODE 0 text1 dist/default/production\NixieIndicator.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\tomo9\AppData\Local\Temp\s4k.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\tomo9\AppData\Local\Temp\s4k.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\tomo9\AppData\Local\Temp\s4k.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\tomo9\AppData\Local\Temp\s4k.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\tomo9\AppData\Local\Temp\s4k.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\tomo9\AppData\Local\Temp\s4k.o
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__end_of_show_character 542 0 CODE 0 text2 dist/default/production\NixieIndicator.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
+_EUSART_DefaultFramingErrorHandler BF0 0 CODE 0 text22 dist/default/production\NixieIndicator.X.production.o
+_EUSART_DefaultOverrunErrorHandler BE0 0 CODE 0 text21 dist/default/production\NixieIndicator.X.production.o
+__end_of_EUSART_Transmit_ISR AC0 0 CODE 0 text19 dist/default/production\NixieIndicator.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
+show@chars 3F 0 BANK0 1 cstackBANK0 dist/default/production\NixieIndicator.X.production.o
+_eusartTxBuffer 30 0 BANK0 1 bssBANK0 dist/default/production\NixieIndicator.X.production.o
 _ANSELA 18C 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _ANSELB 18D 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _ANSELD 18F 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _ANSELE 190 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _APFCON 11D 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _BORCON 116 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__end_of_EUSART_is_rx_ready B82 0 CODE 0 text17 dist/default/production\NixieIndicator.X.production.o
+__end_of_INTERRUPT_InterruptManager 58 0 CODE 0 intentry dist/default/production\NixieIndicator.X.production.o
+EUSART_SetRxInterruptHandler@interruptHandler 71 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 23EF 0 ABS 0 - C:\Users\tomo9\AppData\Local\Temp\scmo.o
-___stacklo 2014 0 ABS 0 - C:\Users\tomo9\AppData\Local\Temp\scmo.o
-show_character@digit 74 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
-show_character@group 78 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
-_PIN_MANAGER_Initialize 81A 0 CODE 0 text6 dist/default/production\NixieIndicator.X.production.o
-start_initialization FE2 0 CODE 0 cinit dist/default/production\NixieIndicator.X.production.o
+__LnvBANK0 0 0 ABS 0 nvBANK0 -
+__size_of_receive_char_from_EUSART 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+___stackhi 23EF 0 ABS 0 - C:\Users\tomo9\AppData\Local\Temp\s4k.o
+___stacklo 2065 0 ABS 0 - C:\Users\tomo9\AppData\Local\Temp\s4k.o
+_EUSART_Initialize 8CA 0 CODE 0 text11 dist/default/production\NixieIndicator.X.production.o
+show_character@digit 75 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
+show_character@group 79 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
+_EUSART_is_rx_ready B70 0 CODE 0 text17 dist/default/production\NixieIndicator.X.production.o
+_PIN_MANAGER_Initialize AC0 0 CODE 0 text9 dist/default/production\NixieIndicator.X.production.o
+start_initialization 5C 0 CODE 0 cinit dist/default/production\NixieIndicator.X.production.o
+_EUSART_SetErrorHandler BCC 0 CODE 0 text16 dist/default/production\NixieIndicator.X.production.o
 _OSCCON 99 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
-__end_of_SYSTEM_Initialize 7F2 0 CODE 0 text4 dist/default/production\NixieIndicator.X.production.o
+EUSART_SetOverrunErrorHandler@interruptHandler 71 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
+_eusartRxBuffer 28 0 BANK0 1 bssBANK0 dist/default/production\NixieIndicator.X.production.o
+__end_of_EUSART_DefaultErrorHandler BF0 0 CODE 0 text23 dist/default/production\NixieIndicator.X.production.o
+_EUSART_RxDataHandler AF6 0 CODE 0 text24 dist/default/production\NixieIndicator.X.production.o
+__size_of_EUSART_SetFramingErrorHandler 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__size_of_EUSART_SetOverrunErrorHandler 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__end_of_SYSTEM_Initialize B70 0 CODE 0 text7 dist/default/production\NixieIndicator.X.production.o
+clear_ram0 B90 0 CODE 0 clrtext dist/default/production\NixieIndicator.X.production.o
+_SPBRGH 19C 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+_SPBRGL 19B 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__pcstackBANK0 3D 0 BANK0 1 cstackBANK0 dist/default/production\NixieIndicator.X.production.o
+__end_of_EUSART_DefaultFramingErrorHandler BF2 0 CODE 0 text22 dist/default/production\NixieIndicator.X.production.o
+__end_of_EUSART_DefaultOverrunErrorHandler BE8 0 CODE 0 text21 dist/default/production\NixieIndicator.X.production.o
 _WDTCON 97 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\tomo9\AppData\Local\Temp\scmo.o
+_EUSART_TxDefaultInterruptHandler 5D 0 BANK0 1 nvBANK0 dist/default/production\NixieIndicator.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\tomo9\AppData\Local\Temp\s4k.o
+__end_of_EUSART_Read A7C 0 CODE 0 text6 dist/default/production\NixieIndicator.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -612,8 +800,8 @@ __Hbank6 0 0 ABS 0 bank6 -
 __Hbank7 0 0 ABS 0 bank7 -
 __Hbank8 0 0 ABS 0 bank8 -
 __Hbank9 0 0 ABS 0 bank9 -
-__Hcinit 1000 0 CODE 0 cinit -
-show_character@dot 77 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
+__Hcinit 88 0 CODE 0 cinit -
+show_character@dot 78 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
 __size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 __Hsfr10 0 0 ABS 0 sfr10 -
 __Hsfr11 0 0 ABS 0 sfr11 -
@@ -660,6 +848,7 @@ __Hbank28 0 0 BANK28 1 bank28 -
 __Hbank29 0 0 BANK29 1 bank29 -
 __Hbank30 0 0 BANK30 1 bank30 -
 __Hbank31 0 0 BANK31 1 bank31 -
+show@chars_index 54 0 BANK0 1 cstackBANK0 dist/default/production\NixieIndicator.X.production.o
 __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
@@ -674,7 +863,9 @@ __Lbank6 0 0 ABS 0 bank6 -
 __Lbank7 0 0 ABS 0 bank7 -
 __Lbank8 0 0 ABS 0 bank8 -
 __Lbank9 0 0 ABS 0 bank9 -
-__Lcinit FE2 0 CODE 0 cinit -
+__Lcinit 5C 0 CODE 0 cinit -
+__end_of_receive_char_from_EUSART A28 0 CODE 0 text5 dist/default/production\NixieIndicator.X.production.o
+EUSART_SetErrorHandler@interruptHandler 71 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
 __Lsfr10 0 0 ABS 0 sfr10 -
 __Lsfr11 0 0 ABS 0 sfr11 -
 __Lsfr12 0 0 ABS 0 sfr12 -
@@ -698,12 +889,11 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-init_ram 7C4 0 CODE 0 inittext dist/default/production\NixieIndicator.X.production.o
-__Linittext 0 0 ABS 0 inittext -
 __size_of_on_digit 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+_INTCONbits B 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
-__Hinit 4 0 CODE 0 init -
+__Hinit 58 0 CODE 0 init -
 __Hsfr0 0 0 ABS 0 sfr0 -
 __Hsfr1 0 0 ABS 0 sfr1 -
 __Hsfr2 0 0 ABS 0 sfr2 -
@@ -717,7 +907,7 @@ __Hsfr9 0 0 ABS 0 sfr9 -
 __Htext 0 0 ABS 0 text -
 __Labs1 0 0 ABS 0 abs1 -
 __Lcode 0 0 ABS 0 code -
-__Linit 4 0 CODE 0 init -
+__Linit 58 0 CODE 0 init -
 __Lsfr0 0 0 ABS 0 sfr0 -
 __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
@@ -729,7 +919,11 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
+__pnvBANK0 55 0 BANK0 1 nvBANK0 dist/default/production\NixieIndicator.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+int$flags 7E 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__size_of_INTERRUPT_InterruptManager 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 __size_of_WDT_Initialize 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _RA0 60 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _RA1 61 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
@@ -756,18 +950,44 @@ _RD7 7F 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _RE0 80 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _RE1 81 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _RE2 82 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
-__S0 800 0 ABS 0 - -
-__S1 7B 0 ABS 0 - -
+__S0 5F9 0 ABS 0 - -
+__S1 B5 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_SYSTEM_Initialize 7DE 0 CODE 0 text4 dist/default/production\NixieIndicator.X.production.o
-__Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\tomo9\AppData\Local\Temp\scmo.o
-__pdataBANK0 20 0 BANK0 1 dataBANK0 dist/default/production\NixieIndicator.X.production.o
+__end_of_EUSART_Receive_ISR 9BA 0 CODE 0 text20 dist/default/production\NixieIndicator.X.production.o
+_SYSTEM_Initialize B56 0 CODE 0 text7 dist/default/production\NixieIndicator.X.production.o
+_EUSART_SetTxInterruptHandler B9C 0 CODE 0 text12 dist/default/production\NixieIndicator.X.production.o
+__HnvBANK0 0 0 ABS 0 nvBANK0 -
+__Lintentry 8 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec C:\Users\tomo9\AppData\Local\Temp\s4k.o
+EUSART_Read@readValue 72 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK1 0 0 ABS 0 bssBANK1 -
 __size_of_show_character 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
-_on_digit 8E4 0 CODE 0 text2 dist/default/production\NixieIndicator.X.production.o
-__end_of_on_digit 97A 0 CODE 0 text2 dist/default/production\NixieIndicator.X.production.o
-__end_of_PIN_MANAGER_Initialize 84E 0 CODE 0 text6 dist/default/production\NixieIndicator.X.production.o
+_on_digit 79E 0 CODE 0 text3 dist/default/production\NixieIndicator.X.production.o
+_INTERRUPT_InterruptManager 8 0 CODE 0 intentry dist/default/production\NixieIndicator.X.production.o
+_RCSTAbits 19D 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+_PIE1bits 91 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+EUSART_SetFramingErrorHandler@interruptHandler 71 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
+__ptext10 B82 0 CODE 0 text10 dist/default/production\NixieIndicator.X.production.o
+__ptext11 8CA 0 CODE 0 text11 dist/default/production\NixieIndicator.X.production.o
+__ptext12 B9C 0 CODE 0 text12 dist/default/production\NixieIndicator.X.production.o
+__ptext13 BA8 0 CODE 0 text13 dist/default/production\NixieIndicator.X.production.o
+__ptext14 BB4 0 CODE 0 text14 dist/default/production\NixieIndicator.X.production.o
+__ptext15 BC0 0 CODE 0 text15 dist/default/production\NixieIndicator.X.production.o
+__ptext16 BCC 0 CODE 0 text16 dist/default/production\NixieIndicator.X.production.o
+__ptext17 B70 0 CODE 0 text17 dist/default/production\NixieIndicator.X.production.o
+__ptext19 A7C 0 CODE 0 text19 dist/default/production\NixieIndicator.X.production.o
+__ptext20 948 0 CODE 0 text20 dist/default/production\NixieIndicator.X.production.o
+__ptext21 BE0 0 CODE 0 text21 dist/default/production\NixieIndicator.X.production.o
+__ptext22 BF0 0 CODE 0 text22 dist/default/production\NixieIndicator.X.production.o
+__ptext23 BE8 0 CODE 0 text23 dist/default/production\NixieIndicator.X.production.o
+__ptext24 AF6 0 CODE 0 text24 dist/default/production\NixieIndicator.X.production.o
+__size_of_EUSART_DefaultErrorHandler 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+_EUSART_Receive_ISR 948 0 CODE 0 text20 dist/default/production\NixieIndicator.X.production.o
+__end_of_on_digit 834 0 CODE 0 text3 dist/default/production\NixieIndicator.X.production.o
+__end_of_PIN_MANAGER_Initialize AF6 0 CODE 0 text9 dist/default/production\NixieIndicator.X.production.o
+_BAUDCON 19F 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -790,59 +1010,107 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext 97A 0 CODE 0 maintext dist/default/production\NixieIndicator.X.production.o
+__pmaintext B2A 0 CODE 0 maintext dist/default/production\NixieIndicator.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
+__end_of_EUSART_SetErrorHandler BD8 0 CODE 0 text16 dist/default/production\NixieIndicator.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
-__Hinittext 0 0 ABS 0 inittext -
+__size_of_EUSART_is_rx_ready 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__size_of_EUSART_Read 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+_EUSART_FramingErrorHandler 59 0 BANK0 1 nvBANK0 dist/default/production\NixieIndicator.X.production.o
+_EUSART_OverrunErrorHandler 57 0 BANK0 1 nvBANK0 dist/default/production\NixieIndicator.X.production.o
+_EUSART_SetRxInterruptHandler BA8 0 CODE 0 text13 dist/default/production\NixieIndicator.X.production.o
 _OSCTUNE 98 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+_EUSART_ErrorHandler 55 0 BANK0 1 nvBANK0 dist/default/production\NixieIndicator.X.production.o
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-show_character@character 73 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
-__Lend_init 4 0 CODE 0 end_init -
+__pbssCOMMON 7A 0 COMMON 1 bssCOMMON dist/default/production\NixieIndicator.X.production.o
+show_character@character 74 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
+EUSART_SetTxInterruptHandler@interruptHandler 71 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_PIR1bits 11 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__Lend_init 58 0 CODE 0 end_init -
+_EUSART_DefaultErrorHandler BE8 0 CODE 0 text23 dist/default/production\NixieIndicator.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization FFA 0 CODE 0 cinit dist/default/production\NixieIndicator.X.production.o
-__Hintentry 4 0 CODE 0 intentry -
+_EUSART_SetFramingErrorHandler BC0 0 CODE 0 text15 dist/default/production\NixieIndicator.X.production.o
+_EUSART_SetOverrunErrorHandler BB4 0 CODE 0 text14 dist/default/production\NixieIndicator.X.production.o
+end_of_initialization 80 0 CODE 0 cinit dist/default/production\NixieIndicator.X.production.o
+__Hintentry 58 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 4 0 CODE 0 reset_vec -
-__ptext1 B28 0 CODE 0 text1 dist/default/production\NixieIndicator.X.production.o
-__ptext2 8E4 0 CODE 0 text2 dist/default/production\NixieIndicator.X.production.o
-__ptext3 84E 0 CODE 0 text3 dist/default/production\NixieIndicator.X.production.o
-__ptext4 7DE 0 CODE 0 text4 dist/default/production\NixieIndicator.X.production.o
-__ptext5 7BC 0 CODE 0 text5 dist/default/production\NixieIndicator.X.production.o
-__ptext6 81A 0 CODE 0 text6 dist/default/production\NixieIndicator.X.production.o
-__ptext7 7D0 0 CODE 0 text7 dist/default/production\NixieIndicator.X.production.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__HbssBANK1 0 0 ABS 0 bssBANK1 -
+show@value_index 53 0 BANK0 1 cstackBANK0 dist/default/production\NixieIndicator.X.production.o
+__ptext1 542 0 CODE 0 text1 dist/default/production\NixieIndicator.X.production.o
+__ptext2 88 0 CODE 0 text2 dist/default/production\NixieIndicator.X.production.o
+__ptext3 79E 0 CODE 0 text3 dist/default/production\NixieIndicator.X.production.o
+__ptext4 834 0 CODE 0 text4 dist/default/production\NixieIndicator.X.production.o
+__ptext5 9BA 0 CODE 0 text5 dist/default/production\NixieIndicator.X.production.o
+__ptext6 A28 0 CODE 0 text6 dist/default/production\NixieIndicator.X.production.o
+__ptext7 B56 0 CODE 0 text7 dist/default/production\NixieIndicator.X.production.o
+__ptext8 BD8 0 CODE 0 text8 dist/default/production\NixieIndicator.X.production.o
+__ptext9 AC0 0 CODE 0 text9 dist/default/production\NixieIndicator.X.production.o
+_eusartTxBufferRemaining 5F 0 BANK0 1 nvBANK0 dist/default/production\NixieIndicator.X.production.o
+receive_char_from_EUSART@receive_char 74 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-off_digit@digit 72 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
+_receive_index 3C 0 BANK0 1 bssBANK0 dist/default/production\NixieIndicator.X.production.o
+off_digit@digit 73 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
+__size_of_EUSART_DefaultFramingErrorHandler 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__size_of_EUSART_DefaultOverrunErrorHandler 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of__initialization FFA 0 CODE 0 cinit dist/default/production\NixieIndicator.X.production.o
+_eusartRxStatusBuffer 20 0 BANK0 1 bssBANK0 dist/default/production\NixieIndicator.X.production.o
+__size_of_EUSART_SetTxInterruptHandler 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__end_of__initialization 80 0 CODE 0 cinit dist/default/production\NixieIndicator.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
-__pidataBANK0 7F2 0 CODE 0 idataBANK0 dist/default/production\NixieIndicator.X.production.o
-__end_of_off_digit 8E4 0 CODE 0 text3 dist/default/production\NixieIndicator.X.production.o
+__end_of_EUSART_SetTxInterruptHandler BA8 0 CODE 0 text12 dist/default/production\NixieIndicator.X.production.o
+_eusartRxCount 39 0 BANK0 1 bssBANK0 dist/default/production\NixieIndicator.X.production.o
+__end_of_off_digit 8CA 0 CODE 0 text4 dist/default/production\NixieIndicator.X.production.o
+__size_of_EUSART_Transmit_ISR 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 __Lclrtext 0 0 ABS 0 clrtext -
 __size_of_off_digit 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__size_of_EUSART_RxDataHandler 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__size_of_EUSART_Initialize 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\NixieIndicator.X.production.o
-__Hend_init 8 0 CODE 0 end_init -
-__end_of_main B28 0 CODE 0 maintext dist/default/production\NixieIndicator.X.production.o
-_off_digit 84E 0 CODE 0 text3 dist/default/production\NixieIndicator.X.production.o
+_TXSTAbits 19E 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__Hend_init 5C 0 CODE 0 end_init -
+__end_of_main B56 0 CODE 0 maintext dist/default/production\NixieIndicator.X.production.o
+__end_of_show 79E 0 CODE 0 text1 dist/default/production\NixieIndicator.X.production.o
+__end_of_EUSART_RxDataHandler B2A 0 CODE 0 text24 dist/default/production\NixieIndicator.X.production.o
+_off_digit 834 0 CODE 0 text4 dist/default/production\NixieIndicator.X.production.o
+_RCREG 199 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+_RCSTA 19D 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _TRISA 8C 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _TRISB 8D 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _TRISC 8E 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _TRISD 8F 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 _TRISE 90 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+_TXREG 19A 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+_TXSTA 19E 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_chars 20 0 BANK0 1 dataBANK0 dist/default/production\NixieIndicator.X.production.o
+_value A0 0 BANK1 1 bssBANK1 dist/default/production\NixieIndicator.X.production.o
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
-_WDT_Initialize 7BC 0 CODE 0 text5 dist/default/production\NixieIndicator.X.production.o
-__HdataBANK0 0 0 ABS 0 dataBANK0 -
-__end_of_OSCILLATOR_Initialize 7DE 0 CODE 0 text7 dist/default/production\NixieIndicator.X.production.o
-__initialization FE2 0 CODE 0 cinit dist/default/production\NixieIndicator.X.production.o
-_OSCILLATOR_Initialize 7D0 0 CODE 0 text7 dist/default/production\NixieIndicator.X.production.o
+_eusartRxLastError 38 0 BANK0 1 bssBANK0 dist/default/production\NixieIndicator.X.production.o
+_WDT_Initialize BD8 0 CODE 0 text8 dist/default/production\NixieIndicator.X.production.o
+__pintentry 8 0 CODE 0 intentry dist/default/production\NixieIndicator.X.production.o
+__size_of_EUSART_SetErrorHandler 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__end_of_OSCILLATOR_Initialize B90 0 CODE 0 text10 dist/default/production\NixieIndicator.X.production.o
+__initialization 5C 0 CODE 0 cinit dist/default/production\NixieIndicator.X.production.o
+__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\NixieIndicator.X.production.o
+__pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/default/production\NixieIndicator.X.production.o
+_EUSART_Transmit_ISR A7C 0 CODE 0 text19 dist/default/production\NixieIndicator.X.production.o
+_eusartRxHead 7B 0 COMMON 1 bssCOMMON dist/default/production\NixieIndicator.X.production.o
+_eusartRxTail 7A 0 COMMON 1 bssCOMMON dist/default/production\NixieIndicator.X.production.o
+__size_of_EUSART_Receive_ISR 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+__size_of_EUSART_SetRxInterruptHandler 0 0 ABS 0 - dist/default/production\NixieIndicator.X.production.o
+_eusartTxHead 3B 0 BANK0 1 bssBANK0 dist/default/production\NixieIndicator.X.production.o
+_eusartTxTail 3A 0 BANK0 1 bssBANK0 dist/default/production\NixieIndicator.X.production.o
+__end_of_EUSART_SetRxInterruptHandler BB4 0 CODE 0 text13 dist/default/production\NixieIndicator.X.production.o
+_OSCILLATOR_Initialize B82 0 CODE 0 text10 dist/default/production\NixieIndicator.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -868,20 +1136,11 @@ _OSCILLATOR_Initialize 7D0 0 CODE 0 text7 dist/default/production\NixieIndicator
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cinit 0 7F1 FE2 F 2
-text1 0 594 B28 25D 2
-text2 0 472 8E4 4B 2
-text3 0 427 84E 4B 2
-text4 0 3EF 7DE A 2
-text5 0 3DE 7BC 4 2
-text6 0 40D 81A 1A 2
-text7 0 3E8 7D0 7 2
-maintext 0 4BD 97A D7 2
-cstackCOMMON 1 70 70 B 1
-inittext 0 3E2 7C4 6 2
-reset_vec 0 0 0 4 2
-idataBANK0 0 3F9 7F2 14 2
-dataBANK0 1 20 20 14 1
+cstackCOMMON 1 70 70 C 1
+intentry 0 4 8 5F5 2
+reset_vec 0 0 0 2 2
+bssBANK0 1 20 20 40 1
+bssBANK1 1 A0 A0 15 1
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section
 # is indicated by %NOTES. The first line indicates the name and decimal

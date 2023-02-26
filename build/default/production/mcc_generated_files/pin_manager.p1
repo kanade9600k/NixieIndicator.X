@@ -623,8 +623,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/pin_manager.c: 71:     TRISB = 0x00;
 [e = _TRISB -> -> 0 `i `uc ]
 "72
-[; ;mcc_generated_files/pin_manager.c: 72:     TRISC = 0x00;
-[e = _TRISC -> -> 0 `i `uc ]
+[; ;mcc_generated_files/pin_manager.c: 72:     TRISC = 0x80;
+[e = _TRISC -> -> 128 `i `uc ]
 "73
 [; ;mcc_generated_files/pin_manager.c: 73:     TRISD = 0x00;
 [e = _TRISD -> -> 0 `i `uc ]

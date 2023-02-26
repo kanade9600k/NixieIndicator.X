@@ -53,6 +53,7 @@
 #include <stdbool.h>
 #include <conio.h>
 #include "interrupt_manager.h"
+#include "i2c_slave.h"
 #include "eusart.h"
 
 

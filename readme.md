@@ -87,3 +87,5 @@
   * [制御基板](https://github.com/kanade9600k/NixieIndicator)
   * [電源基板](https://github.com/kanade9600k/NixieTubePowerSupply)
   * [管基板](https://github.com/kanade9600k/IN-12Panel)
+
+* ゴーストが近いので今後何とかしていきたい

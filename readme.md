@@ -88,4 +88,4 @@
   * [電源基板](https://github.com/kanade9600k/NixieTubePowerSupply)
   * [管基板](https://github.com/kanade9600k/IN-12Panel)
 
-* ゴーストが近いので今後何とかしていきたい
+* ゴーストが結構出てるので今後何とかしていきたい

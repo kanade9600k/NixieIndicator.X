@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=D:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\NixieIndicator.X.production.sym \
   --cmf=dist/default/production\NixieIndicator.X.production.cmf -z \
-  -Q16F1939 -oC:\Users\tomo9\AppData\Local\Temp\sm1k.2 \
+  -Q16F1939 -oC:\Users\tomo9\AppData\Local\Temp\sfec.2 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/NixieIndicator.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=0207Dh-023EFh -pstack=STACK \
@@ -32,7 +32,7 @@ Linker command line:
   -AIDLOC=08000h-08003h -DIDLOC=2 -AEEDATA=00h-0FFh/0F000h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE \
-  -pcinit=CODE -pfunctab=ENTRY -k C:\Users\tomo9\AppData\Local\Temp\sm1k.o \
+  -pcinit=CODE -pfunctab=ENTRY -k C:\Users\tomo9\AppData\Local\Temp\sfec.o \
   dist/default/production\NixieIndicator.X.production.o 
 
 Object code version is 3.11
@@ -42,7 +42,7 @@ Machine type is 16F1939
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\tomo9\AppData\Local\Temp\sm1k.o
+C:\Users\tomo9\AppData\Local\Temp\sfec.o
                 end_init                             4A       4A        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2        0       4
@@ -537,8 +537,6 @@ _RB2                                           (abs)        0006A
 _RB3                                           (abs)        0006B
 _RB4                                           (abs)        0006C
 _RB5                                           (abs)        0006D
-_RB6                                           (abs)        0006E
-_RB7                                           (abs)        0006F
 _RC0                                           (abs)        00070
 _RC1                                           (abs)        00071
 _RC2                                           (abs)        00072
@@ -546,6 +544,8 @@ _RCREG                                         (abs)        00199
 _RCSTA                                         (abs)        0019D
 _RCSTAbits                                     (abs)        0019D
 _RD0                                           (abs)        00078
+_RD4                                           (abs)        0007C
+_RD5                                           (abs)        0007D
 _RD6                                           (abs)        0007E
 _RD7                                           (abs)        0007F
 _RE0                                           (abs)        00080
@@ -1011,7 +1011,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 102 in file "main.c"
+		line 108 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1045,7 +1045,7 @@ Total ram usage:        0 bytes
 
  *************** function _show *****************
  Defined at:
-		line 142 in file "main.c"
+		line 148 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1078,7 +1078,7 @@ Total ram usage:       24 bytes
 
  *************** function _show_character *****************
  Defined at:
-		line 203 in file "main.c"
+		line 209 in file "main.c"
  Parameters:    Size  Location     Type
   dot             1    wreg     unsigned char 
   character       1    0[BANK0 ] unsigned char 
@@ -1111,7 +1111,7 @@ Total ram usage:        6 bytes
 
  *************** function _on_digit *****************
  Defined at:
-		line 605 in file "main.c"
+		line 611 in file "main.c"
  Parameters:    Size  Location     Type
   digit           1    wreg     char 
  Auto vars:     Size  Location     Type
@@ -1141,7 +1141,7 @@ Total ram usage:        3 bytes
 
  *************** function _off_digit *****************
  Defined at:
-		line 648 in file "main.c"
+		line 654 in file "main.c"
  Parameters:    Size  Location     Type
   digit           1    wreg     char 
  Auto vars:     Size  Location     Type
@@ -1171,7 +1171,7 @@ Total ram usage:        3 bytes
 
  *************** function _receive_char_from_I2C *****************
  Defined at:
-		line 694 in file "main.c"
+		line 700 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1262,7 +1262,7 @@ Total ram usage:        0 bytes
 
  *************** function _receive_char_from_EUSART *****************
  Defined at:
-		line 688 in file "main.c"
+		line 694 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1293,7 +1293,7 @@ Total ram usage:        0 bytes
 
  *************** function _decode_received_char *****************
  Defined at:
-		line 700 in file "main.c"
+		line 706 in file "main.c"
  Parameters:    Size  Location     Type
   received_cha    1    wreg     unsigned char 
  Auto vars:     Size  Location     Type

@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Sun Feb 26 19:42:47 2023
+                                                                                               Wed Mar 22 19:41:10 2023
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F1939
@@ -1368,31 +1368,31 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1354  0012                     _PIR2bits	set	18
   1355  0011                     _PIR1bits	set	17
   1356  000B                     _INTCONbits	set	11
-  1357  007E                     _RD6	set	126
-  1358  007F                     _RD7	set	127
-  1359  0068                     _RB0	set	104
-  1360  0069                     _RB1	set	105
-  1361  006A                     _RB2	set	106
-  1362  006B                     _RB3	set	107
-  1363  006C                     _RB4	set	108
-  1364  006D                     _RB5	set	109
-  1365  006E                     _RB6	set	110
-  1366  006F                     _RB7	set	111
-  1367  0072                     _RC2	set	114
-  1368  0071                     _RC1	set	113
-  1369  0070                     _RC0	set	112
-  1370  0066                     _RA6	set	102
+  1357  006D                     _RB5	set	109
+  1358  006C                     _RB4	set	108
+  1359  006B                     _RB3	set	107
+  1360  006A                     _RB2	set	106
+  1361  0069                     _RB1	set	105
+  1362  0068                     _RB0	set	104
+  1363  007F                     _RD7	set	127
+  1364  007E                     _RD6	set	126
+  1365  007D                     _RD5	set	125
+  1366  007C                     _RD4	set	124
+  1367  0063                     _RA3	set	99
+  1368  0062                     _RA2	set	98
+  1369  0061                     _RA1	set	97
+  1370  0060                     _RA0	set	96
   1371  0082                     _RE2	set	130
   1372  0081                     _RE1	set	129
   1373  0080                     _RE0	set	128
   1374  0065                     _RA5	set	101
-  1375  0063                     _RA3	set	99
-  1376  0062                     _RA2	set	98
-  1377  0061                     _RA1	set	97
-  1378  0060                     _RA0	set	96
-  1379  0078                     _RD0	set	120
+  1375  0072                     _RC2	set	114
+  1376  0071                     _RC1	set	113
+  1377  0070                     _RC0	set	112
+  1378  0066                     _RA6	set	102
+  1379  0064                     _RA4	set	100
   1380  0067                     _RA7	set	103
-  1381  0064                     _RA4	set	100
+  1381  0078                     _RD0	set	120
   1382  0092                     _PIE2bits	set	146
   1383  0091                     _PIE1bits	set	145
   1384  0097                     _WDTCON	set	151
@@ -1981,7 +1981,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1967 ;;
   1968 ;; *************** function _main *****************
   1969 ;; Defined at:
-  1970 ;;		line 102 in file "main.c"
+  1970 ;;		line 108 in file "main.c"
   1971 ;; Parameters:    Size  Location     Type
   1972 ;;		None
   1973 ;; Auto vars:     Size  Location     Type
@@ -2026,24 +2026,24 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2007                           ; Regs used in _main: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   2008                           
   2009                           
-  2010                           ;main.c: 105:   SYSTEM_Initialize();
+  2010                           ;main.c: 111:   SYSTEM_Initialize();
   2011  060B  3186  2685  3186   	fcall	_SYSTEM_Initialize
   2012  060E                     l3670:
   2013                           
-  2014                           ;main.c: 111:   (INTCONbits.GIE = 1);
+  2014                           ;main.c: 117:   (INTCONbits.GIE = 1);
   2015  060E  178B               	bsf	11,7	;volatile
   2016  060F                     l3672:
   2017                           
-  2018                           ;main.c: 114:   (INTCONbits.PEIE = 1);
+  2018                           ;main.c: 120:   (INTCONbits.PEIE = 1);
   2019  060F  170B               	bsf	11,6	;volatile
   2020                           
-  2021                           ;main.c: 122:   I2C_Open();
+  2021                           ;main.c: 128:   I2C_Open();
   2022  0610  3185  253D  3186   	fcall	_I2C_Open
   2023  0613                     l182:	
-  2024                           ;main.c: 124:   while (1)
+  2024                           ;main.c: 130:   while (1)
   2025                           
   2026                           
-  2027                           ;main.c: 125:   {;main.c: 126:     if (EUSART_is_rx_ready())
+  2027                           ;main.c: 131:   {;main.c: 132:     if (EUSART_is_rx_ready())
   2028  0613  3186  26D2  3186   	fcall	_EUSART_is_rx_ready
   2029  0616  3A00               	xorlw	0
   2030  0617  1903               	skipnz
@@ -2054,11 +2054,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2035  061B                     u940:
   2036  061B                     l3674:
   2037                           
-  2038                           ;main.c: 127:     {;main.c: 128:       receive_char_from_EUSART();
+  2038                           ;main.c: 133:     {;main.c: 134:       receive_char_from_EUSART();
   2039  061B  3186  26F2  3186   	fcall	_receive_char_from_EUSART
   2040  061E                     l3676:
   2041                           
-  2042                           ;main.c: 131:     if (is_I2C_interrupt)
+  2042                           ;main.c: 137:     if (is_I2C_interrupt)
   2043  061E  0020               	movlb	0	; select bank0
   2044  061F  084A               	movf	_is_I2C_interrupt,w
   2045  0620  1903               	btfsc	3,2
@@ -2069,15 +2069,15 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2050  0624                     u950:
   2051  0624                     l3678:
   2052                           
-  2053                           ;main.c: 132:     {;main.c: 133:       is_I2C_interrupt = 0;
+  2053                           ;main.c: 138:     {;main.c: 139:       is_I2C_interrupt = 0;
   2054  0624  01CA               	clrf	_is_I2C_interrupt
   2055  0625                     l3680:
   2056                           
-  2057                           ;main.c: 134:       receive_char_from_I2C();
+  2057                           ;main.c: 140:       receive_char_from_I2C();
   2058  0625  3186  26EB  3186   	fcall	_receive_char_from_I2C
   2059  0628                     l3682:
   2060                           
-  2061                           ;main.c: 137:     show();
+  2061                           ;main.c: 143:     show();
   2062  0628  3182  229B  3186   	fcall	_show
   2063  062B  2E13               	goto	l182
   2064  062C  3180  284A         	ljmp	start
@@ -2087,7 +2087,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2068  029B                     __ptext1:	
   2069 ;; *************** function _show *****************
   2070 ;; Defined at:
-  2071 ;;		line 142 in file "main.c"
+  2071 ;;		line 148 in file "main.c"
   2072 ;; Parameters:    Size  Location     Type
   2073 ;;		None
   2074 ;; Auto vars:     Size  Location     Type
@@ -2131,18 +2131,18 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2107                           ; Regs used in _show: [wreg-fsr1h+status,2+status,0+pclath+cstack]
   2108                           
   2109                           
-  2110                           ;main.c: 144:   char chars[10 * 2];;main.c: 147:   unsigned char value_index = 0;
+  2110                           ;main.c: 150:   char chars[10 * 2];;main.c: 153:   unsigned char value_index = 0;
   2111  029B  0021               	movlb	1	; select bank1
   2112  029C  01B4               	clrf	show@value_index^(0+128)
   2113                           
-  2114                           ;main.c: 148:   unsigned char chars_index = 0;
+  2114                           ;main.c: 154:   unsigned char chars_index = 0;
   2115  029D  01B5               	clrf	show@chars_index^(0+128)
   2116                           
-  2117                           ;main.c: 149:   while (chars_index < 10 * 2)
+  2117                           ;main.c: 155:   while (chars_index < 10 * 2)
   2118  029E  2B08               	goto	l3630
   2119  029F                     l3612:
   2120                           
-  2121                           ;main.c: 150:   {;main.c: 151:     if (value[value_index] == '.')
+  2121                           ;main.c: 156:   {;main.c: 157:     if (value[value_index] == '.')
   2122  029F  0834               	movf	show@value_index^(0+128),w
   2123  02A0  3EB6               	addlw	(low (_value| 0))& (0+255)
   2124  02A1  0086               	movwf	6
@@ -2157,7 +2157,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2133  02A9                     u920:
   2134  02A9                     l3614:
   2135                           
-  2136                           ;main.c: 152:     {;main.c: 153:       chars[chars_index++] = value[value_index++];
+  2136                           ;main.c: 158:     {;main.c: 159:       chars[chars_index++] = value[value_index++];
   2137  02A9  0834               	movf	show@value_index^(0+128),w
   2138  02AA  3EB6               	addlw	(low (_value| 0))& (0+255)
   2139  02AB  0086               	movwf	6
@@ -2187,7 +2187,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2163  02C1  0021               	movlb	1	; select bank1
   2164  02C2  07B5               	addwf	show@chars_index^(0+128),f
   2165                           
-  2166                           ;main.c: 154:       chars[chars_index++] = value[value_index++];
+  2166                           ;main.c: 160:       chars[chars_index++] = value[value_index++];
   2167  02C3  0834               	movf	show@value_index^(0+128),w
   2168  02C4  3EB6               	addlw	(low (_value| 0))& (0+255)
   2169  02C5  0086               	movwf	6
@@ -2217,11 +2217,11 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2193  02DB  0021               	movlb	1	; select bank1
   2194  02DC  07B5               	addwf	show@chars_index^(0+128),f
   2195                           
-  2196                           ;main.c: 155:     }
+  2196                           ;main.c: 161:     }
   2197  02DD  2B08               	goto	l3630
   2198  02DE                     l3624:
   2199                           
-  2200                           ;main.c: 157:     {;main.c: 158:       chars[chars_index++] = ' ';
+  2200                           ;main.c: 163:     {;main.c: 164:       chars[chars_index++] = ' ';
   2201  02DE  3020               	movlw	32
   2202  02DF  0020               	movlb	0	; select bank0
   2203  02E0  00DB               	movwf	??_show
@@ -2241,7 +2241,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2217  02ED  07B5               	addwf	show@chars_index^(0+128),f
   2218  02EE                     l3628:
   2219                           
-  2220                           ;main.c: 159:       chars[chars_index++] = value[value_index++];
+  2220                           ;main.c: 165:       chars[chars_index++] = value[value_index++];
   2221  02EE  0834               	movf	show@value_index^(0+128),w
   2222  02EF  3EB6               	addlw	(low (_value| 0))& (0+255)
   2223  02F0  0086               	movwf	6
@@ -2270,7 +2270,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2246  0307  07B5               	addwf	show@chars_index^(0+128),f
   2247  0308                     l3630:
   2248                           
-  2249                           ;main.c: 149:   while (chars_index < 10 * 2)
+  2249                           ;main.c: 155:   while (chars_index < 10 * 2)
   2250  0308  3014               	movlw	20
   2251  0309  0235               	subwf	show@chars_index^(0+128),w
   2252  030A  1C03               	skipc
@@ -2281,7 +2281,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2257  030E                     u930:
   2258  030E                     l3632:
   2259                           
-  2260                           ;main.c: 164:   show_character(chars[0], chars[1], 0);
+  2260                           ;main.c: 170:   show_character(chars[0], chars[1], 0);
   2261  030E  0821               	movf	(show@chars^(0+128)+1),w
   2262  030F  0020               	movlb	0	; select bank0
   2263  0310  00DB               	movwf	??_show
@@ -2292,7 +2292,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2268  0315  0820               	movf	show@chars^(0+128),w
   2269  0316  3180  2064  3182   	fcall	_show_character
   2270                           
-  2271                           ;main.c: 165:   show_character(chars[8], chars[9], 4);
+  2271                           ;main.c: 171:   show_character(chars[8], chars[9], 4);
   2272  0319  0021               	movlb	1	; select bank1
   2273  031A  0829               	movf	(show@chars^(0+128)+9),w
   2274  031B  0020               	movlb	0	; select bank0
@@ -2307,7 +2307,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2283  0324  0828               	movf	(show@chars^(0+128)+8),w
   2284  0325  3180  2064  3182   	fcall	_show_character
   2285                           
-  2286                           ;main.c: 166:   show_character(chars[16], chars[17], 8);
+  2286                           ;main.c: 172:   show_character(chars[16], chars[17], 8);
   2287  0328  0021               	movlb	1	; select bank1
   2288  0329  0831               	movf	(show@chars^(0+128)+17),w
   2289  032A  0020               	movlb	0	; select bank0
@@ -2323,7 +2323,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2299  0334  3180  2064  3182   	fcall	_show_character
   2300  0337                     l3634:
   2301                           
-  2302                           ;main.c: 167:   _delay((unsigned long)((800)*(8000000/4000000.0)));
+  2302                           ;main.c: 173:   _delay((unsigned long)((800)*(8000000/4000000.0)));
   2303  0337  30E4               	movlw	228
   2304  0338                     u967:
   2305  0338  3200               	nop2
@@ -2334,21 +2334,21 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2310  033D  3200               	nop2
   2311  033E                     l3636:
   2312                           
-  2313                           ;main.c: 168:   off_digit(0);
+  2313                           ;main.c: 174:   off_digit(0);
   2314  033E  3000               	movlw	0
   2315  033F  3184  24B3  3182   	fcall	_off_digit
   2316  0342                     l3638:
   2317                           
-  2318                           ;main.c: 169:   off_digit(4);
+  2318                           ;main.c: 175:   off_digit(4);
   2319  0342  3004               	movlw	4
   2320  0343  3184  24B3  3182   	fcall	_off_digit
   2321  0346                     l3640:
   2322                           
-  2323                           ;main.c: 170:   off_digit(8);
+  2323                           ;main.c: 176:   off_digit(8);
   2324  0346  3008               	movlw	8
   2325  0347  3184  24B3  3182   	fcall	_off_digit
   2326                           
-  2327                           ;main.c: 171:   _delay((unsigned long)((200)*(8000000/4000000.0)));
+  2327                           ;main.c: 177:   _delay((unsigned long)((200)*(8000000/4000000.0)));
   2328  034A  3085               	movlw	133
   2329  034B                     u977:
   2330  034B  0B89               	decfsz	9,f
@@ -2356,7 +2356,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2332  034D  0000               	nop
   2333  034E                     l3642:
   2334                           
-  2335                           ;main.c: 173:   show_character(chars[2], chars[3], 1);
+  2335                           ;main.c: 179:   show_character(chars[2], chars[3], 1);
   2336  034E  0021               	movlb	1	; select bank1
   2337  034F  0823               	movf	(show@chars^(0+128)+3),w
   2338  0350  0020               	movlb	0	; select bank0
@@ -2370,7 +2370,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2346  0358  3180  2064  3182   	fcall	_show_character
   2347  035B                     l3644:
   2348                           
-  2349                           ;main.c: 174:   show_character(chars[10], chars[11], 5);
+  2349                           ;main.c: 180:   show_character(chars[10], chars[11], 5);
   2350  035B  0021               	movlb	1	; select bank1
   2351  035C  082B               	movf	(show@chars^(0+128)+11),w
   2352  035D  0020               	movlb	0	; select bank0
@@ -2386,7 +2386,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2362  0367  3180  2064  3182   	fcall	_show_character
   2363  036A                     l3646:
   2364                           
-  2365                           ;main.c: 175:   show_character(chars[18], chars[19], 9);
+  2365                           ;main.c: 181:   show_character(chars[18], chars[19], 9);
   2366  036A  0021               	movlb	1	; select bank1
   2367  036B  0833               	movf	(show@chars^(0+128)+19),w
   2368  036C  0020               	movlb	0	; select bank0
@@ -2402,7 +2402,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2378  0376  3180  2064  3182   	fcall	_show_character
   2379  0379                     l3648:
   2380                           
-  2381                           ;main.c: 176:   _delay((unsigned long)((800)*(8000000/4000000.0)));
+  2381                           ;main.c: 182:   _delay((unsigned long)((800)*(8000000/4000000.0)));
   2382  0379  30E4               	movlw	228
   2383  037A                     u987:
   2384  037A  3200               	nop2
@@ -2412,20 +2412,20 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2388  037E  3200               	nop2
   2389  037F  3200               	nop2
   2390                           
-  2391                           ;main.c: 177:   off_digit(1);
+  2391                           ;main.c: 183:   off_digit(1);
   2392  0380  3001               	movlw	1
   2393  0381  3184  24B3  3182   	fcall	_off_digit
   2394                           
-  2395                           ;main.c: 178:   off_digit(5);
+  2395                           ;main.c: 184:   off_digit(5);
   2396  0384  3005               	movlw	5
   2397  0385  3184  24B3  3182   	fcall	_off_digit
   2398                           
-  2399                           ;main.c: 179:   off_digit(9);
+  2399                           ;main.c: 185:   off_digit(9);
   2400  0388  3009               	movlw	9
   2401  0389  3184  24B3  3182   	fcall	_off_digit
   2402  038C                     l3650:
   2403                           
-  2404                           ;main.c: 180:   _delay((unsigned long)((200)*(8000000/4000000.0)));
+  2404                           ;main.c: 186:   _delay((unsigned long)((200)*(8000000/4000000.0)));
   2405  038C  3085               	movlw	133
   2406  038D                     u997:
   2407  038D  0B89               	decfsz	9,f
@@ -2433,7 +2433,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2409  038F  0000               	nop
   2410  0390                     l3652:
   2411                           
-  2412                           ;main.c: 182:   show_character(chars[4], chars[5], 2);
+  2412                           ;main.c: 188:   show_character(chars[4], chars[5], 2);
   2413  0390  0021               	movlb	1	; select bank1
   2414  0391  0825               	movf	(show@chars^(0+128)+5),w
   2415  0392  0020               	movlb	0	; select bank0
@@ -2449,7 +2449,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2425  039C  3180  2064  3182   	fcall	_show_character
   2426  039F                     l3654:
   2427                           
-  2428                           ;main.c: 183:   show_character(chars[12], chars[13], 6);
+  2428                           ;main.c: 189:   show_character(chars[12], chars[13], 6);
   2429  039F  0021               	movlb	1	; select bank1
   2430  03A0  082D               	movf	(show@chars^(0+128)+13),w
   2431  03A1  0020               	movlb	0	; select bank0
@@ -2465,7 +2465,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2441  03AB  3180  2064  3182   	fcall	_show_character
   2442  03AE                     l3656:
   2443                           
-  2444                           ;main.c: 184:   _delay((unsigned long)((800)*(8000000/4000000.0)));
+  2444                           ;main.c: 190:   _delay((unsigned long)((800)*(8000000/4000000.0)));
   2445  03AE  30E4               	movlw	228
   2446  03AF                     u1007:
   2447  03AF  3200               	nop2
@@ -2475,16 +2475,16 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2451  03B3  3200               	nop2
   2452  03B4  3200               	nop2
   2453                           
-  2454                           ;main.c: 185:   off_digit(2);
+  2454                           ;main.c: 191:   off_digit(2);
   2455  03B5  3002               	movlw	2
   2456  03B6  3184  24B3  3182   	fcall	_off_digit
   2457                           
-  2458                           ;main.c: 186:   off_digit(6);
+  2458                           ;main.c: 192:   off_digit(6);
   2459  03B9  3006               	movlw	6
   2460  03BA  3184  24B3  3182   	fcall	_off_digit
   2461  03BD                     l3658:
   2462                           
-  2463                           ;main.c: 187:   _delay((unsigned long)((200)*(8000000/4000000.0)));
+  2463                           ;main.c: 193:   _delay((unsigned long)((200)*(8000000/4000000.0)));
   2464  03BD  3085               	movlw	133
   2465  03BE                     u1017:
   2466  03BE  0B89               	decfsz	9,f
@@ -2492,7 +2492,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2468  03C0  0000               	nop
   2469  03C1                     l3660:
   2470                           
-  2471                           ;main.c: 189:   show_character(chars[6], chars[7], 3);
+  2471                           ;main.c: 195:   show_character(chars[6], chars[7], 3);
   2472  03C1  0021               	movlb	1	; select bank1
   2473  03C2  0827               	movf	(show@chars^(0+128)+7),w
   2474  03C3  0020               	movlb	0	; select bank0
@@ -2508,7 +2508,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2484  03CD  3180  2064  3182   	fcall	_show_character
   2485  03D0                     l3662:
   2486                           
-  2487                           ;main.c: 190:   show_character(chars[14], chars[15], 7);
+  2487                           ;main.c: 196:   show_character(chars[14], chars[15], 7);
   2488  03D0  0021               	movlb	1	; select bank1
   2489  03D1  082F               	movf	(show@chars^(0+128)+15),w
   2490  03D2  0020               	movlb	0	; select bank0
@@ -2524,7 +2524,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2500  03DC  3180  2064  3182   	fcall	_show_character
   2501  03DF                     l3664:
   2502                           
-  2503                           ;main.c: 191:   _delay((unsigned long)((800)*(8000000/4000000.0)));
+  2503                           ;main.c: 197:   _delay((unsigned long)((800)*(8000000/4000000.0)));
   2504  03DF  30E4               	movlw	228
   2505  03E0                     u1027:
   2506  03E0  3200               	nop2
@@ -2534,16 +2534,16 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2510  03E4  3200               	nop2
   2511  03E5  3200               	nop2
   2512                           
-  2513                           ;main.c: 192:   off_digit(3);
+  2513                           ;main.c: 198:   off_digit(3);
   2514  03E6  3003               	movlw	3
   2515  03E7  3184  24B3  3182   	fcall	_off_digit
   2516                           
-  2517                           ;main.c: 193:   off_digit(7);
+  2517                           ;main.c: 199:   off_digit(7);
   2518  03EA  3007               	movlw	7
   2519  03EB  3184  24B3  3182   	fcall	_off_digit
   2520  03EE                     l3666:
   2521                           
-  2522                           ;main.c: 194:   _delay((unsigned long)((200)*(8000000/4000000.0)));
+  2522                           ;main.c: 200:   _delay((unsigned long)((200)*(8000000/4000000.0)));
   2523  03EE  3085               	movlw	133
   2524  03EF                     u1037:
   2525  03EF  0B89               	decfsz	9,f
@@ -2557,7 +2557,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2533  0064                     __ptext2:	
   2534 ;; *************** function _show_character *****************
   2535 ;; Defined at:
-  2536 ;;		line 203 in file "main.c"
+  2536 ;;		line 209 in file "main.c"
   2537 ;; Parameters:    Size  Location     Type
   2538 ;;  dot             1    wreg     unsigned char 
   2539 ;;  character       1    0[BANK0 ] unsigned char 
@@ -2604,8 +2604,8 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2575  0065  00D9               	movwf	show_character@dot
   2576  0066                     l3472:
   2577                           
-  2578                           ;main.c: 203: void show_character(char dot, char character, signed char digit);main.c: 2
-      +                          04: {;main.c: 206:   NIXIE_GLOUP group;;main.c: 207:   if (digit < 4)
+  2578                           ;main.c: 209: void show_character(char dot, char character, signed char digit);main.c: 2
+      +                          10: {;main.c: 212:   NIXIE_GLOUP group;;main.c: 213:   if (digit < 4)
   2579  0066  0856               	movf	show_character@digit,w
   2580  0067  3A80               	xorlw	128
   2581  0068  3E7C               	addlw	-132
@@ -2617,10 +2617,10 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2587  006D                     u890:
   2588  006D                     l3474:
   2589                           
-  2590                           ;main.c: 208:   {;main.c: 209:     group = UPPER;
+  2590                           ;main.c: 214:   {;main.c: 215:     group = UPPER;
   2591  006D  01DA               	clrf	show_character@group
   2592                           
-  2593                           ;main.c: 210:   }
+  2593                           ;main.c: 216:   }
   2594  006E  287D               	goto	l3482
   2595  006F                     l3476:
   2596  006F  0856               	movf	show_character@digit,w
@@ -2634,22 +2634,22 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2604  0076                     u900:
   2605  0076                     l3478:
   2606                           
-  2607                           ;main.c: 212:   {;main.c: 213:     group = MIDDLE;
+  2607                           ;main.c: 218:   {;main.c: 219:     group = MIDDLE;
   2608  0076  01DA               	clrf	show_character@group
   2609  0077  0ADA               	incf	show_character@group,f
   2610                           
-  2611                           ;main.c: 214:   }
+  2611                           ;main.c: 220:   }
   2612  0078  287D               	goto	l3482
   2613  0079                     l3480:
   2614                           
-  2615                           ;main.c: 216:   {;main.c: 217:     group = LOWER;
+  2615                           ;main.c: 222:   {;main.c: 223:     group = LOWER;
   2616  0079  3002               	movlw	2
   2617  007A  00D7               	movwf	??_show_character
   2618  007B  0857               	movf	??_show_character,w
   2619  007C  00DA               	movwf	show_character@group
   2620  007D                     l3482:
   2621                           
-  2622                           ;main.c: 221:   if (dot == '.')
+  2622                           ;main.c: 227:   if (dot == '.')
   2623  007D  302E               	movlw	46
   2624  007E  0659               	xorwf	show_character@dot,w
   2625  007F  1D03               	btfss	3,2
@@ -2660,29 +2660,29 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2630  0083                     u910:
   2631  0083  288A               	goto	l3488
   2632  0084                     l204:	
-  2633                           ;main.c: 224:     {;main.c: 225:     case UPPER:
+  2633                           ;main.c: 230:     {;main.c: 231:     case UPPER:
   2634                           
   2635                           
-  2636                           ;main.c: 226:       RA4 = 1;
-  2637  0084  160C               	bsf	12,4	;volatile
+  2636                           ;main.c: 232:       RD0 = 1;
+  2637  0084  140F               	bsf	15,0	;volatile
   2638                           
-  2639                           ;main.c: 227:       break;
+  2639                           ;main.c: 233:       break;
   2640  0085  2A35               	goto	l3540
   2641  0086                     l206:	
-  2642                           ;main.c: 228:     case MIDDLE:
+  2642                           ;main.c: 234:     case MIDDLE:
   2643                           
   2644                           
-  2645                           ;main.c: 229:       RA7 = 1;
+  2645                           ;main.c: 235:       RA7 = 1;
   2646  0086  178C               	bsf	12,7	;volatile
   2647                           
-  2648                           ;main.c: 230:       break;
+  2648                           ;main.c: 236:       break;
   2649  0087  2A35               	goto	l3540
   2650  0088                     l207:	
-  2651                           ;main.c: 231:     case LOWER:
+  2651                           ;main.c: 237:     case LOWER:
   2652                           
   2653                           
-  2654                           ;main.c: 232:       RD0 = 1;
-  2655  0088  140F               	bsf	15,0	;volatile
+  2654                           ;main.c: 238:       RA4 = 1;
+  2655  0088  160C               	bsf	12,4	;volatile
   2656  0089  2A35               	goto	l3540
   2657  008A                     l3488:
   2658  008A  085A               	movf	show_character@group,w
@@ -2726,29 +2726,29 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2695  009B  2888               	goto	l207
   2696  009C  28B6               	goto	l209
   2697  009D                     l211:	
-  2698                           ;main.c: 240:     {;main.c: 241:     case UPPER:
+  2698                           ;main.c: 246:     {;main.c: 247:     case UPPER:
   2699                           
   2700                           
-  2701                           ;main.c: 242:       RA4 = 0;
-  2702  009D  120C               	bcf	12,4	;volatile
+  2701                           ;main.c: 248:       RD0 = 0;
+  2702  009D  100F               	bcf	15,0	;volatile
   2703                           
-  2704                           ;main.c: 243:       break;
+  2704                           ;main.c: 249:       break;
   2705  009E  2A35               	goto	l3540
   2706  009F                     l213:	
-  2707                           ;main.c: 244:     case MIDDLE:
+  2707                           ;main.c: 250:     case MIDDLE:
   2708                           
   2709                           
-  2710                           ;main.c: 245:       RA7 = 0;
+  2710                           ;main.c: 251:       RA7 = 0;
   2711  009F  138C               	bcf	12,7	;volatile
   2712                           
-  2713                           ;main.c: 246:       break;
+  2713                           ;main.c: 252:       break;
   2714  00A0  2A35               	goto	l3540
   2715  00A1                     l214:	
-  2716                           ;main.c: 247:     case LOWER:
+  2716                           ;main.c: 253:     case LOWER:
   2717                           
   2718                           
-  2719                           ;main.c: 248:       RD0 = 0;
-  2720  00A1  100F               	bcf	15,0	;volatile
+  2719                           ;main.c: 254:       RA4 = 0;
+  2720  00A1  120C               	bcf	12,4	;volatile
   2721  00A2  2A35               	goto	l3540
   2722  00A3                     l3492:
   2723  00A3  085A               	movf	show_character@group,w
@@ -2792,70 +2792,70 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2760  00B4  28A1               	goto	l214
   2761  00B5  28B6               	goto	l209
   2762  00B6                     l209:	
-  2763                           ;main.c: 252:   }
+  2763                           ;main.c: 258:   }
   2764                           
   2765                           
-  2766                           ;main.c: 255:   switch (character)
+  2766                           ;main.c: 261:   switch (character)
   2767  00B6  2A35               	goto	l3540
   2768  00B7                     l219:	
-  2769                           ;main.c: 259:   case 'W':
+  2769                           ;main.c: 265:   case 'W':
   2770                           
   2771                           
-  2772                           ;main.c: 261:     switch (group)
+  2772                           ;main.c: 267:     switch (group)
   2773  00B7  28C7               	goto	l3496
   2774  00B8                     l221:	
-  2775                           ;main.c: 262:     {;main.c: 263:     case UPPER:
+  2775                           ;main.c: 268:     {;main.c: 269:     case UPPER:
   2776                           
   2777                           
-  2778                           ;main.c: 264:       RA0 = 0;
-  2779  00B8  100C               	bcf	12,0	;volatile
+  2778                           ;main.c: 270:       RA6 = 0;
+  2779  00B8  130C               	bcf	12,6	;volatile
   2780                           
-  2781                           ;main.c: 265:       RA1 = 0;
-  2782  00B9  108C               	bcf	12,1	;volatile
+  2781                           ;main.c: 271:       RC0 = 0;
+  2782  00B9  100E               	bcf	14,0	;volatile
   2783                           
-  2784                           ;main.c: 266:       RA2 = 0;
-  2785  00BA  110C               	bcf	12,2	;volatile
+  2784                           ;main.c: 272:       RC1 = 0;
+  2785  00BA  108E               	bcf	14,1	;volatile
   2786                           
-  2787                           ;main.c: 267:       RA3 = 0;
-  2788  00BB  118C               	bcf	12,3	;volatile
+  2787                           ;main.c: 273:       RC2 = 0;
+  2788  00BB  110E               	bcf	14,2	;volatile
   2789                           
-  2790                           ;main.c: 268:       break;
+  2790                           ;main.c: 274:       break;
   2791  00BC  2A96               	goto	l3542
   2792  00BD                     l223:	
-  2793                           ;main.c: 270:     case MIDDLE:
+  2793                           ;main.c: 276:     case MIDDLE:
   2794                           
   2795                           
-  2796                           ;main.c: 271:       RA5 = 0;
+  2796                           ;main.c: 277:       RA5 = 0;
   2797  00BD  128C               	bcf	12,5	;volatile
   2798                           
-  2799                           ;main.c: 272:       RE0 = 0;
+  2799                           ;main.c: 278:       RE0 = 0;
   2800  00BE  1010               	bcf	16,0	;volatile
   2801                           
-  2802                           ;main.c: 273:       RE1 = 0;
+  2802                           ;main.c: 279:       RE1 = 0;
   2803  00BF  1090               	bcf	16,1	;volatile
   2804                           
-  2805                           ;main.c: 274:       RE2 = 0;
+  2805                           ;main.c: 280:       RE2 = 0;
   2806  00C0  1110               	bcf	16,2	;volatile
   2807                           
-  2808                           ;main.c: 275:       break;
+  2808                           ;main.c: 281:       break;
   2809  00C1  2A96               	goto	l3542
   2810  00C2                     l224:	
-  2811                           ;main.c: 277:     case LOWER:
+  2811                           ;main.c: 283:     case LOWER:
   2812                           
   2813                           
-  2814                           ;main.c: 278:       RA6 = 0;
-  2815  00C2  130C               	bcf	12,6	;volatile
+  2814                           ;main.c: 284:       RA0 = 0;
+  2815  00C2  100C               	bcf	12,0	;volatile
   2816                           
-  2817                           ;main.c: 279:       RC0 = 0;
-  2818  00C3  100E               	bcf	14,0	;volatile
+  2817                           ;main.c: 285:       RA1 = 0;
+  2818  00C3  108C               	bcf	12,1	;volatile
   2819                           
-  2820                           ;main.c: 280:       RC1 = 0;
-  2821  00C4  108E               	bcf	14,1	;volatile
+  2820                           ;main.c: 286:       RA2 = 0;
+  2821  00C4  110C               	bcf	12,2	;volatile
   2822                           
-  2823                           ;main.c: 281:       RC2 = 0;
-  2824  00C5  110E               	bcf	14,2	;volatile
+  2823                           ;main.c: 287:       RA3 = 0;
+  2824  00C5  118C               	bcf	12,3	;volatile
   2825                           
-  2826                           ;main.c: 282:       break;
+  2826                           ;main.c: 288:       break;
   2827  00C6  2A96               	goto	l3542
   2828  00C7                     l3496:
   2829  00C7  085A               	movf	show_character@group,w
@@ -2899,64 +2899,64 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2866  00D8  28C2               	goto	l224
   2867  00D9  2A96               	goto	l3542
   2868  00DA                     l229:	
-  2869                           ;main.c: 291:   case 'A':
+  2869                           ;main.c: 297:   case 'A':
   2870                           
   2871                           
-  2872                           ;main.c: 292:     switch (group)
+  2872                           ;main.c: 298:     switch (group)
   2873  00DA  28EA               	goto	l3500
   2874  00DB                     l231:	
-  2875                           ;main.c: 293:     {;main.c: 294:     case UPPER:
+  2875                           ;main.c: 299:     {;main.c: 300:     case UPPER:
   2876                           
   2877                           
-  2878                           ;main.c: 295:       RA0 = 0;
-  2879  00DB  100C               	bcf	12,0	;volatile
+  2878                           ;main.c: 301:       RA6 = 0;
+  2879  00DB  130C               	bcf	12,6	;volatile
   2880                           
-  2881                           ;main.c: 296:       RA1 = 0;
-  2882  00DC  108C               	bcf	12,1	;volatile
+  2881                           ;main.c: 302:       RC0 = 0;
+  2882  00DC  100E               	bcf	14,0	;volatile
   2883                           
-  2884                           ;main.c: 297:       RA2 = 0;
-  2885  00DD  110C               	bcf	12,2	;volatile
+  2884                           ;main.c: 303:       RC1 = 0;
+  2885  00DD  108E               	bcf	14,1	;volatile
   2886                           
-  2887                           ;main.c: 298:       RA3 = 1;
-  2888  00DE  158C               	bsf	12,3	;volatile
+  2887                           ;main.c: 304:       RC2 = 1;
+  2888  00DE  150E               	bsf	14,2	;volatile
   2889                           
-  2890                           ;main.c: 299:       break;
+  2890                           ;main.c: 305:       break;
   2891  00DF  2A96               	goto	l3542
   2892  00E0                     l233:	
-  2893                           ;main.c: 301:     case MIDDLE:
+  2893                           ;main.c: 307:     case MIDDLE:
   2894                           
   2895                           
-  2896                           ;main.c: 302:       RA5 = 0;
+  2896                           ;main.c: 308:       RA5 = 0;
   2897  00E0  128C               	bcf	12,5	;volatile
   2898                           
-  2899                           ;main.c: 303:       RE0 = 0;
+  2899                           ;main.c: 309:       RE0 = 0;
   2900  00E1  1010               	bcf	16,0	;volatile
   2901                           
-  2902                           ;main.c: 304:       RE1 = 0;
+  2902                           ;main.c: 310:       RE1 = 0;
   2903  00E2  1090               	bcf	16,1	;volatile
   2904                           
-  2905                           ;main.c: 305:       RE2 = 1;
+  2905                           ;main.c: 311:       RE2 = 1;
   2906  00E3  1510               	bsf	16,2	;volatile
   2907                           
-  2908                           ;main.c: 306:       break;
+  2908                           ;main.c: 312:       break;
   2909  00E4  2A96               	goto	l3542
   2910  00E5                     l234:	
-  2911                           ;main.c: 308:     case LOWER:
+  2911                           ;main.c: 314:     case LOWER:
   2912                           
   2913                           
-  2914                           ;main.c: 309:       RA6 = 0;
-  2915  00E5  130C               	bcf	12,6	;volatile
+  2914                           ;main.c: 315:       RA0 = 0;
+  2915  00E5  100C               	bcf	12,0	;volatile
   2916                           
-  2917                           ;main.c: 310:       RC0 = 0;
-  2918  00E6  100E               	bcf	14,0	;volatile
+  2917                           ;main.c: 316:       RA1 = 0;
+  2918  00E6  108C               	bcf	12,1	;volatile
   2919                           
-  2920                           ;main.c: 311:       RC1 = 0;
-  2921  00E7  108E               	bcf	14,1	;volatile
+  2920                           ;main.c: 317:       RA2 = 0;
+  2921  00E7  110C               	bcf	12,2	;volatile
   2922                           
-  2923                           ;main.c: 312:       RC2 = 1;
-  2924  00E8  150E               	bsf	14,2	;volatile
+  2923                           ;main.c: 318:       RA3 = 1;
+  2924  00E8  158C               	bsf	12,3	;volatile
   2925                           
-  2926                           ;main.c: 313:       break;
+  2926                           ;main.c: 319:       break;
   2927  00E9  2A96               	goto	l3542
   2928  00EA                     l3500:
   2929  00EA  085A               	movf	show_character@group,w
@@ -3000,64 +3000,64 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   2966  00FB  28E5               	goto	l234
   2967  00FC  2A96               	goto	l3542
   2968  00FD                     l238:	
-  2969                           ;main.c: 322:   case 'O':
+  2969                           ;main.c: 328:   case 'O':
   2970                           
   2971                           
-  2972                           ;main.c: 323:     switch (group)
+  2972                           ;main.c: 329:     switch (group)
   2973  00FD  290D               	goto	l3504
   2974  00FE                     l240:	
-  2975                           ;main.c: 324:     {;main.c: 325:     case UPPER:
+  2975                           ;main.c: 330:     {;main.c: 331:     case UPPER:
   2976                           
   2977                           
-  2978                           ;main.c: 326:       RA0 = 0;
-  2979  00FE  100C               	bcf	12,0	;volatile
+  2978                           ;main.c: 332:       RA6 = 0;
+  2979  00FE  130C               	bcf	12,6	;volatile
   2980                           
-  2981                           ;main.c: 327:       RA1 = 0;
-  2982  00FF  108C               	bcf	12,1	;volatile
+  2981                           ;main.c: 333:       RC0 = 0;
+  2982  00FF  100E               	bcf	14,0	;volatile
   2983                           
-  2984                           ;main.c: 328:       RA2 = 1;
-  2985  0100  150C               	bsf	12,2	;volatile
+  2984                           ;main.c: 334:       RC1 = 1;
+  2985  0100  148E               	bsf	14,1	;volatile
   2986                           
-  2987                           ;main.c: 329:       RA3 = 0;
-  2988  0101  118C               	bcf	12,3	;volatile
+  2987                           ;main.c: 335:       RC2 = 0;
+  2988  0101  110E               	bcf	14,2	;volatile
   2989                           
-  2990                           ;main.c: 330:       break;
+  2990                           ;main.c: 336:       break;
   2991  0102  2A96               	goto	l3542
   2992  0103                     l242:	
-  2993                           ;main.c: 332:     case MIDDLE:
+  2993                           ;main.c: 338:     case MIDDLE:
   2994                           
   2995                           
-  2996                           ;main.c: 333:       RA5 = 0;
+  2996                           ;main.c: 339:       RA5 = 0;
   2997  0103  128C               	bcf	12,5	;volatile
   2998                           
-  2999                           ;main.c: 334:       RE0 = 0;
+  2999                           ;main.c: 340:       RE0 = 0;
   3000  0104  1010               	bcf	16,0	;volatile
   3001                           
-  3002                           ;main.c: 335:       RE1 = 1;
+  3002                           ;main.c: 341:       RE1 = 1;
   3003  0105  1490               	bsf	16,1	;volatile
   3004                           
-  3005                           ;main.c: 336:       RE2 = 0;
+  3005                           ;main.c: 342:       RE2 = 0;
   3006  0106  1110               	bcf	16,2	;volatile
   3007                           
-  3008                           ;main.c: 337:       break;
+  3008                           ;main.c: 343:       break;
   3009  0107  2A96               	goto	l3542
   3010  0108                     l243:	
-  3011                           ;main.c: 339:     case LOWER:
+  3011                           ;main.c: 345:     case LOWER:
   3012                           
   3013                           
-  3014                           ;main.c: 340:       RA6 = 0;
-  3015  0108  130C               	bcf	12,6	;volatile
+  3014                           ;main.c: 346:       RA0 = 0;
+  3015  0108  100C               	bcf	12,0	;volatile
   3016                           
-  3017                           ;main.c: 341:       RC0 = 0;
-  3018  0109  100E               	bcf	14,0	;volatile
+  3017                           ;main.c: 347:       RA1 = 0;
+  3018  0109  108C               	bcf	12,1	;volatile
   3019                           
-  3020                           ;main.c: 342:       RC1 = 1;
-  3021  010A  148E               	bsf	14,1	;volatile
+  3020                           ;main.c: 348:       RA2 = 1;
+  3021  010A  150C               	bsf	12,2	;volatile
   3022                           
-  3023                           ;main.c: 343:       RC2 = 0;
-  3024  010B  110E               	bcf	14,2	;volatile
+  3023                           ;main.c: 349:       RA3 = 0;
+  3024  010B  118C               	bcf	12,3	;volatile
   3025                           
-  3026                           ;main.c: 344:       break;
+  3026                           ;main.c: 350:       break;
   3027  010C  2A96               	goto	l3542
   3028  010D                     l3504:
   3029  010D  085A               	movf	show_character@group,w
@@ -3101,58 +3101,58 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3066  011E  2908               	goto	l243
   3067  011F  2A96               	goto	l3542
   3068  0120                     l248:	
-  3069                           ;main.c: 354:     {;main.c: 355:     case UPPER:
+  3069                           ;main.c: 360:     {;main.c: 361:     case UPPER:
   3070                           
   3071                           
-  3072                           ;main.c: 356:       RA0 = 0;
-  3073  0120  100C               	bcf	12,0	;volatile
+  3072                           ;main.c: 362:       RA6 = 0;
+  3073  0120  130C               	bcf	12,6	;volatile
   3074                           
-  3075                           ;main.c: 357:       RA1 = 0;
-  3076  0121  108C               	bcf	12,1	;volatile
+  3075                           ;main.c: 363:       RC0 = 0;
+  3076  0121  100E               	bcf	14,0	;volatile
   3077                           
-  3078                           ;main.c: 358:       RA2 = 1;
-  3079  0122  150C               	bsf	12,2	;volatile
+  3078                           ;main.c: 364:       RC1 = 1;
+  3079  0122  148E               	bsf	14,1	;volatile
   3080                           
-  3081                           ;main.c: 359:       RA3 = 1;
-  3082  0123  158C               	bsf	12,3	;volatile
+  3081                           ;main.c: 365:       RC2 = 1;
+  3082  0123  150E               	bsf	14,2	;volatile
   3083                           
-  3084                           ;main.c: 360:       break;
+  3084                           ;main.c: 366:       break;
   3085  0124  2A96               	goto	l3542
   3086  0125                     l250:	
-  3087                           ;main.c: 362:     case MIDDLE:
+  3087                           ;main.c: 368:     case MIDDLE:
   3088                           
   3089                           
-  3090                           ;main.c: 363:       RA5 = 0;
+  3090                           ;main.c: 369:       RA5 = 0;
   3091  0125  128C               	bcf	12,5	;volatile
   3092                           
-  3093                           ;main.c: 364:       RE0 = 0;
+  3093                           ;main.c: 370:       RE0 = 0;
   3094  0126  1010               	bcf	16,0	;volatile
   3095                           
-  3096                           ;main.c: 365:       RE1 = 1;
+  3096                           ;main.c: 371:       RE1 = 1;
   3097  0127  1490               	bsf	16,1	;volatile
   3098                           
-  3099                           ;main.c: 366:       RE2 = 1;
+  3099                           ;main.c: 372:       RE2 = 1;
   3100  0128  1510               	bsf	16,2	;volatile
   3101                           
-  3102                           ;main.c: 367:       break;
+  3102                           ;main.c: 373:       break;
   3103  0129  2A96               	goto	l3542
   3104  012A                     l251:	
-  3105                           ;main.c: 369:     case LOWER:
+  3105                           ;main.c: 375:     case LOWER:
   3106                           
   3107                           
-  3108                           ;main.c: 370:       RA6 = 0;
-  3109  012A  130C               	bcf	12,6	;volatile
+  3108                           ;main.c: 376:       RA0 = 0;
+  3109  012A  100C               	bcf	12,0	;volatile
   3110                           
-  3111                           ;main.c: 371:       RC0 = 0;
-  3112  012B  100E               	bcf	14,0	;volatile
+  3111                           ;main.c: 377:       RA1 = 0;
+  3112  012B  108C               	bcf	12,1	;volatile
   3113                           
-  3114                           ;main.c: 372:       RC1 = 1;
-  3115  012C  148E               	bsf	14,1	;volatile
+  3114                           ;main.c: 378:       RA2 = 1;
+  3115  012C  150C               	bsf	12,2	;volatile
   3116                           
-  3117                           ;main.c: 373:       RC2 = 1;
-  3118  012D  150E               	bsf	14,2	;volatile
+  3117                           ;main.c: 379:       RA3 = 1;
+  3118  012D  158C               	bsf	12,3	;volatile
   3119                           
-  3120                           ;main.c: 374:       break;
+  3120                           ;main.c: 380:       break;
   3121  012E  2A96               	goto	l3542
   3122  012F                     l3508:
   3123  012F  085A               	movf	show_character@group,w
@@ -3196,64 +3196,64 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3160  0140  292A               	goto	l251
   3161  0141  2A96               	goto	l3542
   3162  0142                     l255:	
-  3163                           ;main.c: 383:   case 'S':
+  3163                           ;main.c: 389:   case 'S':
   3164                           
   3165                           
-  3166                           ;main.c: 384:     switch (group)
+  3166                           ;main.c: 390:     switch (group)
   3167  0142  2952               	goto	l3512
   3168  0143                     l257:	
-  3169                           ;main.c: 385:     {;main.c: 386:     case UPPER:
+  3169                           ;main.c: 391:     {;main.c: 392:     case UPPER:
   3170                           
   3171                           
-  3172                           ;main.c: 387:       RA0 = 0;
-  3173  0143  100C               	bcf	12,0	;volatile
+  3172                           ;main.c: 393:       RA6 = 0;
+  3173  0143  130C               	bcf	12,6	;volatile
   3174                           
-  3175                           ;main.c: 388:       RA1 = 1;
-  3176  0144  148C               	bsf	12,1	;volatile
+  3175                           ;main.c: 394:       RC0 = 1;
+  3176  0144  140E               	bsf	14,0	;volatile
   3177                           
-  3178                           ;main.c: 389:       RA2 = 0;
-  3179  0145  110C               	bcf	12,2	;volatile
+  3178                           ;main.c: 395:       RC1 = 0;
+  3179  0145  108E               	bcf	14,1	;volatile
   3180                           
-  3181                           ;main.c: 390:       RA3 = 0;
-  3182  0146  118C               	bcf	12,3	;volatile
+  3181                           ;main.c: 396:       RC2 = 0;
+  3182  0146  110E               	bcf	14,2	;volatile
   3183                           
-  3184                           ;main.c: 391:       break;
+  3184                           ;main.c: 397:       break;
   3185  0147  2A96               	goto	l3542
   3186  0148                     l259:	
-  3187                           ;main.c: 393:     case MIDDLE:
+  3187                           ;main.c: 399:     case MIDDLE:
   3188                           
   3189                           
-  3190                           ;main.c: 394:       RA5 = 0;
+  3190                           ;main.c: 400:       RA5 = 0;
   3191  0148  128C               	bcf	12,5	;volatile
   3192                           
-  3193                           ;main.c: 395:       RE0 = 1;
+  3193                           ;main.c: 401:       RE0 = 1;
   3194  0149  1410               	bsf	16,0	;volatile
   3195                           
-  3196                           ;main.c: 396:       RE1 = 0;
+  3196                           ;main.c: 402:       RE1 = 0;
   3197  014A  1090               	bcf	16,1	;volatile
   3198                           
-  3199                           ;main.c: 397:       RE2 = 0;
+  3199                           ;main.c: 403:       RE2 = 0;
   3200  014B  1110               	bcf	16,2	;volatile
   3201                           
-  3202                           ;main.c: 398:       break;
+  3202                           ;main.c: 404:       break;
   3203  014C  2A96               	goto	l3542
   3204  014D                     l260:	
-  3205                           ;main.c: 400:     case LOWER:
+  3205                           ;main.c: 406:     case LOWER:
   3206                           
   3207                           
-  3208                           ;main.c: 401:       RA6 = 0;
-  3209  014D  130C               	bcf	12,6	;volatile
+  3208                           ;main.c: 407:       RA0 = 0;
+  3209  014D  100C               	bcf	12,0	;volatile
   3210                           
-  3211                           ;main.c: 402:       RC0 = 1;
-  3212  014E  140E               	bsf	14,0	;volatile
+  3211                           ;main.c: 408:       RA1 = 1;
+  3212  014E  148C               	bsf	12,1	;volatile
   3213                           
-  3214                           ;main.c: 403:       RC1 = 0;
-  3215  014F  108E               	bcf	14,1	;volatile
+  3214                           ;main.c: 409:       RA2 = 0;
+  3215  014F  110C               	bcf	12,2	;volatile
   3216                           
-  3217                           ;main.c: 404:       RC2 = 0;
-  3218  0150  110E               	bcf	14,2	;volatile
+  3217                           ;main.c: 410:       RA3 = 0;
+  3218  0150  118C               	bcf	12,3	;volatile
   3219                           
-  3220                           ;main.c: 405:       break;
+  3220                           ;main.c: 411:       break;
   3221  0151  2A96               	goto	l3542
   3222  0152                     l3512:
   3223  0152  085A               	movf	show_character@group,w
@@ -3297,64 +3297,64 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3260  0163  294D               	goto	l260
   3261  0164  2A96               	goto	l3542
   3262  0165                     l264:	
-  3263                           ;main.c: 414:   case 'V':
+  3263                           ;main.c: 420:   case 'V':
   3264                           
   3265                           
-  3266                           ;main.c: 415:     switch (group)
+  3266                           ;main.c: 421:     switch (group)
   3267  0165  2975               	goto	l3516
   3268  0166                     l266:	
-  3269                           ;main.c: 416:     {;main.c: 417:     case UPPER:
+  3269                           ;main.c: 422:     {;main.c: 423:     case UPPER:
   3270                           
   3271                           
-  3272                           ;main.c: 418:       RA0 = 0;
-  3273  0166  100C               	bcf	12,0	;volatile
+  3272                           ;main.c: 424:       RA6 = 0;
+  3273  0166  130C               	bcf	12,6	;volatile
   3274                           
-  3275                           ;main.c: 419:       RA1 = 1;
-  3276  0167  148C               	bsf	12,1	;volatile
+  3275                           ;main.c: 425:       RC0 = 1;
+  3276  0167  140E               	bsf	14,0	;volatile
   3277                           
-  3278                           ;main.c: 420:       RA2 = 0;
-  3279  0168  110C               	bcf	12,2	;volatile
+  3278                           ;main.c: 426:       RC1 = 0;
+  3279  0168  108E               	bcf	14,1	;volatile
   3280                           
-  3281                           ;main.c: 421:       RA3 = 1;
-  3282  0169  158C               	bsf	12,3	;volatile
+  3281                           ;main.c: 427:       RC2 = 1;
+  3282  0169  150E               	bsf	14,2	;volatile
   3283                           
-  3284                           ;main.c: 422:       break;
+  3284                           ;main.c: 428:       break;
   3285  016A  2A96               	goto	l3542
   3286  016B                     l268:	
-  3287                           ;main.c: 424:     case MIDDLE:
+  3287                           ;main.c: 430:     case MIDDLE:
   3288                           
   3289                           
-  3290                           ;main.c: 425:       RA5 = 0;
+  3290                           ;main.c: 431:       RA5 = 0;
   3291  016B  128C               	bcf	12,5	;volatile
   3292                           
-  3293                           ;main.c: 426:       RE0 = 1;
+  3293                           ;main.c: 432:       RE0 = 1;
   3294  016C  1410               	bsf	16,0	;volatile
   3295                           
-  3296                           ;main.c: 427:       RE1 = 0;
+  3296                           ;main.c: 433:       RE1 = 0;
   3297  016D  1090               	bcf	16,1	;volatile
   3298                           
-  3299                           ;main.c: 428:       RE2 = 1;
+  3299                           ;main.c: 434:       RE2 = 1;
   3300  016E  1510               	bsf	16,2	;volatile
   3301                           
-  3302                           ;main.c: 429:       break;
+  3302                           ;main.c: 435:       break;
   3303  016F  2A96               	goto	l3542
   3304  0170                     l269:	
-  3305                           ;main.c: 431:     case LOWER:
+  3305                           ;main.c: 437:     case LOWER:
   3306                           
   3307                           
-  3308                           ;main.c: 432:       RA6 = 0;
-  3309  0170  130C               	bcf	12,6	;volatile
+  3308                           ;main.c: 438:       RA0 = 0;
+  3309  0170  100C               	bcf	12,0	;volatile
   3310                           
-  3311                           ;main.c: 433:       RC0 = 1;
-  3312  0171  140E               	bsf	14,0	;volatile
+  3311                           ;main.c: 439:       RA1 = 1;
+  3312  0171  148C               	bsf	12,1	;volatile
   3313                           
-  3314                           ;main.c: 434:       RC1 = 0;
-  3315  0172  108E               	bcf	14,1	;volatile
+  3314                           ;main.c: 440:       RA2 = 0;
+  3315  0172  110C               	bcf	12,2	;volatile
   3316                           
-  3317                           ;main.c: 435:       RC2 = 1;
-  3318  0173  150E               	bsf	14,2	;volatile
+  3317                           ;main.c: 441:       RA3 = 1;
+  3318  0173  158C               	bsf	12,3	;volatile
   3319                           
-  3320                           ;main.c: 436:       break;
+  3320                           ;main.c: 442:       break;
   3321  0174  2A96               	goto	l3542
   3322  0175                     l3516:
   3323  0175  085A               	movf	show_character@group,w
@@ -3398,64 +3398,64 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3360  0186  2970               	goto	l269
   3361  0187  2A96               	goto	l3542
   3362  0188                     l273:	
-  3363                           ;main.c: 445:   case 'H':
+  3363                           ;main.c: 451:   case 'H':
   3364                           
   3365                           
-  3366                           ;main.c: 446:     switch (group)
+  3366                           ;main.c: 452:     switch (group)
   3367  0188  2998               	goto	l3520
   3368  0189                     l275:	
-  3369                           ;main.c: 447:     {;main.c: 448:     case UPPER:
+  3369                           ;main.c: 453:     {;main.c: 454:     case UPPER:
   3370                           
   3371                           
-  3372                           ;main.c: 449:       RA0 = 0;
-  3373  0189  100C               	bcf	12,0	;volatile
+  3372                           ;main.c: 455:       RA6 = 0;
+  3373  0189  130C               	bcf	12,6	;volatile
   3374                           
-  3375                           ;main.c: 450:       RA1 = 1;
-  3376  018A  148C               	bsf	12,1	;volatile
+  3375                           ;main.c: 456:       RC0 = 1;
+  3376  018A  140E               	bsf	14,0	;volatile
   3377                           
-  3378                           ;main.c: 451:       RA2 = 1;
-  3379  018B  150C               	bsf	12,2	;volatile
+  3378                           ;main.c: 457:       RC1 = 1;
+  3379  018B  148E               	bsf	14,1	;volatile
   3380                           
-  3381                           ;main.c: 452:       RA3 = 0;
-  3382  018C  118C               	bcf	12,3	;volatile
+  3381                           ;main.c: 458:       RC2 = 0;
+  3382  018C  110E               	bcf	14,2	;volatile
   3383                           
-  3384                           ;main.c: 453:       break;
+  3384                           ;main.c: 459:       break;
   3385  018D  2A96               	goto	l3542
   3386  018E                     l277:	
-  3387                           ;main.c: 455:     case MIDDLE:
+  3387                           ;main.c: 461:     case MIDDLE:
   3388                           
   3389                           
-  3390                           ;main.c: 456:       RA5 = 0;
+  3390                           ;main.c: 462:       RA5 = 0;
   3391  018E  128C               	bcf	12,5	;volatile
   3392                           
-  3393                           ;main.c: 457:       RE0 = 1;
+  3393                           ;main.c: 463:       RE0 = 1;
   3394  018F  1410               	bsf	16,0	;volatile
   3395                           
-  3396                           ;main.c: 458:       RE1 = 1;
+  3396                           ;main.c: 464:       RE1 = 1;
   3397  0190  1490               	bsf	16,1	;volatile
   3398                           
-  3399                           ;main.c: 459:       RE2 = 0;
+  3399                           ;main.c: 465:       RE2 = 0;
   3400  0191  1110               	bcf	16,2	;volatile
   3401                           
-  3402                           ;main.c: 460:       break;
+  3402                           ;main.c: 466:       break;
   3403  0192  2A96               	goto	l3542
   3404  0193                     l278:	
-  3405                           ;main.c: 462:     case LOWER:
+  3405                           ;main.c: 468:     case LOWER:
   3406                           
   3407                           
-  3408                           ;main.c: 463:       RA6 = 0;
-  3409  0193  130C               	bcf	12,6	;volatile
+  3408                           ;main.c: 469:       RA0 = 0;
+  3409  0193  100C               	bcf	12,0	;volatile
   3410                           
-  3411                           ;main.c: 464:       RC0 = 1;
-  3412  0194  140E               	bsf	14,0	;volatile
+  3411                           ;main.c: 470:       RA1 = 1;
+  3412  0194  148C               	bsf	12,1	;volatile
   3413                           
-  3414                           ;main.c: 465:       RC1 = 1;
-  3415  0195  148E               	bsf	14,1	;volatile
+  3414                           ;main.c: 471:       RA2 = 1;
+  3415  0195  150C               	bsf	12,2	;volatile
   3416                           
-  3417                           ;main.c: 466:       RC2 = 0;
-  3418  0196  110E               	bcf	14,2	;volatile
+  3417                           ;main.c: 472:       RA3 = 0;
+  3418  0196  118C               	bcf	12,3	;volatile
   3419                           
-  3420                           ;main.c: 467:       break;
+  3420                           ;main.c: 473:       break;
   3421  0197  2A96               	goto	l3542
   3422  0198                     l3520:
   3423  0198  085A               	movf	show_character@group,w
@@ -3499,64 +3499,64 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3460  01A9  2993               	goto	l278
   3461  01AA  2A96               	goto	l3542
   3462  01AB                     l282:	
-  3463                           ;main.c: 476:   case 'h':
+  3463                           ;main.c: 482:   case 'h':
   3464                           
   3465                           
-  3466                           ;main.c: 477:     switch (group)
+  3466                           ;main.c: 483:     switch (group)
   3467  01AB  29BB               	goto	l3524
   3468  01AC                     l284:	
-  3469                           ;main.c: 478:     {;main.c: 479:     case UPPER:
+  3469                           ;main.c: 484:     {;main.c: 485:     case UPPER:
   3470                           
   3471                           
-  3472                           ;main.c: 480:       RA0 = 0;
-  3473  01AC  100C               	bcf	12,0	;volatile
+  3472                           ;main.c: 486:       RA6 = 0;
+  3473  01AC  130C               	bcf	12,6	;volatile
   3474                           
-  3475                           ;main.c: 481:       RA1 = 1;
-  3476  01AD  148C               	bsf	12,1	;volatile
+  3475                           ;main.c: 487:       RC0 = 1;
+  3476  01AD  140E               	bsf	14,0	;volatile
   3477                           
-  3478                           ;main.c: 482:       RA2 = 1;
-  3479  01AE  150C               	bsf	12,2	;volatile
+  3478                           ;main.c: 488:       RC1 = 1;
+  3479  01AE  148E               	bsf	14,1	;volatile
   3480                           
-  3481                           ;main.c: 483:       RA3 = 1;
-  3482  01AF  158C               	bsf	12,3	;volatile
+  3481                           ;main.c: 489:       RC2 = 1;
+  3482  01AF  150E               	bsf	14,2	;volatile
   3483                           
-  3484                           ;main.c: 484:       break;
+  3484                           ;main.c: 490:       break;
   3485  01B0  2A96               	goto	l3542
   3486  01B1                     l286:	
-  3487                           ;main.c: 486:     case MIDDLE:
+  3487                           ;main.c: 492:     case MIDDLE:
   3488                           
   3489                           
-  3490                           ;main.c: 487:       RA5 = 0;
+  3490                           ;main.c: 493:       RA5 = 0;
   3491  01B1  128C               	bcf	12,5	;volatile
   3492                           
-  3493                           ;main.c: 488:       RE0 = 1;
+  3493                           ;main.c: 494:       RE0 = 1;
   3494  01B2  1410               	bsf	16,0	;volatile
   3495                           
-  3496                           ;main.c: 489:       RE1 = 1;
+  3496                           ;main.c: 495:       RE1 = 1;
   3497  01B3  1490               	bsf	16,1	;volatile
   3498                           
-  3499                           ;main.c: 490:       RE2 = 1;
+  3499                           ;main.c: 496:       RE2 = 1;
   3500  01B4  1510               	bsf	16,2	;volatile
   3501                           
-  3502                           ;main.c: 491:       break;
+  3502                           ;main.c: 497:       break;
   3503  01B5  2A96               	goto	l3542
   3504  01B6                     l287:	
-  3505                           ;main.c: 493:     case LOWER:
+  3505                           ;main.c: 499:     case LOWER:
   3506                           
   3507                           
-  3508                           ;main.c: 494:       RA6 = 0;
-  3509  01B6  130C               	bcf	12,6	;volatile
+  3508                           ;main.c: 500:       RA0 = 0;
+  3509  01B6  100C               	bcf	12,0	;volatile
   3510                           
-  3511                           ;main.c: 495:       RC0 = 1;
-  3512  01B7  140E               	bsf	14,0	;volatile
+  3511                           ;main.c: 501:       RA1 = 1;
+  3512  01B7  148C               	bsf	12,1	;volatile
   3513                           
-  3514                           ;main.c: 496:       RC1 = 1;
-  3515  01B8  148E               	bsf	14,1	;volatile
+  3514                           ;main.c: 502:       RA2 = 1;
+  3515  01B8  150C               	bsf	12,2	;volatile
   3516                           
-  3517                           ;main.c: 497:       RC2 = 1;
-  3518  01B9  150E               	bsf	14,2	;volatile
+  3517                           ;main.c: 503:       RA3 = 1;
+  3518  01B9  158C               	bsf	12,3	;volatile
   3519                           
-  3520                           ;main.c: 498:       break;
+  3520                           ;main.c: 504:       break;
   3521  01BA  2A96               	goto	l3542
   3522  01BB                     l3524:
   3523  01BB  085A               	movf	show_character@group,w
@@ -3600,58 +3600,58 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3560  01CC  29B6               	goto	l287
   3561  01CD  2A96               	goto	l3542
   3562  01CE                     l292:	
-  3563                           ;main.c: 508:     {;main.c: 509:     case UPPER:
+  3563                           ;main.c: 514:     {;main.c: 515:     case UPPER:
   3564                           
   3565                           
-  3566                           ;main.c: 510:       RA0 = 1;
-  3567  01CE  140C               	bsf	12,0	;volatile
+  3566                           ;main.c: 516:       RA6 = 1;
+  3567  01CE  170C               	bsf	12,6	;volatile
   3568                           
-  3569                           ;main.c: 511:       RA1 = 0;
-  3570  01CF  108C               	bcf	12,1	;volatile
+  3569                           ;main.c: 517:       RC0 = 0;
+  3570  01CF  100E               	bcf	14,0	;volatile
   3571                           
-  3572                           ;main.c: 512:       RA2 = 0;
-  3573  01D0  110C               	bcf	12,2	;volatile
+  3572                           ;main.c: 518:       RC1 = 0;
+  3573  01D0  108E               	bcf	14,1	;volatile
   3574                           
-  3575                           ;main.c: 513:       RA3 = 0;
-  3576  01D1  118C               	bcf	12,3	;volatile
+  3575                           ;main.c: 519:       RC2 = 0;
+  3576  01D1  110E               	bcf	14,2	;volatile
   3577                           
-  3578                           ;main.c: 514:       break;
+  3578                           ;main.c: 520:       break;
   3579  01D2  2A96               	goto	l3542
   3580  01D3                     l294:	
-  3581                           ;main.c: 516:     case MIDDLE:
+  3581                           ;main.c: 522:     case MIDDLE:
   3582                           
   3583                           
-  3584                           ;main.c: 517:       RA5 = 1;
+  3584                           ;main.c: 523:       RA5 = 1;
   3585  01D3  168C               	bsf	12,5	;volatile
   3586                           
-  3587                           ;main.c: 518:       RE0 = 0;
+  3587                           ;main.c: 524:       RE0 = 0;
   3588  01D4  1010               	bcf	16,0	;volatile
   3589                           
-  3590                           ;main.c: 519:       RE1 = 0;
+  3590                           ;main.c: 525:       RE1 = 0;
   3591  01D5  1090               	bcf	16,1	;volatile
   3592                           
-  3593                           ;main.c: 520:       RE2 = 0;
+  3593                           ;main.c: 526:       RE2 = 0;
   3594  01D6  1110               	bcf	16,2	;volatile
   3595                           
-  3596                           ;main.c: 521:       break;
+  3596                           ;main.c: 527:       break;
   3597  01D7  2A96               	goto	l3542
   3598  01D8                     l295:	
-  3599                           ;main.c: 523:     case LOWER:
+  3599                           ;main.c: 529:     case LOWER:
   3600                           
   3601                           
-  3602                           ;main.c: 524:       RA6 = 1;
-  3603  01D8  170C               	bsf	12,6	;volatile
+  3602                           ;main.c: 530:       RA0 = 1;
+  3603  01D8  140C               	bsf	12,0	;volatile
   3604                           
-  3605                           ;main.c: 525:       RC0 = 0;
-  3606  01D9  100E               	bcf	14,0	;volatile
+  3605                           ;main.c: 531:       RA1 = 0;
+  3606  01D9  108C               	bcf	12,1	;volatile
   3607                           
-  3608                           ;main.c: 526:       RC1 = 0;
-  3609  01DA  108E               	bcf	14,1	;volatile
+  3608                           ;main.c: 532:       RA2 = 0;
+  3609  01DA  110C               	bcf	12,2	;volatile
   3610                           
-  3611                           ;main.c: 527:       RC2 = 0;
-  3612  01DB  110E               	bcf	14,2	;volatile
+  3611                           ;main.c: 533:       RA3 = 0;
+  3612  01DB  118C               	bcf	12,3	;volatile
   3613                           
-  3614                           ;main.c: 528:       break;
+  3614                           ;main.c: 534:       break;
   3615  01DC  2A96               	goto	l3542
   3616  01DD                     l3528:
   3617  01DD  085A               	movf	show_character@group,w
@@ -3695,64 +3695,64 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3654  01EE  29D8               	goto	l295
   3655  01EF  2A96               	goto	l3542
   3656  01F0                     l299:	
-  3657                           ;main.c: 537:   case 'F':
+  3657                           ;main.c: 543:   case 'F':
   3658                           
   3659                           
-  3660                           ;main.c: 538:     switch (group)
+  3660                           ;main.c: 544:     switch (group)
   3661  01F0  2A00               	goto	l3532
   3662  01F1                     l301:	
-  3663                           ;main.c: 539:     {;main.c: 540:     case UPPER:
+  3663                           ;main.c: 545:     {;main.c: 546:     case UPPER:
   3664                           
   3665                           
-  3666                           ;main.c: 541:       RA0 = 1;
-  3667  01F1  140C               	bsf	12,0	;volatile
+  3666                           ;main.c: 547:       RA6 = 1;
+  3667  01F1  170C               	bsf	12,6	;volatile
   3668                           
-  3669                           ;main.c: 542:       RA1 = 0;
-  3670  01F2  108C               	bcf	12,1	;volatile
+  3669                           ;main.c: 548:       RC0 = 0;
+  3670  01F2  100E               	bcf	14,0	;volatile
   3671                           
-  3672                           ;main.c: 543:       RA2 = 0;
-  3673  01F3  110C               	bcf	12,2	;volatile
+  3672                           ;main.c: 549:       RC1 = 0;
+  3673  01F3  108E               	bcf	14,1	;volatile
   3674                           
-  3675                           ;main.c: 544:       RA3 = 1;
-  3676  01F4  158C               	bsf	12,3	;volatile
+  3675                           ;main.c: 550:       RC2 = 1;
+  3676  01F4  150E               	bsf	14,2	;volatile
   3677                           
-  3678                           ;main.c: 545:       break;
+  3678                           ;main.c: 551:       break;
   3679  01F5  2A96               	goto	l3542
   3680  01F6                     l303:	
-  3681                           ;main.c: 547:     case MIDDLE:
+  3681                           ;main.c: 553:     case MIDDLE:
   3682                           
   3683                           
-  3684                           ;main.c: 548:       RA5 = 1;
+  3684                           ;main.c: 554:       RA5 = 1;
   3685  01F6  168C               	bsf	12,5	;volatile
   3686                           
-  3687                           ;main.c: 549:       RE0 = 0;
+  3687                           ;main.c: 555:       RE0 = 0;
   3688  01F7  1010               	bcf	16,0	;volatile
   3689                           
-  3690                           ;main.c: 550:       RE1 = 0;
+  3690                           ;main.c: 556:       RE1 = 0;
   3691  01F8  1090               	bcf	16,1	;volatile
   3692                           
-  3693                           ;main.c: 551:       RE2 = 1;
+  3693                           ;main.c: 557:       RE2 = 1;
   3694  01F9  1510               	bsf	16,2	;volatile
   3695                           
-  3696                           ;main.c: 552:       break;
+  3696                           ;main.c: 558:       break;
   3697  01FA  2A96               	goto	l3542
   3698  01FB                     l304:	
-  3699                           ;main.c: 554:     case LOWER:
+  3699                           ;main.c: 560:     case LOWER:
   3700                           
   3701                           
-  3702                           ;main.c: 555:       RA6 = 1;
-  3703  01FB  170C               	bsf	12,6	;volatile
+  3702                           ;main.c: 561:       RA0 = 1;
+  3703  01FB  140C               	bsf	12,0	;volatile
   3704                           
-  3705                           ;main.c: 556:       RC0 = 0;
-  3706  01FC  100E               	bcf	14,0	;volatile
+  3705                           ;main.c: 562:       RA1 = 0;
+  3706  01FC  108C               	bcf	12,1	;volatile
   3707                           
-  3708                           ;main.c: 557:       RC1 = 0;
-  3709  01FD  108E               	bcf	14,1	;volatile
+  3708                           ;main.c: 563:       RA2 = 0;
+  3709  01FD  110C               	bcf	12,2	;volatile
   3710                           
-  3711                           ;main.c: 558:       RC2 = 1;
-  3712  01FE  150E               	bsf	14,2	;volatile
+  3711                           ;main.c: 564:       RA3 = 1;
+  3712  01FE  158C               	bsf	12,3	;volatile
   3713                           
-  3714                           ;main.c: 559:       break;
+  3714                           ;main.c: 565:       break;
   3715  01FF  2A96               	goto	l3542
   3716  0200                     l3532:
   3717  0200  085A               	movf	show_character@group,w
@@ -3796,58 +3796,58 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3754  0211  29FB               	goto	l304
   3755  0212  2A96               	goto	l3542
   3756  0213                     l309:	
-  3757                           ;main.c: 569:     {;main.c: 570:     case UPPER:
+  3757                           ;main.c: 575:     {;main.c: 576:     case UPPER:
   3758                           
   3759                           
-  3760                           ;main.c: 571:       RA0 = 1;
-  3761  0213  140C               	bsf	12,0	;volatile
+  3760                           ;main.c: 577:       RA6 = 1;
+  3761  0213  170C               	bsf	12,6	;volatile
   3762                           
-  3763                           ;main.c: 572:       RA1 = 1;
-  3764  0214  148C               	bsf	12,1	;volatile
+  3763                           ;main.c: 578:       RC0 = 1;
+  3764  0214  140E               	bsf	14,0	;volatile
   3765                           
-  3766                           ;main.c: 573:       RA2 = 1;
-  3767  0215  150C               	bsf	12,2	;volatile
+  3766                           ;main.c: 579:       RC1 = 1;
+  3767  0215  148E               	bsf	14,1	;volatile
   3768                           
-  3769                           ;main.c: 574:       RA3 = 1;
-  3770  0216  158C               	bsf	12,3	;volatile
+  3769                           ;main.c: 580:       RC2 = 1;
+  3770  0216  150E               	bsf	14,2	;volatile
   3771                           
-  3772                           ;main.c: 575:       break;
+  3772                           ;main.c: 581:       break;
   3773  0217  2A96               	goto	l3542
   3774  0218                     l311:	
-  3775                           ;main.c: 577:     case MIDDLE:
+  3775                           ;main.c: 583:     case MIDDLE:
   3776                           
   3777                           
-  3778                           ;main.c: 578:       RA5 = 1;
+  3778                           ;main.c: 584:       RA5 = 1;
   3779  0218  168C               	bsf	12,5	;volatile
   3780                           
-  3781                           ;main.c: 579:       RE0 = 1;
+  3781                           ;main.c: 585:       RE0 = 1;
   3782  0219  1410               	bsf	16,0	;volatile
   3783                           
-  3784                           ;main.c: 580:       RE1 = 1;
+  3784                           ;main.c: 586:       RE1 = 1;
   3785  021A  1490               	bsf	16,1	;volatile
   3786                           
-  3787                           ;main.c: 581:       RE2 = 1;
+  3787                           ;main.c: 587:       RE2 = 1;
   3788  021B  1510               	bsf	16,2	;volatile
   3789                           
-  3790                           ;main.c: 582:       break;
+  3790                           ;main.c: 588:       break;
   3791  021C  2A96               	goto	l3542
   3792  021D                     l312:	
-  3793                           ;main.c: 584:     case LOWER:
+  3793                           ;main.c: 590:     case LOWER:
   3794                           
   3795                           
-  3796                           ;main.c: 585:       RA6 = 1;
-  3797  021D  170C               	bsf	12,6	;volatile
+  3796                           ;main.c: 591:       RA0 = 1;
+  3797  021D  140C               	bsf	12,0	;volatile
   3798                           
-  3799                           ;main.c: 586:       RC0 = 1;
-  3800  021E  140E               	bsf	14,0	;volatile
+  3799                           ;main.c: 592:       RA1 = 1;
+  3800  021E  148C               	bsf	12,1	;volatile
   3801                           
-  3802                           ;main.c: 587:       RC1 = 1;
-  3803  021F  148E               	bsf	14,1	;volatile
+  3802                           ;main.c: 593:       RA2 = 1;
+  3803  021F  150C               	bsf	12,2	;volatile
   3804                           
-  3805                           ;main.c: 588:       RC2 = 1;
-  3806  0220  150E               	bsf	14,2	;volatile
+  3805                           ;main.c: 594:       RA3 = 1;
+  3806  0220  158C               	bsf	12,3	;volatile
   3807                           
-  3808                           ;main.c: 589:       break;
+  3808                           ;main.c: 595:       break;
   3809  0221  2A96               	goto	l3542
   3810  0222                     l3536:
   3811  0222  085A               	movf	show_character@group,w
@@ -4011,7 +4011,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3967  0295  2A22               	goto	l3536
   3968  0296                     l3542:
   3969                           
-  3970                           ;main.c: 598:   on_digit(digit);
+  3970                           ;main.c: 604:   on_digit(digit);
   3971  0296  0856               	movf	show_character@digit,w
   3972  0297  3184  2468  3180   	fcall	_on_digit
   3973  029A                     l314:
@@ -4022,7 +4022,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   3978  0468                     __ptext3:	
   3979 ;; *************** function _on_digit *****************
   3980 ;; Defined at:
-  3981 ;;		line 605 in file "main.c"
+  3981 ;;		line 611 in file "main.c"
   3982 ;; Parameters:    Size  Location     Type
   3983 ;;  digit           1    wreg     char 
   3984 ;; Auto vars:     Size  Location     Type
@@ -4065,108 +4065,108 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4016  0468  00F5               	movwf	on_digit@digit
   4017  0469                     l3462:
   4018                           
-  4019                           ;main.c: 605: void on_digit(signed char digit);main.c: 606: {;main.c: 607:   switch (dig
+  4019                           ;main.c: 611: void on_digit(signed char digit);main.c: 612: {;main.c: 613:   switch (dig
       +                          it)
   4020  0469  2C88               	goto	l3466
   4021  046A                     l318:	
-  4022                           ;main.c: 608:   {;main.c: 609:   case 0:
+  4022                           ;main.c: 614:   {;main.c: 615:   case 0:
   4023                           
   4024                           
-  4025                           ;main.c: 610:     RB7 = 1;
+  4025                           ;main.c: 616:     RD4 = 1;
   4026  046A  0020               	movlb	0	; select bank0
-  4027  046B  178D               	bsf	13,7	;volatile
+  4027  046B  160F               	bsf	15,4	;volatile
   4028                           
-  4029                           ;main.c: 611:     break;
+  4029                           ;main.c: 617:     break;
   4030  046C  2CB2               	goto	l330
   4031  046D                     l320:	
-  4032                           ;main.c: 612:   case 1:
+  4032                           ;main.c: 618:   case 1:
   4033                           
   4034                           
-  4035                           ;main.c: 613:     RB6 = 1;
+  4035                           ;main.c: 619:     RD5 = 1;
   4036  046D  0020               	movlb	0	; select bank0
-  4037  046E  170D               	bsf	13,6	;volatile
+  4037  046E  168F               	bsf	15,5	;volatile
   4038                           
-  4039                           ;main.c: 614:     break;
+  4039                           ;main.c: 620:     break;
   4040  046F  2CB2               	goto	l330
   4041  0470                     l321:	
-  4042                           ;main.c: 615:   case 2:
+  4042                           ;main.c: 621:   case 2:
   4043                           
   4044                           
-  4045                           ;main.c: 616:     RB5 = 1;
+  4045                           ;main.c: 622:     RD6 = 1;
   4046  0470  0020               	movlb	0	; select bank0
-  4047  0471  168D               	bsf	13,5	;volatile
+  4047  0471  170F               	bsf	15,6	;volatile
   4048                           
-  4049                           ;main.c: 617:     break;
+  4049                           ;main.c: 623:     break;
   4050  0472  2CB2               	goto	l330
   4051  0473                     l322:	
-  4052                           ;main.c: 618:   case 3:
+  4052                           ;main.c: 624:   case 3:
   4053                           
   4054                           
-  4055                           ;main.c: 619:     RB4 = 1;
+  4055                           ;main.c: 625:     RD7 = 1;
   4056  0473  0020               	movlb	0	; select bank0
-  4057  0474  160D               	bsf	13,4	;volatile
+  4057  0474  178F               	bsf	15,7	;volatile
   4058                           
-  4059                           ;main.c: 620:     break;
+  4059                           ;main.c: 626:     break;
   4060  0475  2CB2               	goto	l330
   4061  0476                     l323:	
-  4062                           ;main.c: 621:   case 4:
+  4062                           ;main.c: 627:   case 4:
   4063                           
   4064                           
-  4065                           ;main.c: 622:     RB3 = 1;
+  4065                           ;main.c: 628:     RB0 = 1;
   4066  0476  0020               	movlb	0	; select bank0
-  4067  0477  158D               	bsf	13,3	;volatile
+  4067  0477  140D               	bsf	13,0	;volatile
   4068                           
-  4069                           ;main.c: 623:     break;
+  4069                           ;main.c: 629:     break;
   4070  0478  2CB2               	goto	l330
   4071  0479                     l324:	
-  4072                           ;main.c: 624:   case 5:
+  4072                           ;main.c: 630:   case 5:
   4073                           
   4074                           
-  4075                           ;main.c: 625:     RB2 = 1;
+  4075                           ;main.c: 631:     RB1 = 1;
   4076  0479  0020               	movlb	0	; select bank0
-  4077  047A  150D               	bsf	13,2	;volatile
+  4077  047A  148D               	bsf	13,1	;volatile
   4078                           
-  4079                           ;main.c: 626:     break;
+  4079                           ;main.c: 632:     break;
   4080  047B  2CB2               	goto	l330
   4081  047C                     l325:	
-  4082                           ;main.c: 627:   case 6:
+  4082                           ;main.c: 633:   case 6:
   4083                           
   4084                           
-  4085                           ;main.c: 628:     RB1 = 1;
+  4085                           ;main.c: 634:     RB2 = 1;
   4086  047C  0020               	movlb	0	; select bank0
-  4087  047D  148D               	bsf	13,1	;volatile
+  4087  047D  150D               	bsf	13,2	;volatile
   4088                           
-  4089                           ;main.c: 629:     break;
+  4089                           ;main.c: 635:     break;
   4090  047E  2CB2               	goto	l330
   4091  047F                     l326:	
-  4092                           ;main.c: 630:   case 7:
+  4092                           ;main.c: 636:   case 7:
   4093                           
   4094                           
-  4095                           ;main.c: 631:     RB0 = 1;
+  4095                           ;main.c: 637:     RB3 = 1;
   4096  047F  0020               	movlb	0	; select bank0
-  4097  0480  140D               	bsf	13,0	;volatile
+  4097  0480  158D               	bsf	13,3	;volatile
   4098                           
-  4099                           ;main.c: 632:     break;
+  4099                           ;main.c: 638:     break;
   4100  0481  2CB2               	goto	l330
   4101  0482                     l327:	
-  4102                           ;main.c: 633:   case 8:
+  4102                           ;main.c: 639:   case 8:
   4103                           
   4104                           
-  4105                           ;main.c: 634:     RD7 = 1;
+  4105                           ;main.c: 640:     RB4 = 1;
   4106  0482  0020               	movlb	0	; select bank0
-  4107  0483  178F               	bsf	15,7	;volatile
+  4107  0483  160D               	bsf	13,4	;volatile
   4108                           
-  4109                           ;main.c: 635:     break;
+  4109                           ;main.c: 641:     break;
   4110  0484  2CB2               	goto	l330
   4111  0485                     l328:	
-  4112                           ;main.c: 636:   case 9:
+  4112                           ;main.c: 642:   case 9:
   4113                           
   4114                           
-  4115                           ;main.c: 637:     RD6 = 1;
+  4115                           ;main.c: 643:     RB5 = 1;
   4116  0485  0020               	movlb	0	; select bank0
-  4117  0486  170F               	bsf	15,6	;volatile
+  4117  0486  168D               	bsf	13,5	;volatile
   4118                           
-  4119                           ;main.c: 638:     break;
+  4119                           ;main.c: 644:     break;
   4120  0487  2CB2               	goto	l330
   4121  0488                     l3466:
   4122  0488  0875               	movf	on_digit@digit,w
@@ -4240,7 +4240,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4189  04B3                     __ptext4:	
   4190 ;; *************** function _off_digit *****************
   4191 ;; Defined at:
-  4192 ;;		line 648 in file "main.c"
+  4192 ;;		line 654 in file "main.c"
   4193 ;; Parameters:    Size  Location     Type
   4194 ;;  digit           1    wreg     char 
   4195 ;; Auto vars:     Size  Location     Type
@@ -4283,108 +4283,108 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4227  04B3  00F5               	movwf	off_digit@digit
   4228  04B4                     l3600:
   4229                           
-  4230                           ;main.c: 648: void off_digit(signed char digit);main.c: 649: {;main.c: 650:   switch (di
+  4230                           ;main.c: 654: void off_digit(signed char digit);main.c: 655: {;main.c: 656:   switch (di
       +                          git)
   4231  04B4  2CD3               	goto	l3604
   4232  04B5                     l334:	
-  4233                           ;main.c: 651:   {;main.c: 652:   case 0:
+  4233                           ;main.c: 657:   {;main.c: 658:   case 0:
   4234                           
   4235                           
-  4236                           ;main.c: 653:     RB7 = 0;
+  4236                           ;main.c: 659:     RD4 = 0;
   4237  04B5  0020               	movlb	0	; select bank0
-  4238  04B6  138D               	bcf	13,7	;volatile
+  4238  04B6  120F               	bcf	15,4	;volatile
   4239                           
-  4240                           ;main.c: 654:     break;
+  4240                           ;main.c: 660:     break;
   4241  04B7  2CFD               	goto	l346
   4242  04B8                     l336:	
-  4243                           ;main.c: 655:   case 1:
+  4243                           ;main.c: 661:   case 1:
   4244                           
   4245                           
-  4246                           ;main.c: 656:     RB6 = 0;
+  4246                           ;main.c: 662:     RD5 = 0;
   4247  04B8  0020               	movlb	0	; select bank0
-  4248  04B9  130D               	bcf	13,6	;volatile
+  4248  04B9  128F               	bcf	15,5	;volatile
   4249                           
-  4250                           ;main.c: 657:     break;
+  4250                           ;main.c: 663:     break;
   4251  04BA  2CFD               	goto	l346
   4252  04BB                     l337:	
-  4253                           ;main.c: 658:   case 2:
+  4253                           ;main.c: 664:   case 2:
   4254                           
   4255                           
-  4256                           ;main.c: 659:     RB5 = 0;
+  4256                           ;main.c: 665:     RD6 = 0;
   4257  04BB  0020               	movlb	0	; select bank0
-  4258  04BC  128D               	bcf	13,5	;volatile
+  4258  04BC  130F               	bcf	15,6	;volatile
   4259                           
-  4260                           ;main.c: 660:     break;
+  4260                           ;main.c: 666:     break;
   4261  04BD  2CFD               	goto	l346
   4262  04BE                     l338:	
-  4263                           ;main.c: 661:   case 3:
+  4263                           ;main.c: 667:   case 3:
   4264                           
   4265                           
-  4266                           ;main.c: 662:     RB4 = 0;
+  4266                           ;main.c: 668:     RD7 = 0;
   4267  04BE  0020               	movlb	0	; select bank0
-  4268  04BF  120D               	bcf	13,4	;volatile
+  4268  04BF  138F               	bcf	15,7	;volatile
   4269                           
-  4270                           ;main.c: 663:     break;
+  4270                           ;main.c: 669:     break;
   4271  04C0  2CFD               	goto	l346
   4272  04C1                     l339:	
-  4273                           ;main.c: 664:   case 4:
+  4273                           ;main.c: 670:   case 4:
   4274                           
   4275                           
-  4276                           ;main.c: 665:     RB3 = 0;
+  4276                           ;main.c: 671:     RB0 = 0;
   4277  04C1  0020               	movlb	0	; select bank0
-  4278  04C2  118D               	bcf	13,3	;volatile
+  4278  04C2  100D               	bcf	13,0	;volatile
   4279                           
-  4280                           ;main.c: 666:     break;
+  4280                           ;main.c: 672:     break;
   4281  04C3  2CFD               	goto	l346
   4282  04C4                     l340:	
-  4283                           ;main.c: 667:   case 5:
+  4283                           ;main.c: 673:   case 5:
   4284                           
   4285                           
-  4286                           ;main.c: 668:     RB2 = 0;
+  4286                           ;main.c: 674:     RB1 = 0;
   4287  04C4  0020               	movlb	0	; select bank0
-  4288  04C5  110D               	bcf	13,2	;volatile
+  4288  04C5  108D               	bcf	13,1	;volatile
   4289                           
-  4290                           ;main.c: 669:     break;
+  4290                           ;main.c: 675:     break;
   4291  04C6  2CFD               	goto	l346
   4292  04C7                     l341:	
-  4293                           ;main.c: 670:   case 6:
+  4293                           ;main.c: 676:   case 6:
   4294                           
   4295                           
-  4296                           ;main.c: 671:     RB1 = 0;
+  4296                           ;main.c: 677:     RB2 = 0;
   4297  04C7  0020               	movlb	0	; select bank0
-  4298  04C8  108D               	bcf	13,1	;volatile
+  4298  04C8  110D               	bcf	13,2	;volatile
   4299                           
-  4300                           ;main.c: 672:     break;
+  4300                           ;main.c: 678:     break;
   4301  04C9  2CFD               	goto	l346
   4302  04CA                     l342:	
-  4303                           ;main.c: 673:   case 7:
+  4303                           ;main.c: 679:   case 7:
   4304                           
   4305                           
-  4306                           ;main.c: 674:     RB0 = 0;
+  4306                           ;main.c: 680:     RB3 = 0;
   4307  04CA  0020               	movlb	0	; select bank0
-  4308  04CB  100D               	bcf	13,0	;volatile
+  4308  04CB  118D               	bcf	13,3	;volatile
   4309                           
-  4310                           ;main.c: 675:     break;
+  4310                           ;main.c: 681:     break;
   4311  04CC  2CFD               	goto	l346
   4312  04CD                     l343:	
-  4313                           ;main.c: 676:   case 8:
+  4313                           ;main.c: 682:   case 8:
   4314                           
   4315                           
-  4316                           ;main.c: 677:     RD7 = 0;
+  4316                           ;main.c: 683:     RB4 = 0;
   4317  04CD  0020               	movlb	0	; select bank0
-  4318  04CE  138F               	bcf	15,7	;volatile
+  4318  04CE  120D               	bcf	13,4	;volatile
   4319                           
-  4320                           ;main.c: 678:     break;
+  4320                           ;main.c: 684:     break;
   4321  04CF  2CFD               	goto	l346
   4322  04D0                     l344:	
-  4323                           ;main.c: 679:   case 9:
+  4323                           ;main.c: 685:   case 9:
   4324                           
   4325                           
-  4326                           ;main.c: 680:     RD6 = 0;
+  4326                           ;main.c: 686:     RB5 = 0;
   4327  04D0  0020               	movlb	0	; select bank0
-  4328  04D1  130F               	bcf	15,6	;volatile
+  4328  04D1  128D               	bcf	13,5	;volatile
   4329                           
-  4330                           ;main.c: 681:     break;
+  4330                           ;main.c: 687:     break;
   4331  04D2  2CFD               	goto	l346
   4332  04D3                     l3604:
   4333  04D3  0875               	movf	off_digit@digit,w
@@ -4458,7 +4458,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4400  06EB                     __ptext5:	
   4401 ;; *************** function _receive_char_from_I2C *****************
   4402 ;; Defined at:
-  4403 ;;		line 694 in file "main.c"
+  4403 ;;		line 700 in file "main.c"
   4404 ;; Parameters:    Size  Location     Type
   4405 ;;		None
   4406 ;; Auto vars:     Size  Location     Type
@@ -4501,7 +4501,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
       +                          ]
   4438                           
   4439                           
-  4440                           ;main.c: 696:   decode_received_char(I2C_Read());
+  4440                           ;main.c: 702:   decode_received_char(I2C_Read());
   4441  06EB  3187  2770  3186   	fcall	_I2C_Read
   4442  06EE  3185  25AF  3186   	fcall	_decode_received_char
   4443  06F1                     l352:
@@ -4615,7 +4615,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4541  06F2                     __ptext8:	
   4542 ;; *************** function _receive_char_from_EUSART *****************
   4543 ;; Defined at:
-  4544 ;;		line 688 in file "main.c"
+  4544 ;;		line 694 in file "main.c"
   4545 ;; Parameters:    Size  Location     Type
   4546 ;;		None
   4547 ;; Auto vars:     Size  Location     Type
@@ -4658,7 +4658,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
       +                          ack]
   4579                           
   4580                           
-  4581                           ;main.c: 690:   decode_received_char(EUSART_Read());
+  4581                           ;main.c: 696:   decode_received_char(EUSART_Read());
   4582  06F2  3185  25E1  3186   	fcall	_EUSART_Read
   4583  06F5  3185  25AF  3186   	fcall	_decode_received_char
   4584  06F8                     l349:
@@ -4669,7 +4669,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4589  05AF                     __ptext9:	
   4590 ;; *************** function _decode_received_char *****************
   4591 ;; Defined at:
-  4592 ;;		line 700 in file "main.c"
+  4592 ;;		line 706 in file "main.c"
   4593 ;; Parameters:    Size  Location     Type
   4594 ;;  received_cha    1    wreg     unsigned char 
   4595 ;; Auto vars:     Size  Location     Type
@@ -4714,7 +4714,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4629  05AF  00F4               	movwf	decode_received_char@received_char
   4630  05B0                     l2672:
   4631                           
-  4632                           ;main.c: 700: void decode_received_char(char received_char);main.c: 701: {;main.c: 702: 
+  4632                           ;main.c: 706: void decode_received_char(char received_char);main.c: 707: {;main.c: 708: 
       +                            if ((received_char == '$') || (receive_index > 10 * 2))
   4633  05B0  3024               	movlw	36
   4634  05B1  0674               	xorwf	decode_received_char@received_char,w
@@ -4737,15 +4737,15 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4651  05BE                     u520:
   4652  05BE                     l2676:
   4653                           
-  4654                           ;main.c: 703:   {;main.c: 705:     receive_index = 0;
+  4654                           ;main.c: 709:   {;main.c: 711:     receive_index = 0;
   4655  05BE  0020               	movlb	0	; select bank0
   4656  05BF  01CB               	clrf	_receive_index
   4657                           
-  4658                           ;main.c: 706:     for (unsigned char i = 0; i < 10 * 2; i++)
+  4658                           ;main.c: 712:     for (unsigned char i = 0; i < 10 * 2; i++)
   4659  05C0  01F5               	clrf	decode_received_char@i
   4660  05C1                     l2682:
   4661                           
-  4662                           ;main.c: 707:     {;main.c: 708:       value[i] = ' ';
+  4662                           ;main.c: 713:     {;main.c: 714:       value[i] = ' ';
   4663  05C1  3020               	movlw	32
   4664  05C2  00F3               	movwf	??_decode_received_char
   4665  05C3  0875               	movf	decode_received_char@i,w
@@ -4756,7 +4756,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4670  05C8  0081               	movwf	1
   4671  05C9                     l2684:
   4672                           
-  4673                           ;main.c: 709:     }
+  4673                           ;main.c: 715:     }
   4674  05C9  3001               	movlw	1
   4675  05CA  00F3               	movwf	??_decode_received_char
   4676  05CB  0873               	movf	??_decode_received_char,w
@@ -4773,7 +4773,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4687  05D3  2DE0               	goto	l361
   4688  05D4                     l2688:
   4689                           
-  4690                           ;main.c: 712:   {;main.c: 713:     value[receive_index] = received_char;
+  4690                           ;main.c: 718:   {;main.c: 719:     value[receive_index] = received_char;
   4691  05D4  0874               	movf	decode_received_char@received_char,w
   4692  05D5  00F3               	movwf	??_decode_received_char
   4693  05D6  084B               	movf	_receive_index,w
@@ -4784,7 +4784,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   4698  05DB  0081               	movwf	1
   4699  05DC                     l2690:
   4700                           
-  4701                           ;main.c: 714:     receive_index++;
+  4701                           ;main.c: 720:     receive_index++;
   4702  05DC  3001               	movlw	1
   4703  05DD  00F3               	movwf	??_decode_received_char
   4704  05DE  0873               	movf	??_decode_received_char,w
@@ -8971,7 +8971,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Sun Feb 26 19:42:47 2023
+Symbol Table                                                                                   Wed Mar 22 19:41:10 2023
 
                 ?_EUSART_SetRxInterruptHandler 0073                                    _SSPSTATbits 0214  
                                            l39 066A                                             l81 0777  
@@ -9031,13 +9031,13 @@ Symbol Table                                                                    
                                           _RB0 0068                                            _RA3 0063  
                                           _RB1 0069                                            _RA4 0064  
                                           _RC0 0070                                            _RB2 006A  
-                                          _RA5 0065                                            _RC1 0071  
+                                          _RC1 0071                                            _RA5 0065  
                                           _RB3 006B                                            _RD0 0078  
                                           _RA6 0066                                            _RC2 0072  
                                           _RB4 006C                                            _RA7 0067  
                                           _RB5 006D                                            _RE0 0080  
-                                          _RB6 006E                                            _RE1 0081  
-                                          _RB7 006F                                            _RE2 0082  
+                                          _RE1 0081                                            _RE2 0082  
+                                          _RD4 007C                                            _RD5 007D  
                                           _RD6 007E                                            _RD7 007F  
                                           u500 0601                                            u501 0600  
                                           u510 05B6                                            u511 05B5  

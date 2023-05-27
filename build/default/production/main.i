@@ -5559,7 +5559,7 @@ void OSCILLATOR_Initialize(void);
 # 97 "./mcc_generated_files/mcc.h"
 void WDT_Initialize(void);
 # 43 "main.c" 2
-# 78 "main.c"
+# 84 "main.c"
 typedef enum
 {
   UPPER,
@@ -5708,13 +5708,13 @@ void show_character(char dot, char character, signed char digit)
     switch (group)
     {
     case UPPER:
-      RA4 = 1;
+      RD0 = 1;
       break;
     case MIDDLE:
       RA7 = 1;
       break;
     case LOWER:
-      RD0 = 1;
+      RA4 = 1;
     default:
       break;
     }
@@ -5724,13 +5724,13 @@ void show_character(char dot, char character, signed char digit)
     switch (group)
     {
     case UPPER:
-      RA4 = 0;
+      RD0 = 0;
       break;
     case MIDDLE:
       RA7 = 0;
       break;
     case LOWER:
-      RD0 = 0;
+      RA4 = 0;
     default:
       break;
     }
@@ -5746,10 +5746,10 @@ void show_character(char dot, char character, signed char digit)
     switch (group)
     {
     case UPPER:
-      RA0 = 0;
-      RA1 = 0;
-      RA2 = 0;
-      RA3 = 0;
+      RA6 = 0;
+      RC0 = 0;
+      RC1 = 0;
+      RC2 = 0;
       break;
 
     case MIDDLE:
@@ -5760,10 +5760,10 @@ void show_character(char dot, char character, signed char digit)
       break;
 
     case LOWER:
-      RA6 = 0;
-      RC0 = 0;
-      RC1 = 0;
-      RC2 = 0;
+      RA0 = 0;
+      RA1 = 0;
+      RA2 = 0;
+      RA3 = 0;
       break;
 
     default:
@@ -5777,10 +5777,10 @@ void show_character(char dot, char character, signed char digit)
     switch (group)
     {
     case UPPER:
-      RA0 = 0;
-      RA1 = 0;
-      RA2 = 0;
-      RA3 = 1;
+      RA6 = 0;
+      RC0 = 0;
+      RC1 = 0;
+      RC2 = 1;
       break;
 
     case MIDDLE:
@@ -5791,10 +5791,10 @@ void show_character(char dot, char character, signed char digit)
       break;
 
     case LOWER:
-      RA6 = 0;
-      RC0 = 0;
-      RC1 = 0;
-      RC2 = 1;
+      RA0 = 0;
+      RA1 = 0;
+      RA2 = 0;
+      RA3 = 1;
       break;
 
     default:
@@ -5808,10 +5808,10 @@ void show_character(char dot, char character, signed char digit)
     switch (group)
     {
     case UPPER:
-      RA0 = 0;
-      RA1 = 0;
-      RA2 = 1;
-      RA3 = 0;
+      RA6 = 0;
+      RC0 = 0;
+      RC1 = 1;
+      RC2 = 0;
       break;
 
     case MIDDLE:
@@ -5822,10 +5822,10 @@ void show_character(char dot, char character, signed char digit)
       break;
 
     case LOWER:
-      RA6 = 0;
-      RC0 = 0;
-      RC1 = 1;
-      RC2 = 0;
+      RA0 = 0;
+      RA1 = 0;
+      RA2 = 1;
+      RA3 = 0;
       break;
 
     default:
@@ -5838,10 +5838,10 @@ void show_character(char dot, char character, signed char digit)
     switch (group)
     {
     case UPPER:
-      RA0 = 0;
-      RA1 = 0;
-      RA2 = 1;
-      RA3 = 1;
+      RA6 = 0;
+      RC0 = 0;
+      RC1 = 1;
+      RC2 = 1;
       break;
 
     case MIDDLE:
@@ -5852,10 +5852,10 @@ void show_character(char dot, char character, signed char digit)
       break;
 
     case LOWER:
-      RA6 = 0;
-      RC0 = 0;
-      RC1 = 1;
-      RC2 = 1;
+      RA0 = 0;
+      RA1 = 0;
+      RA2 = 1;
+      RA3 = 1;
       break;
 
     default:
@@ -5869,10 +5869,10 @@ void show_character(char dot, char character, signed char digit)
     switch (group)
     {
     case UPPER:
-      RA0 = 0;
-      RA1 = 1;
-      RA2 = 0;
-      RA3 = 0;
+      RA6 = 0;
+      RC0 = 1;
+      RC1 = 0;
+      RC2 = 0;
       break;
 
     case MIDDLE:
@@ -5883,10 +5883,10 @@ void show_character(char dot, char character, signed char digit)
       break;
 
     case LOWER:
-      RA6 = 0;
-      RC0 = 1;
-      RC1 = 0;
-      RC2 = 0;
+      RA0 = 0;
+      RA1 = 1;
+      RA2 = 0;
+      RA3 = 0;
       break;
 
     default:
@@ -5900,10 +5900,10 @@ void show_character(char dot, char character, signed char digit)
     switch (group)
     {
     case UPPER:
-      RA0 = 0;
-      RA1 = 1;
-      RA2 = 0;
-      RA3 = 1;
+      RA6 = 0;
+      RC0 = 1;
+      RC1 = 0;
+      RC2 = 1;
       break;
 
     case MIDDLE:
@@ -5914,10 +5914,10 @@ void show_character(char dot, char character, signed char digit)
       break;
 
     case LOWER:
-      RA6 = 0;
-      RC0 = 1;
-      RC1 = 0;
-      RC2 = 1;
+      RA0 = 0;
+      RA1 = 1;
+      RA2 = 0;
+      RA3 = 1;
       break;
 
     default:
@@ -5931,10 +5931,10 @@ void show_character(char dot, char character, signed char digit)
     switch (group)
     {
     case UPPER:
-      RA0 = 0;
-      RA1 = 1;
-      RA2 = 1;
-      RA3 = 0;
+      RA6 = 0;
+      RC0 = 1;
+      RC1 = 1;
+      RC2 = 0;
       break;
 
     case MIDDLE:
@@ -5945,10 +5945,10 @@ void show_character(char dot, char character, signed char digit)
       break;
 
     case LOWER:
-      RA6 = 0;
-      RC0 = 1;
-      RC1 = 1;
-      RC2 = 0;
+      RA0 = 0;
+      RA1 = 1;
+      RA2 = 1;
+      RA3 = 0;
       break;
 
     default:
@@ -5962,10 +5962,10 @@ void show_character(char dot, char character, signed char digit)
     switch (group)
     {
     case UPPER:
-      RA0 = 0;
-      RA1 = 1;
-      RA2 = 1;
-      RA3 = 1;
+      RA6 = 0;
+      RC0 = 1;
+      RC1 = 1;
+      RC2 = 1;
       break;
 
     case MIDDLE:
@@ -5976,10 +5976,10 @@ void show_character(char dot, char character, signed char digit)
       break;
 
     case LOWER:
-      RA6 = 0;
-      RC0 = 1;
-      RC1 = 1;
-      RC2 = 1;
+      RA0 = 0;
+      RA1 = 1;
+      RA2 = 1;
+      RA3 = 1;
       break;
 
     default:
@@ -5992,10 +5992,10 @@ void show_character(char dot, char character, signed char digit)
     switch (group)
     {
     case UPPER:
-      RA0 = 1;
-      RA1 = 0;
-      RA2 = 0;
-      RA3 = 0;
+      RA6 = 1;
+      RC0 = 0;
+      RC1 = 0;
+      RC2 = 0;
       break;
 
     case MIDDLE:
@@ -6006,10 +6006,10 @@ void show_character(char dot, char character, signed char digit)
       break;
 
     case LOWER:
-      RA6 = 1;
-      RC0 = 0;
-      RC1 = 0;
-      RC2 = 0;
+      RA0 = 1;
+      RA1 = 0;
+      RA2 = 0;
+      RA3 = 0;
       break;
 
     default:
@@ -6023,10 +6023,10 @@ void show_character(char dot, char character, signed char digit)
     switch (group)
     {
     case UPPER:
-      RA0 = 1;
-      RA1 = 0;
-      RA2 = 0;
-      RA3 = 1;
+      RA6 = 1;
+      RC0 = 0;
+      RC1 = 0;
+      RC2 = 1;
       break;
 
     case MIDDLE:
@@ -6037,10 +6037,10 @@ void show_character(char dot, char character, signed char digit)
       break;
 
     case LOWER:
-      RA6 = 1;
-      RC0 = 0;
-      RC1 = 0;
-      RC2 = 1;
+      RA0 = 1;
+      RA1 = 0;
+      RA2 = 0;
+      RA3 = 1;
       break;
 
     default:
@@ -6053,10 +6053,10 @@ void show_character(char dot, char character, signed char digit)
     switch (group)
     {
     case UPPER:
-      RA0 = 1;
-      RA1 = 1;
-      RA2 = 1;
-      RA3 = 1;
+      RA6 = 1;
+      RC0 = 1;
+      RC1 = 1;
+      RC2 = 1;
       break;
 
     case MIDDLE:
@@ -6067,10 +6067,10 @@ void show_character(char dot, char character, signed char digit)
       break;
 
     case LOWER:
-      RA6 = 1;
-      RC0 = 1;
-      RC1 = 1;
-      RC2 = 1;
+      RA0 = 1;
+      RA1 = 1;
+      RA2 = 1;
+      RA3 = 1;
       break;
 
     default:
@@ -6092,34 +6092,34 @@ void on_digit(signed char digit)
   switch (digit)
   {
   case 0:
-    RB7 = 1;
+    RD4 = 1;
     break;
   case 1:
-    RB6 = 1;
+    RD5 = 1;
     break;
   case 2:
-    RB5 = 1;
+    RD6 = 1;
     break;
   case 3:
-    RB4 = 1;
-    break;
-  case 4:
-    RB3 = 1;
-    break;
-  case 5:
-    RB2 = 1;
-    break;
-  case 6:
-    RB1 = 1;
-    break;
-  case 7:
-    RB0 = 1;
-    break;
-  case 8:
     RD7 = 1;
     break;
+  case 4:
+    RB0 = 1;
+    break;
+  case 5:
+    RB1 = 1;
+    break;
+  case 6:
+    RB2 = 1;
+    break;
+  case 7:
+    RB3 = 1;
+    break;
+  case 8:
+    RB4 = 1;
+    break;
   case 9:
-    RD6 = 1;
+    RB5 = 1;
     break;
   default:
     break;
@@ -6135,34 +6135,34 @@ void off_digit(signed char digit)
   switch (digit)
   {
   case 0:
-    RB7 = 0;
+    RD4 = 0;
     break;
   case 1:
-    RB6 = 0;
+    RD5 = 0;
     break;
   case 2:
-    RB5 = 0;
+    RD6 = 0;
     break;
   case 3:
-    RB4 = 0;
-    break;
-  case 4:
-    RB3 = 0;
-    break;
-  case 5:
-    RB2 = 0;
-    break;
-  case 6:
-    RB1 = 0;
-    break;
-  case 7:
-    RB0 = 0;
-    break;
-  case 8:
     RD7 = 0;
     break;
+  case 4:
+    RB0 = 0;
+    break;
+  case 5:
+    RB1 = 0;
+    break;
+  case 6:
+    RB2 = 0;
+    break;
+  case 7:
+    RB3 = 0;
+    break;
+  case 8:
+    RB4 = 0;
+    break;
   case 9:
-    RD6 = 0;
+    RB5 = 0;
     break;
   default:
     break;

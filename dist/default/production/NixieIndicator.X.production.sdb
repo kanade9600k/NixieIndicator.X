@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F1939 ]
 [d frameptr 6 ]
-"206 D:\Programing\PIC\NixieIndicator.X\main.c
+"212 D:\Programing\PIC\NixieIndicator.X\main.c
 [e E3048 . `uc
 UPPER 0
 MIDDLE 1
@@ -25,21 +25,21 @@ I2C_DATA_RX 4
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"102 D:\Programing\PIC\NixieIndicator.X\main.c
+"108 D:\Programing\PIC\NixieIndicator.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"142
+"148
 [v _show show `(v  1 e 1 0 ]
-"203
+"209
 [v _show_character show_character `(v  1 e 1 0 ]
-"605
+"611
 [v _on_digit on_digit `(v  1 e 1 0 ]
-"648
+"654
 [v _off_digit off_digit `(v  1 e 1 0 ]
-"688
-[v _receive_char_from_EUSART receive_char_from_EUSART `(v  1 e 1 0 ]
 "694
-[v _receive_char_from_I2C receive_char_from_I2C `(v  1 e 1 0 ]
+[v _receive_char_from_EUSART receive_char_from_EUSART `(v  1 e 1 0 ]
 "700
+[v _receive_char_from_I2C receive_char_from_I2C `(v  1 e 1 0 ]
+"706
 [v _decode_received_char decode_received_char `(v  1 e 1 0 ]
 "88 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
 [v _EUSART_Initialize EUSART_Initialize `(v  1 e 1 0 ]
@@ -384,10 +384,6 @@ I2C_DATA_RX 4
 [v _RB4 RB4 `VEb  1 e 0 @108 ]
 "8913
 [v _RB5 RB5 `VEb  1 e 0 @109 ]
-"8916
-[v _RB6 RB6 `VEb  1 e 0 @110 ]
-"8919
-[v _RB7 RB7 `VEb  1 e 0 @111 ]
 "8922
 [v _RC0 RC0 `VEb  1 e 0 @112 ]
 "8925
@@ -396,6 +392,10 @@ I2C_DATA_RX 4
 [v _RC2 RC2 `VEb  1 e 0 @114 ]
 "8961
 [v _RD0 RD0 `VEb  1 e 0 @120 ]
+"8973
+[v _RD4 RD4 `VEb  1 e 0 @124 ]
+"8976
+[v _RD5 RD5 `VEb  1 e 0 @125 ]
 "8979
 [v _RD6 RD6 `VEb  1 e 0 @126 ]
 "8982
@@ -406,11 +406,11 @@ I2C_DATA_RX 4
 [v _RE1 RE1 `VEb  1 e 0 @129 ]
 "8991
 [v _RE2 RE2 `VEb  1 e 0 @130 ]
-"87 D:\Programing\PIC\NixieIndicator.X\main.c
+"93 D:\Programing\PIC\NixieIndicator.X\main.c
 [v _value value `[21]uc  1 e 21 0 ]
-"88
+"94
 [v _receive_index receive_index `c  1 e 1 0 ]
-"89
+"95
 [v _is_I2C_interrupt is_I2C_interrupt `uc  1 e 1 0 ]
 "62 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
 [v _eusartTxHead eusartTxHead `VEuc  1 e 1 0 ]
@@ -468,56 +468,56 @@ I2C_DATA_RX 4
 [v _I2C_SlaveBusColInterruptHandler I2C_SlaveBusColInterruptHandler `*.37(v  1 e 2 0 ]
 "140
 [v _I2C_SlaveWrColInterruptHandler I2C_SlaveWrColInterruptHandler `*.37(v  1 e 2 0 ]
-"102 D:\Programing\PIC\NixieIndicator.X\main.c
+"108 D:\Programing\PIC\NixieIndicator.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"139
+"145
 } 0
-"142
+"148
 [v _show show `(v  1 e 1 0 ]
 {
-"144
+"150
 [v show@chars chars `[20]uc  1 a 20 0 ]
-"148
+"154
 [v show@chars_index chars_index `uc  1 a 1 21 ]
-"147
+"153
 [v show@value_index value_index `uc  1 a 1 20 ]
-"195
+"201
 } 0
-"203
+"209
 [v _show_character show_character `(v  1 e 1 0 ]
 {
 [v show_character@dot dot `uc  1 a 1 wreg ]
-"206
+"212
 [v show_character@group group `E3048  1 a 1 5 ]
-"203
+"209
 [v show_character@dot dot `uc  1 a 1 wreg ]
 [v show_character@character character `uc  1 p 1 0 ]
 [v show_character@digit digit `c  1 p 1 1 ]
-"207
+"213
 [v show_character@dot dot `uc  1 a 1 4 ]
-"599
-} 0
 "605
+} 0
+"611
 [v _on_digit on_digit `(v  1 e 1 0 ]
 {
 [v on_digit@digit digit `c  1 a 1 wreg ]
 [v on_digit@digit digit `c  1 a 1 wreg ]
 [v on_digit@digit digit `c  1 a 1 5 ]
-"642
-} 0
 "648
+} 0
+"654
 [v _off_digit off_digit `(v  1 e 1 0 ]
 {
 [v off_digit@digit digit `c  1 a 1 wreg ]
 [v off_digit@digit digit `c  1 a 1 wreg ]
 [v off_digit@digit digit `c  1 a 1 5 ]
-"685
+"691
 } 0
-"694
+"700
 [v _receive_char_from_I2C receive_char_from_I2C `(v  1 e 1 0 ]
 {
-"697
+"703
 } 0
 "135 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/i2c_slave.c
 [v _I2C_Read I2C_Read `(uc  1 e 1 0 ]
@@ -529,22 +529,22 @@ I2C_DATA_RX 4
 {
 "415
 } 0
-"688 D:\Programing\PIC\NixieIndicator.X\main.c
+"694 D:\Programing\PIC\NixieIndicator.X\main.c
 [v _receive_char_from_EUSART receive_char_from_EUSART `(v  1 e 1 0 ]
 {
-"691
+"697
 } 0
-"700
+"706
 [v _decode_received_char decode_received_char `(v  1 e 1 0 ]
 {
 [v decode_received_char@received_char received_char `uc  1 a 1 wreg ]
-"706
+"712
 [v decode_received_char@i i `uc  1 a 1 5 ]
-"700
+"706
 [v decode_received_char@received_char received_char `uc  1 a 1 wreg ]
-"702
+"708
 [v decode_received_char@received_char received_char `uc  1 a 1 4 ]
-"716
+"722
 } 0
 "151 D:\Programing\PIC\NixieIndicator.X\mcc_generated_files/eusart.c
 [v _EUSART_Read EUSART_Read `(uc  1 e 1 0 ]

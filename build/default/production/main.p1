@@ -30,62 +30,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 "213 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 213: _Bool EUSART_is_rx_ready(void);
 [v _EUSART_is_rx_ready `(a ~T0 @X0 0 ef ]
-"97 main.c
-[; ;main.c: 97: void receive_char_from_EUSART(void);
+"103 main.c
+[; ;main.c: 103: void receive_char_from_EUSART(void);
 [v _receive_char_from_EUSART `(v ~T0 @X0 0 ef ]
-"98
-[; ;main.c: 98: void receive_char_from_I2C(void);
+"104
+[; ;main.c: 104: void receive_char_from_I2C(void);
 [v _receive_char_from_I2C `(v ~T0 @X0 0 ef ]
-"93
-[; ;main.c: 93: void show(void);
+"99
+[; ;main.c: 99: void show(void);
 [v _show `(v ~T0 @X0 0 ef ]
-"94
-[; ;main.c: 94: void show_character(char, char, signed char);
+"100
+[; ;main.c: 100: void show_character(char, char, signed char);
 [v _show_character `(v ~T0 @X0 0 ef3`uc`uc`c ]
 [v F2893 `(v ~T0 @X0 1 tf1`ul ]
 "92 D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\pic.h
 [v __delay `JF2893 ~T0 @X0 0 e ]
 [p i __delay ]
-"96 main.c
-[; ;main.c: 96: void off_digit(signed char);
+"102 main.c
+[; ;main.c: 102: void off_digit(signed char);
 [v _off_digit `(v ~T0 @X0 0 ef1`c ]
-"206
-[; ;main.c: 206:   NIXIE_GLOUP group;
+"212
+[; ;main.c: 212:   NIXIE_GLOUP group;
 [c E3048 0 1 2 .. ]
 [n E3048 . UPPER MIDDLE LOWER  ]
-"8886 D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8886: extern volatile __bit RA4 __attribute__((address(0x64)));
-[v _RA4 `Vb ~T0 @X0 0 e@100 ]
+"8961 D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8961: extern volatile __bit RD0 __attribute__((address(0x78)));
+[v _RD0 `Vb ~T0 @X0 0 e@120 ]
 "8895
 [; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8895: extern volatile __bit RA7 __attribute__((address(0x67)));
 [v _RA7 `Vb ~T0 @X0 0 e@103 ]
-"8961
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8961: extern volatile __bit RD0 __attribute__((address(0x78)));
-[v _RD0 `Vb ~T0 @X0 0 e@120 ]
-"8874
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8874: extern volatile __bit RA0 __attribute__((address(0x60)));
-[v _RA0 `Vb ~T0 @X0 0 e@96 ]
-"8877
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8877: extern volatile __bit RA1 __attribute__((address(0x61)));
-[v _RA1 `Vb ~T0 @X0 0 e@97 ]
-"8880
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8880: extern volatile __bit RA2 __attribute__((address(0x62)));
-[v _RA2 `Vb ~T0 @X0 0 e@98 ]
-"8883
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8883: extern volatile __bit RA3 __attribute__((address(0x63)));
-[v _RA3 `Vb ~T0 @X0 0 e@99 ]
-"8889
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8889: extern volatile __bit RA5 __attribute__((address(0x65)));
-[v _RA5 `Vb ~T0 @X0 0 e@101 ]
-"8985
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8985: extern volatile __bit RE0 __attribute__((address(0x80)));
-[v _RE0 `Vb ~T0 @X0 0 e@128 ]
-"8988
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8988: extern volatile __bit RE1 __attribute__((address(0x81)));
-[v _RE1 `Vb ~T0 @X0 0 e@129 ]
-"8991
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8991: extern volatile __bit RE2 __attribute__((address(0x82)));
-[v _RE2 `Vb ~T0 @X0 0 e@130 ]
+"8886
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8886: extern volatile __bit RA4 __attribute__((address(0x64)));
+[v _RA4 `Vb ~T0 @X0 0 e@100 ]
 "8892
 [; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8892: extern volatile __bit RA6 __attribute__((address(0x66)));
 [v _RA6 `Vb ~T0 @X0 0 e@102 ]
@@ -98,41 +74,65 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8928
 [; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8928: extern volatile __bit RC2 __attribute__((address(0x72)));
 [v _RC2 `Vb ~T0 @X0 0 e@114 ]
-"95 main.c
-[; ;main.c: 95: void on_digit(signed char);
+"8889
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8889: extern volatile __bit RA5 __attribute__((address(0x65)));
+[v _RA5 `Vb ~T0 @X0 0 e@101 ]
+"8985
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8985: extern volatile __bit RE0 __attribute__((address(0x80)));
+[v _RE0 `Vb ~T0 @X0 0 e@128 ]
+"8988
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8988: extern volatile __bit RE1 __attribute__((address(0x81)));
+[v _RE1 `Vb ~T0 @X0 0 e@129 ]
+"8991
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8991: extern volatile __bit RE2 __attribute__((address(0x82)));
+[v _RE2 `Vb ~T0 @X0 0 e@130 ]
+"8874
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8874: extern volatile __bit RA0 __attribute__((address(0x60)));
+[v _RA0 `Vb ~T0 @X0 0 e@96 ]
+"8877
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8877: extern volatile __bit RA1 __attribute__((address(0x61)));
+[v _RA1 `Vb ~T0 @X0 0 e@97 ]
+"8880
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8880: extern volatile __bit RA2 __attribute__((address(0x62)));
+[v _RA2 `Vb ~T0 @X0 0 e@98 ]
+"8883
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8883: extern volatile __bit RA3 __attribute__((address(0x63)));
+[v _RA3 `Vb ~T0 @X0 0 e@99 ]
+"101 main.c
+[; ;main.c: 101: void on_digit(signed char);
 [v _on_digit `(v ~T0 @X0 0 ef1`c ]
-"8919 D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8919: extern volatile __bit RB7 __attribute__((address(0x6F)));
-[v _RB7 `Vb ~T0 @X0 0 e@111 ]
-"8916
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8916: extern volatile __bit RB6 __attribute__((address(0x6E)));
-[v _RB6 `Vb ~T0 @X0 0 e@110 ]
-"8913
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8913: extern volatile __bit RB5 __attribute__((address(0x6D)));
-[v _RB5 `Vb ~T0 @X0 0 e@109 ]
-"8910
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8910: extern volatile __bit RB4 __attribute__((address(0x6C)));
-[v _RB4 `Vb ~T0 @X0 0 e@108 ]
-"8907
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8907: extern volatile __bit RB3 __attribute__((address(0x6B)));
-[v _RB3 `Vb ~T0 @X0 0 e@107 ]
-"8904
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8904: extern volatile __bit RB2 __attribute__((address(0x6A)));
-[v _RB2 `Vb ~T0 @X0 0 e@106 ]
-"8901
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8901: extern volatile __bit RB1 __attribute__((address(0x69)));
-[v _RB1 `Vb ~T0 @X0 0 e@105 ]
-"8898
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8898: extern volatile __bit RB0 __attribute__((address(0x68)));
-[v _RB0 `Vb ~T0 @X0 0 e@104 ]
-"8982
-[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8982: extern volatile __bit RD7 __attribute__((address(0x7F)));
-[v _RD7 `Vb ~T0 @X0 0 e@127 ]
+"8973 D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8973: extern volatile __bit RD4 __attribute__((address(0x7C)));
+[v _RD4 `Vb ~T0 @X0 0 e@124 ]
+"8976
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8976: extern volatile __bit RD5 __attribute__((address(0x7D)));
+[v _RD5 `Vb ~T0 @X0 0 e@125 ]
 "8979
 [; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8979: extern volatile __bit RD6 __attribute__((address(0x7E)));
 [v _RD6 `Vb ~T0 @X0 0 e@126 ]
-"99 main.c
-[; ;main.c: 99: void decode_received_char(char);
+"8982
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8982: extern volatile __bit RD7 __attribute__((address(0x7F)));
+[v _RD7 `Vb ~T0 @X0 0 e@127 ]
+"8898
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8898: extern volatile __bit RB0 __attribute__((address(0x68)));
+[v _RB0 `Vb ~T0 @X0 0 e@104 ]
+"8901
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8901: extern volatile __bit RB1 __attribute__((address(0x69)));
+[v _RB1 `Vb ~T0 @X0 0 e@105 ]
+"8904
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8904: extern volatile __bit RB2 __attribute__((address(0x6A)));
+[v _RB2 `Vb ~T0 @X0 0 e@106 ]
+"8907
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8907: extern volatile __bit RB3 __attribute__((address(0x6B)));
+[v _RB3 `Vb ~T0 @X0 0 e@107 ]
+"8910
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8910: extern volatile __bit RB4 __attribute__((address(0x6C)));
+[v _RB4 `Vb ~T0 @X0 0 e@108 ]
+"8913
+[; ;D:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC12-16F1xxx_DFP/1.2.63/xc8\pic\include\proc\pic16f1939.h: 8913: extern volatile __bit RB5 __attribute__((address(0x6D)));
+[v _RB5 `Vb ~T0 @X0 0 e@109 ]
+"105 main.c
+[; ;main.c: 105: void decode_received_char(char);
 [v _decode_received_char `(v ~T0 @X0 0 ef1`uc ]
 "328 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 328: uint8_t EUSART_Read(void);
@@ -683,352 +683,352 @@ Version 4.0 HI-TECH Software Intermediate Code
 "140
 [; ;./mcc_generated_files/i2c_slave.h: 140: void (*I2C_SlaveWrColInterruptHandler)(void);
 [v _I2C_SlaveWrColInterruptHandler `*F2998 ~T0 @X0 1 e ]
-"87 main.c
-[; ;main.c: 87: char value[10 * 2 + 1] = "";
+"93 main.c
+[; ;main.c: 93: char value[10 * 2 + 1] = "";
 [v _value `uc ~T0 @X0 -> 21 `i e ]
 [i _value
 :U ..
 -> 0 `c
 ..
 ]
-"88
-[; ;main.c: 88: signed char receive_index = 0;
+"94
+[; ;main.c: 94: signed char receive_index = 0;
 [v _receive_index `c ~T0 @X0 1 e ]
 [i _receive_index
 -> -> 0 `i `c
 ]
-"89
-[; ;main.c: 89: unsigned char is_I2C_interrupt = 0;
+"95
+[; ;main.c: 95: unsigned char is_I2C_interrupt = 0;
 [v _is_I2C_interrupt `uc ~T0 @X0 1 e ]
 [i _is_I2C_interrupt
 -> -> 0 `i `uc
 ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"102
-[; ;main.c: 102: void main(void)
+"108
+[; ;main.c: 108: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"103
-[; ;main.c: 103: {
+"109
+[; ;main.c: 109: {
 {
 [e :U _main ]
 [f ]
-"105
-[; ;main.c: 105:   SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
 "111
-[; ;main.c: 111:   (INTCONbits.GIE = 1);
+[; ;main.c: 111:   SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
+"117
+[; ;main.c: 117:   (INTCONbits.GIE = 1);
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"114
-[; ;main.c: 114:   (INTCONbits.PEIE = 1);
+"120
+[; ;main.c: 120:   (INTCONbits.PEIE = 1);
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"122
-[; ;main.c: 122:   I2C_Open();
-[e ( _I2C_Open ..  ]
-"124
-[; ;main.c: 124:   while (1)
-[e :U 381 ]
-"125
-[; ;main.c: 125:   {
-{
-"126
-[; ;main.c: 126:     if (EUSART_is_rx_ready())
-[e $ ! != -> ( _EUSART_is_rx_ready ..  `i -> 0 `i 383  ]
-"127
-[; ;main.c: 127:     {
-{
 "128
-[; ;main.c: 128:       receive_char_from_EUSART();
-[e ( _receive_char_from_EUSART ..  ]
-"129
-[; ;main.c: 129:     }
-}
-[e :U 383 ]
+[; ;main.c: 128:   I2C_Open();
+[e ( _I2C_Open ..  ]
+"130
+[; ;main.c: 130:   while (1)
+[e :U 381 ]
 "131
-[; ;main.c: 131:     if (is_I2C_interrupt)
-[e $ ! != -> _is_I2C_interrupt `i -> 0 `i 384  ]
-"132
-[; ;main.c: 132:     {
+[; ;main.c: 131:   {
 {
+"132
+[; ;main.c: 132:     if (EUSART_is_rx_ready())
+[e $ ! != -> ( _EUSART_is_rx_ready ..  `i -> 0 `i 383  ]
 "133
-[; ;main.c: 133:       is_I2C_interrupt = 0;
-[e = _is_I2C_interrupt -> -> 0 `i `uc ]
+[; ;main.c: 133:     {
+{
 "134
-[; ;main.c: 134:       receive_char_from_I2C();
-[e ( _receive_char_from_I2C ..  ]
+[; ;main.c: 134:       receive_char_from_EUSART();
+[e ( _receive_char_from_EUSART ..  ]
 "135
 [; ;main.c: 135:     }
 }
-[e :U 384 ]
+[e :U 383 ]
 "137
-[; ;main.c: 137:     show();
-[e ( _show ..  ]
+[; ;main.c: 137:     if (is_I2C_interrupt)
+[e $ ! != -> _is_I2C_interrupt `i -> 0 `i 384  ]
 "138
-[; ;main.c: 138:   }
+[; ;main.c: 138:     {
+{
+"139
+[; ;main.c: 139:       is_I2C_interrupt = 0;
+[e = _is_I2C_interrupt -> -> 0 `i `uc ]
+"140
+[; ;main.c: 140:       receive_char_from_I2C();
+[e ( _receive_char_from_I2C ..  ]
+"141
+[; ;main.c: 141:     }
+}
+[e :U 384 ]
+"143
+[; ;main.c: 143:     show();
+[e ( _show ..  ]
+"144
+[; ;main.c: 144:   }
 }
 [e :U 380 ]
 [e $U 381  ]
 [e :U 382 ]
-"139
-[; ;main.c: 139: }
+"145
+[; ;main.c: 145: }
 [e :UE 379 ]
 }
-"142
-[; ;main.c: 142: void show(void)
+"148
+[; ;main.c: 148: void show(void)
 [v _show `(v ~T0 @X0 1 ef ]
-"143
-[; ;main.c: 143: {
+"149
+[; ;main.c: 149: {
 {
 [e :U _show ]
 [f ]
-"144
-[; ;main.c: 144:   char chars[10 * 2];
+"150
+[; ;main.c: 150:   char chars[10 * 2];
 [v _chars `uc ~T0 @X0 -> 20 `i a ]
-"147
-[; ;main.c: 147:   unsigned char value_index = 0;
+"153
+[; ;main.c: 153:   unsigned char value_index = 0;
 [v _value_index `uc ~T0 @X0 1 a ]
 [e = _value_index -> -> 0 `i `uc ]
-"148
-[; ;main.c: 148:   unsigned char chars_index = 0;
+"154
+[; ;main.c: 154:   unsigned char chars_index = 0;
 [v _chars_index `uc ~T0 @X0 1 a ]
 [e = _chars_index -> -> 0 `i `uc ]
-"149
-[; ;main.c: 149:   while (chars_index < 10 * 2)
+"155
+[; ;main.c: 155:   while (chars_index < 10 * 2)
 [e $U 386  ]
 [e :U 387 ]
-"150
-[; ;main.c: 150:   {
-{
-"151
-[; ;main.c: 151:     if (value[value_index] == '.')
-[e $ ! == -> *U + &U _value * -> _value_index `ux -> -> # *U &U _value `ui `ux `ui -> 46 `ui 389  ]
-"152
-[; ;main.c: 152:     {
-{
-"153
-[; ;main.c: 153:       chars[chars_index++] = value[value_index++];
-[e = *U + &U _chars * -> ++ _chars_index -> -> 1 `i `uc `ux -> -> # *U &U _chars `ui `ux *U + &U _value * -> ++ _value_index -> -> 1 `i `uc `ux -> -> # *U &U _value `ui `ux ]
-"154
-[; ;main.c: 154:       chars[chars_index++] = value[value_index++];
-[e = *U + &U _chars * -> ++ _chars_index -> -> 1 `i `uc `ux -> -> # *U &U _chars `ui `ux *U + &U _value * -> ++ _value_index -> -> 1 `i `uc `ux -> -> # *U &U _value `ui `ux ]
-"155
-[; ;main.c: 155:     }
-}
-[e $U 390  ]
 "156
-[; ;main.c: 156:     else
-[e :U 389 ]
-"157
-[; ;main.c: 157:     {
+[; ;main.c: 156:   {
 {
+"157
+[; ;main.c: 157:     if (value[value_index] == '.')
+[e $ ! == -> *U + &U _value * -> _value_index `ux -> -> # *U &U _value `ui `ux `ui -> 46 `ui 389  ]
 "158
-[; ;main.c: 158:       chars[chars_index++] = ' ';
-[e = *U + &U _chars * -> ++ _chars_index -> -> 1 `i `uc `ux -> -> # *U &U _chars `ui `ux -> -> 32 `ui `uc ]
+[; ;main.c: 158:     {
+{
 "159
 [; ;main.c: 159:       chars[chars_index++] = value[value_index++];
 [e = *U + &U _chars * -> ++ _chars_index -> -> 1 `i `uc `ux -> -> # *U &U _chars `ui `ux *U + &U _value * -> ++ _value_index -> -> 1 `i `uc `ux -> -> # *U &U _value `ui `ux ]
 "160
-[; ;main.c: 160:     }
+[; ;main.c: 160:       chars[chars_index++] = value[value_index++];
+[e = *U + &U _chars * -> ++ _chars_index -> -> 1 `i `uc `ux -> -> # *U &U _chars `ui `ux *U + &U _value * -> ++ _value_index -> -> 1 `i `uc `ux -> -> # *U &U _value `ui `ux ]
+"161
+[; ;main.c: 161:     }
+}
+[e $U 390  ]
+"162
+[; ;main.c: 162:     else
+[e :U 389 ]
+"163
+[; ;main.c: 163:     {
+{
+"164
+[; ;main.c: 164:       chars[chars_index++] = ' ';
+[e = *U + &U _chars * -> ++ _chars_index -> -> 1 `i `uc `ux -> -> # *U &U _chars `ui `ux -> -> 32 `ui `uc ]
+"165
+[; ;main.c: 165:       chars[chars_index++] = value[value_index++];
+[e = *U + &U _chars * -> ++ _chars_index -> -> 1 `i `uc `ux -> -> # *U &U _chars `ui `ux *U + &U _value * -> ++ _value_index -> -> 1 `i `uc `ux -> -> # *U &U _value `ui `ux ]
+"166
+[; ;main.c: 166:     }
 }
 [e :U 390 ]
-"161
-[; ;main.c: 161:   }
+"167
+[; ;main.c: 167:   }
 }
 [e :U 386 ]
-"149
-[; ;main.c: 149:   while (chars_index < 10 * 2)
+"155
+[; ;main.c: 155:   while (chars_index < 10 * 2)
 [e $ < -> _chars_index `i * -> 10 `i -> 2 `i 387  ]
 [e :U 388 ]
-"164
-[; ;main.c: 164:   show_character(chars[0], chars[1], 0);
-[e ( _show_character (3 , , *U + &U _chars * -> -> -> 0 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 1 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 0 `i `c ]
-"165
-[; ;main.c: 165:   show_character(chars[8], chars[9], 4);
-[e ( _show_character (3 , , *U + &U _chars * -> -> -> 8 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 9 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 4 `i `c ]
-"166
-[; ;main.c: 166:   show_character(chars[16], chars[17], 8);
-[e ( _show_character (3 , , *U + &U _chars * -> -> -> 16 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 17 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 8 `i `c ]
-"167
-[; ;main.c: 167:   _delay((unsigned long)((800)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 800 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"168
-[; ;main.c: 168:   off_digit(0);
-[e ( _off_digit (1 -> -> 0 `i `c ]
-"169
-[; ;main.c: 169:   off_digit(4);
-[e ( _off_digit (1 -> -> 4 `i `c ]
 "170
-[; ;main.c: 170:   off_digit(8);
-[e ( _off_digit (1 -> -> 8 `i `c ]
+[; ;main.c: 170:   show_character(chars[0], chars[1], 0);
+[e ( _show_character (3 , , *U + &U _chars * -> -> -> 0 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 1 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 0 `i `c ]
 "171
-[; ;main.c: 171:   _delay((unsigned long)((200)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 171:   show_character(chars[8], chars[9], 4);
+[e ( _show_character (3 , , *U + &U _chars * -> -> -> 8 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 9 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 4 `i `c ]
+"172
+[; ;main.c: 172:   show_character(chars[16], chars[17], 8);
+[e ( _show_character (3 , , *U + &U _chars * -> -> -> 16 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 17 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 8 `i `c ]
 "173
-[; ;main.c: 173:   show_character(chars[2], chars[3], 1);
-[e ( _show_character (3 , , *U + &U _chars * -> -> -> 2 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 3 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 1 `i `c ]
+[; ;main.c: 173:   _delay((unsigned long)((800)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 800 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
 "174
-[; ;main.c: 174:   show_character(chars[10], chars[11], 5);
-[e ( _show_character (3 , , *U + &U _chars * -> -> -> 10 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 11 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 5 `i `c ]
+[; ;main.c: 174:   off_digit(0);
+[e ( _off_digit (1 -> -> 0 `i `c ]
 "175
-[; ;main.c: 175:   show_character(chars[18], chars[19], 9);
-[e ( _show_character (3 , , *U + &U _chars * -> -> -> 18 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 19 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 9 `i `c ]
+[; ;main.c: 175:   off_digit(4);
+[e ( _off_digit (1 -> -> 4 `i `c ]
 "176
-[; ;main.c: 176:   _delay((unsigned long)((800)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 800 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 176:   off_digit(8);
+[e ( _off_digit (1 -> -> 8 `i `c ]
 "177
-[; ;main.c: 177:   off_digit(1);
-[e ( _off_digit (1 -> -> 1 `i `c ]
-"178
-[; ;main.c: 178:   off_digit(5);
-[e ( _off_digit (1 -> -> 5 `i `c ]
+[; ;main.c: 177:   _delay((unsigned long)((200)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
 "179
-[; ;main.c: 179:   off_digit(9);
-[e ( _off_digit (1 -> -> 9 `i `c ]
+[; ;main.c: 179:   show_character(chars[2], chars[3], 1);
+[e ( _show_character (3 , , *U + &U _chars * -> -> -> 2 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 3 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 1 `i `c ]
 "180
-[; ;main.c: 180:   _delay((unsigned long)((200)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 180:   show_character(chars[10], chars[11], 5);
+[e ( _show_character (3 , , *U + &U _chars * -> -> -> 10 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 11 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 5 `i `c ]
+"181
+[; ;main.c: 181:   show_character(chars[18], chars[19], 9);
+[e ( _show_character (3 , , *U + &U _chars * -> -> -> 18 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 19 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 9 `i `c ]
 "182
-[; ;main.c: 182:   show_character(chars[4], chars[5], 2);
-[e ( _show_character (3 , , *U + &U _chars * -> -> -> 4 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 5 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 2 `i `c ]
+[; ;main.c: 182:   _delay((unsigned long)((800)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 800 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
 "183
-[; ;main.c: 183:   show_character(chars[12], chars[13], 6);
-[e ( _show_character (3 , , *U + &U _chars * -> -> -> 12 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 13 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 6 `i `c ]
+[; ;main.c: 183:   off_digit(1);
+[e ( _off_digit (1 -> -> 1 `i `c ]
 "184
-[; ;main.c: 184:   _delay((unsigned long)((800)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 800 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 184:   off_digit(5);
+[e ( _off_digit (1 -> -> 5 `i `c ]
 "185
-[; ;main.c: 185:   off_digit(2);
-[e ( _off_digit (1 -> -> 2 `i `c ]
+[; ;main.c: 185:   off_digit(9);
+[e ( _off_digit (1 -> -> 9 `i `c ]
 "186
-[; ;main.c: 186:   off_digit(6);
-[e ( _off_digit (1 -> -> 6 `i `c ]
-"187
-[; ;main.c: 187:   _delay((unsigned long)((200)*(8000000/4000000.0)));
+[; ;main.c: 186:   _delay((unsigned long)((200)*(8000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"188
+[; ;main.c: 188:   show_character(chars[4], chars[5], 2);
+[e ( _show_character (3 , , *U + &U _chars * -> -> -> 4 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 5 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 2 `i `c ]
 "189
-[; ;main.c: 189:   show_character(chars[6], chars[7], 3);
-[e ( _show_character (3 , , *U + &U _chars * -> -> -> 6 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 7 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 3 `i `c ]
+[; ;main.c: 189:   show_character(chars[12], chars[13], 6);
+[e ( _show_character (3 , , *U + &U _chars * -> -> -> 12 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 13 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 6 `i `c ]
 "190
-[; ;main.c: 190:   show_character(chars[14], chars[15], 7);
-[e ( _show_character (3 , , *U + &U _chars * -> -> -> 14 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 15 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 7 `i `c ]
-"191
-[; ;main.c: 191:   _delay((unsigned long)((800)*(8000000/4000000.0)));
+[; ;main.c: 190:   _delay((unsigned long)((800)*(8000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 800 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"191
+[; ;main.c: 191:   off_digit(2);
+[e ( _off_digit (1 -> -> 2 `i `c ]
 "192
-[; ;main.c: 192:   off_digit(3);
-[e ( _off_digit (1 -> -> 3 `i `c ]
+[; ;main.c: 192:   off_digit(6);
+[e ( _off_digit (1 -> -> 6 `i `c ]
 "193
-[; ;main.c: 193:   off_digit(7);
-[e ( _off_digit (1 -> -> 7 `i `c ]
-"194
-[; ;main.c: 194:   _delay((unsigned long)((200)*(8000000/4000000.0)));
+[; ;main.c: 193:   _delay((unsigned long)((200)*(8000000/4000000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
 "195
-[; ;main.c: 195: }
+[; ;main.c: 195:   show_character(chars[6], chars[7], 3);
+[e ( _show_character (3 , , *U + &U _chars * -> -> -> 6 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 7 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 3 `i `c ]
+"196
+[; ;main.c: 196:   show_character(chars[14], chars[15], 7);
+[e ( _show_character (3 , , *U + &U _chars * -> -> -> 14 `i `ui `ux -> -> # *U &U _chars `ui `ux *U + &U _chars * -> -> -> 15 `i `ui `ux -> -> # *U &U _chars `ui `ux -> -> 7 `i `c ]
+"197
+[; ;main.c: 197:   _delay((unsigned long)((800)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 800 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"198
+[; ;main.c: 198:   off_digit(3);
+[e ( _off_digit (1 -> -> 3 `i `c ]
+"199
+[; ;main.c: 199:   off_digit(7);
+[e ( _off_digit (1 -> -> 7 `i `c ]
+"200
+[; ;main.c: 200:   _delay((unsigned long)((200)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"201
+[; ;main.c: 201: }
 [e :UE 385 ]
 }
-"203
-[; ;main.c: 203: void show_character(char dot, char character, signed char digit)
+"209
+[; ;main.c: 209: void show_character(char dot, char character, signed char digit)
 [v _show_character `(v ~T0 @X0 1 ef3`uc`uc`c ]
-"204
-[; ;main.c: 204: {
+"210
+[; ;main.c: 210: {
 {
 [e :U _show_character ]
-"203
-[; ;main.c: 203: void show_character(char dot, char character, signed char digit)
+"209
+[; ;main.c: 209: void show_character(char dot, char character, signed char digit)
 [v _dot `uc ~T0 @X0 1 r1 ]
 [v _character `uc ~T0 @X0 1 r2 ]
 [v _digit `c ~T0 @X0 1 r3 ]
-"204
-[; ;main.c: 204: {
-[f ]
-"206
-[; ;main.c: 206:   NIXIE_GLOUP group;
-[v _group `E3048 ~T0 @X0 1 a ]
-"207
-[; ;main.c: 207:   if (digit < 4)
-[e $ ! < -> _digit `i -> 4 `i 392  ]
-"208
-[; ;main.c: 208:   {
-{
-"209
-[; ;main.c: 209:     group = UPPER;
-[e = _group . `E3048 0 ]
 "210
-[; ;main.c: 210:   }
+[; ;main.c: 210: {
+[f ]
+"212
+[; ;main.c: 212:   NIXIE_GLOUP group;
+[v _group `E3048 ~T0 @X0 1 a ]
+"213
+[; ;main.c: 213:   if (digit < 4)
+[e $ ! < -> _digit `i -> 4 `i 392  ]
+"214
+[; ;main.c: 214:   {
+{
+"215
+[; ;main.c: 215:     group = UPPER;
+[e = _group . `E3048 0 ]
+"216
+[; ;main.c: 216:   }
 }
 [e $U 393  ]
-"211
-[; ;main.c: 211:   else if (digit < 8)
+"217
+[; ;main.c: 217:   else if (digit < 8)
 [e :U 392 ]
 [e $ ! < -> _digit `i -> 8 `i 394  ]
-"212
-[; ;main.c: 212:   {
+"218
+[; ;main.c: 218:   {
 {
-"213
-[; ;main.c: 213:     group = MIDDLE;
+"219
+[; ;main.c: 219:     group = MIDDLE;
 [e = _group . `E3048 1 ]
-"214
-[; ;main.c: 214:   }
+"220
+[; ;main.c: 220:   }
 }
 [e $U 395  ]
-"215
-[; ;main.c: 215:   else
-[e :U 394 ]
-"216
-[; ;main.c: 216:   {
-{
-"217
-[; ;main.c: 217:     group = LOWER;
-[e = _group . `E3048 2 ]
-"218
-[; ;main.c: 218:   }
-}
-[e :U 395 ]
-[e :U 393 ]
 "221
-[; ;main.c: 221:   if (dot == '.')
-[e $ ! == -> _dot `ui -> 46 `ui 396  ]
+[; ;main.c: 221:   else
+[e :U 394 ]
 "222
 [; ;main.c: 222:   {
 {
 "223
-[; ;main.c: 223:     switch (group)
-[e $U 398  ]
+[; ;main.c: 223:     group = LOWER;
+[e = _group . `E3048 2 ]
 "224
-[; ;main.c: 224:     {
-{
-"225
-[; ;main.c: 225:     case UPPER:
-[e :U 399 ]
-"226
-[; ;main.c: 226:       RA4 = 1;
-[e = _RA4 -> -> 1 `i `b ]
+[; ;main.c: 224:   }
+}
+[e :U 395 ]
+[e :U 393 ]
 "227
-[; ;main.c: 227:       break;
-[e $U 397  ]
+[; ;main.c: 227:   if (dot == '.')
+[e $ ! == -> _dot `ui -> 46 `ui 396  ]
 "228
-[; ;main.c: 228:     case MIDDLE:
-[e :U 400 ]
+[; ;main.c: 228:   {
+{
 "229
-[; ;main.c: 229:       RA7 = 1;
-[e = _RA7 -> -> 1 `i `b ]
+[; ;main.c: 229:     switch (group)
+[e $U 398  ]
 "230
-[; ;main.c: 230:       break;
-[e $U 397  ]
+[; ;main.c: 230:     {
+{
 "231
-[; ;main.c: 231:     case LOWER:
-[e :U 401 ]
+[; ;main.c: 231:     case UPPER:
+[e :U 399 ]
 "232
 [; ;main.c: 232:       RD0 = 1;
 [e = _RD0 -> -> 1 `i `b ]
 "233
-[; ;main.c: 233:     default:
-[e :U 402 ]
-"234
-[; ;main.c: 234:       break;
+[; ;main.c: 233:       break;
 [e $U 397  ]
+"234
+[; ;main.c: 234:     case MIDDLE:
+[e :U 400 ]
 "235
-[; ;main.c: 235:     }
+[; ;main.c: 235:       RA7 = 1;
+[e = _RA7 -> -> 1 `i `b ]
+"236
+[; ;main.c: 236:       break;
+[e $U 397  ]
+"237
+[; ;main.c: 237:     case LOWER:
+[e :U 401 ]
+"238
+[; ;main.c: 238:       RA4 = 1;
+[e = _RA4 -> -> 1 `i `b ]
+"239
+[; ;main.c: 239:     default:
+[e :U 402 ]
+"240
+[; ;main.c: 240:       break;
+[e $U 397  ]
+"241
+[; ;main.c: 241:     }
 }
 [e $U 397  ]
 [e :U 398 ]
@@ -1037,54 +1037,54 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3048 2 `ui 401
  402 ]
 [e :U 397 ]
-"236
-[; ;main.c: 236:   }
+"242
+[; ;main.c: 242:   }
 }
 [e $U 403  ]
-"237
-[; ;main.c: 237:   else
-[e :U 396 ]
-"238
-[; ;main.c: 238:   {
-{
-"239
-[; ;main.c: 239:     switch (group)
-[e $U 405  ]
-"240
-[; ;main.c: 240:     {
-{
-"241
-[; ;main.c: 241:     case UPPER:
-[e :U 406 ]
-"242
-[; ;main.c: 242:       RA4 = 0;
-[e = _RA4 -> -> 0 `i `b ]
 "243
-[; ;main.c: 243:       break;
-[e $U 404  ]
+[; ;main.c: 243:   else
+[e :U 396 ]
 "244
-[; ;main.c: 244:     case MIDDLE:
-[e :U 407 ]
+[; ;main.c: 244:   {
+{
 "245
-[; ;main.c: 245:       RA7 = 0;
-[e = _RA7 -> -> 0 `i `b ]
+[; ;main.c: 245:     switch (group)
+[e $U 405  ]
 "246
-[; ;main.c: 246:       break;
-[e $U 404  ]
+[; ;main.c: 246:     {
+{
 "247
-[; ;main.c: 247:     case LOWER:
-[e :U 408 ]
+[; ;main.c: 247:     case UPPER:
+[e :U 406 ]
 "248
 [; ;main.c: 248:       RD0 = 0;
 [e = _RD0 -> -> 0 `i `b ]
 "249
-[; ;main.c: 249:     default:
-[e :U 409 ]
-"250
-[; ;main.c: 250:       break;
+[; ;main.c: 249:       break;
 [e $U 404  ]
+"250
+[; ;main.c: 250:     case MIDDLE:
+[e :U 407 ]
 "251
-[; ;main.c: 251:     }
+[; ;main.c: 251:       RA7 = 0;
+[e = _RA7 -> -> 0 `i `b ]
+"252
+[; ;main.c: 252:       break;
+[e $U 404  ]
+"253
+[; ;main.c: 253:     case LOWER:
+[e :U 408 ]
+"254
+[; ;main.c: 254:       RA4 = 0;
+[e = _RA4 -> -> 0 `i `b ]
+"255
+[; ;main.c: 255:     default:
+[e :U 409 ]
+"256
+[; ;main.c: 256:       break;
+[e $U 404  ]
+"257
+[; ;main.c: 257:     }
 }
 [e $U 404  ]
 [e :U 405 ]
@@ -1093,93 +1093,93 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3048 2 `ui 408
  409 ]
 [e :U 404 ]
-"252
-[; ;main.c: 252:   }
+"258
+[; ;main.c: 258:   }
 }
 [e :U 403 ]
-"255
-[; ;main.c: 255:   switch (character)
-[e $U 411  ]
-"256
-[; ;main.c: 256:   {
-{
-"257
-[; ;main.c: 257:   case '0':
-[e :U 412 ]
-"258
-[; ;main.c: 258:   case 'u':
-[e :U 413 ]
-"259
-[; ;main.c: 259:   case 'W':
-[e :U 414 ]
 "261
-[; ;main.c: 261:     switch (group)
-[e $U 416  ]
+[; ;main.c: 261:   switch (character)
+[e $U 411  ]
 "262
-[; ;main.c: 262:     {
+[; ;main.c: 262:   {
 {
 "263
-[; ;main.c: 263:     case UPPER:
-[e :U 417 ]
+[; ;main.c: 263:   case '0':
+[e :U 412 ]
 "264
-[; ;main.c: 264:       RA0 = 0;
-[e = _RA0 -> -> 0 `i `b ]
+[; ;main.c: 264:   case 'u':
+[e :U 413 ]
 "265
-[; ;main.c: 265:       RA1 = 0;
-[e = _RA1 -> -> 0 `i `b ]
-"266
-[; ;main.c: 266:       RA2 = 0;
-[e = _RA2 -> -> 0 `i `b ]
+[; ;main.c: 265:   case 'W':
+[e :U 414 ]
 "267
-[; ;main.c: 267:       RA3 = 0;
-[e = _RA3 -> -> 0 `i `b ]
+[; ;main.c: 267:     switch (group)
+[e $U 416  ]
 "268
-[; ;main.c: 268:       break;
-[e $U 415  ]
+[; ;main.c: 268:     {
+{
+"269
+[; ;main.c: 269:     case UPPER:
+[e :U 417 ]
 "270
-[; ;main.c: 270:     case MIDDLE:
-[e :U 418 ]
-"271
-[; ;main.c: 271:       RA5 = 0;
-[e = _RA5 -> -> 0 `i `b ]
-"272
-[; ;main.c: 272:       RE0 = 0;
-[e = _RE0 -> -> 0 `i `b ]
-"273
-[; ;main.c: 273:       RE1 = 0;
-[e = _RE1 -> -> 0 `i `b ]
-"274
-[; ;main.c: 274:       RE2 = 0;
-[e = _RE2 -> -> 0 `i `b ]
-"275
-[; ;main.c: 275:       break;
-[e $U 415  ]
-"277
-[; ;main.c: 277:     case LOWER:
-[e :U 419 ]
-"278
-[; ;main.c: 278:       RA6 = 0;
+[; ;main.c: 270:       RA6 = 0;
 [e = _RA6 -> -> 0 `i `b ]
-"279
-[; ;main.c: 279:       RC0 = 0;
+"271
+[; ;main.c: 271:       RC0 = 0;
 [e = _RC0 -> -> 0 `i `b ]
-"280
-[; ;main.c: 280:       RC1 = 0;
+"272
+[; ;main.c: 272:       RC1 = 0;
 [e = _RC1 -> -> 0 `i `b ]
-"281
-[; ;main.c: 281:       RC2 = 0;
+"273
+[; ;main.c: 273:       RC2 = 0;
 [e = _RC2 -> -> 0 `i `b ]
-"282
-[; ;main.c: 282:       break;
+"274
+[; ;main.c: 274:       break;
 [e $U 415  ]
+"276
+[; ;main.c: 276:     case MIDDLE:
+[e :U 418 ]
+"277
+[; ;main.c: 277:       RA5 = 0;
+[e = _RA5 -> -> 0 `i `b ]
+"278
+[; ;main.c: 278:       RE0 = 0;
+[e = _RE0 -> -> 0 `i `b ]
+"279
+[; ;main.c: 279:       RE1 = 0;
+[e = _RE1 -> -> 0 `i `b ]
+"280
+[; ;main.c: 280:       RE2 = 0;
+[e = _RE2 -> -> 0 `i `b ]
+"281
+[; ;main.c: 281:       break;
+[e $U 415  ]
+"283
+[; ;main.c: 283:     case LOWER:
+[e :U 419 ]
 "284
-[; ;main.c: 284:     default:
-[e :U 420 ]
+[; ;main.c: 284:       RA0 = 0;
+[e = _RA0 -> -> 0 `i `b ]
 "285
-[; ;main.c: 285:       break;
-[e $U 415  ]
+[; ;main.c: 285:       RA1 = 0;
+[e = _RA1 -> -> 0 `i `b ]
 "286
-[; ;main.c: 286:     }
+[; ;main.c: 286:       RA2 = 0;
+[e = _RA2 -> -> 0 `i `b ]
+"287
+[; ;main.c: 287:       RA3 = 0;
+[e = _RA3 -> -> 0 `i `b ]
+"288
+[; ;main.c: 288:       break;
+[e $U 415  ]
+"290
+[; ;main.c: 290:     default:
+[e :U 420 ]
+"291
+[; ;main.c: 291:       break;
+[e $U 415  ]
+"292
+[; ;main.c: 292:     }
 }
 [e $U 415  ]
 [e :U 416 ]
@@ -1188,86 +1188,86 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3048 2 `ui 419
  420 ]
 [e :U 415 ]
-"287
-[; ;main.c: 287:     break;
-[e $U 410  ]
-"289
-[; ;main.c: 289:   case '1':
-[e :U 421 ]
-"290
-[; ;main.c: 290:   case 'n':
-[e :U 422 ]
-"291
-[; ;main.c: 291:   case 'A':
-[e :U 423 ]
-"292
-[; ;main.c: 292:     switch (group)
-[e $U 425  ]
 "293
-[; ;main.c: 293:     {
-{
-"294
-[; ;main.c: 294:     case UPPER:
-[e :U 426 ]
+[; ;main.c: 293:     break;
+[e $U 410  ]
 "295
-[; ;main.c: 295:       RA0 = 0;
-[e = _RA0 -> -> 0 `i `b ]
+[; ;main.c: 295:   case '1':
+[e :U 421 ]
 "296
-[; ;main.c: 296:       RA1 = 0;
-[e = _RA1 -> -> 0 `i `b ]
+[; ;main.c: 296:   case 'n':
+[e :U 422 ]
 "297
-[; ;main.c: 297:       RA2 = 0;
-[e = _RA2 -> -> 0 `i `b ]
+[; ;main.c: 297:   case 'A':
+[e :U 423 ]
 "298
-[; ;main.c: 298:       RA3 = 1;
-[e = _RA3 -> -> 1 `i `b ]
+[; ;main.c: 298:     switch (group)
+[e $U 425  ]
 "299
-[; ;main.c: 299:       break;
-[e $U 424  ]
+[; ;main.c: 299:     {
+{
+"300
+[; ;main.c: 300:     case UPPER:
+[e :U 426 ]
 "301
-[; ;main.c: 301:     case MIDDLE:
-[e :U 427 ]
-"302
-[; ;main.c: 302:       RA5 = 0;
-[e = _RA5 -> -> 0 `i `b ]
-"303
-[; ;main.c: 303:       RE0 = 0;
-[e = _RE0 -> -> 0 `i `b ]
-"304
-[; ;main.c: 304:       RE1 = 0;
-[e = _RE1 -> -> 0 `i `b ]
-"305
-[; ;main.c: 305:       RE2 = 1;
-[e = _RE2 -> -> 1 `i `b ]
-"306
-[; ;main.c: 306:       break;
-[e $U 424  ]
-"308
-[; ;main.c: 308:     case LOWER:
-[e :U 428 ]
-"309
-[; ;main.c: 309:       RA6 = 0;
+[; ;main.c: 301:       RA6 = 0;
 [e = _RA6 -> -> 0 `i `b ]
-"310
-[; ;main.c: 310:       RC0 = 0;
+"302
+[; ;main.c: 302:       RC0 = 0;
 [e = _RC0 -> -> 0 `i `b ]
-"311
-[; ;main.c: 311:       RC1 = 0;
+"303
+[; ;main.c: 303:       RC1 = 0;
 [e = _RC1 -> -> 0 `i `b ]
-"312
-[; ;main.c: 312:       RC2 = 1;
+"304
+[; ;main.c: 304:       RC2 = 1;
 [e = _RC2 -> -> 1 `i `b ]
-"313
-[; ;main.c: 313:       break;
+"305
+[; ;main.c: 305:       break;
 [e $U 424  ]
+"307
+[; ;main.c: 307:     case MIDDLE:
+[e :U 427 ]
+"308
+[; ;main.c: 308:       RA5 = 0;
+[e = _RA5 -> -> 0 `i `b ]
+"309
+[; ;main.c: 309:       RE0 = 0;
+[e = _RE0 -> -> 0 `i `b ]
+"310
+[; ;main.c: 310:       RE1 = 0;
+[e = _RE1 -> -> 0 `i `b ]
+"311
+[; ;main.c: 311:       RE2 = 1;
+[e = _RE2 -> -> 1 `i `b ]
+"312
+[; ;main.c: 312:       break;
+[e $U 424  ]
+"314
+[; ;main.c: 314:     case LOWER:
+[e :U 428 ]
 "315
-[; ;main.c: 315:     default:
-[e :U 429 ]
+[; ;main.c: 315:       RA0 = 0;
+[e = _RA0 -> -> 0 `i `b ]
 "316
-[; ;main.c: 316:       break;
-[e $U 424  ]
+[; ;main.c: 316:       RA1 = 0;
+[e = _RA1 -> -> 0 `i `b ]
 "317
-[; ;main.c: 317:     }
+[; ;main.c: 317:       RA2 = 0;
+[e = _RA2 -> -> 0 `i `b ]
+"318
+[; ;main.c: 318:       RA3 = 1;
+[e = _RA3 -> -> 1 `i `b ]
+"319
+[; ;main.c: 319:       break;
+[e $U 424  ]
+"321
+[; ;main.c: 321:     default:
+[e :U 429 ]
+"322
+[; ;main.c: 322:       break;
+[e $U 424  ]
+"323
+[; ;main.c: 323:     }
 }
 [e $U 424  ]
 [e :U 425 ]
@@ -1276,86 +1276,86 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3048 2 `ui 428
  429 ]
 [e :U 424 ]
-"318
-[; ;main.c: 318:     break;
-[e $U 410  ]
-"320
-[; ;main.c: 320:   case '2':
-[e :U 430 ]
-"321
-[; ;main.c: 321:   case '%':
-[e :U 431 ]
-"322
-[; ;main.c: 322:   case 'O':
-[e :U 432 ]
-"323
-[; ;main.c: 323:     switch (group)
-[e $U 434  ]
 "324
-[; ;main.c: 324:     {
-{
-"325
-[; ;main.c: 325:     case UPPER:
-[e :U 435 ]
+[; ;main.c: 324:     break;
+[e $U 410  ]
 "326
-[; ;main.c: 326:       RA0 = 0;
-[e = _RA0 -> -> 0 `i `b ]
+[; ;main.c: 326:   case '2':
+[e :U 430 ]
 "327
-[; ;main.c: 327:       RA1 = 0;
-[e = _RA1 -> -> 0 `i `b ]
+[; ;main.c: 327:   case '%':
+[e :U 431 ]
 "328
-[; ;main.c: 328:       RA2 = 1;
-[e = _RA2 -> -> 1 `i `b ]
+[; ;main.c: 328:   case 'O':
+[e :U 432 ]
 "329
-[; ;main.c: 329:       RA3 = 0;
-[e = _RA3 -> -> 0 `i `b ]
+[; ;main.c: 329:     switch (group)
+[e $U 434  ]
 "330
-[; ;main.c: 330:       break;
-[e $U 433  ]
+[; ;main.c: 330:     {
+{
+"331
+[; ;main.c: 331:     case UPPER:
+[e :U 435 ]
 "332
-[; ;main.c: 332:     case MIDDLE:
-[e :U 436 ]
-"333
-[; ;main.c: 333:       RA5 = 0;
-[e = _RA5 -> -> 0 `i `b ]
-"334
-[; ;main.c: 334:       RE0 = 0;
-[e = _RE0 -> -> 0 `i `b ]
-"335
-[; ;main.c: 335:       RE1 = 1;
-[e = _RE1 -> -> 1 `i `b ]
-"336
-[; ;main.c: 336:       RE2 = 0;
-[e = _RE2 -> -> 0 `i `b ]
-"337
-[; ;main.c: 337:       break;
-[e $U 433  ]
-"339
-[; ;main.c: 339:     case LOWER:
-[e :U 437 ]
-"340
-[; ;main.c: 340:       RA6 = 0;
+[; ;main.c: 332:       RA6 = 0;
 [e = _RA6 -> -> 0 `i `b ]
-"341
-[; ;main.c: 341:       RC0 = 0;
+"333
+[; ;main.c: 333:       RC0 = 0;
 [e = _RC0 -> -> 0 `i `b ]
-"342
-[; ;main.c: 342:       RC1 = 1;
+"334
+[; ;main.c: 334:       RC1 = 1;
 [e = _RC1 -> -> 1 `i `b ]
-"343
-[; ;main.c: 343:       RC2 = 0;
+"335
+[; ;main.c: 335:       RC2 = 0;
 [e = _RC2 -> -> 0 `i `b ]
-"344
-[; ;main.c: 344:       break;
+"336
+[; ;main.c: 336:       break;
 [e $U 433  ]
+"338
+[; ;main.c: 338:     case MIDDLE:
+[e :U 436 ]
+"339
+[; ;main.c: 339:       RA5 = 0;
+[e = _RA5 -> -> 0 `i `b ]
+"340
+[; ;main.c: 340:       RE0 = 0;
+[e = _RE0 -> -> 0 `i `b ]
+"341
+[; ;main.c: 341:       RE1 = 1;
+[e = _RE1 -> -> 1 `i `b ]
+"342
+[; ;main.c: 342:       RE2 = 0;
+[e = _RE2 -> -> 0 `i `b ]
+"343
+[; ;main.c: 343:       break;
+[e $U 433  ]
+"345
+[; ;main.c: 345:     case LOWER:
+[e :U 437 ]
 "346
-[; ;main.c: 346:     default:
-[e :U 438 ]
+[; ;main.c: 346:       RA0 = 0;
+[e = _RA0 -> -> 0 `i `b ]
 "347
-[; ;main.c: 347:       break;
-[e $U 433  ]
+[; ;main.c: 347:       RA1 = 0;
+[e = _RA1 -> -> 0 `i `b ]
 "348
-[; ;main.c: 348:     }
+[; ;main.c: 348:       RA2 = 1;
+[e = _RA2 -> -> 1 `i `b ]
+"349
+[; ;main.c: 349:       RA3 = 0;
+[e = _RA3 -> -> 0 `i `b ]
+"350
+[; ;main.c: 350:       break;
+[e $U 433  ]
+"352
+[; ;main.c: 352:     default:
+[e :U 438 ]
+"353
+[; ;main.c: 353:       break;
+[e $U 433  ]
+"354
+[; ;main.c: 354:     }
 }
 [e $U 433  ]
 [e :U 434 ]
@@ -1364,83 +1364,83 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3048 2 `ui 437
  438 ]
 [e :U 433 ]
-"349
-[; ;main.c: 349:     break;
-[e $U 410  ]
-"351
-[; ;main.c: 351:   case '3':
-[e :U 439 ]
-"352
-[; ;main.c: 352:   case 'p':
-[e :U 440 ]
-"353
-[; ;main.c: 353:     switch (group)
-[e $U 442  ]
-"354
-[; ;main.c: 354:     {
-{
 "355
-[; ;main.c: 355:     case UPPER:
-[e :U 443 ]
-"356
-[; ;main.c: 356:       RA0 = 0;
-[e = _RA0 -> -> 0 `i `b ]
+[; ;main.c: 355:     break;
+[e $U 410  ]
 "357
-[; ;main.c: 357:       RA1 = 0;
-[e = _RA1 -> -> 0 `i `b ]
+[; ;main.c: 357:   case '3':
+[e :U 439 ]
 "358
-[; ;main.c: 358:       RA2 = 1;
-[e = _RA2 -> -> 1 `i `b ]
+[; ;main.c: 358:   case 'p':
+[e :U 440 ]
 "359
-[; ;main.c: 359:       RA3 = 1;
-[e = _RA3 -> -> 1 `i `b ]
+[; ;main.c: 359:     switch (group)
+[e $U 442  ]
 "360
-[; ;main.c: 360:       break;
-[e $U 441  ]
+[; ;main.c: 360:     {
+{
+"361
+[; ;main.c: 361:     case UPPER:
+[e :U 443 ]
 "362
-[; ;main.c: 362:     case MIDDLE:
-[e :U 444 ]
-"363
-[; ;main.c: 363:       RA5 = 0;
-[e = _RA5 -> -> 0 `i `b ]
-"364
-[; ;main.c: 364:       RE0 = 0;
-[e = _RE0 -> -> 0 `i `b ]
-"365
-[; ;main.c: 365:       RE1 = 1;
-[e = _RE1 -> -> 1 `i `b ]
-"366
-[; ;main.c: 366:       RE2 = 1;
-[e = _RE2 -> -> 1 `i `b ]
-"367
-[; ;main.c: 367:       break;
-[e $U 441  ]
-"369
-[; ;main.c: 369:     case LOWER:
-[e :U 445 ]
-"370
-[; ;main.c: 370:       RA6 = 0;
+[; ;main.c: 362:       RA6 = 0;
 [e = _RA6 -> -> 0 `i `b ]
-"371
-[; ;main.c: 371:       RC0 = 0;
+"363
+[; ;main.c: 363:       RC0 = 0;
 [e = _RC0 -> -> 0 `i `b ]
-"372
-[; ;main.c: 372:       RC1 = 1;
+"364
+[; ;main.c: 364:       RC1 = 1;
 [e = _RC1 -> -> 1 `i `b ]
-"373
-[; ;main.c: 373:       RC2 = 1;
+"365
+[; ;main.c: 365:       RC2 = 1;
 [e = _RC2 -> -> 1 `i `b ]
-"374
-[; ;main.c: 374:       break;
+"366
+[; ;main.c: 366:       break;
 [e $U 441  ]
+"368
+[; ;main.c: 368:     case MIDDLE:
+[e :U 444 ]
+"369
+[; ;main.c: 369:       RA5 = 0;
+[e = _RA5 -> -> 0 `i `b ]
+"370
+[; ;main.c: 370:       RE0 = 0;
+[e = _RE0 -> -> 0 `i `b ]
+"371
+[; ;main.c: 371:       RE1 = 1;
+[e = _RE1 -> -> 1 `i `b ]
+"372
+[; ;main.c: 372:       RE2 = 1;
+[e = _RE2 -> -> 1 `i `b ]
+"373
+[; ;main.c: 373:       break;
+[e $U 441  ]
+"375
+[; ;main.c: 375:     case LOWER:
+[e :U 445 ]
 "376
-[; ;main.c: 376:     default:
-[e :U 446 ]
+[; ;main.c: 376:       RA0 = 0;
+[e = _RA0 -> -> 0 `i `b ]
 "377
-[; ;main.c: 377:       break;
-[e $U 441  ]
+[; ;main.c: 377:       RA1 = 0;
+[e = _RA1 -> -> 0 `i `b ]
 "378
-[; ;main.c: 378:     }
+[; ;main.c: 378:       RA2 = 1;
+[e = _RA2 -> -> 1 `i `b ]
+"379
+[; ;main.c: 379:       RA3 = 1;
+[e = _RA3 -> -> 1 `i `b ]
+"380
+[; ;main.c: 380:       break;
+[e $U 441  ]
+"382
+[; ;main.c: 382:     default:
+[e :U 446 ]
+"383
+[; ;main.c: 383:       break;
+[e $U 441  ]
+"384
+[; ;main.c: 384:     }
 }
 [e $U 441  ]
 [e :U 442 ]
@@ -1449,86 +1449,86 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3048 2 `ui 445
  446 ]
 [e :U 441 ]
-"379
-[; ;main.c: 379:     break;
-[e $U 410  ]
-"381
-[; ;main.c: 381:   case '4':
-[e :U 447 ]
-"382
-[; ;main.c: 382:   case 'k':
-[e :U 448 ]
-"383
-[; ;main.c: 383:   case 'S':
-[e :U 449 ]
-"384
-[; ;main.c: 384:     switch (group)
-[e $U 451  ]
 "385
-[; ;main.c: 385:     {
-{
-"386
-[; ;main.c: 386:     case UPPER:
-[e :U 452 ]
+[; ;main.c: 385:     break;
+[e $U 410  ]
 "387
-[; ;main.c: 387:       RA0 = 0;
-[e = _RA0 -> -> 0 `i `b ]
+[; ;main.c: 387:   case '4':
+[e :U 447 ]
 "388
-[; ;main.c: 388:       RA1 = 1;
-[e = _RA1 -> -> 1 `i `b ]
+[; ;main.c: 388:   case 'k':
+[e :U 448 ]
 "389
-[; ;main.c: 389:       RA2 = 0;
-[e = _RA2 -> -> 0 `i `b ]
+[; ;main.c: 389:   case 'S':
+[e :U 449 ]
 "390
-[; ;main.c: 390:       RA3 = 0;
-[e = _RA3 -> -> 0 `i `b ]
+[; ;main.c: 390:     switch (group)
+[e $U 451  ]
 "391
-[; ;main.c: 391:       break;
-[e $U 450  ]
+[; ;main.c: 391:     {
+{
+"392
+[; ;main.c: 392:     case UPPER:
+[e :U 452 ]
 "393
-[; ;main.c: 393:     case MIDDLE:
-[e :U 453 ]
-"394
-[; ;main.c: 394:       RA5 = 0;
-[e = _RA5 -> -> 0 `i `b ]
-"395
-[; ;main.c: 395:       RE0 = 1;
-[e = _RE0 -> -> 1 `i `b ]
-"396
-[; ;main.c: 396:       RE1 = 0;
-[e = _RE1 -> -> 0 `i `b ]
-"397
-[; ;main.c: 397:       RE2 = 0;
-[e = _RE2 -> -> 0 `i `b ]
-"398
-[; ;main.c: 398:       break;
-[e $U 450  ]
-"400
-[; ;main.c: 400:     case LOWER:
-[e :U 454 ]
-"401
-[; ;main.c: 401:       RA6 = 0;
+[; ;main.c: 393:       RA6 = 0;
 [e = _RA6 -> -> 0 `i `b ]
-"402
-[; ;main.c: 402:       RC0 = 1;
+"394
+[; ;main.c: 394:       RC0 = 1;
 [e = _RC0 -> -> 1 `i `b ]
-"403
-[; ;main.c: 403:       RC1 = 0;
+"395
+[; ;main.c: 395:       RC1 = 0;
 [e = _RC1 -> -> 0 `i `b ]
-"404
-[; ;main.c: 404:       RC2 = 0;
+"396
+[; ;main.c: 396:       RC2 = 0;
 [e = _RC2 -> -> 0 `i `b ]
-"405
-[; ;main.c: 405:       break;
+"397
+[; ;main.c: 397:       break;
 [e $U 450  ]
+"399
+[; ;main.c: 399:     case MIDDLE:
+[e :U 453 ]
+"400
+[; ;main.c: 400:       RA5 = 0;
+[e = _RA5 -> -> 0 `i `b ]
+"401
+[; ;main.c: 401:       RE0 = 1;
+[e = _RE0 -> -> 1 `i `b ]
+"402
+[; ;main.c: 402:       RE1 = 0;
+[e = _RE1 -> -> 0 `i `b ]
+"403
+[; ;main.c: 403:       RE2 = 0;
+[e = _RE2 -> -> 0 `i `b ]
+"404
+[; ;main.c: 404:       break;
+[e $U 450  ]
+"406
+[; ;main.c: 406:     case LOWER:
+[e :U 454 ]
 "407
-[; ;main.c: 407:     default:
-[e :U 455 ]
+[; ;main.c: 407:       RA0 = 0;
+[e = _RA0 -> -> 0 `i `b ]
 "408
-[; ;main.c: 408:       break;
-[e $U 450  ]
+[; ;main.c: 408:       RA1 = 1;
+[e = _RA1 -> -> 1 `i `b ]
 "409
-[; ;main.c: 409:     }
+[; ;main.c: 409:       RA2 = 0;
+[e = _RA2 -> -> 0 `i `b ]
+"410
+[; ;main.c: 410:       RA3 = 0;
+[e = _RA3 -> -> 0 `i `b ]
+"411
+[; ;main.c: 411:       break;
+[e $U 450  ]
+"413
+[; ;main.c: 413:     default:
+[e :U 455 ]
+"414
+[; ;main.c: 414:       break;
+[e $U 450  ]
+"415
+[; ;main.c: 415:     }
 }
 [e $U 450  ]
 [e :U 451 ]
@@ -1537,86 +1537,86 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3048 2 `ui 454
  455 ]
 [e :U 450 ]
-"410
-[; ;main.c: 410:     break;
-[e $U 410  ]
-"412
-[; ;main.c: 412:   case '5':
-[e :U 456 ]
-"413
-[; ;main.c: 413:   case 'M':
-[e :U 457 ]
-"414
-[; ;main.c: 414:   case 'V':
-[e :U 458 ]
-"415
-[; ;main.c: 415:     switch (group)
-[e $U 460  ]
 "416
-[; ;main.c: 416:     {
-{
-"417
-[; ;main.c: 417:     case UPPER:
-[e :U 461 ]
+[; ;main.c: 416:     break;
+[e $U 410  ]
 "418
-[; ;main.c: 418:       RA0 = 0;
-[e = _RA0 -> -> 0 `i `b ]
+[; ;main.c: 418:   case '5':
+[e :U 456 ]
 "419
-[; ;main.c: 419:       RA1 = 1;
-[e = _RA1 -> -> 1 `i `b ]
+[; ;main.c: 419:   case 'M':
+[e :U 457 ]
 "420
-[; ;main.c: 420:       RA2 = 0;
-[e = _RA2 -> -> 0 `i `b ]
+[; ;main.c: 420:   case 'V':
+[e :U 458 ]
 "421
-[; ;main.c: 421:       RA3 = 1;
-[e = _RA3 -> -> 1 `i `b ]
+[; ;main.c: 421:     switch (group)
+[e $U 460  ]
 "422
-[; ;main.c: 422:       break;
-[e $U 459  ]
+[; ;main.c: 422:     {
+{
+"423
+[; ;main.c: 423:     case UPPER:
+[e :U 461 ]
 "424
-[; ;main.c: 424:     case MIDDLE:
-[e :U 462 ]
-"425
-[; ;main.c: 425:       RA5 = 0;
-[e = _RA5 -> -> 0 `i `b ]
-"426
-[; ;main.c: 426:       RE0 = 1;
-[e = _RE0 -> -> 1 `i `b ]
-"427
-[; ;main.c: 427:       RE1 = 0;
-[e = _RE1 -> -> 0 `i `b ]
-"428
-[; ;main.c: 428:       RE2 = 1;
-[e = _RE2 -> -> 1 `i `b ]
-"429
-[; ;main.c: 429:       break;
-[e $U 459  ]
-"431
-[; ;main.c: 431:     case LOWER:
-[e :U 463 ]
-"432
-[; ;main.c: 432:       RA6 = 0;
+[; ;main.c: 424:       RA6 = 0;
 [e = _RA6 -> -> 0 `i `b ]
-"433
-[; ;main.c: 433:       RC0 = 1;
+"425
+[; ;main.c: 425:       RC0 = 1;
 [e = _RC0 -> -> 1 `i `b ]
-"434
-[; ;main.c: 434:       RC1 = 0;
+"426
+[; ;main.c: 426:       RC1 = 0;
 [e = _RC1 -> -> 0 `i `b ]
-"435
-[; ;main.c: 435:       RC2 = 1;
+"427
+[; ;main.c: 427:       RC2 = 1;
 [e = _RC2 -> -> 1 `i `b ]
-"436
-[; ;main.c: 436:       break;
+"428
+[; ;main.c: 428:       break;
 [e $U 459  ]
+"430
+[; ;main.c: 430:     case MIDDLE:
+[e :U 462 ]
+"431
+[; ;main.c: 431:       RA5 = 0;
+[e = _RA5 -> -> 0 `i `b ]
+"432
+[; ;main.c: 432:       RE0 = 1;
+[e = _RE0 -> -> 1 `i `b ]
+"433
+[; ;main.c: 433:       RE1 = 0;
+[e = _RE1 -> -> 0 `i `b ]
+"434
+[; ;main.c: 434:       RE2 = 1;
+[e = _RE2 -> -> 1 `i `b ]
+"435
+[; ;main.c: 435:       break;
+[e $U 459  ]
+"437
+[; ;main.c: 437:     case LOWER:
+[e :U 463 ]
 "438
-[; ;main.c: 438:     default:
-[e :U 464 ]
+[; ;main.c: 438:       RA0 = 0;
+[e = _RA0 -> -> 0 `i `b ]
 "439
-[; ;main.c: 439:       break;
-[e $U 459  ]
+[; ;main.c: 439:       RA1 = 1;
+[e = _RA1 -> -> 1 `i `b ]
 "440
-[; ;main.c: 440:     }
+[; ;main.c: 440:       RA2 = 0;
+[e = _RA2 -> -> 0 `i `b ]
+"441
+[; ;main.c: 441:       RA3 = 1;
+[e = _RA3 -> -> 1 `i `b ]
+"442
+[; ;main.c: 442:       break;
+[e $U 459  ]
+"444
+[; ;main.c: 444:     default:
+[e :U 464 ]
+"445
+[; ;main.c: 445:       break;
+[e $U 459  ]
+"446
+[; ;main.c: 446:     }
 }
 [e $U 459  ]
 [e :U 460 ]
@@ -1625,86 +1625,86 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3048 2 `ui 463
  464 ]
 [e :U 459 ]
-"441
-[; ;main.c: 441:     break;
-[e $U 410  ]
-"443
-[; ;main.c: 443:   case '6':
-[e :U 465 ]
-"444
-[; ;main.c: 444:   case 'm':
-[e :U 466 ]
-"445
-[; ;main.c: 445:   case 'H':
-[e :U 467 ]
-"446
-[; ;main.c: 446:     switch (group)
-[e $U 469  ]
 "447
-[; ;main.c: 447:     {
-{
-"448
-[; ;main.c: 448:     case UPPER:
-[e :U 470 ]
+[; ;main.c: 447:     break;
+[e $U 410  ]
 "449
-[; ;main.c: 449:       RA0 = 0;
-[e = _RA0 -> -> 0 `i `b ]
+[; ;main.c: 449:   case '6':
+[e :U 465 ]
 "450
-[; ;main.c: 450:       RA1 = 1;
-[e = _RA1 -> -> 1 `i `b ]
+[; ;main.c: 450:   case 'm':
+[e :U 466 ]
 "451
-[; ;main.c: 451:       RA2 = 1;
-[e = _RA2 -> -> 1 `i `b ]
+[; ;main.c: 451:   case 'H':
+[e :U 467 ]
 "452
-[; ;main.c: 452:       RA3 = 0;
-[e = _RA3 -> -> 0 `i `b ]
+[; ;main.c: 452:     switch (group)
+[e $U 469  ]
 "453
-[; ;main.c: 453:       break;
-[e $U 468  ]
+[; ;main.c: 453:     {
+{
+"454
+[; ;main.c: 454:     case UPPER:
+[e :U 470 ]
 "455
-[; ;main.c: 455:     case MIDDLE:
-[e :U 471 ]
-"456
-[; ;main.c: 456:       RA5 = 0;
-[e = _RA5 -> -> 0 `i `b ]
-"457
-[; ;main.c: 457:       RE0 = 1;
-[e = _RE0 -> -> 1 `i `b ]
-"458
-[; ;main.c: 458:       RE1 = 1;
-[e = _RE1 -> -> 1 `i `b ]
-"459
-[; ;main.c: 459:       RE2 = 0;
-[e = _RE2 -> -> 0 `i `b ]
-"460
-[; ;main.c: 460:       break;
-[e $U 468  ]
-"462
-[; ;main.c: 462:     case LOWER:
-[e :U 472 ]
-"463
-[; ;main.c: 463:       RA6 = 0;
+[; ;main.c: 455:       RA6 = 0;
 [e = _RA6 -> -> 0 `i `b ]
-"464
-[; ;main.c: 464:       RC0 = 1;
+"456
+[; ;main.c: 456:       RC0 = 1;
 [e = _RC0 -> -> 1 `i `b ]
-"465
-[; ;main.c: 465:       RC1 = 1;
+"457
+[; ;main.c: 457:       RC1 = 1;
 [e = _RC1 -> -> 1 `i `b ]
-"466
-[; ;main.c: 466:       RC2 = 0;
+"458
+[; ;main.c: 458:       RC2 = 0;
 [e = _RC2 -> -> 0 `i `b ]
-"467
-[; ;main.c: 467:       break;
+"459
+[; ;main.c: 459:       break;
 [e $U 468  ]
+"461
+[; ;main.c: 461:     case MIDDLE:
+[e :U 471 ]
+"462
+[; ;main.c: 462:       RA5 = 0;
+[e = _RA5 -> -> 0 `i `b ]
+"463
+[; ;main.c: 463:       RE0 = 1;
+[e = _RE0 -> -> 1 `i `b ]
+"464
+[; ;main.c: 464:       RE1 = 1;
+[e = _RE1 -> -> 1 `i `b ]
+"465
+[; ;main.c: 465:       RE2 = 0;
+[e = _RE2 -> -> 0 `i `b ]
+"466
+[; ;main.c: 466:       break;
+[e $U 468  ]
+"468
+[; ;main.c: 468:     case LOWER:
+[e :U 472 ]
 "469
-[; ;main.c: 469:     default:
-[e :U 473 ]
+[; ;main.c: 469:       RA0 = 0;
+[e = _RA0 -> -> 0 `i `b ]
 "470
-[; ;main.c: 470:       break;
-[e $U 468  ]
+[; ;main.c: 470:       RA1 = 1;
+[e = _RA1 -> -> 1 `i `b ]
 "471
-[; ;main.c: 471:     }
+[; ;main.c: 471:       RA2 = 1;
+[e = _RA2 -> -> 1 `i `b ]
+"472
+[; ;main.c: 472:       RA3 = 0;
+[e = _RA3 -> -> 0 `i `b ]
+"473
+[; ;main.c: 473:       break;
+[e $U 468  ]
+"475
+[; ;main.c: 475:     default:
+[e :U 473 ]
+"476
+[; ;main.c: 476:       break;
+[e $U 468  ]
+"477
+[; ;main.c: 477:     }
 }
 [e $U 468  ]
 [e :U 469 ]
@@ -1713,86 +1713,86 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3048 2 `ui 472
  473 ]
 [e :U 468 ]
-"472
-[; ;main.c: 472:     break;
-[e $U 410  ]
-"474
-[; ;main.c: 474:   case '7':
-[e :U 474 ]
-"475
-[; ;main.c: 475:   case '+':
-[e :U 475 ]
-"476
-[; ;main.c: 476:   case 'h':
-[e :U 476 ]
-"477
-[; ;main.c: 477:     switch (group)
-[e $U 478  ]
 "478
-[; ;main.c: 478:     {
-{
-"479
-[; ;main.c: 479:     case UPPER:
-[e :U 479 ]
+[; ;main.c: 478:     break;
+[e $U 410  ]
 "480
-[; ;main.c: 480:       RA0 = 0;
-[e = _RA0 -> -> 0 `i `b ]
+[; ;main.c: 480:   case '7':
+[e :U 474 ]
 "481
-[; ;main.c: 481:       RA1 = 1;
-[e = _RA1 -> -> 1 `i `b ]
+[; ;main.c: 481:   case '+':
+[e :U 475 ]
 "482
-[; ;main.c: 482:       RA2 = 1;
-[e = _RA2 -> -> 1 `i `b ]
+[; ;main.c: 482:   case 'h':
+[e :U 476 ]
 "483
-[; ;main.c: 483:       RA3 = 1;
-[e = _RA3 -> -> 1 `i `b ]
+[; ;main.c: 483:     switch (group)
+[e $U 478  ]
 "484
-[; ;main.c: 484:       break;
-[e $U 477  ]
+[; ;main.c: 484:     {
+{
+"485
+[; ;main.c: 485:     case UPPER:
+[e :U 479 ]
 "486
-[; ;main.c: 486:     case MIDDLE:
-[e :U 480 ]
-"487
-[; ;main.c: 487:       RA5 = 0;
-[e = _RA5 -> -> 0 `i `b ]
-"488
-[; ;main.c: 488:       RE0 = 1;
-[e = _RE0 -> -> 1 `i `b ]
-"489
-[; ;main.c: 489:       RE1 = 1;
-[e = _RE1 -> -> 1 `i `b ]
-"490
-[; ;main.c: 490:       RE2 = 1;
-[e = _RE2 -> -> 1 `i `b ]
-"491
-[; ;main.c: 491:       break;
-[e $U 477  ]
-"493
-[; ;main.c: 493:     case LOWER:
-[e :U 481 ]
-"494
-[; ;main.c: 494:       RA6 = 0;
+[; ;main.c: 486:       RA6 = 0;
 [e = _RA6 -> -> 0 `i `b ]
-"495
-[; ;main.c: 495:       RC0 = 1;
+"487
+[; ;main.c: 487:       RC0 = 1;
 [e = _RC0 -> -> 1 `i `b ]
-"496
-[; ;main.c: 496:       RC1 = 1;
+"488
+[; ;main.c: 488:       RC1 = 1;
 [e = _RC1 -> -> 1 `i `b ]
-"497
-[; ;main.c: 497:       RC2 = 1;
+"489
+[; ;main.c: 489:       RC2 = 1;
 [e = _RC2 -> -> 1 `i `b ]
-"498
-[; ;main.c: 498:       break;
+"490
+[; ;main.c: 490:       break;
 [e $U 477  ]
+"492
+[; ;main.c: 492:     case MIDDLE:
+[e :U 480 ]
+"493
+[; ;main.c: 493:       RA5 = 0;
+[e = _RA5 -> -> 0 `i `b ]
+"494
+[; ;main.c: 494:       RE0 = 1;
+[e = _RE0 -> -> 1 `i `b ]
+"495
+[; ;main.c: 495:       RE1 = 1;
+[e = _RE1 -> -> 1 `i `b ]
+"496
+[; ;main.c: 496:       RE2 = 1;
+[e = _RE2 -> -> 1 `i `b ]
+"497
+[; ;main.c: 497:       break;
+[e $U 477  ]
+"499
+[; ;main.c: 499:     case LOWER:
+[e :U 481 ]
 "500
-[; ;main.c: 500:     default:
-[e :U 482 ]
+[; ;main.c: 500:       RA0 = 0;
+[e = _RA0 -> -> 0 `i `b ]
 "501
-[; ;main.c: 501:       break;
-[e $U 477  ]
+[; ;main.c: 501:       RA1 = 1;
+[e = _RA1 -> -> 1 `i `b ]
 "502
-[; ;main.c: 502:     }
+[; ;main.c: 502:       RA2 = 1;
+[e = _RA2 -> -> 1 `i `b ]
+"503
+[; ;main.c: 503:       RA3 = 1;
+[e = _RA3 -> -> 1 `i `b ]
+"504
+[; ;main.c: 504:       break;
+[e $U 477  ]
+"506
+[; ;main.c: 506:     default:
+[e :U 482 ]
+"507
+[; ;main.c: 507:       break;
+[e $U 477  ]
+"508
+[; ;main.c: 508:     }
 }
 [e $U 477  ]
 [e :U 478 ]
@@ -1801,83 +1801,83 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3048 2 `ui 481
  482 ]
 [e :U 477 ]
-"503
-[; ;main.c: 503:     break;
-[e $U 410  ]
-"505
-[; ;main.c: 505:   case '8':
-[e :U 483 ]
-"506
-[; ;main.c: 506:   case '-':
-[e :U 484 ]
-"507
-[; ;main.c: 507:     switch (group)
-[e $U 486  ]
-"508
-[; ;main.c: 508:     {
-{
 "509
-[; ;main.c: 509:     case UPPER:
-[e :U 487 ]
-"510
-[; ;main.c: 510:       RA0 = 1;
-[e = _RA0 -> -> 1 `i `b ]
+[; ;main.c: 509:     break;
+[e $U 410  ]
 "511
-[; ;main.c: 511:       RA1 = 0;
-[e = _RA1 -> -> 0 `i `b ]
+[; ;main.c: 511:   case '8':
+[e :U 483 ]
 "512
-[; ;main.c: 512:       RA2 = 0;
-[e = _RA2 -> -> 0 `i `b ]
+[; ;main.c: 512:   case '-':
+[e :U 484 ]
 "513
-[; ;main.c: 513:       RA3 = 0;
-[e = _RA3 -> -> 0 `i `b ]
+[; ;main.c: 513:     switch (group)
+[e $U 486  ]
 "514
-[; ;main.c: 514:       break;
-[e $U 485  ]
+[; ;main.c: 514:     {
+{
+"515
+[; ;main.c: 515:     case UPPER:
+[e :U 487 ]
 "516
-[; ;main.c: 516:     case MIDDLE:
-[e :U 488 ]
-"517
-[; ;main.c: 517:       RA5 = 1;
-[e = _RA5 -> -> 1 `i `b ]
-"518
-[; ;main.c: 518:       RE0 = 0;
-[e = _RE0 -> -> 0 `i `b ]
-"519
-[; ;main.c: 519:       RE1 = 0;
-[e = _RE1 -> -> 0 `i `b ]
-"520
-[; ;main.c: 520:       RE2 = 0;
-[e = _RE2 -> -> 0 `i `b ]
-"521
-[; ;main.c: 521:       break;
-[e $U 485  ]
-"523
-[; ;main.c: 523:     case LOWER:
-[e :U 489 ]
-"524
-[; ;main.c: 524:       RA6 = 1;
+[; ;main.c: 516:       RA6 = 1;
 [e = _RA6 -> -> 1 `i `b ]
-"525
-[; ;main.c: 525:       RC0 = 0;
+"517
+[; ;main.c: 517:       RC0 = 0;
 [e = _RC0 -> -> 0 `i `b ]
-"526
-[; ;main.c: 526:       RC1 = 0;
+"518
+[; ;main.c: 518:       RC1 = 0;
 [e = _RC1 -> -> 0 `i `b ]
-"527
-[; ;main.c: 527:       RC2 = 0;
+"519
+[; ;main.c: 519:       RC2 = 0;
 [e = _RC2 -> -> 0 `i `b ]
-"528
-[; ;main.c: 528:       break;
+"520
+[; ;main.c: 520:       break;
 [e $U 485  ]
+"522
+[; ;main.c: 522:     case MIDDLE:
+[e :U 488 ]
+"523
+[; ;main.c: 523:       RA5 = 1;
+[e = _RA5 -> -> 1 `i `b ]
+"524
+[; ;main.c: 524:       RE0 = 0;
+[e = _RE0 -> -> 0 `i `b ]
+"525
+[; ;main.c: 525:       RE1 = 0;
+[e = _RE1 -> -> 0 `i `b ]
+"526
+[; ;main.c: 526:       RE2 = 0;
+[e = _RE2 -> -> 0 `i `b ]
+"527
+[; ;main.c: 527:       break;
+[e $U 485  ]
+"529
+[; ;main.c: 529:     case LOWER:
+[e :U 489 ]
 "530
-[; ;main.c: 530:     default:
-[e :U 490 ]
+[; ;main.c: 530:       RA0 = 1;
+[e = _RA0 -> -> 1 `i `b ]
 "531
-[; ;main.c: 531:       break;
-[e $U 485  ]
+[; ;main.c: 531:       RA1 = 0;
+[e = _RA1 -> -> 0 `i `b ]
 "532
-[; ;main.c: 532:     }
+[; ;main.c: 532:       RA2 = 0;
+[e = _RA2 -> -> 0 `i `b ]
+"533
+[; ;main.c: 533:       RA3 = 0;
+[e = _RA3 -> -> 0 `i `b ]
+"534
+[; ;main.c: 534:       break;
+[e $U 485  ]
+"536
+[; ;main.c: 536:     default:
+[e :U 490 ]
+"537
+[; ;main.c: 537:       break;
+[e $U 485  ]
+"538
+[; ;main.c: 538:     }
 }
 [e $U 485  ]
 [e :U 486 ]
@@ -1886,86 +1886,86 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3048 2 `ui 489
  490 ]
 [e :U 485 ]
-"533
-[; ;main.c: 533:     break;
-[e $U 410  ]
-"535
-[; ;main.c: 535:   case '9':
-[e :U 491 ]
-"536
-[; ;main.c: 536:   case 'P':
-[e :U 492 ]
-"537
-[; ;main.c: 537:   case 'F':
-[e :U 493 ]
-"538
-[; ;main.c: 538:     switch (group)
-[e $U 495  ]
 "539
-[; ;main.c: 539:     {
-{
-"540
-[; ;main.c: 540:     case UPPER:
-[e :U 496 ]
+[; ;main.c: 539:     break;
+[e $U 410  ]
 "541
-[; ;main.c: 541:       RA0 = 1;
-[e = _RA0 -> -> 1 `i `b ]
+[; ;main.c: 541:   case '9':
+[e :U 491 ]
 "542
-[; ;main.c: 542:       RA1 = 0;
-[e = _RA1 -> -> 0 `i `b ]
+[; ;main.c: 542:   case 'P':
+[e :U 492 ]
 "543
-[; ;main.c: 543:       RA2 = 0;
-[e = _RA2 -> -> 0 `i `b ]
+[; ;main.c: 543:   case 'F':
+[e :U 493 ]
 "544
-[; ;main.c: 544:       RA3 = 1;
-[e = _RA3 -> -> 1 `i `b ]
+[; ;main.c: 544:     switch (group)
+[e $U 495  ]
 "545
-[; ;main.c: 545:       break;
-[e $U 494  ]
+[; ;main.c: 545:     {
+{
+"546
+[; ;main.c: 546:     case UPPER:
+[e :U 496 ]
 "547
-[; ;main.c: 547:     case MIDDLE:
-[e :U 497 ]
-"548
-[; ;main.c: 548:       RA5 = 1;
-[e = _RA5 -> -> 1 `i `b ]
-"549
-[; ;main.c: 549:       RE0 = 0;
-[e = _RE0 -> -> 0 `i `b ]
-"550
-[; ;main.c: 550:       RE1 = 0;
-[e = _RE1 -> -> 0 `i `b ]
-"551
-[; ;main.c: 551:       RE2 = 1;
-[e = _RE2 -> -> 1 `i `b ]
-"552
-[; ;main.c: 552:       break;
-[e $U 494  ]
-"554
-[; ;main.c: 554:     case LOWER:
-[e :U 498 ]
-"555
-[; ;main.c: 555:       RA6 = 1;
+[; ;main.c: 547:       RA6 = 1;
 [e = _RA6 -> -> 1 `i `b ]
-"556
-[; ;main.c: 556:       RC0 = 0;
+"548
+[; ;main.c: 548:       RC0 = 0;
 [e = _RC0 -> -> 0 `i `b ]
-"557
-[; ;main.c: 557:       RC1 = 0;
+"549
+[; ;main.c: 549:       RC1 = 0;
 [e = _RC1 -> -> 0 `i `b ]
-"558
-[; ;main.c: 558:       RC2 = 1;
+"550
+[; ;main.c: 550:       RC2 = 1;
 [e = _RC2 -> -> 1 `i `b ]
-"559
-[; ;main.c: 559:       break;
+"551
+[; ;main.c: 551:       break;
 [e $U 494  ]
+"553
+[; ;main.c: 553:     case MIDDLE:
+[e :U 497 ]
+"554
+[; ;main.c: 554:       RA5 = 1;
+[e = _RA5 -> -> 1 `i `b ]
+"555
+[; ;main.c: 555:       RE0 = 0;
+[e = _RE0 -> -> 0 `i `b ]
+"556
+[; ;main.c: 556:       RE1 = 0;
+[e = _RE1 -> -> 0 `i `b ]
+"557
+[; ;main.c: 557:       RE2 = 1;
+[e = _RE2 -> -> 1 `i `b ]
+"558
+[; ;main.c: 558:       break;
+[e $U 494  ]
+"560
+[; ;main.c: 560:     case LOWER:
+[e :U 498 ]
 "561
-[; ;main.c: 561:     default:
-[e :U 499 ]
+[; ;main.c: 561:       RA0 = 1;
+[e = _RA0 -> -> 1 `i `b ]
 "562
-[; ;main.c: 562:       break;
-[e $U 494  ]
+[; ;main.c: 562:       RA1 = 0;
+[e = _RA1 -> -> 0 `i `b ]
 "563
-[; ;main.c: 563:     }
+[; ;main.c: 563:       RA2 = 0;
+[e = _RA2 -> -> 0 `i `b ]
+"564
+[; ;main.c: 564:       RA3 = 1;
+[e = _RA3 -> -> 1 `i `b ]
+"565
+[; ;main.c: 565:       break;
+[e $U 494  ]
+"567
+[; ;main.c: 567:     default:
+[e :U 499 ]
+"568
+[; ;main.c: 568:       break;
+[e $U 494  ]
+"569
+[; ;main.c: 569:     }
 }
 [e $U 494  ]
 [e :U 495 ]
@@ -1974,83 +1974,83 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3048 2 `ui 498
  499 ]
 [e :U 494 ]
-"564
-[; ;main.c: 564:     break;
-[e $U 410  ]
-"566
-[; ;main.c: 566:   case ' ':
-[e :U 500 ]
-"567
-[; ;main.c: 567:   default:
-[e :U 501 ]
-"568
-[; ;main.c: 568:     switch (group)
-[e $U 503  ]
-"569
-[; ;main.c: 569:     {
-{
 "570
-[; ;main.c: 570:     case UPPER:
-[e :U 504 ]
-"571
-[; ;main.c: 571:       RA0 = 1;
-[e = _RA0 -> -> 1 `i `b ]
+[; ;main.c: 570:     break;
+[e $U 410  ]
 "572
-[; ;main.c: 572:       RA1 = 1;
-[e = _RA1 -> -> 1 `i `b ]
+[; ;main.c: 572:   case ' ':
+[e :U 500 ]
 "573
-[; ;main.c: 573:       RA2 = 1;
-[e = _RA2 -> -> 1 `i `b ]
+[; ;main.c: 573:   default:
+[e :U 501 ]
 "574
-[; ;main.c: 574:       RA3 = 1;
-[e = _RA3 -> -> 1 `i `b ]
+[; ;main.c: 574:     switch (group)
+[e $U 503  ]
 "575
-[; ;main.c: 575:       break;
-[e $U 502  ]
+[; ;main.c: 575:     {
+{
+"576
+[; ;main.c: 576:     case UPPER:
+[e :U 504 ]
 "577
-[; ;main.c: 577:     case MIDDLE:
-[e :U 505 ]
-"578
-[; ;main.c: 578:       RA5 = 1;
-[e = _RA5 -> -> 1 `i `b ]
-"579
-[; ;main.c: 579:       RE0 = 1;
-[e = _RE0 -> -> 1 `i `b ]
-"580
-[; ;main.c: 580:       RE1 = 1;
-[e = _RE1 -> -> 1 `i `b ]
-"581
-[; ;main.c: 581:       RE2 = 1;
-[e = _RE2 -> -> 1 `i `b ]
-"582
-[; ;main.c: 582:       break;
-[e $U 502  ]
-"584
-[; ;main.c: 584:     case LOWER:
-[e :U 506 ]
-"585
-[; ;main.c: 585:       RA6 = 1;
+[; ;main.c: 577:       RA6 = 1;
 [e = _RA6 -> -> 1 `i `b ]
-"586
-[; ;main.c: 586:       RC0 = 1;
+"578
+[; ;main.c: 578:       RC0 = 1;
 [e = _RC0 -> -> 1 `i `b ]
-"587
-[; ;main.c: 587:       RC1 = 1;
+"579
+[; ;main.c: 579:       RC1 = 1;
 [e = _RC1 -> -> 1 `i `b ]
-"588
-[; ;main.c: 588:       RC2 = 1;
+"580
+[; ;main.c: 580:       RC2 = 1;
 [e = _RC2 -> -> 1 `i `b ]
-"589
-[; ;main.c: 589:       break;
+"581
+[; ;main.c: 581:       break;
 [e $U 502  ]
+"583
+[; ;main.c: 583:     case MIDDLE:
+[e :U 505 ]
+"584
+[; ;main.c: 584:       RA5 = 1;
+[e = _RA5 -> -> 1 `i `b ]
+"585
+[; ;main.c: 585:       RE0 = 1;
+[e = _RE0 -> -> 1 `i `b ]
+"586
+[; ;main.c: 586:       RE1 = 1;
+[e = _RE1 -> -> 1 `i `b ]
+"587
+[; ;main.c: 587:       RE2 = 1;
+[e = _RE2 -> -> 1 `i `b ]
+"588
+[; ;main.c: 588:       break;
+[e $U 502  ]
+"590
+[; ;main.c: 590:     case LOWER:
+[e :U 506 ]
 "591
-[; ;main.c: 591:     default:
-[e :U 507 ]
+[; ;main.c: 591:       RA0 = 1;
+[e = _RA0 -> -> 1 `i `b ]
 "592
-[; ;main.c: 592:       break;
-[e $U 502  ]
+[; ;main.c: 592:       RA1 = 1;
+[e = _RA1 -> -> 1 `i `b ]
 "593
-[; ;main.c: 593:     }
+[; ;main.c: 593:       RA2 = 1;
+[e = _RA2 -> -> 1 `i `b ]
+"594
+[; ;main.c: 594:       RA3 = 1;
+[e = _RA3 -> -> 1 `i `b ]
+"595
+[; ;main.c: 595:       break;
+[e $U 502  ]
+"597
+[; ;main.c: 597:     default:
+[e :U 507 ]
+"598
+[; ;main.c: 598:       break;
+[e $U 502  ]
+"599
+[; ;main.c: 599:     }
 }
 [e $U 502  ]
 [e :U 503 ]
@@ -2059,11 +2059,11 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> . `E3048 2 `ui 506
  507 ]
 [e :U 502 ]
-"594
-[; ;main.c: 594:     break;
+"600
+[; ;main.c: 600:     break;
 [e $U 410  ]
-"595
-[; ;main.c: 595:   }
+"601
+[; ;main.c: 601:   }
 }
 [e $U 410  ]
 [e :U 411 ]
@@ -2098,130 +2098,130 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> -> 32 `ui `i 500
  501 ]
 [e :U 410 ]
-"598
-[; ;main.c: 598:   on_digit(digit);
+"604
+[; ;main.c: 604:   on_digit(digit);
 [e ( _on_digit (1 _digit ]
-"599
-[; ;main.c: 599: }
+"605
+[; ;main.c: 605: }
 [e :UE 391 ]
 }
-"605
-[; ;main.c: 605: void on_digit(signed char digit)
+"611
+[; ;main.c: 611: void on_digit(signed char digit)
 [v _on_digit `(v ~T0 @X0 1 ef1`c ]
-"606
-[; ;main.c: 606: {
+"612
+[; ;main.c: 612: {
 {
 [e :U _on_digit ]
-"605
-[; ;main.c: 605: void on_digit(signed char digit)
-[v _digit `c ~T0 @X0 1 r1 ]
-"606
-[; ;main.c: 606: {
-[f ]
-"607
-[; ;main.c: 607:   switch (digit)
-[e $U 510  ]
-"608
-[; ;main.c: 608:   {
-{
-"609
-[; ;main.c: 609:   case 0:
-[e :U 511 ]
-"610
-[; ;main.c: 610:     RB7 = 1;
-[e = _RB7 -> -> 1 `i `b ]
 "611
-[; ;main.c: 611:     break;
-[e $U 509  ]
+[; ;main.c: 611: void on_digit(signed char digit)
+[v _digit `c ~T0 @X0 1 r1 ]
 "612
-[; ;main.c: 612:   case 1:
-[e :U 512 ]
+[; ;main.c: 612: {
+[f ]
 "613
-[; ;main.c: 613:     RB6 = 1;
-[e = _RB6 -> -> 1 `i `b ]
+[; ;main.c: 613:   switch (digit)
+[e $U 510  ]
 "614
-[; ;main.c: 614:     break;
-[e $U 509  ]
+[; ;main.c: 614:   {
+{
 "615
-[; ;main.c: 615:   case 2:
-[e :U 513 ]
+[; ;main.c: 615:   case 0:
+[e :U 511 ]
 "616
-[; ;main.c: 616:     RB5 = 1;
-[e = _RB5 -> -> 1 `i `b ]
+[; ;main.c: 616:     RD4 = 1;
+[e = _RD4 -> -> 1 `i `b ]
 "617
 [; ;main.c: 617:     break;
 [e $U 509  ]
 "618
-[; ;main.c: 618:   case 3:
-[e :U 514 ]
+[; ;main.c: 618:   case 1:
+[e :U 512 ]
 "619
-[; ;main.c: 619:     RB4 = 1;
-[e = _RB4 -> -> 1 `i `b ]
+[; ;main.c: 619:     RD5 = 1;
+[e = _RD5 -> -> 1 `i `b ]
 "620
 [; ;main.c: 620:     break;
 [e $U 509  ]
 "621
-[; ;main.c: 621:   case 4:
-[e :U 515 ]
+[; ;main.c: 621:   case 2:
+[e :U 513 ]
 "622
-[; ;main.c: 622:     RB3 = 1;
-[e = _RB3 -> -> 1 `i `b ]
+[; ;main.c: 622:     RD6 = 1;
+[e = _RD6 -> -> 1 `i `b ]
 "623
 [; ;main.c: 623:     break;
 [e $U 509  ]
 "624
-[; ;main.c: 624:   case 5:
-[e :U 516 ]
+[; ;main.c: 624:   case 3:
+[e :U 514 ]
 "625
-[; ;main.c: 625:     RB2 = 1;
-[e = _RB2 -> -> 1 `i `b ]
+[; ;main.c: 625:     RD7 = 1;
+[e = _RD7 -> -> 1 `i `b ]
 "626
 [; ;main.c: 626:     break;
 [e $U 509  ]
 "627
-[; ;main.c: 627:   case 6:
-[e :U 517 ]
+[; ;main.c: 627:   case 4:
+[e :U 515 ]
 "628
-[; ;main.c: 628:     RB1 = 1;
-[e = _RB1 -> -> 1 `i `b ]
+[; ;main.c: 628:     RB0 = 1;
+[e = _RB0 -> -> 1 `i `b ]
 "629
 [; ;main.c: 629:     break;
 [e $U 509  ]
 "630
-[; ;main.c: 630:   case 7:
-[e :U 518 ]
+[; ;main.c: 630:   case 5:
+[e :U 516 ]
 "631
-[; ;main.c: 631:     RB0 = 1;
-[e = _RB0 -> -> 1 `i `b ]
+[; ;main.c: 631:     RB1 = 1;
+[e = _RB1 -> -> 1 `i `b ]
 "632
 [; ;main.c: 632:     break;
 [e $U 509  ]
 "633
-[; ;main.c: 633:   case 8:
-[e :U 519 ]
+[; ;main.c: 633:   case 6:
+[e :U 517 ]
 "634
-[; ;main.c: 634:     RD7 = 1;
-[e = _RD7 -> -> 1 `i `b ]
+[; ;main.c: 634:     RB2 = 1;
+[e = _RB2 -> -> 1 `i `b ]
 "635
 [; ;main.c: 635:     break;
 [e $U 509  ]
 "636
-[; ;main.c: 636:   case 9:
-[e :U 520 ]
+[; ;main.c: 636:   case 7:
+[e :U 518 ]
 "637
-[; ;main.c: 637:     RD6 = 1;
-[e = _RD6 -> -> 1 `i `b ]
+[; ;main.c: 637:     RB3 = 1;
+[e = _RB3 -> -> 1 `i `b ]
 "638
 [; ;main.c: 638:     break;
 [e $U 509  ]
 "639
-[; ;main.c: 639:   default:
-[e :U 521 ]
+[; ;main.c: 639:   case 8:
+[e :U 519 ]
 "640
-[; ;main.c: 640:     break;
-[e $U 509  ]
+[; ;main.c: 640:     RB4 = 1;
+[e = _RB4 -> -> 1 `i `b ]
 "641
-[; ;main.c: 641:   }
+[; ;main.c: 641:     break;
+[e $U 509  ]
+"642
+[; ;main.c: 642:   case 9:
+[e :U 520 ]
+"643
+[; ;main.c: 643:     RB5 = 1;
+[e = _RB5 -> -> 1 `i `b ]
+"644
+[; ;main.c: 644:     break;
+[e $U 509  ]
+"645
+[; ;main.c: 645:   default:
+[e :U 521 ]
+"646
+[; ;main.c: 646:     break;
+[e $U 509  ]
+"647
+[; ;main.c: 647:   }
 }
 [e $U 509  ]
 [e :U 510 ]
@@ -2237,127 +2237,127 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 9 `i 520
  521 ]
 [e :U 509 ]
-"642
-[; ;main.c: 642: }
+"648
+[; ;main.c: 648: }
 [e :UE 508 ]
 }
-"648
-[; ;main.c: 648: void off_digit(signed char digit)
+"654
+[; ;main.c: 654: void off_digit(signed char digit)
 [v _off_digit `(v ~T0 @X0 1 ef1`c ]
-"649
-[; ;main.c: 649: {
+"655
+[; ;main.c: 655: {
 {
 [e :U _off_digit ]
-"648
-[; ;main.c: 648: void off_digit(signed char digit)
-[v _digit `c ~T0 @X0 1 r1 ]
-"649
-[; ;main.c: 649: {
-[f ]
-"650
-[; ;main.c: 650:   switch (digit)
-[e $U 524  ]
-"651
-[; ;main.c: 651:   {
-{
-"652
-[; ;main.c: 652:   case 0:
-[e :U 525 ]
-"653
-[; ;main.c: 653:     RB7 = 0;
-[e = _RB7 -> -> 0 `i `b ]
 "654
-[; ;main.c: 654:     break;
-[e $U 523  ]
+[; ;main.c: 654: void off_digit(signed char digit)
+[v _digit `c ~T0 @X0 1 r1 ]
 "655
-[; ;main.c: 655:   case 1:
-[e :U 526 ]
+[; ;main.c: 655: {
+[f ]
 "656
-[; ;main.c: 656:     RB6 = 0;
-[e = _RB6 -> -> 0 `i `b ]
+[; ;main.c: 656:   switch (digit)
+[e $U 524  ]
 "657
-[; ;main.c: 657:     break;
-[e $U 523  ]
+[; ;main.c: 657:   {
+{
 "658
-[; ;main.c: 658:   case 2:
-[e :U 527 ]
+[; ;main.c: 658:   case 0:
+[e :U 525 ]
 "659
-[; ;main.c: 659:     RB5 = 0;
-[e = _RB5 -> -> 0 `i `b ]
+[; ;main.c: 659:     RD4 = 0;
+[e = _RD4 -> -> 0 `i `b ]
 "660
 [; ;main.c: 660:     break;
 [e $U 523  ]
 "661
-[; ;main.c: 661:   case 3:
-[e :U 528 ]
+[; ;main.c: 661:   case 1:
+[e :U 526 ]
 "662
-[; ;main.c: 662:     RB4 = 0;
-[e = _RB4 -> -> 0 `i `b ]
+[; ;main.c: 662:     RD5 = 0;
+[e = _RD5 -> -> 0 `i `b ]
 "663
 [; ;main.c: 663:     break;
 [e $U 523  ]
 "664
-[; ;main.c: 664:   case 4:
-[e :U 529 ]
+[; ;main.c: 664:   case 2:
+[e :U 527 ]
 "665
-[; ;main.c: 665:     RB3 = 0;
-[e = _RB3 -> -> 0 `i `b ]
+[; ;main.c: 665:     RD6 = 0;
+[e = _RD6 -> -> 0 `i `b ]
 "666
 [; ;main.c: 666:     break;
 [e $U 523  ]
 "667
-[; ;main.c: 667:   case 5:
-[e :U 530 ]
+[; ;main.c: 667:   case 3:
+[e :U 528 ]
 "668
-[; ;main.c: 668:     RB2 = 0;
-[e = _RB2 -> -> 0 `i `b ]
+[; ;main.c: 668:     RD7 = 0;
+[e = _RD7 -> -> 0 `i `b ]
 "669
 [; ;main.c: 669:     break;
 [e $U 523  ]
 "670
-[; ;main.c: 670:   case 6:
-[e :U 531 ]
+[; ;main.c: 670:   case 4:
+[e :U 529 ]
 "671
-[; ;main.c: 671:     RB1 = 0;
-[e = _RB1 -> -> 0 `i `b ]
+[; ;main.c: 671:     RB0 = 0;
+[e = _RB0 -> -> 0 `i `b ]
 "672
 [; ;main.c: 672:     break;
 [e $U 523  ]
 "673
-[; ;main.c: 673:   case 7:
-[e :U 532 ]
+[; ;main.c: 673:   case 5:
+[e :U 530 ]
 "674
-[; ;main.c: 674:     RB0 = 0;
-[e = _RB0 -> -> 0 `i `b ]
+[; ;main.c: 674:     RB1 = 0;
+[e = _RB1 -> -> 0 `i `b ]
 "675
 [; ;main.c: 675:     break;
 [e $U 523  ]
 "676
-[; ;main.c: 676:   case 8:
-[e :U 533 ]
+[; ;main.c: 676:   case 6:
+[e :U 531 ]
 "677
-[; ;main.c: 677:     RD7 = 0;
-[e = _RD7 -> -> 0 `i `b ]
+[; ;main.c: 677:     RB2 = 0;
+[e = _RB2 -> -> 0 `i `b ]
 "678
 [; ;main.c: 678:     break;
 [e $U 523  ]
 "679
-[; ;main.c: 679:   case 9:
-[e :U 534 ]
+[; ;main.c: 679:   case 7:
+[e :U 532 ]
 "680
-[; ;main.c: 680:     RD6 = 0;
-[e = _RD6 -> -> 0 `i `b ]
+[; ;main.c: 680:     RB3 = 0;
+[e = _RB3 -> -> 0 `i `b ]
 "681
 [; ;main.c: 681:     break;
 [e $U 523  ]
 "682
-[; ;main.c: 682:   default:
-[e :U 535 ]
+[; ;main.c: 682:   case 8:
+[e :U 533 ]
 "683
-[; ;main.c: 683:     break;
-[e $U 523  ]
+[; ;main.c: 683:     RB4 = 0;
+[e = _RB4 -> -> 0 `i `b ]
 "684
-[; ;main.c: 684:   }
+[; ;main.c: 684:     break;
+[e $U 523  ]
+"685
+[; ;main.c: 685:   case 9:
+[e :U 534 ]
+"686
+[; ;main.c: 686:     RB5 = 0;
+[e = _RB5 -> -> 0 `i `b ]
+"687
+[; ;main.c: 687:     break;
+[e $U 523  ]
+"688
+[; ;main.c: 688:   default:
+[e :U 535 ]
+"689
+[; ;main.c: 689:     break;
+[e $U 523  ]
+"690
+[; ;main.c: 690:   }
 }
 [e $U 523  ]
 [e :U 524 ]
@@ -2373,104 +2373,104 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 9 `i 534
  535 ]
 [e :U 523 ]
-"685
-[; ;main.c: 685: }
-[e :UE 522 ]
-}
-"688
-[; ;main.c: 688: void receive_char_from_EUSART(void)
-[v _receive_char_from_EUSART `(v ~T0 @X0 1 ef ]
-"689
-[; ;main.c: 689: {
-{
-[e :U _receive_char_from_EUSART ]
-[f ]
-"690
-[; ;main.c: 690:   decode_received_char(EUSART_Read());
-[e ( _decode_received_char (1 -> ( _EUSART_Read ..  `uc ]
 "691
 [; ;main.c: 691: }
-[e :UE 536 ]
+[e :UE 522 ]
 }
 "694
-[; ;main.c: 694: void receive_char_from_I2C(void)
-[v _receive_char_from_I2C `(v ~T0 @X0 1 ef ]
+[; ;main.c: 694: void receive_char_from_EUSART(void)
+[v _receive_char_from_EUSART `(v ~T0 @X0 1 ef ]
 "695
 [; ;main.c: 695: {
 {
-[e :U _receive_char_from_I2C ]
+[e :U _receive_char_from_EUSART ]
 [f ]
 "696
-[; ;main.c: 696:   decode_received_char(I2C_Read());
-[e ( _decode_received_char (1 -> ( _I2C_Read ..  `uc ]
+[; ;main.c: 696:   decode_received_char(EUSART_Read());
+[e ( _decode_received_char (1 -> ( _EUSART_Read ..  `uc ]
 "697
 [; ;main.c: 697: }
-[e :UE 537 ]
+[e :UE 536 ]
 }
 "700
-[; ;main.c: 700: void decode_received_char(char received_char)
-[v _decode_received_char `(v ~T0 @X0 1 ef1`uc ]
+[; ;main.c: 700: void receive_char_from_I2C(void)
+[v _receive_char_from_I2C `(v ~T0 @X0 1 ef ]
 "701
 [; ;main.c: 701: {
 {
-[e :U _decode_received_char ]
-"700
-[; ;main.c: 700: void decode_received_char(char received_char)
-[v _received_char `uc ~T0 @X0 1 r1 ]
-"701
-[; ;main.c: 701: {
+[e :U _receive_char_from_I2C ]
 [f ]
 "702
-[; ;main.c: 702:   if ((received_char == '$') || (receive_index > 10 * 2))
-[e $ ! || == -> _received_char `ui -> 36 `ui > -> _receive_index `i * -> 10 `i -> 2 `i 539  ]
+[; ;main.c: 702:   decode_received_char(I2C_Read());
+[e ( _decode_received_char (1 -> ( _I2C_Read ..  `uc ]
 "703
-[; ;main.c: 703:   {
-{
-"705
-[; ;main.c: 705:     receive_index = 0;
-[e = _receive_index -> -> 0 `i `c ]
+[; ;main.c: 703: }
+[e :UE 537 ]
+}
 "706
-[; ;main.c: 706:     for (unsigned char i = 0; i < 10 * 2; i++)
+[; ;main.c: 706: void decode_received_char(char received_char)
+[v _decode_received_char `(v ~T0 @X0 1 ef1`uc ]
+"707
+[; ;main.c: 707: {
+{
+[e :U _decode_received_char ]
+"706
+[; ;main.c: 706: void decode_received_char(char received_char)
+[v _received_char `uc ~T0 @X0 1 r1 ]
+"707
+[; ;main.c: 707: {
+[f ]
+"708
+[; ;main.c: 708:   if ((received_char == '$') || (receive_index > 10 * 2))
+[e $ ! || == -> _received_char `ui -> 36 `ui > -> _receive_index `i * -> 10 `i -> 2 `i 539  ]
+"709
+[; ;main.c: 709:   {
+{
+"711
+[; ;main.c: 711:     receive_index = 0;
+[e = _receive_index -> -> 0 `i `c ]
+"712
+[; ;main.c: 712:     for (unsigned char i = 0; i < 10 * 2; i++)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
 [e $ < -> _i `i * -> 10 `i -> 2 `i 540  ]
 [e $U 541  ]
 [e :U 540 ]
-"707
-[; ;main.c: 707:     {
+"713
+[; ;main.c: 713:     {
 {
-"708
-[; ;main.c: 708:       value[i] = ' ';
+"714
+[; ;main.c: 714:       value[i] = ' ';
 [e = *U + &U _value * -> _i `ux -> -> # *U &U _value `ui `ux -> -> 32 `ui `uc ]
-"709
-[; ;main.c: 709:     }
+"715
+[; ;main.c: 715:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e $ < -> _i `i * -> 10 `i -> 2 `i 540  ]
 [e :U 541 ]
 }
-"710
-[; ;main.c: 710:   }
+"716
+[; ;main.c: 716:   }
 }
 [e $U 543  ]
-"711
-[; ;main.c: 711:   else
+"717
+[; ;main.c: 717:   else
 [e :U 539 ]
-"712
-[; ;main.c: 712:   {
+"718
+[; ;main.c: 718:   {
 {
-"713
-[; ;main.c: 713:     value[receive_index] = received_char;
+"719
+[; ;main.c: 719:     value[receive_index] = received_char;
 [e = *U + &U _value * -> -> _receive_index `uc `ux -> -> # *U &U _value `ui `ux _received_char ]
-"714
-[; ;main.c: 714:     receive_index++;
+"720
+[; ;main.c: 720:     receive_index++;
 [e ++ _receive_index -> -> 1 `i `c ]
-"715
-[; ;main.c: 715:   }
+"721
+[; ;main.c: 721:   }
 }
 [e :U 543 ]
-"716
-[; ;main.c: 716: }
+"722
+[; ;main.c: 722: }
 [e :UE 538 ]
 }

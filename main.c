@@ -44,31 +44,37 @@
 
 // 各ピンの名前設定
 // 左のニキシー管から0, 1, ..., 9桁目という風にカウント
-#define DIGIT_0 RB7
-#define DIGIT_1 RB6
-#define DIGIT_2 RB5
-#define DIGIT_3 RB4
-#define DIGIT_4 RB3
-#define DIGIT_5 RB2
-#define DIGIT_6 RB1
-#define DIGIT_7 RB0
-#define DIGIT_8 RD7
-#define DIGIT_9 RD6
-#define DECODER0_D RA0
-#define DECODER0_C RA1
-#define DECODER0_B RA2
-#define DECODER0_A RA3
-#define DOT0 RA4
+/* 要対応 RB7, 6, ..., 1, 0, RD7, 6, 5, 4 
+         DIG11, 10, ...,             1, 0 
+ 等言う風にピンを変更する*/
+#define DIGIT_0 RD4
+#define DIGIT_1 RD5
+#define DIGIT_2 RD6
+#define DIGIT_3 RD7
+#define DIGIT_4 RB0
+#define DIGIT_5 RB1
+#define DIGIT_6 RB2
+#define DIGIT_7 RB3
+#define DIGIT_8 RB4
+#define DIGIT_9 RB5
+#define DIGIT_10 RB6
+#define DIGIT_11 RB7
+#define DECODER0_D RA6
+#define DECODER0_C RC0
+#define DECODER0_B RC1
+#define DECODER0_A RC2
+#define DOT0 RD0
 #define DECODER1_D RA5
 #define DECODER1_C RE0
 #define DECODER1_B RE1
 #define DECODER1_A RE2
 #define DOT1 RA7
-#define DECODER2_D RA6
-#define DECODER2_C RC0
-#define DECODER2_B RC1
-#define DECODER2_A RC2
-#define DOT2 RD0
+#define DECODER2_D RA0
+#define DECODER2_C RA1
+#define DECODER2_B RA2
+#define DECODER2_A RA3
+#define DOT2 RA4
+
 // 定数
 #define DIGITS 10           // ニキシー管の桁数
 #define LIGHTING_TIME 800   // 点灯時間(us)
